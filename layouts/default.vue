@@ -1,117 +1,98 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
-    </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+  <v-app id="app">
+    <Header />
+    <Nuxt />
+    <Footer />
   </v-app>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
-  }
-}
+export default {};
 </script>
+
+<style lang="scss">
+.content-wrapper:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.content-wrapper {
+  margin-bottom: 1rem;
+}
+
+.theme--light {
+  // background-color: white !important;
+}
+
+$siegel-red: #770019;
+$siegel-lightgray: #d9d9da;
+$siegel-gray: #afafb0;
+
+$light-s2: #2e2e2e;
+
+.siegel-primary {
+  color: #770019 !important;
+}
+
+.bg-lightgray {
+  background-color: $siegel-lightgray;
+}
+
+.material-icons {
+  margin-right: 4px;
+  vertical-align: middle;
+  color: #2e2e2e;
+}
+
+h1 {
+  color: $light-s2;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+h2 {
+  color: $siegel-red;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  margin: 0.5rem 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5rem;
+  color: #4b4b4b;
+}
+
+a {
+  text-decoration: none;
+}
+
+br {
+  margin-bottom: 10px;
+  width: 1px;
+}
+
+.document {
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 16px;
+}
+
+.text-logo {
+  color: $light-s2;
+  font-size: 24px;
+  white-space: nowrap;
+  line-height: 1.75rem;
+}
+</style>

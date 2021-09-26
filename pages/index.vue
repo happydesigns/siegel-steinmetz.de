@@ -1,77 +1,94 @@
+<!--Landing page - siegel-steinmetz.de-->
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <div class="document">
+    <HeroSection image="banner.webp">
+    </HeroSection>
+    <Split class="mt-8">
+      <div class="card">
+        <h2><router-link to="/restaurierungen" class="siegel-primary">Restaurierungen</router-link></h2>
+        <figure>
+          <img src="@/assets/img/home_1.jpg" />
+        </figure>
+        <p
+          class="mt-4"
+        >Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.</p>
+      </div>
+
+      <div class="card">
+        <h2><router-link to="/grabmale" class="siegel-primary">Grabmale</router-link></h2>
+        <figure>
+          <img src="@/assets/img/home_2.jpg" />
+        </figure>
+        <p class="mt-4">
+          Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal.
+          <br />Sie können aus einer Vielfalt an Materialien, Inschriften und Ornamenten wählen. Handwerkliche Grabmale werden direkt in Neudenau hergestellt. Industriell hergestellte Steine, beziehen wir von unserem Zulieferer.
+        </p>
+      </div>
+    </Split>
+    <!-- <TextImageCard image="home_1.jpg"></TextImageCard> -->
+  </div>
 </template>
+
+<script>
+import TextIntroduction from "@/components/TextIntroduction.vue";
+import TextImageCard from "@/components/TextImageCard.vue";
+import Split from "@/components/Split.vue";
+
+// const tiles = [
+//   {
+//     title: "Restaurierungen",
+//     text:
+//       "Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.",
+//     image: "Restaurierungen.jpg",
+//     link: "/restaurierungen"
+//   },
+//   {
+//     title: "Grabmale",
+//     text:
+//       "Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal. Sie können aus einer Vielfalt an Materialien, Inschriften und Ornamenten wählen.\nHandwerkliche Grabmale werden direkt in Neudenau hergestellt. Industriell hergestellte Steine beziehen wir von unserem Zulieferer.",
+//     image: "Grabmale.jpg",
+//     link: "/grabmale"
+//   }
+// ];
+
+export default {
+  components: {
+    TextIntroduction,
+    TextImageCard,
+    Split
+  }
+};
+</script>
+
+<style scoped>
+@media (min-width: 550px) {
+  .card {
+    margin-right: 1rem;
+  }
+}
+
+.split {
+  justify-content: space-between;
+}
+
+.split > div {
+  max-width: 450px;
+}
+
+.split > figure + p {
+  margin-left: 32px;
+}
+
+.split figure,
+.split p {
+  max-width: 450px;
+}
+
+.split img {
+  max-width: 100%;
+}
+
+img {
+  border-radius: 4px;
+}
+</style>
