@@ -8,6 +8,9 @@
       <p>
         Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
       </p>
+
+      <!-- <nuxt-img v-if="currentAlbum != null" src="banner.webp"></nuxt-img> -->
+
     </div>
     <section class="document">
       <ul class="card-container">
@@ -21,6 +24,8 @@
         />
       </ul>
 
+      {{ galleryPath }} : {{ albumPath }}
+
       <div v-if="currentAlbum != null" class="mt-8 image-container" :key="imageKey">
         <span
           v-for="image in currentAlbum.images"
@@ -30,7 +35,8 @@
           }`"
         >
           <i :style="`padding-top:${(image.height / image.width) * 100}%`"></i>
-          <nuxt-img src="banner.webp" quality="80" loading="lazy" />
+          test
+          <!-- <nuxt-img src="banner.webp" /> -->
         </span>
       </div>
     </section>
@@ -83,8 +89,8 @@ export default {
   },
   computed: {},
   mounted() {
-    let path = $nuxt.$route.path.split("/");
-    if (path.length > 2) {
+    let path = $nuxt.$route.path.split("/").filter(e => e);
+    if (path.length > 1) {
       this.albumPath = path[path.length - 1];
       this.currentAlbum = this.albums.find(
         (album) => album.path == this.albumPath
@@ -92,7 +98,7 @@ export default {
       path.pop();
     }
     if (path.length > 0) {
-      this.galleryPath = path.join("/");
+      this.galleryPath = "/" + path.join("/");
     }
     this.loadAlbum(this.currentAlbum);
   },

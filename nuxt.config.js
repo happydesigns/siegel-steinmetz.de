@@ -70,6 +70,11 @@ export default {
   build: {
   },
 
+  generate: {
+    devtools: true,
+    routes: ['/galerie/grabmallager', '/galerie/grabmalreferenzen', 'galerie/restaurierungen']
+  },
+
   image: {
     staticFilename: '[publicPath]/images/[name]-[hash][ext]'
   }
