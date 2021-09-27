@@ -1,11 +1,17 @@
 <template>
   <li>
-    <figure :style="{ backgroundImage: `url('${require(`@/assets/img/${image}`)}')` }"></figure>
-    <!-- <img :src="" /> -->
-    <span>
-      <h2>{{title}}</h2>
-      <p>{{amount}} Bilder</p>
-    </span>
+    <NuxtLink :to="path">
+      <figure
+        :style="{
+          backgroundImage: `url('${require(`@/assets/img/${thumbnail}`)}')`,
+        }"
+      ></figure>
+      <!-- <img :src="" /> -->
+      <span>
+        <h2>{{ title }}</h2>
+        <p>{{ amount }} Bilder</p>
+      </span>
+    </NuxtLink>
   </li>
 </template>
 
@@ -14,9 +20,10 @@ export default {
   name: "GalleryAlbumCard",
   props: {
     title: String,
-    image: String,
-    amount: Number
-  }
+    thumbnail: String,
+    amount: Number,
+    path: String
+  },
 };
 </script>
 
@@ -38,8 +45,8 @@ li {
 }
 
 li:hover {
-	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+  transform: translateY(-0.5rem) scale(1.0125);
+  box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 figure {

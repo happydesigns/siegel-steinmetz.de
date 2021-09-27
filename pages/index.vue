@@ -25,38 +25,12 @@
         </p>
       </div>
     </Split>
-    <!-- <TextImageCard image="home_1.jpg"></TextImageCard> -->
   </div>
 </template>
 
 <script>
-import TextIntroduction from "@/components/TextIntroduction.vue";
-import TextImageCard from "@/components/TextImageCard.vue";
-import Split from "@/components/Split.vue";
-
-// const tiles = [
-//   {
-//     title: "Restaurierungen",
-//     text:
-//       "Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.",
-//     image: "Restaurierungen.jpg",
-//     link: "/restaurierungen"
-//   },
-//   {
-//     title: "Grabmale",
-//     text:
-//       "Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal. Sie können aus einer Vielfalt an Materialien, Inschriften und Ornamenten wählen.\nHandwerkliche Grabmale werden direkt in Neudenau hergestellt. Industriell hergestellte Steine beziehen wir von unserem Zulieferer.",
-//     image: "Grabmale.jpg",
-//     link: "/grabmale"
-//   }
-// ];
-
 export default {
-  components: {
-    TextIntroduction,
-    TextImageCard,
-    Split
-  }
+
 };
 </script>
 
