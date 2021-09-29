@@ -28,7 +28,10 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
+    script: [
+      { src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDIfUVcub6RqXsutLIVam2Q9mEP3BML_KA" }
     ]
   },
 
@@ -55,7 +58,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // '@nuxtjs/sitemap'
   ],
+
+  // sitemap: {
+  //   hostname: 'https://www.siegel-steinmetz.de'
+  // },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
