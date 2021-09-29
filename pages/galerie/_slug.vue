@@ -10,7 +10,8 @@
       </p>
 
       <!-- <nuxt-img v-if="currentAlbum != null" src="banner.webp"></nuxt-img> -->
-
+      <!-- <nuxt-img :src="test"></nuxt-img> -->
+      <!-- <nuxt-img v-for="img in imgs" :src="test + img + '.jpg'" alt="" :key="img" /> -->
     </div>
     <section class="document">
       <ul class="card-container">
@@ -26,17 +27,39 @@
 
       {{ galleryPath }} : {{ albumPath }}
 
-      <div v-if="currentAlbum != null" class="mt-8 image-container" :key="imageKey">
+      <!-- <div v-if="currentAlbum">
+        <div v-for="image in images" :key="image">
+          {{ image }}
+          <nuxt-img :src="image"></nuxt-img>
+        </div>
+      </div> -->
+
+      <!-- <div v-if="currentAlbum">
+        <nuxt-img :src="'album/' + albumPath + '/' + albumPath + '-001.jpg'"></nuxt-img>
+        <div v-for="image in currentAlbum.context.keys()" :key="image">
+          album/{{ albumPath }}{{ image.substring(1) }}
+          <nuxt-img :src="'album/' + albumPath + image.substring(1)"></nuxt-img>
+        </div>
+      </div> -->
+      -
+
+      <!-- <div v-if="currentAlbum" class="mt-8 image-container">
         <span
-          v-for="image in currentAlbum.images"
-          :key="image.key"
-          :style="`width:${(image.width * 384) / image.height}px;flex-grow:${
-            (image.width * 300) / image.height
-          }`"
+          v-for="image in currentAlbum.context.keys()"
+          :key="image"
+          :style="`width:${(image.width * 384) / image.height}px;flex-grow:${(image.width * 300) / image.height}`"
         >
           <i :style="`padding-top:${(image.height / image.width) * 100}%`"></i>
-          test
-          <!-- <nuxt-img src="banner.webp" /> -->
+          <nuxt-img :src="test"></nuxt-img>
+        </span>
+      </div> -->
+
+      <div v-if="renderedImages" class="mt-8 image-container">
+        imgs: {{ images }}
+        <span v-for="image in renderedImages" :key="image.src">
+          {{ image.src }}
+          <i :style="`padding-top:${(image.height / image.width) * 100}%`"></i>
+          <nuxt-img :src="image.src"></nuxt-img>
         </span>
       </div>
     </section>
@@ -53,7 +76,7 @@ let albums = [
       "@/assets/img/album/grabmallager/",
       false,
       /\.(png|jpe?g|svg)$/
-    )
+    ),
   },
   {
     path: "grabmalreferenzen",
@@ -63,7 +86,7 @@ let albums = [
       "@/assets/img/album/grabmalreferenzen/",
       false,
       /\.(png|jpe?g|svg)$/
-    )
+    ),
   },
   {
     path: "restaurierungen",
@@ -73,7 +96,7 @@ let albums = [
       "@/assets/img/album/restaurierungen/",
       false,
       /\.(png|jpe?g|svg)$/
-    )
+    ),
   },
 ];
 
@@ -81,47 +104,153 @@ export default {
   data() {
     return {
       albums: albums,
-      currentAlbum: null,
-      albumPath: "",
-      galleryPath: "",
-      imageKey: 0
+      imageKey: 0,
+      images: [],
     };
   },
-  computed: {},
-  mounted() {
-    let path = $nuxt.$route.path.split("/").filter(e => e);
-    if (path.length > 1) {
-      this.albumPath = path[path.length - 1];
-      this.currentAlbum = this.albums.find(
-        (album) => album.path == this.albumPath
-      );
-      path.pop();
-    }
-    if (path.length > 0) {
-      this.galleryPath = "/" + path.join("/");
-    }
-    this.loadAlbum(this.currentAlbum);
-  },
-  methods: {
-    loadAlbum: function (album) {
-      if (album != null) {
-        album.images = [];
-
-        album.context.keys().forEach((img) => {
-          const src = this.$img("album/" + this.albumPath + img.substring(1));
-          console.log("src1: " + src)
-          const image = new Image();
-          image.onload = () => {
-            console.log("src2: " + image.src)
-            album.images.push({
-              width: image.width,
-              height: image.height,
-              src: "album/" + this.albumPath + img.substring(1),
-            });
-            this.imageKey++;
-          };
-          image.src = src;
+  computed: {
+    galleryPath: function () {
+      let path = this.$nuxt.$route.path.split("/").filter((e) => e);
+      if (path.length > 1) {
+        path.pop();
+      }
+      return "/" + path.join("/");
+    },
+    albumPath: function () {
+      const path = this.$nuxt.$route.path.split("/").filter((e) => e);
+      if (path.length > 1) {
+        return path[path.length - 1];
+      }
+      return "";
+    },
+    currentAlbum: function () {
+      return this.albums.find((album) => album.path == this.albumPath);
+    },
+    preloadAlbum: function () {
+      let images = [];
+      if (this.currentAlbum) {
+        this.currentAlbum.context.keys().forEach((img) => {
+          images.push({ src: `album/${this.albumPath}${img.substring(1)}` });
         });
+      }
+      return images;
+    },
+    renderedImages: function () {
+      if (this.images.length) {
+        return this.images;
+      }
+      return this.preloadAlbum;
+    }
+  },
+  mounted() {
+    if (this.currentAlbum) {
+      let images = [];
+      let i = 0;
+      const length = this.currentAlbum.context.keys().length;
+      this.currentAlbum.context.keys().forEach((img) => {
+        const src = `album/${this.albumPath}${img.substring(1)}`;
+        const image = new Image();
+        image.onload = () => {
+          images.push({
+            src: src,
+            width: image.width,
+            height: image.height,
+          });
+          if (++i == length) {
+            this.images = images;
+          }
+        };
+        image.src = this.$img(src);
+      });
+    }
+  },
+  // mounted() {
+  //   this.$refs["image"].forEach((img) => {
+  //     const image = new Image();
+  //     image.onload = () => {
+  //       img.$options.parent.height = image.height
+  //     };
+  //     image.src = this.$img(img.src)
+  //   });
+  //   // console.log(this.albums.find((album) => album.path == this.albumPath))
+  //   console.log("album: " + this.currentAlbum)
+  //   let path = $nuxt.$route.path.split("/").filter(e => e);
+  //   if (path.length > 1) {
+  //     // this.albumPath = path[path.length - 1];
+  //     // this.currentAlbum = this.albums.find(
+  //     //   (album) => album.path == this.albumPath
+  //     // );
+  //     path.pop();
+  //   }
+  //   if (path.length > 0) {
+  //     this.galleryPath = "/" + path.join("/");
+  //   }
+  //   this.loadAlbum(this.currentAlbum);
+  // },
+  methods: {
+  
+    loadAlbum: function (album) {
+      const hi = new Image();
+      if (album != null) {
+        // album.images = [];
+        // let i = new Image();
+        // let src = this.$img("album/restaurierungen/restaurierungen-001.jpg");
+        // // this.test = src
+        // i.onload = () => {
+        //   console.log(i)
+        // }
+        // i.src = src
+        // console.log(src)
+
+        let imageCounts = {
+          grabmallager: 34,
+          grabmalreferenzen: 24,
+          restaurierungen: 7,
+        };
+
+        const imageCount = imageCounts[this.albumPath] || 0;
+
+        console.log(imageCount);
+        for (let i = imageCount; i > 0; i--) {
+          const pre = i / 10 >= 1 ? "0" : "00";
+          this.images.push(
+            "album/" +
+              this.albumPath +
+              "/" +
+              this.albumPath +
+              "-" +
+              pre +
+              i +
+              ".jpg"
+          );
+        }
+        // for (let i = imageCounts; i > 0; i--) {
+        //   const pre = i / 10 > 1 ? "0" : "00"
+        //   console.log(pre)
+        //   album.images.push("album/" + this.albumPath + "/" + this.albumPath + "-" + pre + i + ".jpg")
+        // }
+        // this.imageKey++;
+
+        // album.context.keys().forEach((img) => {
+        // album.images.push("album/" + this.albumPath + "/" + this.albumPath + "-"//img.substring(1))
+        // })
+        // console.log(album.images)
+
+        // album.context.keys().forEach((img) => {
+        //   const src = this.$img("album/" + this.albumPath + img.substring(1));
+        //   console.log("src1: " + src)
+        //   const image = new Image();
+        //   image.onload = () => {
+        //     console.log("src2: " + image.src)
+        //     album.images.push({
+        //       width: image.width,
+        //       height: image.height,
+        //       src: "album/" + this.albumPath + img.substring(1),
+        //     });
+        //     this.imageKey++;
+        //   };
+        //   image.src = src;
+        // });
       }
     },
   },

@@ -72,7 +72,8 @@ export default {
 
   generate: {
     devtools: true,
-    routes: ['/galerie/grabmallager', '/galerie/grabmalreferenzen', 'galerie/restaurierungen']
+    routes: ['/galerie/grabmallager', '/galerie/grabmalreferenzen', 'galerie/restaurierungen'],
+    ignore: ['grabmalreferenzen', 'grabmallager']
   },
 
   image: {
