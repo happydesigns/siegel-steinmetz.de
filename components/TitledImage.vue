@@ -30,7 +30,6 @@ export default {
   }
 }
 
-
 figcaption {
   font-style: italic;
 }

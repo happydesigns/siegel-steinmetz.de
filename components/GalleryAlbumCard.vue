@@ -6,7 +6,6 @@
           backgroundImage: `url('${require(`@/assets/img/${thumbnail}`)}')`,
         }"
       ></figure>
-      <!-- <img :src="" /> -->
       <span>
         <h2>{{ title }}</h2>
         <p>{{ amount }} Bilder</p>

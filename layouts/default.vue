@@ -1,10 +1,12 @@
 <template>
   <v-app id="app">
     <div class="page-bg">
-      <Header />
-      <Nuxt />
+      <div class="body-bg">
+        <Header />
+        <Nuxt />
+      </div>
+      <Footer />
     </div>
-    <Footer />
   </v-app>
 </template>
 
@@ -28,15 +30,21 @@ export default {};
   --siegel-lightgray: #d9d9da;
   --siegel-gray: #afafb0;
   --light-s2: #2e2e2e;
-  
-  --document: #fff;
-  --page: #f0f0f0;
 
-  background: var(--page);
+  --page: #f5f5f5;
+  --document: #fff;
+  --body: #fff;
+
+  background: var(--body);
 }
 
 .page-bg {
   background: var(--page);
+  min-height: 100vh;
+}
+
+.body-bg {
+  background: var(--body);
 }
 
 .siegel-primary {
@@ -44,13 +52,13 @@ export default {};
 }
 
 .bg-lightgray {
-  background-color: var(--siegel-lightgray)
+  background-color: var(--siegel-lightgray);
 }
 
-.material-icons {
+.v-icon.mdi {
   margin-right: 4px;
   vertical-align: middle;
-  color: var(--light-s2);
+  font-size: 20px;
 }
 
 h1 {
