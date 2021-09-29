@@ -1,16 +1,16 @@
 <!--Photo gallery page - siegel-steinmetz.de/galerie-->
 <template>
-  <div>
-    <div class="mt-8 document">
+  <div class="document page">
+    <div class="mt-8">
       <router-link to="/galerie">
         <h1>Galerie</h1>
       </router-link>
-      <p>
-        Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
-      </p>
     </div>
+    <p>
+      Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
+    </p>
 
-    <section class="document">
+    <section>
       <ul class="card-container">
         <GalleryAlbumCard
           v-for="album in albums"
@@ -22,7 +22,7 @@
         />
       </ul>
 
-      <div v-if="renderedImages" class="mt-8 image-container">
+      <div v-if="renderedImages" class="my-8 image-container">
         <span
           v-for="image in renderedImages"
           :key="image.src"
@@ -151,7 +151,7 @@ section {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0;
   font-size: 0;

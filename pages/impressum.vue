@@ -1,8 +1,12 @@
 <!--Imprint page - siegel-steinmetz.de/impressum-->
 <template>
-  <div class="document">
-    <h1>Impressum</h1>
-    <Split>
+  <div class="document page">
+    <div class="mt-8">
+      <router-link to="/impressum">
+        <h1>Impressum</h1>
+      </router-link>
+    </div>
+    <Split class="my-8">
       <span>
         <p>
           Bernd Siegel
@@ -24,7 +28,7 @@
         </p>
         <p>
           Umsatzsteuer-Identifikationsnummer gem. § 27a UStG:
-          <br />XXXXXXX
+          <br />DE 212603016
         </p>
       </span>
       <span>

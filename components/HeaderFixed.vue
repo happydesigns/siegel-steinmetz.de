@@ -11,18 +11,7 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo.vue'
-import Navigation from '@/components/Navigation.vue'
-import Menu from '@/components/Menu.vue'
-import NavigationDrawer from '@/components/NavigationDrawer.vue'
-
 export default {
-  components: {
-    Logo,
-    Navigation,
-    Menu,
-    NavigationDrawer
-  },
   data() {
     return {
       scrollY: 0,
@@ -60,7 +49,6 @@ header {
   position: fixed;
   background-color: white;
   transition: top 0.4s;
-  
 }
 
 header.scrolled {

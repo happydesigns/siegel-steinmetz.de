@@ -4,6 +4,12 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  render: {
+    static: {
+      maxAge: 60 * 60 * 24 * 30,
+    },
+  },
+
   router: {
     base: '/siegel-steinmetz'
   },

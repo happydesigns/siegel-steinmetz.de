@@ -1,9 +1,11 @@
 <!--Informational page about resoration - siegel-steinmetz.de/restaurierungen-->
 <template>
-  <div class="mt-8 document">
-    <router-link to="/restaurierungen">
-      <h1>Restaurierungen</h1>
-    </router-link>
+  <div class="document page">
+    <div class="mt-8">
+      <router-link to="/restaurierungen">
+        <h1>Restaurierungen</h1>
+      </router-link>
+    </div>
     <section>
       <div class="content-wrapper">
         <TextImage class="mt-4" side="right">
@@ -35,3 +37,9 @@
     </section>
   </div>
 </template>
+
+<style scoped>
+.text {
+  text-align: justify;
+}
+</style>

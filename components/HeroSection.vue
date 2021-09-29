@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-img src="banner.webp" class="banner" alt="Hero Image" />
+    <nuxt-img :src="image" class="banner" alt="Hero Image" />
     <div>
       <h1>Bernd Siegel Steingestaltung</h1>
       <p>Wir bieten einen umfassenden Service rund um den Naturstoff Stein:</p>
@@ -26,7 +26,7 @@
 <script>
 export default {
   props: {
-    src: String,
+    image: String,
   },
 };
 </script>

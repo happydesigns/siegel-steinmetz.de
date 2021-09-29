@@ -1,12 +1,12 @@
 <template>
-  <span class="titled-image">
+  <div class="titled-image">
     <figure>
-      <img :src="require(`@/assets/img/${image}`)" />
+      <nuxt-img :src="image" />
       <figcaption>
         <slot />
       </figcaption>
     </figure>
-  </span>
+  </div>
 </template>
 
 <script>
@@ -20,13 +20,13 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .right figure {
-    margin-left: 16px;
+    margin-left: 24px;
   }
 
   .left figure {
-    margin-right: 16px;
+    margin-right: 24px;
   }
 }
 
@@ -37,6 +37,13 @@ figcaption {
 
 img {
   max-width: 100%;
+  border-radius: 4px;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .titled-image {

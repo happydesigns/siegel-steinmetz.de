@@ -1,7 +1,9 @@
 <template>
   <v-app id="app">
-    <Header />
-    <Nuxt />
+    <div class="page-bg">
+      <Header />
+      <Nuxt />
+    </div>
     <Footer />
   </v-app>
 </template>
@@ -12,7 +14,7 @@ export default {};
 
 <style lang="scss">
 .content-wrapper:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -21,32 +23,38 @@ export default {};
   margin-bottom: 1rem;
 }
 
-.theme--light {
-  // background-color: white !important;
+#app {
+  --siegel-red: #770019;
+  --siegel-lightgray: #d9d9da;
+  --siegel-gray: #afafb0;
+  --light-s2: #2e2e2e;
+  
+  --document: #fff;
+  --page: #f0f0f0;
+
+  background: var(--page);
 }
 
-$siegel-red: #770019;
-$siegel-lightgray: #d9d9da;
-$siegel-gray: #afafb0;
-
-$light-s2: #2e2e2e;
+.page-bg {
+  background: var(--page);
+}
 
 .siegel-primary {
   color: #770019 !important;
 }
 
 .bg-lightgray {
-  background-color: $siegel-lightgray;
+  background-color: var(--siegel-lightgray)
 }
 
 .material-icons {
   margin-right: 4px;
   vertical-align: middle;
-  color: #2e2e2e;
+  color: var(--light-s2);
 }
 
 h1 {
-  color: $light-s2;
+  color: var(--light-s2);
   margin-bottom: 0.5rem;
   display: inline-block;
   overflow-wrap: break-word;
@@ -54,7 +62,7 @@ h1 {
 }
 
 h2 {
-  color: $siegel-red;
+  color: var(--siegel-red);
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -89,10 +97,22 @@ br {
   padding: 4px 16px;
 }
 
+.document.page {
+  border-radius: 4px;
+  background: var(--document);
+}
+
 .text-logo {
-  color: $light-s2;
+  color: var(--light-s2);
   font-size: 24px;
   white-space: nowrap;
   line-height: 1.75rem;
+}
+
+@media (min-width: 600px) {
+  .document {
+    min-width: 1196px;
+    padding: 4px 32px;
+  }
 }
 </style>

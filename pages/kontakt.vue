@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 mb-4 document">
+  <div class="mt-8 mb-4 document page">
     <router-link to="/kontakt">
       <h1>Kontakt</h1>
     </router-link>

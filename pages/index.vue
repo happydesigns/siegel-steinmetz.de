@@ -1,13 +1,13 @@
 <!--Landing page - siegel-steinmetz.de-->
 <template>
-  <div class="document">
+  <div class="document page">
     <HeroSection image="banner.webp">
     </HeroSection>
-    <Split class="mt-8">
+    <Split class="my-8">
       <div class="card">
         <h2><router-link to="/restaurierungen" class="siegel-primary">Restaurierungen</router-link></h2>
         <figure>
-          <img src="@/assets/img/home_1.jpg" />
+          <nuxt-img src="home_1.jpg" />
         </figure>
         <p
           class="mt-4"
@@ -17,7 +17,7 @@
       <div class="card">
         <h2><router-link to="/grabmale" class="siegel-primary">Grabmale</router-link></h2>
         <figure>
-          <img src="@/assets/img/home_2.jpg" />
+          <nuxt-img src="home_2.jpg" />
         </figure>
         <p class="mt-4">
           Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal.

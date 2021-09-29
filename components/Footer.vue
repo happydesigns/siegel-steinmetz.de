@@ -33,23 +33,11 @@
   </div>
 </template>
 
-<script>
-import LinkExternal from '@/components/LinkExternal.vue';
-import Split from '@/components/Split.vue'
-
-export default {
-  components: {
-    LinkExternal,
-    Split
-  }
-};
-</script>
-
 <style scoped>
 .footer {
   width: 100%;
-  background-color: #eeeeee;
-  padding: 0 32px;
+  background-color: var(--page);
+  padding: 32px;
 }
 
 .footer div {
@@ -70,7 +58,7 @@ i {
 }
 
 h3 {
-  padding-top: 32px;
+  padding-top: 0;
   color: #2e2e2e;
   border-bottom: 2px solid #770019;
   margin-bottom: 12px;

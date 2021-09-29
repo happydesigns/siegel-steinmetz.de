@@ -1,6 +1,6 @@
 <template>
   <div class="text-image" :class="side">
-    <slot/>
+    <slot />
   </div>
 </template>
 
@@ -8,22 +8,32 @@
 export default {
   name: "TombsOriginal",
   props: {
-    side: String
+    side: String,
   },
   data() {
     return {
-      test: "tst"
-    }
-  }
-}
+      test: "tst",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.right .titled-image {
-  float: right;
+.text-image {
+  overflow: auto;
 }
 
-.left .titled-image {
-  float: left;
+.titled-image {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .right .titled-image {
+    float: right;
+  }
+
+  .left .titled-image {
+    float: left;
+  }
 }
 </style>
