@@ -13,7 +13,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.18.0",
     "nuxt": "^2.15.7",
-    "vuetify": "^2.5.9"
+    "vuetify": "^2.5.5"
   },
   "devDependencies": {
     "@nuxt/components": "^2.2.1",
