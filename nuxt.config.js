@@ -6,7 +6,7 @@ export default {
 
   router: {
     base: 'https://xsuffix.github.io/siegel-steinmetz/'
-  }
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
