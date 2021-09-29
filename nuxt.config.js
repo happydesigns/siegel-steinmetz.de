@@ -5,7 +5,7 @@ export default {
   target: 'static',
 
   router: {
-    base: 'https://xsuffix.github.io/siegel-steinmetz/'
+    base: '/siegel-steinmetz'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
