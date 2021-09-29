@@ -61,9 +61,9 @@ export default {
     // '@nuxtjs/sitemap'
   ],
 
-  sitemap: {
-    hostname: 'https://www.siegel-steinmetz.de'
-  },
+  // sitemap: {
+  //   hostname: 'https://www.siegel-steinmetz.de'
+  // },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
