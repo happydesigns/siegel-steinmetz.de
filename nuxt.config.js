@@ -4,6 +4,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    base: 'https://xsuffix.github.io/siegel-steinmetz/'
+  }
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Bernd Siegel Steingestaltung',
