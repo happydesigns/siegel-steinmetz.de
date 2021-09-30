@@ -119,7 +119,7 @@ br {
 
 @media (min-width: 600px) {
   .document {
-    min-width: 1196px;
+    max-width: 1196px;
     padding: 4px 32px;
   }
 }
