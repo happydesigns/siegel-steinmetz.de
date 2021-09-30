@@ -1,5 +1,5 @@
 <template>
-  <span class="material-icons">menu</span>
+  <v-icon>mdi-menu</v-icon>
 </template>
 
 <script>
@@ -13,17 +13,18 @@ export default {
   font-size: 32px;
 }
 
-span {
+.v-icon {
   color: #2e2e2e;
   user-select: none;
   align-self: center;
-  font-size: 48px;
+  font-size: 40px;
   cursor: pointer;
+  display: none;
 }
 
-@media (min-width: 801px) {
-  span {
-    display: none;
+@media (max-width: 800px) {
+  .v-icon {
+    display: block;
   }
 }
 </style>
