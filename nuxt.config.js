@@ -10,9 +10,9 @@ export default {
     },
   },
 
-  // router: {
-  //   base: '/www.siegel-steinmetz.de'
-  // },
+  router: {
+    base: ''
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
