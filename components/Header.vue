@@ -1,40 +1,35 @@
 <!--Header for each page, includes logo and navigation-->
 <template>
   <div>
-    <header class="document small" :class="{'scrolled': this.scrollY > 64}">
+    <header class="document small" :class="{ scrolled: this.scrollY > 64 }">
       <Logo />
       <Navigation />
-      <Menu @click.native="openNavigation()"/>
+      <Menu @click.native="openNavigation()" />
     </header>
     <header class="document">
       <Logo />
       <Navigation />
-      <Menu @click.native="openNavigation()"/>
+      <Menu @click.native="openNavigation()" />
     </header>
     <v-navigation-drawer
-        v-model="drawer"
-        class="white nav-drawer"
-        temporary
-        fixed
-      >
+      v-model="drawer"
+      class="white nav-drawer"
+      temporary
+      fixed
+    >
       <h1>Navigation</h1>
-        <v-list>
-          <v-list-item
-            v-for="item in items"
-            :key="item.title"
-          >
-          <router-link :to="item.url">
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-  
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-            </router-link>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
+      <v-list dense nav>
+        <v-list-item v-for="item in items" :key="item.title" link @click.native="$router.push(item.url)">
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 
@@ -45,37 +40,41 @@ export default {
       scrollY: 0,
       drawer: false,
       items: [
-        { title: 'Restaurierungen', icon: 'subject', url: '/restaurierungen' },
-        { title: 'Grabmale', icon: 'subject', url: '/grabmale' },
-        { title: 'Über uns', icon: 'person', url: '/ueber-uns' },
-        { title: 'Galerie', icon: 'photo_library', url: '/galerie' },
-        { title: 'Kontakt', icon: 'contact_phone', url: '/kontakt' },
-        { title: 'Impressum', icon: 'short_text', url: '/impressum' },
-        { title: 'Datenschutz', icon: 'description', url: '/datenschutz' }
-      ]
-    }
+        {
+          title: "Restaurierungen",
+          icon: "mdi-hammer-wrench",
+          url: "/restaurierungen",
+        },
+        { title: "Grabmale", icon: "mdi-grave-stone", url: "/grabmale" },
+        { title: "Über uns", icon: "mdi-account", url: "/ueber-uns" },
+        { title: "Galerie", icon: "mdi-image-multiple", url: "/galerie" },
+        { title: "Kontakt", icon: "mdi-phone", url: "/kontakt" },
+        { title: "Impressum", icon: "mdi-tooltip-account", url: "/impressum" },
+        { title: "Datenschutz", icon: "mdi-shield", url: "/datenschutz" },
+      ],
+    };
   },
   beforeMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   },
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll: function() {
-      this.scrollY = window.scrollY
+    handleScroll: function () {
+      this.scrollY = window.scrollY;
     },
-    openNavigation: function() {
+    openNavigation: function () {
       this.drawer = !this.drawer;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 a {
-  display: inline-flex;
-  color: unset !important;
+  // display: inline-flex;
+  // color: unset !important;
 }
 
 aside {
