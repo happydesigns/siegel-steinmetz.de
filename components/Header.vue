@@ -17,9 +17,22 @@
       temporary
       fixed
     >
-      <h1>Navigation</h1>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6"> Navigation </v-list-item-title>
+          <v-list-item-subtitle> Bernd Siegel Steingestaltung </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider />
+
       <v-list dense nav>
-        <v-list-item v-for="item in items" :key="item.title" link @click.native="$router.push(item.url)">
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+          @click.native="$router.push(item.url)"
+        >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
