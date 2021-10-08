@@ -8,7 +8,7 @@
     </div>
     <div class="content-wrapper">
       <TextImage class="mt-4" side="right">
-        <TitledImage image="tombs_1.jpg">Doppelstein Jura mit Bronze</TitledImage>
+        <TitledImage image="tombs_1.jpg" alt="Doppelstein Jura mit Bronze">Doppelstein Jura mit Bronze</TitledImage>
         <span class="text">
           <p>
             Ein Grabmal ist ein sichtbares und individuelles Andenken an einen geliebten Menschen.
@@ -20,7 +20,7 @@
     </div>
     <div class="content-wrapper">
       <TextImage class="mt-6" side="left">
-        <TitledImage image="tombs_2.jpg">Doppelgrabmal Tarno Diorit</TitledImage>
+        <TitledImage image="tombs_2.jpg" alt="Doppelgrabmal Tarno Diorit">Doppelgrabmal Tarno Diorit</TitledImage>
         <span class="text">
           <p>
             Sie kennen Ihren geliebten Verstorbenen am besten. Wir erarbeiten mit Ihnen gemeinsam die ganz persönliche Erinnerung an Ihren verstorbenen Verwandten.
@@ -34,7 +34,7 @@
     </div>
     <div class="content-wrapper">
       <TextImage class="mt-6" side="right">
-        <TitledImage image="tombs_3.jpg">Urnengrab Kalkstein</TitledImage>
+        <TitledImage image="tombs_3.jpg" alt="Urnengrab Kalkstein">Urnengrab Kalkstein</TitledImage>
         <span class="text">
           <p>Grabsteine sind im Laufe der Jahre und Jahrzehnte dauerhaft wechselnden Witterungen ausgesetzt. Nässe, Kälte, aber auch Hitze setzen ihnen mit der Zeit zu. Inschriften verblassen, aufgesetzte Buchstaben, Insignien und Ornamente lockern sich und gehen möglicherweise verloren. Wir erneuern die Inschrift des Grabmals Ihrer Lieben. Auch Moos oder Verschmutzung entfernen wir. So wird der Grabstein wieder in den einwandfreien Originalzustand gebracht.</p>
           <p>Bei Beerdigungen bauen wir Grabanlagen ab und nach einer angemessen Zeit detailgenau und liebevoll mit Respekt gegenüber den Verstorbenen wieder auf. Des Weiteren bieten wir Ihnen eine regelmäßige und umfassende Betreuung des Grabmals Ihrer Angehörigen. Hierzu gehört die Reinigung und bei Bedarf die Instandsetzung des Steins. Gerne präsentieren wir Ihnen die unterschiedlichen Möglichkeiten der Wartung.</p>

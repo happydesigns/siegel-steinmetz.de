@@ -1,7 +1,7 @@
 <template>
   <div class="titled-image">
     <figure>
-      <nuxt-img :src="image" />
+      <nuxt-img :src="image" :alt="alt" />
       <figcaption>
         <slot />
       </figcaption>
@@ -14,7 +14,8 @@ export default {
   name: "TitledImage",
   props: {
     image: String,
-    title: String
+    title: String,
+    alt: String
   }
 };
 </script>

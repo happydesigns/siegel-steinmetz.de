@@ -8,7 +8,7 @@
       </div>
       <div class="content-wrapper">
         <TextImage class="mt-4" side="right">
-          <TitledImage image="about_1.jpg">Betriebsgelände Bernd Siegel</TitledImage>
+          <TitledImage image="about_1.jpg" alt="Betriebsgelände Bernd Siegel">Betriebsgelände Bernd Siegel</TitledImage>
           <span class="text">
             <p>Sie finden unsere Firma Bernd Siegel Steingestaltung in Neudenau. Nach mehr als 15 Jahren bieten wir Ihnen viel Erfahrung, Fachwissen und Freude an der Kreativität bei der Gestaltung und Bearbeitung des Naturstoffes Stein.</p>
             <p>Bernd Siegel ist als Firmengründer staatlich geprüfter Steintechniker und Meister seines Fachs. Als Steinmetzmeister und Steinbildhauermeister hat er sich auf die Restauration von Sandsteinfassaden und Gestaltung von Grabmalen spezialisiert.</p>
@@ -21,7 +21,7 @@
       </div>
       <div class="content-wrapper">
         <TextImage class="mt-4" side="left">
-          <TitledImage image="about_2.jpg">Ausstellungsfläche</TitledImage>
+          <TitledImage image="about_2.jpg" alt="Ausstellungsfläche">Ausstellungsfläche</TitledImage>
           <span class="text">
             <p>Auf unserer Ausstellungsfläche bieten wir Grabmale in vielfältiger Art und Form aus eigener Produktion oder zugekauft. Wir beziehen unter anderem Grabmale der Firma Gräf Granit GmbH aus dem Fichtelgebirge.</p>
             <p>Auf Wunsch verwenden wir auch Steine aus Deutschland. Unser Angebot wird vervollständigt durch Grabzubehör. Wir nehmen auch Grababräumungen vor und lagern die Grabanlagen für sie bei uns ein.</p>

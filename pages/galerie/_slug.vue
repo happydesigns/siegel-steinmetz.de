@@ -31,7 +31,7 @@
           }`"
         >
           <i :style="`padding-top:${(image.height / image.width) * 100}%`"></i>
-          <nuxt-img :src="image.src"></nuxt-img>
+          <nuxt-img :src="image.src" alt="" />
         </span>
       </div>
     </section>

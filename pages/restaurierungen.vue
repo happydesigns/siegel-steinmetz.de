@@ -9,8 +9,7 @@
     <section>
       <div class="content-wrapper">
         <TextImage class="mt-4" side="right">
-          <TitledImage
-            image="restorations_1.jpg"
+          <TitledImage image="restorations_1.jpg" alt="Fensterumrahmung Solitudestr. Ludwigsburg"
           >Restaurierung: Fensterumrahmung Solitudestr. Ludwigsburg</TitledImage>
           <span class="text">
             <p>Unsere Firma hat als einen Schwerpunkt ihrer Arbeit die Komplette und fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.</p>
@@ -21,14 +20,14 @@
       </div>
       <div class="content-wrapper">
         <TextImage class="mt-6" side="left">
-          <TitledImage image="restorations_2.jpg">Austausch einer Säulenbasis aus dem Jahr 1890</TitledImage>
+          <TitledImage image="restorations_2.jpg" alt="Austausch einer Säulenbasis">Austausch einer Säulenbasis aus dem Jahr 1890</TitledImage>
           <span class="text">
             <p>Für das Reinigen von Natursteinoberflächen nutzen wir das Niederdruckstrahlverfahren. Das Ergebnis entspricht der Reinigung mit dem Jos- bzw. dem Nebelstrahlverfahren. Die Reinigung kann individuell auf den Verschmutzungsgrad eingestellt werden. Dazu werden die Parameter unterschiedlich verändert. Veränderbar sind die Zufuhr von Wasser, Luftdruck (0,5-10 bar) und der Strahldüsenabstand. Unter denkmalpflegerischer Hinsicht darf die originale Oberflächenstruktur nicht zerstört werden. Meistens befindet man sich bei dieser Problemstellung auf einer Gratwanderung. Schwarze Krusten können nur aufgehellt werden, um die kostbare originale Oberflächenbearbeitung zu erhalten.</p>
           </span>
         </TextImage>
       </div>
       <TextImage class="mt-6" side="right">
-        <TitledImage image="restorations_3.jpg"/>
+        <TitledImage image="restorations_3.jpg" alt="Uhu Statue" />
         <span class="text">
           <p>Sie können von uns perfekte, handwerkliche und traditionelle Arbeit erwarten, die wir mit viel Hingabe, Erfahrung und Engagement übernehmen. Daneben aber setzen wir modernste Technik ein, um optimale Ergebnisse zu erzielen, die Sie zufrieden stellen.</p>
           <p>Selbstverständlich übernehmen wir diese Arbeiten in wiederkehrenden Abständen für Sie, um das perfekte Aussehen jederzeit zu gewährleisten.</p>
