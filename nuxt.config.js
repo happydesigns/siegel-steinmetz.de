@@ -24,8 +24,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Sie finden unsere Firma Bernd Siegel Steingestaltung in Neudenau.' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.' },
+      { hid: 'keywords', name: 'keywords', content: 'Grabmale, Restaurierungen, Grab, Neudenau, Heilbronn, Siegel, Steingestaltung' },
+      { hid: 'google-site-verification', name: 'google-site-verification', content: 'i5hJWTD7u44mb8sXv4PjgwP5EoPz0sWVuHd4rhbV6vk' },
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
