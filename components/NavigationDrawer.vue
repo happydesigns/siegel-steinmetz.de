@@ -5,7 +5,7 @@
         dark
         temporary
         absolute
-        @close="drawer=false"
+        @close="drawer = false"
       >
         <v-list>
           <v-list-item
