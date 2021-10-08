@@ -37,6 +37,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: "Über uns"
+    }
+  }
+}
+</script>
+
 <style scoped>
 a {
   color: #770019;

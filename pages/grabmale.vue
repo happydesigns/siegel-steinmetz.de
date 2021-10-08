@@ -49,6 +49,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: "Grabmale"
+    }
+  }
+}
+</script>
+
 <style scoped>
 .text {
   text-align: justify;

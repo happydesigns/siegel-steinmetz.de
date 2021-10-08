@@ -37,6 +37,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: "Restaurierungen"
+    }
+  }
+}
+</script>
+
 <style scoped>
 .text {
   text-align: justify;

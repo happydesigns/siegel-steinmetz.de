@@ -47,6 +47,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: "Impressum"
+    }
+  }
+}
+</script>
+
 <style scoped>
 .split span {
   min-width: 50%;

@@ -73,6 +73,11 @@ let albums = [
 ];
 
 export default {
+  head() {
+    return {
+      title: "Galerie"
+    }
+  },
   data() {
     return {
       albums: albums,

@@ -37,6 +37,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Kontakt"
+    }
+  },
   mounted() {
     let location = {
       lat: 49.28869,
