@@ -114,14 +114,13 @@ header.small {
   z-index: 1000;
   left: 0;
   right: 0;
-  padding: 4px 16px;
   position: fixed;
   transition: top 0.4s;
 }
 
 header.scrolled {
   top: 0;
-  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 12px 12px -12px rgba(0, 0, 0, 0.16);
 }
 
 .logo + .navigation {
