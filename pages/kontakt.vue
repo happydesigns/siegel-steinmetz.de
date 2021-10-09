@@ -30,7 +30,7 @@
         </a>
       </div>
 
-      <div id="map"></div>
+      <div id="map" />
     </div>
   </div>
 </template>
@@ -39,19 +39,26 @@
 export default {
   head() {
     return {
-      title: "Kontakt"
-    }
-  },
-  mounted() {
-    let location = {
-      lat: 49.28869,
-      lng: 9.27136,
+      title: "Kontakt",
+      script: [
+        {
+          hid: "maps",
+          src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDIfUVcub6RqXsutLIVam2Q9mEP3BML_KA",
+          defer: true,
+          callback: () => {
+            new google.maps.Map(document.getElementById("map"), {
+              zoom: 17,
+              center: {
+                lat: 49.28869,
+                lng: 9.27136,
+              },
+            })
+            console.log(JSON.stringify(google.maps.Map))            
+          },
+        },
+      ],
     };
-    this.map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 16,
-      center: location,
-    });
-  },
+  }
 };
 </script>
 
