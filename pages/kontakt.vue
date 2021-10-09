@@ -46,20 +46,23 @@ export default {
           src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDIfUVcub6RqXsutLIVam2Q9mEP3BML_KA",
           defer: true,
           callback: () => {
-            new google.maps.Map(document.getElementById("map"), {
+            const center = {
+              lat: 49.28869,
+              lng: 9.27136,
+            };
+            const map = new google.maps.Map(document.getElementById("map"), {
               zoom: 17,
-              center: {
-                lat: 49.28869,
-                lng: 9.27136,
-              },
-              title: "Bernd Siegel Steingestaltung",
-            })
-            console.log(JSON.stringify(google.maps.Map))            
+              center: center,
+            });
+            new google.maps.Marker({
+              position: center,
+              map,
+            });
           },
         },
       ],
     };
-  }
+  },
 };
 </script>
 
