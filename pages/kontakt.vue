@@ -52,6 +52,7 @@ export default {
                 lat: 49.28869,
                 lng: 9.27136,
               },
+              title: "Bernd Siegel Steingestaltung",
             })
             console.log(JSON.stringify(google.maps.Map))            
           },
