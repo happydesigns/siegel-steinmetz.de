@@ -85,11 +85,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a {
-  // display: inline-flex;
-  // color: unset !important;
-}
-
 aside {
   z-index: 1000;
 }
