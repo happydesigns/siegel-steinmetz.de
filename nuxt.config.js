@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
+import { defineNuxtConfig } from '@nuxt/bridge'
 
-export default {
+export default defineNuxtConfig ({
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -97,4 +98,4 @@ export default {
   image: {
     staticFilename: '[publicPath]/images/[name]-[hash][ext]'
   }
-}
+})
