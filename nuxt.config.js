@@ -33,7 +33,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://static.cloudflareinsights.com/beacon.min.js', defer: true, 'data-cf-beacon': '{"token": "1c674d7433ee479cbb8a157ad9028dfb"}' }
+      { defer: true, body: true, src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "1c674d7433ee479cbb8a157ad9028dfb"}' }
     ]
   },
 
