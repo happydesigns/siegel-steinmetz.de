@@ -97,6 +97,10 @@ br {
   width: 1px;
 }
 
+ul {
+  margin-bottom: 16px;
+}
+
 .document {
   width: 100%;
   max-width: 1180px;

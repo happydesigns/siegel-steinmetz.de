@@ -11,20 +11,20 @@
         <h2 class="mb-1">Anschrift</h2>
         <p>
           Bernd Siegel
-          <br />Steingestaltung
+          <br>Steingestaltung
         </p>
         <p>
           Bahnhofstraße 13
-          <br />74861 Neudenau
+          <br>74861 Neudenau
         </p>
         <a href="tel:+496264926444" class="link-in">
           <v-icon>mdi-phone</v-icon>06264 / 92 64 44
         </a>
-        <br />
+        <br>
         <a href="tel:+496264926445" class="link-in">
           <v-icon>mdi-printer</v-icon>06264 / 92 64 45
         </a>
-        <br />
+        <br>
         <a href="mailto:siegel.neudenau@t-online.de" class="link-in">
           <v-icon>mdi-email</v-icon>info@siegel-steinmetz.de
         </a>

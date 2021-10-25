@@ -12,7 +12,7 @@
     "@nuxt/image": "^0.6.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.19.0",
-    "nuxt-edge": "latest",
+    "nuxt": "^2.15.8",
     "vuetify": "^2.5.10"
   },
   "devDependencies": {
