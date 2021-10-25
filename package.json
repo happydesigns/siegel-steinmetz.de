@@ -11,9 +11,9 @@
   "dependencies": {
     "@nuxt/image": "^0.6.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.18.0",
+    "core-js": "^3.19.0",
     "nuxt-edge": "latest",
-    "vuetify": "^2.5.9"
+    "vuetify": "^2.5.10"
   },
   "devDependencies": {
     "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27234271.da7ff44",
