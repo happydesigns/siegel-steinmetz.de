@@ -11,12 +11,17 @@
   "dependencies": {
     "@nuxt/image": "^0.6.0",
     "@nuxtjs/sitemap": "^2.4.0",
+<<<<<<< HEAD
     "core-js": "^3.19.0",
     "nuxt-edge": "latest",
     "vuetify": "^2.5.10"
+=======
+    "core-js": "^3.18.0",
+    "nuxt": "^2.15.7",
+    "vuetify": "^2.5.9"
+>>>>>>> parent of e0f6834 (Revert "Revert "Add Nuxt 3 bridge"")
   },
   "devDependencies": {
-    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27234271.da7ff44",
     "@nuxt/components": "^2.2.1",
     "@nuxtjs/vuetify": "^1.12.1",
     "sass-loader": "^10.1.1"
