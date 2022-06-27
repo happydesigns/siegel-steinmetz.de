@@ -25,7 +25,7 @@
           <v-icon>mdi-printer</v-icon>06264 / 92 64 45
         </a>
         <br>
-        <a href="mailto:siegel.neudenau@t-online.de" class="link-in">
+        <a href="mailto:info@siegel-steinmetz.de" class="link-in">
           <v-icon>mdi-email</v-icon>info@siegel-steinmetz.de
         </a>
       </div>
