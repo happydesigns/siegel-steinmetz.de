@@ -1,5 +1,5 @@
 {
-  "name": "www.siegel-steinmetz.de",
+  "name": "siegel-steinmetz.de",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/image": "^0.6.0",
+    "@nuxt/image": "^0.7.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.19.0",
     "nuxt": "^2.15.8",
