@@ -2,12 +2,6 @@
   <v-icon>mdi-menu</v-icon>
 </template>
 
-<script>
-export default {
-  name: 'Menu'
-}
-</script>
-
 <style scoped>
 .small span {
   font-size: 32px;

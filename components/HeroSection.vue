@@ -1,35 +1,33 @@
+<script setup lang="ts">
+defineProps<{
+  image: string
+}>()
+</script>
+
 <template>
   <div>
-    <nuxt-img :src="image" class="banner" alt="Hero Image" />
+    <img :src="image" class="banner" alt="Hero Image">
     <div>
-      <h1>Bernd Siegel Steingestaltung</h1>
+      <h1 h1>
+        Bernd Siegel Steingestaltung
+      </h1>
       <p>Wir bieten einen umfassenden Service rund um den Naturstoff Stein:</p>
       <p>
         Die Pflege und Restauration von Gebäuden, Sandsteinfassaden, Fenstern,
         Treppen, Geländern, Ornamenten, Denkmälern und Grabsteinen.
       </p>
       <p>
-        <strong
-          >Zum Grabmalkatalog:
+        <strong>Zum Grabmalkatalog:
           <a
             href="https://www.graef-granit.de/content/produkte"
             target="_blank"
             rel="noopener"
-            >Gräf GmbH</a
-          >
+          >Gräf GmbH</a>
         </strong>
       </p>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    image: String,
-  },
-};
-</script>
 
 <style scoped>
 .banner {

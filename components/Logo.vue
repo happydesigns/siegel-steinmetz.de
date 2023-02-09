@@ -13,17 +13,6 @@
   </router-link>
 </template>
 
-<script>
-import LogoClaim from "@/components/LogoClaim.vue";
-
-export default {
-  name: "Logo",
-  components: {
-    LogoClaim
-  }
-};
-</script>
-
 <style lang="scss" scoped>
 .small .favicon {
   height: 48px;

@@ -1,4 +1,10 @@
-<!--Imprint page - siegel-steinmetz.de/impressum-->
+<!-- Imprint page - siegel-steinmetz.de/impressum -->
+<script setup lang="ts">
+useHead({
+  title: 'Impressum',
+})
+</script>
+
 <template>
   <div class="document page">
     <div class="mt-8">
@@ -46,16 +52,6 @@
     </Split>
   </div>
 </template>
-
-<script>
-export default {
-  head() {
-    return {
-      title: "Impressum"
-    }
-  }
-}
-</script>
 
 <style scoped>
 .split span {

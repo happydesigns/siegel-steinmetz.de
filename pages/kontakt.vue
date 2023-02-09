@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useHead({
+  title: 'Kontakt',
+})
+</script>
+
 <template>
   <div class="document page">
     <div class="mt-8">
@@ -8,7 +14,9 @@
 
     <div class="mb-8">
       <div class="address mb-4">
-        <h2 class="mb-1">Anschrift</h2>
+        <h2 class="mb-1">
+          Anschrift
+        </h2>
         <p>
           Bernd Siegel
           <br>Steingestaltung
@@ -34,37 +42,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  head() {
-    return {
-      title: "Kontakt",
-      script: [
-        {
-          hid: "maps",
-          src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDIfUVcub6RqXsutLIVam2Q9mEP3BML_KA",
-          defer: true,
-          callback: () => {
-            const center = {
-              lat: 49.28869,
-              lng: 9.27136,
-            };
-            const map = new google.maps.Map(document.getElementById("map"), {
-              zoom: 17,
-              center: center,
-            });
-            new google.maps.Marker({
-              position: center,
-              map,
-            });
-          },
-        },
-      ],
-    };
-  },
-};
-</script>
 
 <style scoped>
 #map {

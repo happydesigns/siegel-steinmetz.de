@@ -1,3 +1,12 @@
+<script setup lang="ts">
+defineProps<{
+  title: string
+  thumbnail: string
+  amount: number
+  path: string
+}>()
+</script>
+
 <template>
   <li>
     <NuxtLink :to="path">
@@ -5,7 +14,7 @@
         :style="{
           backgroundImage: `url('${require(`@/assets/img/${thumbnail}`)}')`,
         }"
-      ></figure>
+      />
       <span>
         <h2>{{ title }}</h2>
         <p>{{ amount }} Bilder</p>
@@ -13,18 +22,6 @@
     </NuxtLink>
   </li>
 </template>
-
-<script>
-export default {
-  name: "GalleryAlbumCard",
-  props: {
-    title: String,
-    thumbnail: String,
-    amount: Number,
-    path: String
-  },
-};
-</script>
 
 <style scoped>
 li {

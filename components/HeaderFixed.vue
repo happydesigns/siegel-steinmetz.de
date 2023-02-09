@@ -1,40 +1,22 @@
-<!--Header for each page, includes logo and navigation-->
-<template>
-  <div>
-    <header class="document small" :class="{'scrolled': this.scrollY > 64}">
-      <Logo />
-      <Navigation />
-      <Menu @click.native="openNavigation()"/>
-    </header>
-    <!-- <NavigationDrawer :drawer="open"/> -->
-  </div>
-</template>
+<!-- Header for each page, includes logo and navigation -->
+<script setup lang="ts">
+const drawer = ref(false)
+const { y } = useWindowScroll()
 
-<script>
-export default {
-  data() {
-    return {
-      scrollY: 0,
-      open: false
-    }
-  },
-  created () {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll: function() {
-      // console.log(window.scrollY);
-      this.scrollY = window.scrollY
-    },
-    openNavigation: function() {
-      this.open = !this.open;
-    }
-  }
+function toggleDrawer() {
+  drawer.value = !drawer.value
 }
 </script>
+
+<template>
+  <div>
+    <header class="document small" :class="{ scrolled: y > 64 }">
+      <Logo />
+      <Navigation />
+      <Menu @click="toggleDrawer()" />
+    </header>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 header {

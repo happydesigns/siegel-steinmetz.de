@@ -1,24 +1,21 @@
+<script setup lang="ts">
+defineProps<{
+  image: string
+  title: string
+  alt: string
+}>()
+</script>
+
 <template>
   <div class="titled-image">
     <figure>
-      <nuxt-img :src="image" :alt="alt" />
+      <img :src="image" :alt="alt">
       <figcaption>
         <slot />
       </figcaption>
     </figure>
   </div>
 </template>
-
-<script>
-export default {
-  name: "TitledImage",
-  props: {
-    image: String,
-    title: String,
-    alt: String
-  }
-};
-</script>
 
 <style scoped>
 @media (min-width: 768px) {
@@ -50,4 +47,3 @@ figcaption {
   margin-bottom: 1rem;
 }
 </style>
-

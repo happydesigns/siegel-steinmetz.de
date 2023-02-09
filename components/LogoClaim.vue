@@ -1,4 +1,4 @@
-<!--The 'Bernd Siegel Steingestaltung' Claim-->
+<!-- The 'Bernd Siegel Steingestaltung' Claim -->
 <template>
   <div class="logo-claim">
     <div class="claim-top">
@@ -6,14 +6,8 @@
       <span class="siegel-primary">Siegel</span>
     </div>
     <span>Steingestaltung</span>
-  </div> 
+  </div>
 </template>
-
-<script>
-export default {
-  name: 'LogoClaim'
-}
-</script>
 
 <style lang="scss" scoped>
 .claim-top {

@@ -1,20 +1,27 @@
 <template>
-  <v-app id="app">
-    <div class="page-bg">
-      <div class="body-bg">
-        <Header />
-        <Nuxt />
-      </div>
-      <Footer />
+  <div bg-base min-h-100vh>
+    <div class="body-bg">
+      <Header />
+      <slot />
     </div>
-  </v-app>
+    <Footer />
+  </div>
 </template>
 
-<script>
-export default {};
-</script>
+<style scoped lang="scss">
+.document {
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 16px;
+}
 
-<style lang="scss">
+.document.page {
+  border-radius: 4px;
+  background: var(--document);
+}
+
 .content-wrapper:after {
   content: "";
   display: table;
@@ -36,11 +43,6 @@ export default {};
   --body: #fff;
 
   background: var(--page);
-}
-
-.page-bg {
-  background: var(--page);
-  min-height: 100vh;
 }
 
 .body-bg {
@@ -99,19 +101,6 @@ br {
 
 ul {
   margin-bottom: 16px;
-}
-
-.document {
-  width: 100%;
-  max-width: 1180px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 4px 16px;
-}
-
-.document.page {
-  border-radius: 4px;
-  background: var(--document);
 }
 
 .text-logo {

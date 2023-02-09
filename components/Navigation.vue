@@ -1,4 +1,4 @@
-<!--Main navigation - Restaurierungen | Grabmale | Über uns | Galerien | Kontakt-->
+<!-- Main navigation - Restaurierungen | Grabmale | Über uns | Galerien | Kontakt -->
 <template>
   <span class="navigation">
     <router-link class="siegel-primary" to="/restaurierungen">Restaurierungen</router-link>
@@ -8,12 +8,6 @@
     <router-link class="siegel-primary" to="/kontakt">Kontakt</router-link>
   </span>
 </template>
-
-<script>
-export default {
-  name: "Navigation"
-};
-</script>
 
 <style lang="scss" scoped>
 .navigation {

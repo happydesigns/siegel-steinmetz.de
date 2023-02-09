@@ -3,17 +3,17 @@
     <Split class="document">
       <span>
         <span class="h3">Navigation</span>
-        <router-link to="/">Startseite</router-link>
-        <router-link to="/restaurierungen">Restaurierungen</router-link>
-        <router-link to="/grabmale">Grabmale</router-link>
-        <router-link to="/ueber-uns">Über uns</router-link>
-        <router-link to="/galerie">Galerie</router-link>
-        <router-link to="/kontakt">Kontakt</router-link>
+        <nuxt-link to="/">Startseite</nuxt-link>
+        <nuxt-link to="/restaurierungen">Restaurierungen</nuxt-link>
+        <nuxt-link to="/grabmale">Grabmale</nuxt-link>
+        <nuxt-link to="/ueber-uns">Über uns</nuxt-link>
+        <nuxt-link to="/galerie">Galerie</nuxt-link>
+        <nuxt-link to="/kontakt">Kontakt</nuxt-link>
       </span>
       <span>
         <span class="h3">Rechtliches</span>
-        <router-link to="/impressum">Impressum</router-link>
-        <router-link to="/datenschutz">Datenschutz</router-link>
+        <nuxt-link to="/impressum">Impressum</nuxt-link>
+        <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>
       </span>
       <span>
         <span class="h3">Kontakt</span>

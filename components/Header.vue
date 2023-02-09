@@ -1,27 +1,46 @@
-<!--Header for each page, includes logo and navigation-->
+<!-- Header for each page, includes logo and navigation -->
+<script setup lang="ts">
+const drawer = ref(false)
+const { y } = useWindowScroll()
+
+const items = [
+  { title: 'Restaurierungen', icon: 'mdi-hammer-wrench', url: '/restaurierungen' },
+  { title: 'Grabmale', icon: 'mdi-grave-stone', url: '/grabmale' },
+  { title: 'Über uns', icon: 'mdi-account', url: '/ueber-uns' },
+  { title: 'Galerie', icon: 'mdi-image-multiple', url: '/galerie' },
+  { title: 'Kontakt', icon: 'mdi-phone', url: '/kontakt' },
+  { title: 'Impressum', icon: 'mdi-tooltip-account', url: '/impressum' },
+  { title: 'Datenschutz', icon: 'mdi-shield', url: '/datenschutz' },
+]
+
+function toggleDrawer() {
+  drawer.value = !drawer.value
+}
+</script>
+
 <template>
   <div>
-    <header class="document small" :class="{ scrolled: this.scrollY > 64 }">
+    <header class="document small" :class="{ scrolled: y > 64 }">
       <Logo />
       <Navigation />
-      <Menu @click.native="openNavigation()" />
+      <Menu @click="toggleDrawer()" />
     </header>
     <header class="document">
       <Logo />
       <Navigation />
-      <Menu @click.native="openNavigation()" />
+      <Menu @click="toggleDrawer()" />
     </header>
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       v-model="drawer"
       class="white nav-drawer"
       temporary
       fixed
     >
       <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6"> Navigation </v-list-item-title>
-          <v-list-item-subtitle> Bernd Siegel Steingestaltung </v-list-item-subtitle>
-        </v-list-item-content>
+        <v-list-item-title class="text-h6">
+          Navigation
+        </v-list-item-title>
+        <v-list-item-subtitle>Bernd Siegel Steingestaltung</v-list-item-subtitle>
       </v-list-item>
 
       <v-divider />
@@ -31,58 +50,16 @@
           v-for="item in items"
           :key="item.title"
           link
-          @click.native="$router.push(item.url)"
+          @click="$router.push(item.url)"
         >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+          <v-icon>{{ item.icon }}</v-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      scrollY: 0,
-      drawer: false,
-      items: [
-        {
-          title: "Restaurierungen",
-          icon: "mdi-hammer-wrench",
-          url: "/restaurierungen",
-        },
-        { title: "Grabmale", icon: "mdi-grave-stone", url: "/grabmale" },
-        { title: "Über uns", icon: "mdi-account", url: "/ueber-uns" },
-        { title: "Galerie", icon: "mdi-image-multiple", url: "/galerie" },
-        { title: "Kontakt", icon: "mdi-phone", url: "/kontakt" },
-        { title: "Impressum", icon: "mdi-tooltip-account", url: "/impressum" },
-        { title: "Datenschutz", icon: "mdi-shield", url: "/datenschutz" },
-      ],
-    };
-  },
-  beforeMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll: function () {
-      this.scrollY = window.scrollY;
-    },
-    openNavigation: function () {
-      this.drawer = !this.drawer;
-    },
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 aside {
