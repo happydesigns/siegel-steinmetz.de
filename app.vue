@@ -1,4 +1,9 @@
 <script setup lang="ts">
+const links = [
+  { label: 'Restaurierungen', to: '/restauierungen' },
+  { label: 'Grabmale', to: '/grabmale' },
+]
+
 useHead({
   title: 'Bernd Siegel Steingestaltung',
   meta: [
