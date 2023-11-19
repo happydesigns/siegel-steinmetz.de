@@ -1,13 +1,13 @@
 import type { BlogArticle } from '../types'
-export const useBlog = () => {
+
+export function useBlog() {
   const articles = useState<BlogArticle[]>('articles', () => [])
   // const featuredArticle: Ref<BlogArticle | {}> = useState('featured-article', () => ({}))
 
   // Data fetching
-  async function fetchList () {
-    if (articles.value.length) {
+  async function fetchList() {
+    if (articles.value.length)
       return
-    }
 
     try {
       const data = await queryContent<BlogArticle>('/blog')
@@ -18,7 +18,8 @@ export const useBlog = () => {
 
       articles.value = (data as BlogArticle[]).filter(article => article._path !== '/blog')
       // featuredArticle.value = articles.value?.shift() || {}
-    } catch (e) {
+    }
+    catch (e) {
       articles.value = []
       return e
     }
@@ -27,6 +28,6 @@ export const useBlog = () => {
   return {
     articles,
     // featuredArticle,
-    fetchList
+    fetchList,
   }
 }
