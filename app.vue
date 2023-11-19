@@ -1,9 +1,4 @@
 <script setup lang="ts">
-const links = [
-  { label: 'Restaurierungen', to: '/restauierungen' },
-  { label: 'Grabmale', to: '/grabmale' },
-]
-
 useHead({
   title: 'Bernd Siegel Steingestaltung',
   meta: [
@@ -18,7 +13,7 @@ useHead({
 })
 
 useSeoMeta({
-  description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.'
+  description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.',
 })
 </script>
 
