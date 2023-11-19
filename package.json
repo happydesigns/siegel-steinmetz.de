@@ -20,6 +20,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^1.2.1",
     "eslint": "^8.54.0",
+    "nuxt-og-image": "^2.2.4",
     "typescript": "^5.2.2"
   }
 }

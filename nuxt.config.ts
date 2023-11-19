@@ -4,14 +4,13 @@ export default defineNuxtConfig({
     preference: 'light',
   },
   devtools: { enabled: true },
-  extends: [
-    '@nuxt/ui-pro',
-  ],
+  extends: ['@nuxt/ui-pro'],
   modules: [
     '@nuxt/content',
     '@nuxt/ui',
+    'nuxt-og-image',
   ],
   ui: {
     icons: ['ph'],
-  }
+  },
 })
