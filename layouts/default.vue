@@ -1,11 +1,11 @@
+<script setup lang="ts">
+const { page } = useContent()
+</script>
+
 <template>
-  <div>
-    <AppHeader />
-
-    <UMain>
-      <NuxtPage />
-    </UMain>
-
-    <AppFooter />
-  </div>
+  <UMain>
+    <UContainer :ui="{ padding: page?.container ? undefined : '', constrained: page?.container ? undefined : '' }">
+      <slot />
+    </UContainer>
+  </UMain>
 </template>
