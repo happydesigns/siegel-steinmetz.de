@@ -11,11 +11,11 @@ const appConfig = useAppConfig()
     <template #panel>
       <UAsideLinks :links="appConfig.links.header" />
       <UDivider class="my-6" />
-      <UButton label="Kontakt" block />
+      <UButton block label="Kontakt" to="/kontakt" />
     </template>
 
     <template #right>
-      <UButton label="Kontakt" color="black" class="hidden lg:flex" />
+      <UButton label="Kontakt" color="black" class="hidden lg:flex" to="/kontakt" />
     </template>
   </UHeader>
 </template>
