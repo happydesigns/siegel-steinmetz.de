@@ -1,8 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // colorMode: {
-  //   preference: 'light',
-  // },
   content: {
     documentDriven: true,
   },
@@ -14,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxthq/studio',
     '@nuxtjs/plausible',
+    '@unocss/nuxt',
     'nuxt-og-image',
   ],
   ui: {
