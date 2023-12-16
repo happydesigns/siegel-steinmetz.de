@@ -18,11 +18,11 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style>
 .left > figure {
-  @apply md:float-left md:mr-6 my-5;
+  @apply md:float-left md:mr-8 my-5;
 }
 
 .right > figure {
-  @apply md:float-right md:ml-6 my-5;
+  @apply md:float-right md:ml-8 my-5;
 }
 
 .left > figure > img, .right > figure > img {
