@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxthq/studio',
     '@nuxtjs/plausible',
-    '@unocss/nuxt',
     'nuxt-og-image',
   ],
   ui: {
