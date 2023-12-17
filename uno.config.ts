@@ -5,12 +5,19 @@ import {
   presetUno,
   transformerDirectives,
 } from 'unocss'
+import extractorMdc from '@unocss/extractor-mdc'
+
+const preset = presetUno()
+preset.theme!.colors = {}
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    // preset,
     presetIcons(),
     presetAttributify(),
+  ],
+  extractors: [
+    extractorMdc(),
   ],
   content: {
     filesystem: [
@@ -20,4 +27,7 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
   ],
+  theme: {
+    colors: {},
+  }
 })
