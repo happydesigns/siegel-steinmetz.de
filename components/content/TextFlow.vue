@@ -1,5 +1,5 @@
 <script setup lang="ts">
-export interface Props  {
+export interface Props {
   side?: 'left' | 'right'
   class?: string
 }

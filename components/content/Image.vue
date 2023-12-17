@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <figure>
-    <NuxtImg :src="src" :alt="alt" class="mb-1 border border-gray-200 dark:border-gray-800 w-96 lg:w-112 rounded" :class="img" />
+    <NuxtImg :src="src" :alt="alt" class="mb-1 border border-gray-200 dark:border-gray-800 w-96 lg:w-[28rem] rounded" :class="img" />
     <figcaption class="text-center">
       {{ caption }}
     </figcaption>
