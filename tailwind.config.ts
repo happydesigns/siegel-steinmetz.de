@@ -8,7 +8,7 @@ export default <Partial<Config>> {
     extend: {
       colors: {
         red: {
-          50:  '#ffb8c7',
+          50: '#ffb8c7',
           100: '#ff8aa3',
           200: '#ff5c7f',
           300: '#ff2e5b',

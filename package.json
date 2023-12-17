@@ -1,9 +1,9 @@
 {
-  "packageManager": "pnpm@8.12.1",
   "name": "siegel-steinmetz.de",
   "type": "module",
   "version": "2.0.0",
   "private": true,
+  "packageManager": "pnpm@8.12.1",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
