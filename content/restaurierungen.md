@@ -1,8 +1,8 @@
 ---
+title: Restaurierungen
+description: Fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.
 container: true
 ---
-
-# Restaurierungen
 
 ::text-flow{side="right" class="text-justify"}
 :image{src="/images/restorations-1.jpg" alt="Restaurierung: Fensterumrahmung Solitudestr. Ludwigsburg" caption="Restaurierung: Fensterumrahmung Solitudestr. Ludwigsburg"}

@@ -1,12 +1,11 @@
 ---
+title: Grabmale
+description: Ein Grabmal ist ein sichtbares und individuelles Andenken an einen geliebten Menschen.
 container: true
 ---
 
-# Grabmale
-
 ::text-flow{side="right" class="text-justify"}
 :image{src="/images/tombs-1.jpg" alt="Doppelstein Jura mit Bronze" caption="Doppelstein Jura mit Bronze"}
-Ein Grabmal ist ein sichtbares und individuelles Andenken an einen geliebten Menschen.\
 Die Beschaffenheit des Materials, die Größe, Farbe und Form des Steins, seine Verarbeitung, die enthaltenen Symbole und Inschriften – all das legt Zeugnis ab über das Leben des lieben Verstorbenen und ist uns eine tröstliche Erinnerung und ein Ankerplatz, an dem wir die unauflösliche Verbindung zu ihm spüren dürfen. Das Grabmal drückt Wertschätzung dem Verstorbenen gegenüber aus und ist eine trostreiche Erinnerung.
 
 Seit Jahrtausenden werden für Grabmäler grob behauene Steine verwendet. Das robuste, lang haltbare, witterungsbeständige, unvergängliche Naturmaterial symbolisiert die unvergängliche Liebe und Verbundenheit zu einem geliebten Menschen und schmückt die Gräber der Angehörigen.

@@ -1,10 +1,8 @@
 ---
+title: Galerie
+description: Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
 container: true
 ---
-
-# Galerie
-
-Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
 
 ::page-columns
 
