@@ -1,6 +1,7 @@
 <script setup lang="ts">
 useHead({
   title: 'Bernd Siegel Steingestaltung',
+  titleTemplate: '%s | Bernd Siegel Steingestaltung',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
   ],
