@@ -9,7 +9,7 @@ container: true
 
 Unsere Firma hat als einen Schwerpunkt ihrer Arbeit die Komplette und fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.
 
-Bei der klassischen Vorgehensweise in der Denkmalpflege wird folgender Weg beschritten: Zuerst erfolgt die Reinigung von diversen Bauteilen der Fassade wie Eckquadern, Balustraden, Treppen, Fenster- und Türumrahmungen usw. Schäden, wie z.B. Risse, Ausbrüche und Rückwitterungen werden je nach Schadensumfang durch Antragungen oder Vierungen (nur teilweiser Austausch an den beschädigten Bauteilen) ersetzt.
+Bei der klassischen Vorgehensweise in der Denkmalpflege wird folgender Weg beschritten: Zuerst erfolgt die Reinigung von diversen Bauteilen der Fassade wie Eckquadern, Balustraden, Treppen, Fenster- und Türumrahmungen usw. Schäden, wie z.&nbsp;B. Risse, Ausbrüche und Rückwitterungen werden je nach Schadensumfang durch Antragungen oder Vierungen (nur teilweiser Austausch an den beschädigten Bauteilen) ersetzt.
 
 Bei allen auszuführenden Arbeiten orientieren wir uns so weit wie möglich am Original. Das beinhaltet die Materialauswahl bis hin zur Oberflächenstruktur. Auch wenn wir bei unseren Eingriffen in die historische Bausubstanz sehr zurückhaltend und vorsichtig agieren. Sobedeutet es doch für unsere Auftraggeber ein optimales Kosten-Nutzenverhältnis.
 ::
