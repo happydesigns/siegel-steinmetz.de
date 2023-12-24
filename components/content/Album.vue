@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const gallery = import.meta.glob('~/assets/gallery/**', { eager: true }) as Record<string, { default: string }>
 const album = useAlbum(props.path)
-const previewImages = album.slice(0, 4)
+const previewImage = album[0]
 
 function useAlbum(path?: string) {
   if (!path)
@@ -29,24 +29,17 @@ function useAlbum(path?: string) {
 </script>
 
 <template>
-  <UCard :ui="{ body: { background: '' } }">
-    <template #header>
-      <h2 class="m-0">
-        {{ title }}
-      </h2>
-      <p class="mt-2 mb-0">
-        {{ album.length }} Bilder
-      </p>
-    </template>
-
-    <div class="grid grid-cols-2 gap-4">
-      <img
-        v-for="image in previewImages"
-        :key="image.src"
-        :src="image.src"
-        :alt="image.alt"
-        class="aspect-1 object-cover m-0 rounded"
-      >
+  <figure class="!my-0 pt-2 cursor-pointer overflow-hidden min-w-[12rem] lg:min-w-0 flex-1">
+    <div class="relative w-full aspect-1">
+      <div class="absolute -top-2 h-full inset-x-3 rounded-lg opacity-50 bg-gray-400 border border-black" />
+      <div class="absolute -top-1 h-full inset-x-2 rounded-lg bg-gray-400 border border-black" />
+      <img :src="previewImage?.src" :alt="previewImage?.alt" class="absolute bg-green-400 h-full w-full top-0 rounded-lg m-0 object-cover border border-black">
     </div>
-  </UCard>
+    <figcaption class="font-medium">
+      <h3 class="m-0">
+        {{ title }}
+      </h3>
+      {{ album.length }} Bilder
+    </figcaption>
+  </figure>
 </template>

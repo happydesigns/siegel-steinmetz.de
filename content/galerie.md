@@ -4,27 +4,14 @@ description: Eine kleine Übersicht über unsere bisherigen Leistungen finden Si
 container: true
 ---
 
-::page-columns
-
-::album
+::gallery
 ---
-title: Grabmallager
-path: grabmallager
+albums:
+  - path: grabmallager
+    title: Grabmallager
+  - path: grabmalreferenzen
+    title: Grabmalreferenzen
+  - path: restaurierungen
+    title: Restaurierungen
 ---
-::
-
-::album
----
-title: Grabmalreferenzen
-path: grabmalreferenzen
----
-::
-
-::album
----
-title: Restaurierungen
-path: restaurierungen
----
-::
-
 ::
