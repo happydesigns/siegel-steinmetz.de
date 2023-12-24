@@ -1,28 +1,26 @@
 <script setup lang="ts">
 export interface Props {
   side?: 'left' | 'right'
-  class?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   side: 'left',
-  class: '',
 })
 </script>
 
 <template>
-  <div class="md:overflow-auto" :class="`${props.side} ${props.class}`">
+  <div class="md:overflow-auto" :class="props.side">
     <slot />
   </div>
 </template>
 
 <style>
 .left > figure {
-  @apply md:float-left md:mr-8 md:my-5;
+  @apply md:float-left lg:mr-16 md:mr-8 md:my-5;
 }
 
 .right > figure {
-  @apply md:float-right md:ml-8 md:my-5;
+  @apply md:float-right lg:ml-16 md:ml-8 md:my-5;
 }
 
 .left > figure > img, .right > figure > img {
