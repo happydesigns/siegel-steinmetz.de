@@ -19,12 +19,12 @@
     "@nuxt/ui": "^2.11.1",
     "@nuxt/ui-pro": "^0.6.1",
     "@nuxthq/studio": "^1.0.6",
-    "@nuxtjs/plausible": "^0.2.4",
-    "nuxt": "^3.8.2"
+    "@nuxtjs/plausible": "^0.2.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.5.0",
+    "@antfu/eslint-config": "^2.6.0",
     "eslint": "^8.56.0",
+    "nuxt": "^3.9.0",
     "nuxt-og-image": "^2.2.4",
     "typescript": "^5.3.3"
   }
