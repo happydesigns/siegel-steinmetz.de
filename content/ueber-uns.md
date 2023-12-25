@@ -5,7 +5,7 @@ container: true
 ---
 
 ::text-flow{side="right" class="md:text-justify"}
-:image{src="/images/about-1.jpg" alt="Betriebsgelände Bernd Siegel" caption="Betriebsgelände Bernd Siegel"}
+:image-caption{src="/images/about-1.jpg" alt="Betriebsgelände Bernd Siegel" caption="Betriebsgelände Bernd Siegel"}
 
 Sie finden unsere Firma Bernd Siegel Steingestaltung in Neudenau. Nach mehr als 15 Jahren bieten wir Ihnen viel Erfahrung, Fachwissen und Freude an der Kreativität bei der Gestaltung und Bearbeitung des Naturstoffes Stein.
 
@@ -23,7 +23,7 @@ Wir reinigen Außenfassaden von Gebäuden im Niederdruckstrahlverfahren, verglei
 <br>
 
 ::text-flow{side="left" class="md:text-justify"}
-:image{src="/images/about-2.jpg" alt="Ausstellungsfläche" caption="Ausstellungsfläche"}
+:image-caption{src="/images/about-2.jpg" alt="Ausstellungsfläche" caption="Ausstellungsfläche"}
 
 Auf unserer Ausstellungsfläche bieten wir Grabmale in vielfältiger Art und Form aus eigener Produktion oder zugekauft. Wir beziehen unter anderem Grabmale der Firma Gräf Granit GmbH aus dem Fichtelgebirge.
 

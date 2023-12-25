@@ -5,7 +5,7 @@ container: true
 ---
 
 ::text-flow{side="right" class="md:text-justify"}
-:image{src="/images/restorations-1.jpg" alt="Restaurierung: Fensterumrahmung Solitudestr. Ludwigsburg" caption="Restaurierung: Fensterumrahmung Solitudestr. Ludwigsburg"}
+:image-caption{src="/images/restorations-1.jpg" alt="Restaurierung: Fensterumrahmung Solitudestr. Ludwigsburg" caption="Restaurierung: Fensterumrahmung Solitudestr. Ludwigsburg"}
 
 Unsere Firma hat als einen Schwerpunkt ihrer Arbeit die Komplette und fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.
 
@@ -15,7 +15,7 @@ Bei allen auszuführenden Arbeiten orientieren wir uns so weit wie möglich am O
 ::
 
 ::text-flow{side="left" class="md:text-justify"}
-:image{src="/images/restorations-2.jpg" alt="Austausch einer Säulenbasis aus dem Jahr 1890" caption="Austausch einer Säulenbasis aus dem Jahr 1890"}
+:image-caption{src="/images/restorations-2.jpg" alt="Austausch einer Säulenbasis aus dem Jahr 1890" caption="Austausch einer Säulenbasis aus dem Jahr 1890"}
 
 Für das Reinigen von Natursteinoberflächen nutzen wir das Niederdruckstrahlverfahren. Das Ergebnis entspricht der Reinigung mit dem Jos- bzw. dem Nebelstrahlverfahren. Die Reinigung kann individuell auf den Verschmutzungsgrad eingestellt werden. Dazu werden die Parameter unterschiedlich verändert. Veränderbar sind die Zufuhr von Wasser, Luftdruck (0,5-10 bar) und der Strahldüsenabstand.
 
@@ -23,7 +23,7 @@ Unter denkmalpflegerischer Hinsicht darf die originale Oberflächenstruktur nich
 ::
 
 ::text-flow{side="right" class="md:text-justify"}
-:image{src="/images/restorations-3.jpg" alt="Uhu Statue"}
+:image-caption{src="/images/restorations-3.jpg" alt="Uhu Statue"}
 
 Sie können von uns perfekte, handwerkliche und traditionelle Arbeit erwarten, die wir mit viel Hingabe, Erfahrung und Engagement übernehmen. Daneben aber setzen wir modernste Technik ein, um optimale Ergebnisse zu erzielen, die Sie zufrieden stellen.
 
