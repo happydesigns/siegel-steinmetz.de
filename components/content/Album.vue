@@ -33,7 +33,7 @@ function useAlbum(path?: string) {
     <div class="relative w-full aspect-1">
       <div class="absolute -top-2 h-full inset-x-3 rounded-lg opacity-50 bg-gray-400 border border-black" />
       <div class="absolute -top-1 h-full inset-x-2 rounded-lg bg-gray-400 border border-black" />
-      <img :src="previewImage?.src" :alt="previewImage?.alt" class="absolute bg-green-400 h-full w-full top-0 rounded-lg m-0 object-cover border border-black">
+      <img :src="previewImage?.src" :alt="previewImage?.alt" class="absolute h-full w-full top-0 rounded-lg m-0 object-cover border border-black">
     </div>
     <figcaption class="font-medium">
       <h3 class="m-0">
