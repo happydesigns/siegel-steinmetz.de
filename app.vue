@@ -23,3 +23,14 @@ useSeoMeta({
   <NuxtPage />
   <AppFooter />
 </template>
+
+<style>
+:root {
+  --color-primary-DEFAULT: var(--color-primary-800);
+  --tw-prose-links: var(--color-primary-DEFAULT);
+}
+
+.dark {
+  --color-primary-DEFAULT: var(--color-primary-400);
+}
+</style>
