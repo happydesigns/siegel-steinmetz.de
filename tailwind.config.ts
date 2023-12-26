@@ -34,6 +34,10 @@ export default <Partial<Config>> {
           950: '#1b2c50',
         },
       },
+      fontFamily: {
+        sans: ['Lato'],
+        serif: ['Lora'],
+      },
       typography: (theme: any) => {
         return {
           DEFAULT: {
