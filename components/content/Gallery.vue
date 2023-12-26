@@ -22,7 +22,7 @@ function selectAlbum(path: string, images: { src: string, alt: string | undefine
     </template>
 
     <UPageColumns>
-      <NuxtImg v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full m-0 rounded-lg border border-gray-200 dark:border-gray-800" />
+      <img v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full m-0 rounded-lg border border-gray-200 dark:border-gray-800">
     </UPageColumns>
   </UPage>
 </template>
