@@ -6,30 +6,31 @@ container: true
 
 ::text-flow{side="right" class="md:text-justify"}
 :image-caption{src="/images/tombs-1.jpg" alt="Doppelstein Jura mit Bronze" caption="Doppelstein Jura mit Bronze"}
-Die Beschaffenheit des Materials, die Größe, Farbe und Form des Steins, seine Verarbeitung, die enthaltenen Symbole und Inschriften – all das legt Zeugnis ab über das Leben des lieben Verstorbenen und ist uns eine tröstliche Erinnerung und ein Ankerplatz, an dem wir die unauflösliche Verbindung zu ihm spüren dürfen. Das Grabmal drückt Wertschätzung dem Verstorbenen gegenüber aus und ist eine trostreiche Erinnerung.
+Die Beschaffenheit des Materials, die Größe, Farbe und Form des Steins, seine Verarbeitung, die enthaltenen Symbole und Inschriften – all das legt Zeugnis ab über das Leben des lieben Verstorbenen und ist uns eine tröstliche Erinnerung und ein Ankerplatz, an dem wir die unauflösliche Verbindung zu ihm spüren dürfen. Das Grabmal drückt die Wertschätzung für den Verstorbenen aus und ist eine tröstende Erinnerung.
 
-Seit Jahrtausenden werden für Grabmäler grob behauene Steine verwendet. Das robuste, lang haltbare, witterungsbeständige, unvergängliche Naturmaterial symbolisiert die unvergängliche Liebe und Verbundenheit zu einem geliebten Menschen und schmückt die Gräber der Angehörigen.
+Seit Jahrtausenden werden für Grabmale grob behauene Steine verwendet. Das robuste, langlebige, witterungsbeständige und unvergängliche Naturmaterial symbolisiert die unvergängliche Liebe und Verbundenheit zu einem geliebten Menschen und schmückt die Gräber der Angehörigen.
 ::
 
 ::text-flow{side="left" class="md:text-justify"}
 :image-caption{src="/images/tombs-2.jpg" alt="Doppelgrabmal Tarno Diorit" caption="Doppelgrabmal Tarno Diorit"}
 
-Sie kennen Ihren geliebten Verstorbenen am besten. Wir erarbeiten mit Ihnen gemeinsam die ganz persönliche Erinnerung an Ihren verstorbenen Verwandten.
+Sie kennen Ihren geliebten Verstorbenen am besten. Gemeinsam mit Ihnen erarbeiten wir Ihre ganz persönliche Erinnerung an Ihren Angehörigen.
 
-Sie haben eine große Auswahl an unterschiedlichen Materialien. Dies beginnt bei der Farbe eines Steins und seiner Größe. Bei den Formen wählen Sie zwischen schmalen Stelen oder großen, beeindruckenden Steinen. Das Grabmal kann fein und glatt bearbeitet sein oder ein grob behauener Stein, eine Bruchraue oder ein Findling. Wir versehen es mit Symbolen, Ornamenten und Verzierungen, die die Persönlichkeit Ihres lieben Angehörigen widerspiegeln.\
-Sehr gerne zeigen wir Ihnen unterschiedliche Ausstellungsstücke und geben Ihnen einen Eindruck der zahlreichen Gestaltungsmöglichkeiten.
+Sie haben eine große Auswahl an verschiedenen Materialien. Das beginnt bei der Farbe des Steins und seiner Größe. Bei der Form haben Sie die Wahl zwischen schmalen Stelen oder großen, imposanten Steinen. Das Grabmal kann fein und glatt gearbeitet oder ein grob behauener Stein, eine Bruchraue oder ein Findling sein. Wir versehen es mit Symbolen, Ornamenten und Verzierungen, die die Persönlichkeit Ihres Angehörigen widerspiegeln.
 
-Auch die Grabinschrift wird mit Ihnen festgelegt. Sie kann schlicht, klar und edel gestaltet sein oder kunstvoll. Wir fertigen einen Entwurf an und bringen ihn in liebevoller Handarbeit auf das Grabmal auf.
+Gerne zeigen wir Ihnen verschiedene Beispiele und geben Ihnen einen Eindruck von den vielfältigen Gestaltungsmöglichkeiten.
 
-Grabzubehör wie Grableuchten aus Stahl, Aluminium oder Bronze sowie robuste Pflanzenschalen und wetterfeste Vasen in unterschiedlichen Materialausführungen und Größen komplettiert unser Angebot.
+Auch die Grabinschrift legen wir gemeinsam mit Ihnen fest. Sie kann schlicht, klar und edel oder kunstvoll gestaltet sein. Wir fertigen einen Entwurf an und bringen ihn in liebevoller Handarbeit auf dem Grabmal an.
+
+Grabzubehör wie Grableuchten aus Stahl, Aluminium oder Bronze sowie robuste Pflanzschalen und wetterfeste Vasen in verschiedenen Materialausführungen und Größen runden unser Angebot ab.
 ::
 
 ::text-flow{side="right" class="md:text-justify"}
 :image-caption{src="/images/tombs-3.jpg" alt="Urnengrab Kalkstein" caption="Urnengrab Kalkstein"}
 
-Grabsteine sind im Laufe der Jahre und Jahrzehnte dauerhaft wechselnden Witterungen ausgesetzt. Nässe, Kälte, aber auch Hitze setzen ihnen mit der Zeit zu. Inschriften verblassen, aufgesetzte Buchstaben, Insignien und Ornamente lockern sich und gehen möglicherweise verloren. Wir erneuern die Inschrift des Grabmals Ihrer Lieben. Auch Moos oder Verschmutzung entfernen wir. So wird der Grabstein wieder in den einwandfreien Originalzustand gebracht.
+Grabsteine sind im Laufe der Jahre und Jahrzehnte ständig wechselnden Witterungseinflüssen ausgesetzt. Feuchtigkeit, Kälte, aber auch Hitze setzen ihnen mit der Zeit zu. Inschriften verblassen, angebrachte Buchstaben, Inschriften und Ornamente lockern sich und können verloren gehen. Wir erneuern die Inschrift auf dem Grabmal Ihrer Lieben. Auch Moos oder Verschmutzungen entfernen wir. So wird der Grabstein wieder in seinen einwandfreien Originalzustand versetzt.
 
-Bei Beerdigungen bauen wir Grabanlagen ab und nach einer angemessen Zeit detailgenau und liebevoll mit Respekt gegenüber den Verstorbenen wieder auf. Des Weiteren bieten wir Ihnen eine regelmäßige und umfassende Betreuung des Grabmals Ihrer Angehörigen. Hierzu gehört die Reinigung und bei Bedarf die Instandsetzung des Steins. Gerne präsentieren wir Ihnen die unterschiedlichen Möglichkeiten der Wartung.
+Bei Beerdigungen bauen wir die Grabanlagen ab und nach einer angemessenen Zeit wieder auf&nbsp;&ndash; sorgfältig, liebevoll und mit Respekt vor den Verstorbenen. Des Weiteren bieten wir Ihnen eine regelmäßige und umfassende Betreuung des Grabmals Ihrer Angehörigen. Hierzu gehören die Reinigung und bei Bedarf die Instandsetzung des Steins. Gerne präsentieren wir Ihnen die unterschiedlichen Möglichkeiten der Wartung.
 
 Wir beraten Sie gerne. Einfühlsamkeit, gepaart mit jahrelanger Erfahrung, Fachkönnen und Kompetenz zeichnen uns aus. Bei uns sind Sie in den besten Händen.
 
