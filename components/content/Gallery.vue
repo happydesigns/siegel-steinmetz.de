@@ -1,18 +1,28 @@
 <script setup lang="ts">
-defineProps({
-  albums: {
-    type: Array as PropType<{ path: string, title: string }[]>,
-    required: true,
-  },
-})
+defineProps<{
+  albums?: { path: string, title: string }[]
+}>()
+
+const gallery = reactive(useImages(useRoute().query.album as string))
+
+function selectAlbum(path: string, images: { src: string, alt: string | undefined }[]) {
+  gallery.splice(0, gallery.length, ...images)
+  navigateTo({ query: { album: path } })
+}
 </script>
 
 <template>
-  <UPage>
+  <UPage class="gap-8">
     <template #left>
-      <UPageColumns class="overflow-x-auto flex lg:flex-col gap-4 w-full">
-        <Album v-for="album in albums" :key="album.path" :path="album.path" :title="album.title" />
-      </UPageColumns>
+      <UAside class="block -mt-8">
+        <UPageColumns class="overflow-x-auto flex lg:flex-col gap-4 w-full">
+          <Album v-for="album in albums" :key="album.path" :path="album.path" :title="album.title" @select-album="selectAlbum" />
+        </UPageColumns>
+      </UAside>
     </template>
+
+    <UPageColumns>
+      <NuxtImg v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full m-0 rounded-lg border border-gray-200 dark:border-gray-800" />
+    </UPageColumns>
   </UPage>
 </template>
