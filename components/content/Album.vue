@@ -21,7 +21,7 @@ const previewImage = images[0]
       <img :src="previewImage?.src" :alt="previewImage?.alt" class="absolute h-full w-full top-0 rounded-lg m-0 object-cover border border-gray-700 dark:border-black">
     </div>
     <figcaption class="font-medium">
-      <h3 class="m-0">
+      <h3 class="m-0 font-sans">
         {{ title }}
       </h3>
       {{ images.length }} Bilder
