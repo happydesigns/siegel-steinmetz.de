@@ -14,8 +14,8 @@ const appConfig = useAppConfig()
       <UFooterColumns :links="appConfig.links?.footer">
         <template #right>
           <div class="space-y-4">
-            <UFormGroup name="theme" label="Farbschema">
-              <UColorModeSelect class="w-32" />
+            <UFormGroup name="theme" label="Farbschema" :ui="{ label: { base: 'font-serif font-semibold text-gray-900' } }">
+              <UColorModeSelect class="w-32 mt-6" />
             </UFormGroup>
           </div>
         </template>
