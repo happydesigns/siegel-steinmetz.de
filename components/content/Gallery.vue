@@ -15,7 +15,7 @@ function selectAlbum(path: string, images: { src: string, alt: string | undefine
   <UPage class="gap-8">
     <template #left>
       <UAside class="block -mt-8">
-        <UPageColumns class="overflow-x-auto flex lg:flex-col gap-8 w-full">
+        <UPageColumns class="overflow-x-auto flex lg:flex-col gap-4 sm:gap-6 lg:gap-8 w-full">
           <Album v-for="album in albums" :key="album.path" :path="album.path" :title="album.title" @select-album="selectAlbum" />
         </UPageColumns>
       </UAside>
