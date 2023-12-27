@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default <Partial<Config>> {
+  content: ['./content/**/*.{md,json,yaml,yml,csv}'],
   theme: {
     extend: {
       // https://uicolors.app/create
@@ -35,8 +37,8 @@ export default <Partial<Config>> {
         },
       },
       fontFamily: {
-        sans: ['Lato'],
-        serif: ['Lora'],
+        sans: ['Lato', ...defaultTheme.fontFamily.sans],
+        serif: ['Lora', ...defaultTheme.fontFamily.serif],
       },
       typography: (theme: any) => {
         return {
@@ -115,6 +117,9 @@ export default <Partial<Config>> {
               'input[type="checkbox"]:disabled': {
                 opacity: 0.5,
                 cursor: 'not-allowed',
+              },
+              'strong a': {
+                fontWeight: 'inherit',
               },
               'ul.contains-task-list': {
                 marginLeft: '-1.625em',
