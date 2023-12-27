@@ -6,8 +6,8 @@ const headline = computed(() => page.value?._dir ? findPageHeadline(page.value) 
 <template>
   <UMain>
     <UContainer :ui="{ padding: page?.container ? undefined : '', constrained: page?.container ? undefined : '' }">
-      <UPageHeader :title="page?.title" :description="page?.description" :links="page?.links" :headline="headline" />
-      <UPageBody prose>
+      <UPageHeader v-if="page.showHeader !== false" :title="page?.title" :description="page?.description" :links="page?.links" :headline="headline" />
+      <UPageBody prose :class="[page.ui.body]">
         <slot />
       </UPageBody>
     </UContainer>
