@@ -44,7 +44,7 @@ ui: { wrapper: 'pb-8 sm:pb-12', title: 'text-3xl sm:text-4xl lg:text-4xl' }
 icon: i-ph-cross-duotone
 title: Grabmale
 description: Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal. Sie können aus einer Vielfalt an Materialien, Inschriften und Ornamenten wählen. Handwerkliche Grabmale werden direkt in Neudenau hergestellt. Industriell hergestellte Steine, beziehen wir von unserem Zulieferer.
-links: [{ label: 'Galerie', to: '/galerie?album=grabmalreferenzen', color: 'gray', icon: 'i-ph-image-duotone', size: 'lg' }, { label: 'Mehr erfahren', to: '/restaurierungen', variant: 'link', color: 'black', trailing-icon: 'i-ph-arrow-right', size: 'lg' }]
+links: [{ label: 'Galerie', to: '/galerie?album=grabmalreferenzen', color: 'gray', icon: 'i-ph-image-duotone', size: 'lg' }, { label: 'Mehr erfahren', to: '/grabmale', variant: 'link', color: 'black', trailing-icon: 'i-ph-arrow-right', size: 'lg' }]
 align: right
 ui: { title: 'text-3xl sm:text-4xl lg:text-4xl'}
 ---
