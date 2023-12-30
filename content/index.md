@@ -9,7 +9,7 @@ ui: { body: 'mt-0' }
 ---
 title: Herzlich Willkommen!
 orientation: horizontal
-ui: { wrapper: 'py-0 sm:py-0 md:py-0 lg:py-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl' }
+ui: { wrapper: 'py-0 sm:py-0 md:py-0 lg:py-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
 ---
 
 <div class="lg:col-span-4">
@@ -33,7 +33,7 @@ title: Restaurierungen
 description: Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.
 links: [{ label: 'Galerie', to: '/galerie?album=restaurierungen', color: 'gray', icon: 'i-ph-image-duotone', size: 'lg' }, { label: 'Mehr erfahren', to: '/restaurierungen', variant: 'link', color: 'black', trailing-icon: 'i-ph-arrow-right', size: 'lg' }]
 align: right
-ui: { wrapper: 'pb-8 sm:pb-12' }
+ui: { wrapper: 'pb-8 sm:pb-12', title: 'text-3xl sm:text-4xl lg:text-4xl' }
 ---
 
 ![Restaurierungen](/images/home-1.jpg)
@@ -46,6 +46,7 @@ title: Grabmale
 description: Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal. Sie können aus einer Vielfalt an Materialien, Inschriften und Ornamenten wählen. Handwerkliche Grabmale werden direkt in Neudenau hergestellt. Industriell hergestellte Steine, beziehen wir von unserem Zulieferer.
 links: [{ label: 'Galerie', to: '/galerie?album=grabmalreferenzen', color: 'gray', icon: 'i-ph-image-duotone', size: 'lg' }, { label: 'Mehr erfahren', to: '/restaurierungen', variant: 'link', color: 'black', trailing-icon: 'i-ph-arrow-right', size: 'lg' }]
 align: right
+ui: { title: 'text-3xl sm:text-4xl lg:text-4xl'}
 ---
 
 ![Grabmale](/images/home-2.jpg)
