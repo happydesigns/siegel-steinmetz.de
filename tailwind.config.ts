@@ -169,7 +169,7 @@ export default <Partial<Config>> {
               '--tw-prose-body': 'rgb(var(--color-gray-700))',
               '--tw-prose-headings': 'rgb(var(--color-gray-900))',
               '--tw-prose-lead': 'rgb(var(--color-gray-600))',
-              '--tw-prose-links': 'rgb(var(--color-primary-500))',
+              '--tw-prose-links': 'rgb(var(--color-primary-900))',
               '--tw-prose-bold': 'rgb(var(--color-gray-900))',
               '--tw-prose-counters': 'rgb(var(--color-gray-500))',
               '--tw-prose-bullets': 'rgb(var(--color-gray-300))',
