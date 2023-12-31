@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.13.1",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
@@ -19,10 +19,11 @@
     "@nuxt/ui": "^2.11.1",
     "@nuxt/ui-pro": "^0.6.1",
     "@nuxthq/studio": "^1.0.6",
-    "@nuxtjs/plausible": "^0.2.4"
+    "@nuxtjs/plausible": "^0.2.4",
+    "vue": "^3.4.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.0",
+    "@antfu/eslint-config": "^2.6.1",
     "@nuxtjs/fontaine": "^0.4.1",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.0",
