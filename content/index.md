@@ -9,12 +9,12 @@ ui: { body: 'mt-0' }
 ---
 title: Herzlich Willkommen!
 orientation: horizontal
-ui: { wrapper: 'bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-800 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
+ui: { wrapper: 'wave-b bg-gray-100 dark:bg-gray-800 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
 ---
 
 <div class="lg:col-span-4">
 
-![Banner](/images/banner.webp){.rounded-none .lg:rounded-xl .-mx-4 .sm:-mx-6 .lg:mx-0 .w-[100dvw] .max-w-none .lg:max-w-full}
+![Banner](/images/banner.webp){.rounded-none .lg:rounded-xl .-mx-4 .sm:-mx-6 .lg:mx-0 .w-[100dvw] .max-w-none .lg:max-w-full .border-none .lg:border}
 
 </div>
 
@@ -25,6 +25,8 @@ Die Pflege und Restauration von Gebäuden, Sandsteinfassaden, Fenstern, Treppen,
 
 <strong>Zum Grabmalkatalog: [Gräf GmbH](https://www.graef-granit.de/content/produkte){target="_blank"}</strong>
 ::
+
+:wave
 
 ::landing-section
 ---
