@@ -9,7 +9,7 @@ ui: { body: 'mt-0' }
 ---
 title: Herzlich Willkommen!
 orientation: horizontal
-ui: { wrapper: 'py-0 sm:py-0 md:py-0 lg:py-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
+ui: { wrapper: 'bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-800 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
 ---
 
 <div class="lg:col-span-4">
