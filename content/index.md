@@ -14,7 +14,7 @@ ui: { wrapper: 'wave-b bg-gray-100 dark:bg-gray-800 !pt-0 lg:!pt-40 pb-8 sm:pb-1
 
 <div class="lg:col-span-4">
 
-![Banner](/images/banner.webp){.rounded-none .lg:rounded-xl .-mx-4 .sm:-mx-6 .lg:mx-0 .w-[100dvw] .max-w-none .lg:max-w-full .border-none .lg:border}
+![Banner](/images/banner.webp){.rounded-none .lg:rounded-xl .-mx-4 .sm:-mx-6 .lg:mx-0 .w-[100dvw] .max-w-none .lg:max-w-full .border-0 .lg:border}
 
 </div>
 
