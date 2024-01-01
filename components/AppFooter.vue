@@ -6,8 +6,9 @@ const appConfig = useAppConfig()
 <template>
   <UFooter
     :ui="{
-      bottom: { wrapper: 'border-t border-gray-200 dark:border-gray-800', container: '!py-6', left: '~', center: '~', right: '~' },
-      top: { wrapper: 'border-t border-gray-200 dark:border-gray-800', container: 'py-8 lg:py-12' },
+      wrapper: 'bg-cool-800 dark:bg-cool-900 prose-invert dark',
+      bottom: { wrapper: 'border-t border-gray-200 dark:border-cool-700', container: '!py-6', left: '~', center: '~', right: '~' },
+      top: { wrapper: '', container: 'py-8 lg:py-12' },
     }"
   >
     <template #top>
@@ -15,7 +16,7 @@ const appConfig = useAppConfig()
         <template #right>
           <div class="space-y-4">
             <UFormGroup name="theme" label="Farbschema" :ui="{ label: { base: 'font-serif font-semibold text-gray-900' } }">
-              <UColorModeSelect class="w-32 mt-6" />
+              <UColorModeSelect class="w-32 mt-6" select-class="dark:bg-cool-900" :ui="{ select: 'bg-slate-800' }" :ui-menu="{ background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } }" />
             </UFormGroup>
           </div>
         </template>

@@ -2,14 +2,14 @@
 title: Home
 showHeader: false
 prose: false
-ui: { body: 'mt-0' }
+ui: { body: 'mt-0 bg-cool-100 dark:bg-gray-950', wave: 'bg-cool-100 dark:bg-gray-950' }
 ---
 
 ::landing-hero
 ---
 title: Herzlich Willkommen!
 orientation: horizontal
-ui: { wrapper: 'wave-b bg-gray-100 dark:bg-gray-800 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
+ui: { wrapper: 'wave-b bg-white dark:bg-gray-900 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
 ---
 
 <div class="lg:col-span-4">
@@ -26,14 +26,14 @@ Die Pflege und Restauration von Gebäuden, Sandsteinfassaden, Fenstern, Treppen,
 <strong>Zum Grabmalkatalog: [Gräf GmbH](https://www.graef-granit.de/content/produkte){target="_blank"}</strong>
 ::
 
-:wave
+:wave{.fill-white .dark:fill-gray-900}
 
 ::landing-section
 ---
 icon: i-ph-bank-duotone
 title: Restaurierungen
 description: Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.
-links: [{ label: 'Galerie', to: '/galerie?album=restaurierungen', color: 'gray', icon: 'i-ph-image-duotone', size: 'lg' }, { label: 'Mehr erfahren', to: '/restaurierungen', variant: 'link', color: 'black', trailing-icon: 'i-ph-arrow-right', size: 'lg' }]
+links: [{ label: 'Galerie', to: '/galerie?album=restaurierungen', color: 'primary', icon: 'i-ph-image-duotone', size: 'lg' }, { label: 'Mehr erfahren', to: '/restaurierungen', variant: 'link', color: 'black', trailing-icon: 'i-ph-arrow-right', size: 'lg' }]
 align: right
 ui: { wrapper: 'pb-8 sm:pb-12', title: 'text-3xl sm:text-4xl lg:text-4xl', icon.base: 'text-primary-900 dark:text-primary-400' }
 ---
@@ -46,7 +46,7 @@ ui: { wrapper: 'pb-8 sm:pb-12', title: 'text-3xl sm:text-4xl lg:text-4xl', icon.
 icon: i-ph-cross-duotone
 title: Grabmale
 description: Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal. Sie können aus einer Vielfalt an Materialien, Inschriften und Ornamenten wählen. Handwerkliche Grabmale werden direkt in Neudenau hergestellt. Industriell hergestellte Steine, beziehen wir von unserem Zulieferer.
-links: [{ label: 'Galerie', to: '/galerie?album=grabmalreferenzen', color: 'gray', icon: 'i-ph-image-duotone', size: 'lg' }, { label: 'Mehr erfahren', to: '/grabmale', variant: 'link', color: 'black', trailing-icon: 'i-ph-arrow-right', size: 'lg' }]
+links: [{ label: 'Galerie', to: '/galerie?album=grabmalreferenzen', color: 'primary', icon: 'i-ph-image-duotone', size: 'lg' }, { label: 'Mehr erfahren', to: '/grabmale', variant: 'link', color: 'black', trailing-icon: 'i-ph-arrow-right', size: 'lg' }]
 align: right
 ui: { title: 'text-3xl sm:text-4xl lg:text-4xl', icon.base: 'text-primary-900 dark:text-primary-400' }
 ---
