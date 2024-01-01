@@ -2,19 +2,19 @@
 title: Home
 showHeader: false
 prose: false
-ui: { body: 'mt-0 bg-cool-100 dark:bg-gray-950', wave: 'bg-cool-100 dark:bg-gray-950' }
+ui: { body: 'mt-0 bg-cool-100 dark:bg-gray-950' }
 ---
 
 ::landing-hero
 ---
 title: Herzlich Willkommen!
 orientation: horizontal
-ui: { wrapper: 'wave-b bg-white dark:bg-gray-900 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
+ui: { wrapper: 'bg-white dark:bg-gray-900 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
 ---
 
-<div class="lg:col-span-4">
+<div class="lg:col-span-4 -mx-4 sm:-mx-6 lg:mx-0 max-w-[100dvw] overflow-x-hidden">
 
-![Banner](/images/banner.webp){.rounded-none .lg:rounded-xl .-mx-4 .sm:-mx-6 .lg:mx-0 .w-[100dvw] .max-w-none .lg:max-w-full .border-0 .lg:border}
+![Banner](/images/banner.webp){.rounded-none .lg:rounded-xl .w-[100dvw] .max-w-none .lg:max-w-full .border-0 .lg:border}
 
 </div>
 

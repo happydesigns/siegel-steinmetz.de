@@ -7,6 +7,12 @@ export default defineAppConfig({
         solid: 'bg-primary-900 hover:bg-primary-800 disabled:bg-primary-900 focus-visible:outline-primary-800',
       },
     },
+    footer: {
+      wrapper: 'bg-cool-800 dark:bg-cool-800',
+      menu: { background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } },
+      wave: 'fill-cool-800 dark:fill-cool-800',
+    },
+
   },
   links: {
     header: [

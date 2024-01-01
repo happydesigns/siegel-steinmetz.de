@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { page } = useContent()
-const headline = computed(() => page.value?._dir ? findPageHeadline(page.value) : '')
+const headline = computed(() => page?.value?._dir ? findPageHeadline(page?.value) : '')
 </script>
 
 <template>
@@ -13,6 +13,5 @@ const headline = computed(() => page.value?._dir ? findPageHeadline(page.value) 
         </UPageBody>
       </UContainer>
     </UMain>
-    <Wave class="fill-cool-800 dark:fill-cool-800 rotate-180 -mb-[2px]" :class="[page?.ui?.wave]" />
   </div>
 </template>
