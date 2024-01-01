@@ -13,6 +13,6 @@ const headline = computed(() => page.value?._dir ? findPageHeadline(page.value) 
         </UPageBody>
       </UContainer>
     </UMain>
-    <Wave class="fill-cool-800 dark:fill-cool-800 rotate-180 -mb-[1px]" :class="[page?.ui?.wave]" />
+    <Wave class="fill-cool-800 dark:fill-cool-800 rotate-180 -mb-[2px]" :class="[page?.ui?.wave]" />
   </div>
 </template>
