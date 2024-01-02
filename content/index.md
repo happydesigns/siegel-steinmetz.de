@@ -2,7 +2,7 @@
 title: Home
 showHeader: false
 prose: false
-ui: { wrapper: 'bg-cool-100 dark:bg-gray-950', body: 'mt-0', footer: { wave: 'bg-gray-100 dark:bg-gray-950' } }
+ui: { wrapper: 'bg-cool-100 dark:bg-raisin', body: 'mt-0', footer: { wave: 'bg-gray-100 dark:bg-raisin' } }
 ---
 
 ::landing-hero

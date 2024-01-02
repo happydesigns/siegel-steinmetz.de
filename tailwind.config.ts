@@ -35,6 +35,7 @@ export default <Partial<Config>> {
           900: '#1f3c6f',
           950: '#1b2c50',
         },
+        raisin: '#1d1f25',
       },
       fontFamily: {
         sans: ['Lato', ...defaultTheme.fontFamily.sans],

@@ -21,7 +21,7 @@ const { page } = useContent()
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader :ui="page?.ui?.header" />
   <NuxtPage />
   <AppFooter :ui="page?.ui?.footer" />
 </template>
