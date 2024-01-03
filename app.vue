@@ -47,7 +47,7 @@ img {
   @apply rounded-xl border border-gray-200 dark:border-gray-800;
 }
 
-.prose .icon {
+.icon {
   @apply mb-0.5 mr-1;
 }
 </style>

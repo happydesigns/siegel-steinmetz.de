@@ -32,21 +32,38 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
       <template #top>
         <UFooterColumns :links="appConfig.links?.footer">
           <template #right>
-            <div class="space-y-4">
-              <UFormGroup name="theme" label="Farbschema" class="light" :ui="{ label: { base: 'font-serif font-semibold text-gray-900' } }">
-                <UColorModeSelect class="w-32 mt-6" select-class="dark:bg-inherit" :ui="{ select: 'bg-slate-800' }" :ui-menu="ui.menu" />
-              </UFormGroup>
+            <div class="flex flex-col lg:grid grid-flow-col auto cols-fr gap-8 xl:col-span-2 text-gray-600 dark:text-gray-300">
+              <div class="space-y-4">
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                  Anschrift
+                </h3>
+                <p>Bernd Siegel<br>Steingestaltung</p>
+                <p>Bahnhofstraße 13<br>74861 Neudenau</p>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                  Kontakt
+                </h3>
+                <p>
+                  <UIcon name="i-ph-phone-fill" class="-mb-0.5 mr-1" /> 06264 / 92 64 44<br>
+                  <UIcon name="i-ph-printer-fill" class="-mb-0.5 mr-1" /> 06264 / 92 64 45<br>
+                  <UIcon name="i-ph-envelope-fill" class="-mb-0.5 mr-1" /> info@siegel-steinmetz.de
+                </p>
+              </div>
             </div>
           </template>
         </UFooterColumns>
       </template>
-      <template #center>
+      <template #left>
         <p class="text-gray-500 dark:text-gray-400 text-sm">
           Copyright © {{ new Date().getFullYear() }}
           <NuxtLink to="https://www.happydesigns.de/" target="_blank">
             happydesigns
           </NuxtLink>
         </p>
+      </template>
+      <template #right>
+        <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" />
       </template>
     </UFooter>
   </div>
