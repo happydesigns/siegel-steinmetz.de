@@ -1,5 +1,10 @@
+import process from 'node:process'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  build: {
+    transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
+  },
   content: {
     documentDriven: true,
   },
@@ -21,7 +26,17 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     'nuxt-og-image',
   ],
+  runtimeConfig: {
+    public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
+  },
   ui: {
     icons: ['ph'],
+  },
+  vite: {
+    optimizeDeps: {
+      include: [
+        'fast-deep-equal',
+      ],
+    },
   },
 })
