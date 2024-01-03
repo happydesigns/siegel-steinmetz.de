@@ -38,7 +38,7 @@ align: right
 ui: { wrapper: 'pb-8 sm:pb-12', title: 'text-3xl sm:text-4xl lg:text-4xl', icon.base: 'text-primary-900 dark:text-primary-400' }
 ---
 
-![Restaurierungen](/images/home-1.jpg)
+![Restaurierungen](/images/home-1.jpg){.aspect-[5/3]}
 ::
 
 ::landing-section
@@ -51,5 +51,5 @@ align: right
 ui: { title: 'text-3xl sm:text-4xl lg:text-4xl', icon.base: 'text-primary-900 dark:text-primary-400' }
 ---
 
-![Grabmale](/images/home-2.jpg)
+![Grabmale](/images/home-2.jpg){.aspect-[5/3]}
 ::
