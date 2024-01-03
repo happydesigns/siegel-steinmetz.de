@@ -9,7 +9,7 @@ const appConfig = useAppConfig()
     </template>
 
     <template #panel>
-      <UAsideLinks :links="appConfig.links.header" />
+      <UAsideLinks :links="appConfig.links.header" :ui="{ active: 'text-primary-900 dark:text-primary-400', icon: { active: 'bg-primary-900 dark:bg-primary', inactive: 'group-hover:bg-primary-900 dark:group-hover:bg-primary', wrapper: '~', base: '~' } }" />
       <UDivider class="my-6" />
       <UButton to="/kontakt" label="Kontakt" icon="i-ph-phone-duotone" block />
     </template>
