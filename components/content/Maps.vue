@@ -13,7 +13,7 @@ const markers = reactive([
   <GMapMap
     :center="center"
     :zoom="16"
-    class="w-full min-h-96 h-[50dvh] rounded-lg overflow-hidden border"
+    class="w-full min-h-96 h-[50dvh] rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800"
   >
     <GMapCluster>
       <GMapMarker
