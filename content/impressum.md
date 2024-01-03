@@ -10,7 +10,8 @@ ui: { left: 'lg:col-span-5', center.base: 'lg:col-span-5' }
 ---
 #left
 Bernd Siegel\
-Steingestaltung\
+Steingestaltung
+
 Bahnhofstraße 13\
 74861 Neudenau
 
