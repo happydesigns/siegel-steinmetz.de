@@ -4,6 +4,7 @@ useHead({
   titleTemplate: '%s | Bernd Siegel Steingestaltung',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'google-site-verification', content: 'i5hJWTD7u44mb8sXv4PjgwP5EoPz0sWVuHd4rhbV6vk' },
   ],
   link: [
     { rel: 'icon', href: '/favicon.ico' },
