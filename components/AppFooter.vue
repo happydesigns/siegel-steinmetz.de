@@ -34,19 +34,21 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
           <template #right>
             <div class="flex flex-col lg:grid grid-flow-col auto cols-fr gap-8 xl:col-span-2 text-gray-600 dark:text-gray-300">
               <div class="space-y-4">
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-6">
                   Anschrift
                 </h3>
                 <p>Bernd Siegel<br>Steingestaltung</p>
                 <p>Bahnhofstraße 13<br>74861 Neudenau</p>
               </div>
               <div class="space-y-4">
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-6">
                   Kontakt
                 </h3>
                 <p>
                   <UIcon name="i-ph-phone-fill" class="-mb-0.5 mr-1" /> 06264 / 92 64 44<br>
                   <UIcon name="i-ph-printer-fill" class="-mb-0.5 mr-1" /> 06264 / 92 64 45<br>
+                </p>
+                <p>
                   <UIcon name="i-ph-envelope-fill" class="-mb-0.5 mr-1" /> info@siegel-steinmetz.de
                 </p>
               </div>
