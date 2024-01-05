@@ -21,7 +21,7 @@
     "@nuxt/ui-pro": "^0.6.1",
     "@nuxthq/studio": "^1.0.6",
     "@nuxtjs/plausible": "^0.2.4",
-    "vue": "^3.4.3",
+    "vue": "^3.4.5",
     "vue-google-maps-community-fork": "^0.3.1"
   },
   "devDependencies": {
