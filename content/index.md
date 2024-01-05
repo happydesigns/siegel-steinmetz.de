@@ -14,7 +14,7 @@ ui: { wrapper: 'bg-white dark:bg-gray-900 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12
 
 <div class="lg:col-span-4 -mx-4 sm:-mx-6 lg:mx-0 max-w-[100dvw] overflow-x-hidden">
 
-![Banner](/images/banner.webp){.rounded-none .lg:rounded-xl .w-[100dvw] .max-w-none .lg:max-w-full .border-0 .lg:border}
+![Banner](/images/banner.webp){.default .!rounded-none .lg:!rounded-md .w-[100dvw] .max-w-none .lg:max-w-full .border-0 .lg:border}
 
 </div>
 
@@ -38,7 +38,7 @@ align: right
 ui: { wrapper: 'pb-8 sm:pb-12', title: 'text-3xl sm:text-4xl lg:text-4xl', icon.base: 'text-primary-900 dark:text-primary-400' }
 ---
 
-![Restaurierungen](/images/home-1.jpg){.aspect-[5/3]}
+![Restaurierungen](/images/home-1.jpg){.aspect-[10/7] .object-cover .object-right-top .object-[65%_50%] .default}
 ::
 
 ::landing-section
@@ -51,5 +51,5 @@ align: right
 ui: { title: 'text-3xl sm:text-4xl lg:text-4xl', icon.base: 'text-primary-900 dark:text-primary-400' }
 ---
 
-![Grabmale](/images/home-2.jpg){.aspect-[5/3]}
+![Grabmale](/images/home-2.jpg){.aspect-[10/7] .object-cover .default}
 ::

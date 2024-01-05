@@ -43,8 +43,8 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-serif;
 }
 
-img {
-  @apply rounded-xl border border-gray-200 dark:border-gray-800;
+img.default {
+  @apply rounded-md border border-gray-200 dark:border-gray-800;
 }
 
 .icon {

@@ -16,4 +16,4 @@ Bahnhofstraße 13\
 :icon{name="i-ph-printer-fill"} 06264 / 92 64 45\
 :icon{name="i-ph-envelope-fill"} info@siegel-steinmetz.de
 
-:maps{.mt-8}
+:maps{.not-prose .mt-8}

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 defineProps<{
-  albums?: { path: string, title: string }[]
+  albums?: { path: string; title: string }[]
 }>()
 
 const gallery = reactive(useImages(useRoute().query.album as string))
 
-function selectAlbum(path: string, images: { src: string, alt: string | undefined }[]) {
+function selectAlbum(path: string, images: { src: string; alt: string | undefined }[]) {
   gallery.splice(0, gallery.length, ...images)
   navigateTo({ query: { album: path } })
 }
@@ -22,7 +22,7 @@ function selectAlbum(path: string, images: { src: string, alt: string | undefine
     </template>
 
     <UPageColumns>
-      <img v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full m-0 rounded-lg border border-gray-200 dark:border-gray-800">
+      <img v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full m-0 rounded-md border border-gray-200 dark:border-gray-800">
     </UPageColumns>
   </UPage>
 </template>
