@@ -1,12 +1,20 @@
 <script setup lang="ts">
 defineProps<{
-  albums?: { path: string; title: string }[]
+  albums?: { path: string, title: string }[]
 }>()
 
-const gallery = reactive(useImages(useRoute().query.album as string))
+const route = useRoute()
+const gallery = ref([] as {
+  src: string
+  alt: string | undefined
+}[])
 
-function selectAlbum(path: string, images: { src: string; alt: string | undefined }[]) {
-  gallery.splice(0, gallery.length, ...images)
+watchEffect(() => {
+  gallery.value = useImages(route.query.album as string)
+})
+
+function selectAlbum(path: string, images: { src: string, alt: string | undefined }[]) {
+  gallery.value.splice(0, gallery.value.length, ...images)
   navigateTo({ query: { album: path } })
 }
 </script>
