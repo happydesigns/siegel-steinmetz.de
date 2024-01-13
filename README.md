@@ -2,6 +2,8 @@
 
 # siegel-steinmetz.de
 
+[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
+
 Look at the [Content documentation](https://content.nuxt.com/) to learn more.
 
 ## Setup
@@ -9,12 +11,6 @@ Look at the [Content documentation](https://content.nuxt.com/) to learn more.
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
 # pnpm
 pnpm install
 ```
@@ -24,7 +20,7 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## Production
@@ -32,13 +28,13 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 Locally preview production build:
 
 ```bash
-npm run preview
+pnpm preview
 ```
 
 Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
