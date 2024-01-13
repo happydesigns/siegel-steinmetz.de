@@ -11,7 +11,6 @@ Look at the [Content documentation](https://content.nuxt.com/) to learn more.
 Make sure to install the dependencies:
 
 ```bash
-# pnpm
 pnpm install
 ```
 
