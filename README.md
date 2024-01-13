@@ -1,4 +1,6 @@
-# Content v2 Minimal Starter
+![siegel-steinmetz de](https://github.com/happydesigns/siegel-steinmetz.de/assets/22038857/e83f6947-be87-47a8-bdde-c8073d100b11)
+
+# siegel-steinmetz.de
 
 Look at the [Content documentation](https://content.nuxt.com/) to learn more.
 
