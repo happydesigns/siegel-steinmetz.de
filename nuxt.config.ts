@@ -10,13 +10,6 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   extends: ['@nuxt/ui-pro'],
-  image: {
-    // TODO: temporary workaround, see https://github.com/nuxt/image/issues/999
-    provider: 'netlify',
-    netlify: {
-      baseURL: 'https://siegel-steinmetz.netlify.app',
-    },
-  },
   modules: [
     '@nuxt/content',
     '@nuxt/image',
