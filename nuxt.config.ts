@@ -10,6 +10,10 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   extends: ['@nuxt/ui-pro'],
+  image: {
+    quality: 80,
+    format: ['avif', 'webp', 'jpg'],
+  },
   modules: [
     '@nuxt/content',
     '@nuxt/image',
