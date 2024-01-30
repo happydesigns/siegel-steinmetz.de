@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div class="md:overflow-auto" :class="props.side">
+  <div class="md:overflow-auto my-4 sm:my-6 lg:my-8" :class="props.side">
     <slot />
   </div>
 </template>
