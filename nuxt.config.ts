@@ -16,6 +16,9 @@ export default defineNuxtConfig({
     },
   },
   extends: ['@nuxt/ui-pro'],
+  hub: {
+    blob: true,
+  },
   image: {
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
@@ -26,6 +29,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxthq/studio',
+    '@nuxthub/core',
     '@nuxtjs/fontaine',
     '@nuxtjs/plausible',
     'nuxt-og-image',
