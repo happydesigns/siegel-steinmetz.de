@@ -9,6 +9,12 @@ export default defineNuxtConfig({
     documentDriven: true,
   },
   devtools: { enabled: true },
+  eslint: {
+    config: {
+      stylistic: true,
+      standalone: false,
+    },
+  },
   extends: ['@nuxt/ui-pro'],
   image: {
     quality: 80,
@@ -16,6 +22,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/content',
+    '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxthq/studio',

@@ -9,6 +9,8 @@ const props = withDefaults(defineProps<Props>(), {
   title: '',
 })
 
+defineEmits(['selectAlbum'])
+
 const images = useImages(props.path)
 const previewImage = images[0]
 </script>

@@ -23,7 +23,8 @@ const props = withDefaults(defineProps<Props>(), {
   @apply md:float-right lg:ml-16 md:ml-8 md:my-5;
 }
 
-.left > figure > img, .right > figure > img {
+.left > figure > img,
+.right > figure > img {
   @apply min-w-full;
 }
 </style>

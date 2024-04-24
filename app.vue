@@ -39,7 +39,12 @@ const { page } = useContent()
   --color-primary-DEFAULT: var(--color-primary-400);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-serif;
 }
 
