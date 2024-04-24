@@ -31,7 +31,6 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@nuxthub/core',
     '@nuxtjs/fontaine',
-    '@nuxtjs/plausible',
     'nuxt-og-image',
   ],
   routeRules: {
