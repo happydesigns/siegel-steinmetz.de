@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "bun@1.1.4",
+  "packageManager": "bun@1.1.6",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
@@ -23,9 +23,9 @@
     "vue-google-maps-community-fork": "^0.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.15.0",
-    "@nuxt/eslint": "^0.3.9",
-    "@nuxthub/core": "^0.5.12",
+    "@antfu/eslint-config": "^2.16.0",
+    "@nuxt/eslint": "^0.3.10",
+    "@nuxthub/core": "^0.5.14",
     "@nuxtjs/fontaine": "^0.4.1",
     "eslint": "^9.1.1",
     "nuxt": "^3.11.2",
