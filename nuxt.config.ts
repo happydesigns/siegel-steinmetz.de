@@ -5,24 +5,31 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
   },
+
   content: {
     documentDriven: true,
   },
+
   devtools: { enabled: true },
+
   eslint: {
     config: {
       stylistic: true,
       standalone: false,
     },
   },
+
   extends: ['@nuxt/ui-pro'],
+
   hub: {
     blob: true,
   },
+
   image: {
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
   },
+
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
@@ -33,6 +40,7 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     'nuxt-og-image',
   ],
+
   routeRules: {
     '/': { prerender: true },
     'ueber-uns': { prerender: true },
@@ -43,12 +51,11 @@ export default defineNuxtConfig({
     'impressum': { prerender: true },
     'datenschutz': { prerender: true },
   },
+
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
-  ui: {
-    icons: ['ph'],
-  },
+
   vite: {
     optimizeDeps: {
       include: [
@@ -56,4 +63,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  compatibilityDate: '2024-08-18',
 })

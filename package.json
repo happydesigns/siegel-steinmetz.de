@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "bun@1.1.6",
+  "packageManager": "bun@1.1.24",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
@@ -14,23 +14,23 @@
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",
-    "@iconify-json/ph": "^1.1.12",
-    "@nuxt/content": "^2.12.1",
-    "@nuxt/image": "^1.6.0",
-    "@nuxt/ui": "^2.15.2",
-    "@nuxt/ui-pro": "^1.1.0",
-    "@nuxthq/studio": "^1.0.13",
+    "@iconify-json/ph": "^1.1.14",
+    "@nuxt/content": "^2.13.2",
+    "@nuxt/image": "^1.7.0",
+    "@nuxt/ui": "^2.18.4",
+    "@nuxt/ui-pro": "^1.4.1",
+    "@nuxthq/studio": "^2.0.3",
     "vue-google-maps-community-fork": "^0.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.16.0",
-    "@nuxt/eslint": "^0.3.10",
-    "@nuxthub/core": "^0.5.14",
-    "@nuxtjs/fontaine": "^0.4.1",
-    "eslint": "^9.1.1",
-    "nuxt": "^3.11.2",
-    "nuxt-og-image": "^3.0.0-rc.52",
-    "typescript": "^5.4.5",
-    "wrangler": "^3.52.0"
+    "@antfu/eslint-config": "^2.26.0",
+    "@nuxt/eslint": "^0.5.0",
+    "@nuxthub/core": "^0.7.3",
+    "@nuxtjs/fontaine": "^0.4.3",
+    "eslint": "^9.9.0",
+    "nuxt": "^3.12.4",
+    "nuxt-og-image": "^3.0.0-rc.64",
+    "typescript": "^5.5.4",
+    "wrangler": "^3.72.0"
   }
 }
