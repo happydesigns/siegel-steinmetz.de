@@ -31,24 +31,22 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@nuxthub/core',
     '@nuxtjs/fontaine',
-    'nuxt-og-image',
+    // 'nuxt-og-image',
   ],
-  routeRules: {
-    '/': { prerender: true },
-    'ueber-uns': { prerender: true },
-    'restaurierungen': { prerender: true },
-    'grabmale': { prerender: true },
-    'galerie': { prerender: true },
-    'kontakt': { prerender: true },
-    'impressum': { prerender: true },
-    'datenschutz': { prerender: true },
+  nitro: {
+    prerender: {
+      // Pre-render the homepage
+      routes: ['/'],
+      // Then crawl all the links on the page
+      crawlLinks: true,
+    },
   },
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
-  ui: {
-    icons: ['ph'],
-  },
+  // site: {
+  //   url: 'https://siegel-steinmetz-de.pages.dev/',
+  // },
   vite: {
     optimizeDeps: {
       include: [
@@ -56,4 +54,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  compatibilityDate: '2024-08-18',
 })
