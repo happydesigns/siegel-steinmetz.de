@@ -33,15 +33,13 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     // 'nuxt-og-image',
   ],
-  routeRules: {
-    '/': { prerender: true },
-    'ueber-uns': { prerender: true },
-    'restaurierungen': { prerender: true },
-    'grabmale': { prerender: true },
-    'galerie': { prerender: true },
-    'kontakt': { prerender: true },
-    'impressum': { prerender: true },
-    'datenschutz': { prerender: true },
+  nitro: {
+    prerender: {
+      // Pre-render the homepage
+      routes: ['/'],
+      // Then crawl all the links on the page
+      crawlLinks: true,
+    },
   },
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
