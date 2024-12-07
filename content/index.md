@@ -23,7 +23,7 @@ Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
 
 Die Pflege und Restauration von Gebäuden, Sandsteinfassaden, Fenstern, Treppen, Geländern, Ornamenten, Denkmälern und Grabsteinen.
 
-<strong>Zum Grabmalkatalog: [Gräf GmbH](https://www.graef-granit.de/content/produkte){target="_blank"}</strong>
+<strong>Zum Grabmalkatalog: [Gräf GmbH](https://www.graef-granit.de/index.php?Itemid=204){target="_blank"}</strong>
 ::
 
 :wave{.fill-white .dark:fill-gray-900}
