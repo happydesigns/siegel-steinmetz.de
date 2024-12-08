@@ -33,14 +33,6 @@ export default defineNuxtConfig({
     // '@nuxthq/studio',
     // '@nuxthub/core',
   ],
-  nitro: {
-    prerender: {
-      // Pre-render the homepage
-      routes: ['/'],
-      // Then crawl all the links on the page
-      crawlLinks: true,
-    },
-  },
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
