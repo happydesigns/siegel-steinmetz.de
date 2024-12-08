@@ -16,20 +16,21 @@
     "@fawmi/vue-google-maps": "^0.9.79",
     "@iconify-json/ph": "^1.2.1",
     "@nuxt/content": "^2.13.4",
+    "@nuxt/fonts": "0.10.3",
     "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "^2.19.2",
     "@nuxt/ui-pro": "^1.5.0",
     "@nuxthq/studio": "^2.2.1",
+    "nuxt": "^3.14.1592",
+    "nuxt-og-image": "^4.0.0",
     "vue-google-maps-community-fork": "^0.3.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
     "@nuxt/eslint": "^0.7.2",
-    "@nuxt/fonts": "0.10.3",
     "@nuxthub/core": "^0.8.7",
     "eslint": "^9.16.0",
-    "nuxt": "^3.14.1592",
-    "nuxt-og-image": "^4.0.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "wrangler": "^3.93.0"
   }
 }
