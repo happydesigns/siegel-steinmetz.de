@@ -25,8 +25,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
     "@nuxt/eslint": "^0.7.2",
+    "@nuxt/fonts": "0.10.3",
     "@nuxthub/core": "^0.8.7",
-    "@nuxtjs/fontaine": "^0.4.4",
     "eslint": "^9.16.0",
     "nuxt": "^3.14.1592",
     "nuxt-og-image": "^4.0.0",

@@ -30,8 +30,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxthq/studio',
     '@nuxthub/core',
-    '@nuxtjs/fontaine',
     // 'nuxt-og-image',
+    '@nuxt/fonts',
   ],
   nitro: {
     prerender: {
