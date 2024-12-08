@@ -28,10 +28,10 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxthq/studio',
-    '@nuxthub/core',
-    // 'nuxt-og-image',
     '@nuxt/fonts',
+    // 'nuxt-og-image',
+    // '@nuxthq/studio',
+    // '@nuxthub/core',
   ],
   nitro: {
     prerender: {
