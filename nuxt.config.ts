@@ -33,6 +33,16 @@ export default defineNuxtConfig({
     // '@nuxthq/studio',
     // '@nuxthub/core',
   ],
+  // routeRules: {
+  //   '/': { prerender: true },
+  //   'ueber-uns': { prerender: true },
+  //   'restaurierungen': { prerender: true },
+  //   'grabmale': { prerender: true },
+  //   'galerie': { prerender: true },
+  //   'kontakt': { prerender: true },
+  //   'impressum': { prerender: true },
+  //   'datenschutz': { prerender: true },
+  // },
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
