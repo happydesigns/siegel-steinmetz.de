@@ -1,0 +1,80 @@
+title: Home
+hero:
+  title: Herzlich Willkommen!
+  description: 'Wir bieten einen umfassenden Service rund um den Naturstoff Stein:'
+  features:
+    - name: Einzigartige Grabmale nach Maß
+      description: Gestaltung von individuellen Grabmalen
+      icon: i-ph-cross-duotone
+    - name: Historische Werte stilvoll bewahren
+      description: Pflege und Restauration von Gebäuden, Sandsteinfassaden, Fenstern, Treppen, Geländern, Ornamenten, Denkmälern und Grabsteinen
+      icon: i-ph-bank-duotone
+  links:
+    - label: Gräf-Granit
+      to: 'https://www.graef-granit.de/index.php?Itemid=204'
+      icon: i-ph-hammer-duotone
+      size: md
+      external: true
+      target: _blank
+    - label: Mainzer-Grabmaldesign
+      to: 'https://www.mainzer-grabmale.de/'
+      trailingIcon: i-ph-arrow-right
+      size: md
+      color: gray
+      external: true
+      target: _blank
+  align: left
+  ui:
+  # wrapper: 'bg-white dark:bg-gray-900 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40'
+  # container: 'gap-8 sm:gap-12 lg:!grid-cols-9'
+  image:
+    src: /images/banner-trimmed.webp
+    alt: Banner Image
+    class: border border-red-500
+  # description: |
+  #   <strong>Zum Grabmalkatalog: <NuxtLink to="https://www.graef-granit.de/index.php?Itemid=204" target="_blank">Gräf GmbH</NuxtLink></strong>
+sections:
+  - icon: i-ph-bank-duotone
+    title: Restaurierungen
+    description: >
+      Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.
+    align: right
+    ui:
+      wrapper: 'pb-8 sm:pb-12'
+    links:
+      - label: Galerie
+        to: '/galerie?album=restaurierungen'
+        color: primary
+        icon: i-ph-image-duotone
+        size: lg
+      - label: Mehr erfahren
+        to: '/restaurierungen'
+        variant: link
+        color: black
+        trailing-icon: i-ph-arrow-right
+        size: lg
+    image:
+      src: /images/home-1.jpg
+      alt: Restaurierungen Image
+  - icon: i-ph-cross-duotone
+    title: Grabmale
+    description: >
+      Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal.
+    align: right
+    links:
+      - label: Galerie
+        to: '/galerie?album=grabmalreferenzen'
+        color: primary
+        icon: i-ph-image-duotone
+        size: lg
+      - label: Mehr erfahren
+        to: '/grabmale'
+        variant: link
+        color: black
+        trailing-icon: i-ph-arrow-right
+        size: lg
+    image:
+      src: /images/home-2.jpg
+      alt: Grabmale Image
+footer:
+  wave: bg-gray-100 dark:bg-raisin
