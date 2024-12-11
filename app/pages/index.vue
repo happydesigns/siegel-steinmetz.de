@@ -53,12 +53,7 @@ useSeoMeta({
     <ULandingSection
       v-for="(section, index) in page.sections"
       :key="index"
-      :icon="section.icon"
-      :title="section.title"
-      :description="section.description"
-      :align="section.align"
-      :ui="section.ui"
-      :links="section.links"
+      v-bind="section"
     >
       <template #default>
         <img
@@ -68,14 +63,5 @@ useSeoMeta({
         >
       </template>
     </ULandingSection>
-
-    <!-- Footer Section -->
-    <Wave :class="page.footer.wave" />
   </div>
 </template>
-
-<style scoped>
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-</style>
