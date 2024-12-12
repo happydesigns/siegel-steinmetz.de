@@ -52,8 +52,7 @@ useSeoMeta({
     </ULandingSection>
 
     <!-- Landing Sections -->
-    <!-- gradient from white to gray -->
-    <div class="bg-gradient-to-b from-white to-gray-100">
+    <div class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-raisin">
       <ULandingSection
         v-for="(section, index) in page.sections"
         :key="index"
