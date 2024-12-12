@@ -10,25 +10,26 @@ hero:
       description: Pflege und Restauration von Gebäuden, Sandsteinfassaden, Fenstern, Treppen, Geländern, Ornamenten, Denkmälern und Grabsteinen
       icon: i-ph-bank-duotone
   links:
-    - label: Gräf-Granit
+    - label: Gräf Granit
       to: 'https://www.graef-granit.de/index.php?Itemid=204'
       icon: i-ph-hammer-duotone
-      size: md
+      size: lg
       external: true
       target: _blank
-    - label: Mainzer-Grabmaldesign
+    - label: Mainzer Grabmaldesign
       to: 'https://www.mainzer-grabmale.de/'
       trailingIcon: i-ph-arrow-right
-      size: md
+      size: lg
       color: gray
       external: true
       target: _blank
+      class: '[&>*:last-child]:hidden sm:[&>*:last-child]:block'
   align: left
   ui:
   # wrapper: 'bg-white dark:bg-gray-900 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40'
   # container: 'gap-8 sm:gap-12 lg:!grid-cols-9'
   image:
-    src: /images/banner-trimmed.webp
+    src: /images/banner.webp
     alt: Banner Image
     class: border border-red-500
   # description: |
@@ -40,7 +41,8 @@ sections:
       Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.
     align: right
     ui:
-      wrapper: 'pb-8 sm:pb-12'
+      wrapper: 'pb-12 sm:pb-16'
+      title: 'lg:font-medium'
     links:
       - label: Galerie
         to: '/galerie?album=restaurierungen'
@@ -56,11 +58,15 @@ sections:
     image:
       src: /images/home-1.jpg
       alt: Restaurierungen Image
+      class: 'rounded-md'
   - icon: i-ph-cross-duotone
     title: Grabmale
     description: >
       Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal.
     align: right
+    ui:
+      wrapper: 'pt-12 sm:pt-16'
+      title: 'lg:font-medium'
     links:
       - label: Galerie
         to: '/galerie?album=grabmalreferenzen'
@@ -76,5 +82,7 @@ sections:
     image:
       src: /images/home-2.jpg
       alt: Grabmale Image
-footer:
-  wave: bg-gray-100 dark:bg-raisin
+      class: 'rounded-md'
+ui:
+  footer:
+    wave: bg-gray-100 dark:bg-raisin
