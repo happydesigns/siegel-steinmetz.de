@@ -1,4 +1,7 @@
 title: Home
+ui:
+  footer:
+    wave: bg-gray-100 dark:bg-raisin
 hero:
   title: Herzlich Willkommen!
   description: 'Wir bieten einen umfassenden Service rund um den Naturstoff Stein:'
@@ -35,37 +38,13 @@ hero:
   # description: |
   #   <strong>Zum Grabmalkatalog: <NuxtLink to="https://www.graef-granit.de/index.php?Itemid=204" target="_blank">Gräf GmbH</NuxtLink></strong>
 sections:
-  - icon: i-ph-bank-duotone
-    title: Restaurierungen
-    description: >
-      Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.
-    align: right
-    ui:
-      wrapper: 'pb-12 sm:pb-16'
-      title: 'lg:font-medium'
-    links:
-      - label: Galerie
-        to: '/galerie?album=restaurierungen'
-        color: primary
-        icon: i-ph-image-duotone
-        size: lg
-      - label: Mehr erfahren
-        to: '/restaurierungen'
-        variant: link
-        color: black
-        trailing-icon: i-ph-arrow-right
-        size: lg
-    image:
-      src: /images/home-1.jpg
-      alt: Restaurierungen Image
-      class: 'rounded-md'
   - icon: i-ph-cross-duotone
     title: Grabmale
     description: >
-      Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal.
+      Wir gestalten gemeinsam mit Ihnen ein ganz persönliches Andenken an Ihren verstorbenen Angehörigen, ein individuelles Grabmal. Sie können aus einer Vielzahl von Materialien, Inschriften und Ornamenten wählen. Handwerkliche Grabmale fertigen wir direkt in Neudenau. Industriell gefertigte Steine beziehen wir von unseren Lieferanten.
     align: right
     ui:
-      wrapper: 'pt-12 sm:pt-16'
+      wrapper: 'pb-12 sm:pb-16'
       title: 'lg:font-medium'
     links:
       - label: Galerie
@@ -83,6 +62,27 @@ sections:
       src: /images/home-2.jpg
       alt: Grabmale Image
       class: 'rounded-md'
-ui:
-  footer:
-    wave: bg-gray-100 dark:bg-raisin
+  - icon: i-ph-bank-duotone
+    title: Restaurierungen
+    description: >
+      Unsere Firma hat als zweiten Schwerpunkt die kompetente und fachgerechte Restaurierung, Aufbereitung und Pflege historischer Kirchen, Gebäude, Grabmäler, Denkmäler und Bildhauerarbeiten im Programm.
+    align: right
+    ui:
+      wrapper: 'pt-12 sm:pt-16'
+      title: 'lg:font-medium'
+    links:
+      - label: Galerie
+        to: '/galerie?album=restaurierungen'
+        color: primary
+        icon: i-ph-image-duotone
+        size: lg
+      - label: Mehr erfahren
+        to: '/restaurierungen'
+        variant: link
+        color: black
+        trailing-icon: i-ph-arrow-right
+        size: lg
+    image:
+      src: /images/home-1.jpg
+      alt: Restaurierungen Image
+      class: 'rounded-md'
