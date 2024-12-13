@@ -21,8 +21,8 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
 <!-- eslint-disable vue/no-extra-parens -->
 <template>
   <div>
-    <!-- <Wave class="rotate-180" :class="ui.wave" />
-    <UFooter
+    <Wave class="rotate-180" :class="ui.wave" />
+    <!-- <UFooter
       :ui="{
         wrapper: 'dark',
         bottom: { wrapper: 'border-t border-gray-200 dark:border-cool-700', container: '!py-6', left: '~', center: '~', right: '~' },
