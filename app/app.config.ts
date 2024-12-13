@@ -27,16 +27,16 @@ export default defineAppConfig({
         to: '/ueber-uns',
       },
       {
-        label: 'Restaurierungen',
-        description: 'Fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.',
-        icon: 'i-ph-bank-duotone',
-        to: '/restaurierungen',
-      },
-      {
         label: 'Grabmale',
         description: 'Ein sichtbares und individuelles Andenken an einen geliebten Menschen.',
         icon: 'i-ph-cross-duotone',
         to: '/grabmale',
+      },
+      {
+        label: 'Restaurierungen',
+        description: 'Fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.',
+        icon: 'i-ph-bank-duotone',
+        to: '/restaurierungen',
       },
       {
         label: 'Galerie',
@@ -59,11 +59,11 @@ export default defineAppConfig({
     }, {
       label: 'Unsere Leistungen',
       children: [{
-        label: 'Restaurierungen',
-        to: '/restaurierungen',
-      }, {
         label: 'Grabmale',
         to: '/grabmale',
+      }, {
+        label: 'Restaurierungen',
+        to: '/restaurierungen',
       }, {
         label: 'Galerie',
         to: '/galerie',
