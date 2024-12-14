@@ -21,6 +21,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
 <!-- eslint-disable vue/no-extra-parens -->
 <template>
   <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" />
+  <Wave class="rotate-180" :class="ui.wave" />
 
   <div v-bind="attrs" :class="props.class">
     <Wave class="rotate-180" :class="ui.wave" />
