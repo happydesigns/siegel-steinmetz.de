@@ -42,6 +42,8 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
 <template>
   <!-- <AppHeader :ui="page?.ui?.header" /> -->
   <!-- <NuxtPage /> -->
+  <Wave class="rotate-180" :class="ui.wave" />
+
   <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" />
 
   <AppFooter :ui="page?.ui?.footer" />
