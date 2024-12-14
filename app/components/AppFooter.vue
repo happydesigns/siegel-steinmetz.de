@@ -22,13 +22,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
 <template>
   <div v-bind="attrs" :class="props.class">
     <Wave class="rotate-180" :class="ui.wave" />
-    <UFooter
-      :ui="{
-        wrapper: 'dark',
-        bottom: { wrapper: 'border-t border-gray-200 dark:border-cool-700', container: '!py-6', left: '~', center: '~', right: '~' },
-        top: { wrapper: '', container: 'py-8 lg:py-12' },
-      }"
-    >
+    <UFooter>
       <template #top>
         <UFooterColumns :links="appConfig.links?.footer">
           <!-- <template #right>
