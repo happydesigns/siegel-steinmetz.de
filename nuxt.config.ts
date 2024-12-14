@@ -36,9 +36,6 @@ export default defineNuxtConfig({
   // site: {
   //   url: 'https://siegel-steinmetz-de.pages.dev/',
   // },
-  ui: {
-    safelistColors: ['cool'],
-  },
   vite: {
     optimizeDeps: {
       include: [
