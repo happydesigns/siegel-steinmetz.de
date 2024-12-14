@@ -29,7 +29,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
         top: { wrapper: '', container: 'py-8 lg:py-12' },
       }"
     >
-      <template #top>
+      <!-- <template #top>
         <UFooterColumns :links="appConfig.links?.footer">
           <template #right>
             <div class="flex flex-col lg:grid grid-flow-col auto cols-fr gap-8 xl:col-span-2 text-gray-600 dark:text-gray-300 text-sm">
@@ -55,7 +55,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
             </div>
           </template>
         </UFooterColumns>
-      </template>
+      </template> -->
       <template #left>
         <p class="text-gray-500 dark:text-gray-400 text-sm">
           Copyright © {{ new Date().getFullYear() }}
