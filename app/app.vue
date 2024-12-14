@@ -1,4 +1,12 @@
 <script setup lang="ts">
+const props = withDefaults(defineProps<{
+  ui?: Partial<typeof config>
+  class?: any
+}>(), {
+  ui: () => ({}),
+  class: undefined,
+})
+
 // useHead({
 //   title: 'Bernd Siegel Steingestaltung',
 //   titleTemplate: '%s | Bernd Siegel Steingestaltung',
@@ -18,15 +26,7 @@
 //   description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.',
 // })
 
-// const { page } = useContent()
-
-const props = withDefaults(defineProps<{
-  ui?: Partial<typeof config>
-  class?: any
-}>(), {
-  ui: () => ({}),
-  class: undefined,
-})
+const { page } = useContent()
 
 const menu = { background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } }
 
@@ -44,7 +44,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
   <!-- <NuxtPage /> -->
   <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" />
 
-  <!-- <AppFooter :ui="page?.ui?.footer" /> -->
+  <AppFooter :ui="page?.ui?.footer" />
 </template>
 
 <style>
