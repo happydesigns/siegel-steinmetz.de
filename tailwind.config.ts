@@ -36,5 +36,8 @@ export default <Partial<Config>> {
     'dark:bg-cool-900',
     'fill-cool-800',
     'dark:fill-cool-800',
+    'xl:grid-cols-5',
+    'xl:col-span-3',
+    'xl:col-span-2',
   ],
 }
