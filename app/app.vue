@@ -30,6 +30,17 @@ const { page } = useContent()
 
 const menu = { background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } }
 
+const footer = {
+  wrapper: 'bg-cool-800 dark:bg-cool-800',
+  menu: { background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } },
+  wave: 'fill-cool-800 dark:fill-cool-800',
+  columns: {
+    wrapper: 'xl:grid-cols-5',
+    center: 'xl:col-span-3',
+    right: 'xl:col-span-2',
+  },
+}
+
 const config = {
   wrapper: '',
   menu: {},
@@ -42,7 +53,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
 <template>
   <!-- <AppHeader :ui="page?.ui?.header" /> -->
   <!-- <NuxtPage /> -->
-  <Wave class="rotate-180" :class="ui.wave" />
+  <Wave class="rotate-180" :class="footer.wave" />
 
   <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" />
 
