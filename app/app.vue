@@ -20,13 +20,29 @@
 
 // const { page } = useContent()
 
+const props = withDefaults(defineProps<{
+  ui?: Partial<typeof config>
+  class?: any
+}>(), {
+  ui: () => ({}),
+  class: undefined,
+})
+
 const menu = { background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } }
+
+const config = {
+  wrapper: '',
+  menu: {},
+  wave: '',
+}
+
+const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, 'class'), true)
 </script>
 
 <template>
   <!-- <AppHeader :ui="page?.ui?.header" /> -->
   <!-- <NuxtPage /> -->
-  <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="menu" />
+  <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" />
 
   <!-- <AppFooter :ui="page?.ui?.footer" /> -->
 </template>
