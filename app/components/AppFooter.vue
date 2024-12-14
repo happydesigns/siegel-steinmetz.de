@@ -31,7 +31,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
     >
       <template #top>
         <UFooterColumns :links="appConfig.links?.footer">
-          <!-- <template #right>
+          <template #right>
             <div class="flex flex-col lg:grid grid-flow-col auto cols-fr gap-8 xl:col-span-2 text-gray-600 dark:text-gray-300 text-sm">
               <div class="space-y-4">
                 <h3 class="font-semibold text-gray-900 dark:text-white mb-6">
@@ -53,7 +53,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
                 </p>
               </div>
             </div>
-          </template> -->
+          </template>
         </UFooterColumns>
       </template>
       <template #left>
