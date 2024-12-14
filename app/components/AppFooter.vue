@@ -65,7 +65,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
         </p>
       </template>
       <template #right>
-        <!-- <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" /> -->
+        <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" />
       </template>
     </UFooter>
   </div>
