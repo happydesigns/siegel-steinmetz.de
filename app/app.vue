@@ -18,13 +18,17 @@
 //   description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.',
 // })
 
-const { page } = useContent()
+// const { page } = useContent()
+
+const menu = { background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } }
 </script>
 
 <template>
   <!-- <AppHeader :ui="page?.ui?.header" /> -->
   <!-- <NuxtPage /> -->
-  <AppFooter :ui="page?.ui?.footer" />
+  <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="menu" />
+
+  <!-- <AppFooter :ui="page?.ui?.footer" /> -->
 </template>
 
 <style>
