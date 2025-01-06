@@ -24,7 +24,7 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
     <Wave class="rotate-180" :class="ui.wave" />
     <UFooter
       :ui="{
-        wrapper: 'dark',
+        wrapper: 'dark dark:bg-raisinCool',
         bottom: { wrapper: 'border-t border-gray-200 dark:border-cool-700', container: '!py-6', left: '~', center: '~', right: '~' },
         top: { wrapper: '', container: 'py-8 lg:py-12' },
       }"
