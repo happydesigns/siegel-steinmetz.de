@@ -9,18 +9,18 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div class="md:overflow-auto my-4 sm:my-6 lg:my-8" :class="props.side">
+  <div class="md:overflow-x-auto py-4 sm:py-6 lg:py-8" :class="props.side">
     <slot />
   </div>
 </template>
 
 <style>
 .left > figure {
-  @apply md:float-left lg:mr-16 md:mr-8 md:my-5;
+  @apply md:float-left md:mr-8 lg:mr-16 my-6;
 }
 
 .right > figure {
-  @apply md:float-right lg:ml-16 md:ml-8 md:my-5;
+  @apply md:float-right md:ml-8 lg:ml-16 my-6;
 }
 
 .left > figure > img,

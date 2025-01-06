@@ -47,7 +47,7 @@ h6 {
 }
 
 img.default {
-  @apply rounded-md border border-gray-200 dark:border-gray-800;
+  @apply rounded-lg border border-gray-200 dark:border-gray-800;
 }
 
 .icon {
