@@ -1,17 +1,27 @@
 ---
 title: Grabmale
 description: Ein Grabmal ist ein sichtbares und individuelles Andenken an einen geliebten Menschen.
+layout: content
 container: true
+toc: false
+header:
+  image: '/images/tombs-1.jpg'
+  class: relative z-10
+  icon: i-ph-cross-duotone
+  links:
+    - label: Galerie
+      to: '/galerie?album=grabmalreferenzen'
+      icon: i-ph-image-duotone
 ---
 
-::text-flow{side="right" class="md:text-justify"}
+::text-flow{side="right"}
 :image-caption{src="/images/tombs-1.jpg" alt="Doppelstein Jura mit Bronze" caption="Doppelstein Jura mit Bronze"}
 Die Beschaffenheit des Materials, die Größe, Farbe und Form des Steins, seine Verarbeitung, die enthaltenen Symbole und Inschriften – all das legt Zeugnis ab über das Leben des lieben Verstorbenen und ist ein Ankerplatz, an dem wir die unauflösliche Verbindung zu ihm spüren dürfen. Das Grabmal drückt die Wertschätzung für den Verstorbenen aus und ist eine tröstende Erinnerung.
 
 Seit Jahrtausenden werden für Grabmale grob behauene Steine verwendet. Das robuste, witterungsbeständige und langlebige Naturmaterial symbolisiert die unvergängliche Liebe und Verbundenheit zu einem geliebten Menschen und schmückt die Gräber der Angehörigen.
 ::
 
-::text-flow{side="left" class="md:text-justify"}
+::text-flow{side="left"}
 :image-caption{src="/images/tombs-2.jpg" alt="Doppelgrabmal Tarno Diorit" caption="Doppelgrabmal Tarno Diorit"}
 Sie kennen Ihren geliebten Verstorbenen am besten. Gemeinsam mit Ihnen erarbeiten wir Ihre ganz persönliche Erinnerung an Ihren Angehörigen.
 
@@ -24,7 +34,7 @@ Auch die Grabinschrift legen wir gemeinsam mit Ihnen fest. Sie kann schlicht, kl
 Grabzubehör wie Grablaternen aus Bronze, Aluminium oder Stahl sowie robuste Pflanzschalen und wetterfeste Vasen in verschiedenen Materialausführungen und Größen runden unser Angebot ab.
 ::
 
-::text-flow{side="right" class="md:text-justify"}
+::text-flow{side="right"}
 :image-caption{src="/images/tombs-3.jpg" alt="Urnengrab Kalkstein" caption="Urnengrab Kalkstein"}
 Grabsteine sind im Laufe der Jahre und Jahrzehnte ständig wechselnden Witterungseinflüssen ausgesetzt. Feuchtigkeit, Kälte, aber auch Hitze setzen ihnen mit der Zeit zu. Inschriften verblassen, angebrachte Buchstaben, Inschriften und Ornamente lockern sich und können verloren gehen. Gerne erneuern wir die Inschrift auf dem Grabmal Ihrer Lieben. Auch Moos oder Verschmutzungen entfernen wir. So wird der Grabstein wieder in seinen einwandfreien Originalzustand versetzt.
 
