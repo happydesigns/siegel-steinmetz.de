@@ -6,7 +6,9 @@ export default defineNuxtConfig({
     transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
   },
   content: {
-    documentDriven: true,
+    documentDriven: {
+      layoutFallbacks: ['content'],
+    },
   },
   devtools: { enabled: true },
   eslint: {
@@ -15,7 +17,10 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
-  extends: ['@nuxt/ui-pro'],
+  extends: [
+    '@nuxt/ui-pro',
+    'github:happydesigns/ui-base',
+  ],
   image: {
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
