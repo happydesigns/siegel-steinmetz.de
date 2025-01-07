@@ -40,5 +40,6 @@ export default <Partial<Config>> {
     'xl:grid-cols-5',
     'xl:col-span-3',
     'xl:col-span-2',
+    'dark:fill-raisinCool',
   ],
 }
