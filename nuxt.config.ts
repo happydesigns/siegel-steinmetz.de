@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     // 'nuxt-og-image',
     // '@nuxthq/studio',
+    // '@nuxthub/core',
   ],
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
