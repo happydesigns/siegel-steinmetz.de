@@ -16,6 +16,7 @@ useSeoMeta({
 <template>
   <div v-if="page">
     <ULandingSection
+      v-if="page.hero"
       v-bind="page.hero"
       :ui="{
         wrapper: 'pt-0 pb-28 sm:pt-6 md:pb-32 lg:py-32 2xl:py-36 overflow-hidden',
@@ -24,16 +25,30 @@ useSeoMeta({
         container: 'relative overflow-visible flex flex-col-reverse lg:grid !gap-8',
       }"
     >
-      <template v-if="page?.hero.headline" #headline>
+      <template v-if="page.hero.headline" #headline>
         <NuxtLink :to="page.hero.headline.to">
           <UBadge color="white" size="md" class="relative px-3 rounded-full font-semibold dark:hover:bg-gray-400/15 dark:hover:ring-gray-700">
-            {{ page?.hero.headline.label }}
+            {{ page.hero.headline.label }}
             <UIcon
-              v-if="page?.hero.headline.icon" :name="page?.hero.headline.icon"
+              v-if="page.hero?.headline.icon" :name="page.hero.headline.icon"
               class="ml-1 w-4 h-4 pointer-events-none"
             />
           </UBadge>
         </NuxtLink>
+      </template>
+
+      <template #links>
+        <div class="w-full">
+          <h2 class="font-bold text-lg mb-2">
+            Zum Grabmalkatalog:
+          </h2>
+        </div>
+        <UButton
+          v-for="(link, index) in page.hero.links"
+          :key="index"
+          v-bind="link"
+          @click="link.click"
+        />
       </template>
 
       <HeroGradient class="lg:block absolute h-[768px] left-[-18rem] bottom-[-8rem] z-[-1] box-border" />
@@ -43,7 +58,7 @@ useSeoMeta({
           <img
             :src="page.hero.image.src"
             class="lg:block relative w-full lg:h-[360px] xl:h-[380px] 2xl:h-[420px] sm:rounded-xl aspect-[19/9] sm:aspect-[20/9] md:aspect-[21/9] lg:aspect-[7/5] xl:aspect-[16/9] object-cover md:object-[25%]"
-            alt="NuxtHub Deploy page"
+            alt=""
           >
           <div class="hidden lg:block absolute inset-2 border border-4 border-gray-100 dark:border-gray-800 rounded-lg" />
         </div>
