@@ -20,7 +20,7 @@ hero:
       external: true
       target: _blank
     - label: Mainzer Grabmaldesign
-      to: 'https://www.mainzer-grabmale.de/'
+      to: 'https://www.mainzer-grabmale.de/produktuebersicht/moderne-grabsteine/page/9/'
       trailingIcon: i-ph-arrow-right
       size: lg
       color: gray
