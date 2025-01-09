@@ -51,7 +51,7 @@ useSeoMeta({
         />
       </template>
 
-      <HeroGradient class="lg:block absolute h-[768px] left-[-18rem] bottom-[-8rem] z-[-1] box-border" />
+      <HeroGradient class="lg:block absolute h-[1152px] left-[-18rem] bottom-[-12rem] z-[-1] box-border" />
 
       <div class="lg:absolute md:right-0 lg:right-[-1rem] xl:right-[-8rem] 2xl:right-[-15rem] -mx-4 sm:m-0">
         <div class="relative">
