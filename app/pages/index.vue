@@ -60,7 +60,7 @@ useSeoMeta({
             class="lg:block relative w-full lg:h-[360px] xl:h-[380px] 2xl:h-[420px] sm:rounded-lg aspect-[19/9] sm:aspect-[20/9] md:aspect-[21/9] lg:aspect-[7/5] xl:aspect-[16/9] object-cover md:object-[25%]"
             alt=""
           >
-          <div class="hidden lg:block absolute inset-2 border border-4 border-gray-100 dark:border-gray-800 rounded-md" />
+          <div class="hidden lg:block absolute inset-2 border border-4 border-white dark:border-gray-900 rounded-md" />
         </div>
       </div>
     </ULandingSection>
