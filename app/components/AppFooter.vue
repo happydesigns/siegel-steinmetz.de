@@ -45,11 +45,11 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
                   Kontakt
                 </h3>
                 <p>
-                  <UIcon name="i-ph-phone-fill" class="-mb-0.5 mr-1" /> 06264 / 92 64 44<br>
-                  <UIcon name="i-ph-printer-fill" class="-mb-0.5 mr-1" /> 06264 / 92 64 45<br>
+                  <UIcon name="i-ph-phone-fill" /> 06264 / 92 64 44<br>
+                  <UIcon name="i-ph-printer-fill" /> 06264 / 92 64 45<br>
                 </p>
                 <p>
-                  <UIcon name="i-ph-envelope-fill" class="-mb-0.5 mr-1" /> info@siegel-steinmetz.de
+                  <UIcon name="i-ph-envelope-fill" /> info@siegel-steinmetz.de
                 </p>
               </div>
             </div>
