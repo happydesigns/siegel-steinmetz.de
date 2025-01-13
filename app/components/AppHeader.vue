@@ -5,7 +5,7 @@ const appConfig = useAppConfig()
 <template>
   <UHeader :links="appConfig.links.header">
     <template #logo>
-      <Logo class="w-auto h-11 bg-white rounded-md p-1" />
+      <Logo class="w-auto h-12 dark:bg-white rounded-md p-1" />
     </template>
 
     <template #panel>
