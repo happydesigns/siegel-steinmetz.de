@@ -37,9 +37,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
-  // site: {
-  //   url: 'https://siegel-steinmetz-de.pages.dev/',
-  // },
+  site: {
+    url: 'https://www.siegel-steinmetz.de',
+    name: 'Bernd Siegel Steingestaltung',
+  },
   vite: {
     optimizeDeps: {
       include: [
