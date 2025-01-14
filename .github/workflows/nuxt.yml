@@ -18,6 +18,9 @@ jobs:
       - run: npm install
         env:
           GIGET_AUTH: ${{ secrets.GIGET_AUTH }}
+      - run: printenv | grep NUXT_UI_PRO_LICENSE
+        env:
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
       - run: npx nuxt build --preset github_pages
         env:
           GIGET_AUTH: ${{ secrets.GIGET_AUTH }}
