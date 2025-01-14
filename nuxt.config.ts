@@ -6,7 +6,9 @@ export default defineNuxtConfig({
     transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
   },
   content: {
-    documentDriven: true,
+    documentDriven: {
+      layoutFallbacks: ['content'],
+    },
   },
   devtools: { enabled: true },
   eslint: {
@@ -15,10 +17,10 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
-  extends: ['@nuxt/ui-pro'],
-  // hub: {
-  //   blob: true,
-  // },
+  extends: [
+    '@nuxt/ui-pro',
+    // 'github:happydesigns/ui-base',
+  ],
   image: {
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
@@ -31,18 +33,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     // 'nuxt-og-image',
     // '@nuxthq/studio',
-    // '@nuxthub/core',
   ],
-  // routeRules: {
-  //   '/': { prerender: true },
-  //   'ueber-uns': { prerender: true },
-  //   'restaurierungen': { prerender: true },
-  //   'grabmale': { prerender: true },
-  //   'galerie': { prerender: true },
-  //   'kontakt': { prerender: true },
-  //   'impressum': { prerender: true },
-  //   'datenschutz': { prerender: true },
-  // },
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },

@@ -9,6 +9,8 @@ ui: { wrapper: 'bg-cool-100 dark:bg-raisin', body: 'mt-0', footer: { wave: 'bg-g
 ---
 title: Herzlich Willkommen!
 orientation: horizontal
+# Gräf-Granit und Mainzer-Grabmaldesign
+links: [{ label: 'Gräf GmbH', to: 'https://www.graef-granit.de/index.php?Itemid=204', target: '_blank', color: 'primary', icon: 'i-ph-link-duotone', size: 'lg' }, { label: 'Mainzer Grabmaldesign', to: 'https://www.mainzer-grabmale.de/', target: '_blank', color: 'gray', icon: 'i-ph-link-duotone', size: 'lg' }]
 ui: { wrapper: 'bg-white dark:bg-gray-900 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40', container: 'gap-8 sm:gap-12 lg:!grid-cols-9', base: 'prose prose-primary dark:prose-invert max-w-none order-1 lg:order-first lg:col-span-5', title: 'text-3xl sm:text-4xl lg:text-5xl' }
 ---
 
