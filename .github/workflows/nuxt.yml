@@ -16,7 +16,13 @@ jobs:
           node-version: "20"
       # Pick your own package manager and build script
       - run: npm install
+        env:
+          GIGET_AUTH: ${{ secrets.GIGET_AUTH }}
       - run: npx nuxt build --preset github_pages
+        env:
+          GIGET_AUTH: ${{ secrets.GIGET_AUTH }}
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
