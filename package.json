@@ -22,7 +22,7 @@
     "@nuxt/ui-pro": "^1.7.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/seo": "2.0.3",
-    "nuxt": "^3.15.1",
+    "nuxt": "^3.15.2",
     "nuxt-og-image": "^4.0.3",
     "vue-google-maps-community-fork": "^0.3.1"
   },
@@ -33,6 +33,6 @@
     "changelogen": "^0.5.7",
     "eslint": "^9.18.0",
     "typescript": "^5.7.3",
-    "wrangler": "^3.101.0"
+    "wrangler": "^3.102.0"
   }
 }
