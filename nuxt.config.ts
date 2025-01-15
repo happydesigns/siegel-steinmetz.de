@@ -22,6 +22,10 @@ export default defineNuxtConfig({
     // 'github:happydesigns/ui-base',
   ],
   image: {
+    provider: 'cloudflare',
+    cloudflare: {
+      baseURL: 'https://www.siegel-steinmetz.de',
+    },
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
   },
