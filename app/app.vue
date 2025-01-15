@@ -50,7 +50,11 @@ img.default {
   @apply rounded-md border border-gray-200 dark:border-gray-800;
 }
 
-.iconify {
-  @apply inline-block align-middle text-base leading-none mb-0.5 mr-1;
+p .iconify {
+  @apply inline-block align-middle mb-0.5 mr-1;
+}
+
+footer p .iconify {
+  @apply text-base;
 }
 </style>
