@@ -14,7 +14,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div v-if="page">
+  <NuxtLayout v-if="page">
     <ULandingSection
       v-if="page.hero"
       v-bind="(page.hero as any)"
@@ -69,5 +69,5 @@ useSeoMeta({
         </template>
       </ULandingSection>
     </div>
-  </div>
+  </NuxtLayout>
 </template>

@@ -12,8 +12,6 @@ useSeoMeta({
 
 <template>
   <UMain :class="page?.ui?.wrapper" class="break-words">
-    <UPageBody :prose="page?.prose !== false" class="pb-32" :class="[page?.ui?.body]">
-      <slot />
-    </UPageBody>
+    <slot />
   </UMain>
 </template>
