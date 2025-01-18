@@ -1,7 +1,5 @@
 title: Home
-ui:
-  footer:
-    wave: bg-gray-100 dark:bg-raisin
+description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.'
 hero:
   title: Herzlich Willkommen!
   description: 'Wir bieten einen umfassenden Service rund um den Naturstoff Stein:'
@@ -28,15 +26,10 @@ hero:
       target: _blank
       class: '[&>*:last-child]:hidden sm:[&>*:last-child]:block'
   align: left
-  ui:
-  # wrapper: 'bg-white dark:bg-gray-900 !pt-0 lg:!pt-40 pb-8 sm:pb-12 md:pb-12 lg:pb-40'
-  # container: 'gap-8 sm:gap-12 lg:!grid-cols-9'
   image:
     src: /images/banner.webp
     alt: Banner Image
     class: border border-red-500
-  # description: |
-  #   <strong>Zum Grabmalkatalog: <NuxtLink to="https://www.graef-granit.de/index.php?Itemid=204" target="_blank">Gräf GmbH</NuxtLink></strong>
 sections:
   - icon: i-ph-cross-duotone
     title: Grabmale
@@ -86,3 +79,6 @@ sections:
       src: /images/home-1.jpg
       alt: Restaurierungen Image
       class: 'rounded-md'
+ui:
+  footer:
+    wave: bg-gray-100 dark:bg-raisin
