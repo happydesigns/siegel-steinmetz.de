@@ -5,8 +5,6 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Landing page not found', fatal: true })
 }
 
-console.log('page', Object.keys(page.value))
-
 useSeoMeta({
   title: page.value.seo?.title,
   ogTitle: page.value.seo?.title,
