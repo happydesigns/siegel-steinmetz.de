@@ -5,11 +5,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
   },
-  content: {
-    documentDriven: {
-      layoutFallbacks: ['content'],
-    },
-  },
   devtools: { enabled: true },
   eslint: {
     config: {
@@ -34,17 +29,16 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
-    // '@nuxthq/studio',
     '@nuxt/fonts',
-    '@nuxtjs/seo',
+    // '@nuxtjs/seo',
   ],
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
-  site: {
-    url: 'https://www.siegel-steinmetz.de',
-    name: 'Bernd Siegel Steingestaltung',
-  },
+  // site: {
+  //   url: 'https://www.siegel-steinmetz.de',
+  //   name: 'Bernd Siegel Steingestaltung',
+  // },
   vite: {
     optimizeDeps: {
       include: [
