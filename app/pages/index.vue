@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('/', () => queryCollection('landing').path('/').first())
+const { data: page } = await useAsyncData('landing', () => queryCollection('landing').path('/').first())
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Landing page not found', fatal: true })
 }
+
+console.log('page', Object.keys(page.value))
 
 useSeoMeta({
   title: page.value.seo?.title,
