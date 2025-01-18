@@ -18,7 +18,14 @@ useSeoMeta({
   description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.',
 })
 
-const { page } = useContent()
+const route = useRoute()
+const { data: page } = await useAsyncData(
+  route.path,
+  () => queryCollection('content').path(route.path).first(),
+  {
+    watch: [route],
+  },
+)
 </script>
 
 <template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { page } = useContent()
+const route = useRoute()
+const { data: page } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first()) as any
 const headline = computed(() => page?.value?._dir ? findPageHeadline(page?.value) : '')
 </script>
 
