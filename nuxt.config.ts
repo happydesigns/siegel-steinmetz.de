@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     },
   },
   extends: [
-    '@nuxt/ui-pro',
     // 'github:happydesigns/ui-base',
   ],
   image: {
@@ -25,20 +24,19 @@ export default defineNuxtConfig({
     format: ['avif', 'webp', 'jpg'],
   },
   modules: [
+    '@nuxtjs/seo',
+    '@nuxt/ui-pro',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxt/fonts',
-    // '@nuxtjs/seo',
   ],
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
-  // site: {
-  //   url: 'https://www.siegel-steinmetz.de',
-  //   name: 'Bernd Siegel Steingestaltung',
-  // },
+  site: {
+    url: 'https://www.siegel-steinmetz.de',
+    name: 'Bernd Siegel Steingestaltung',
+  },
   vite: {
     optimizeDeps: {
       include: [
