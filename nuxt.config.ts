@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
   },
+  css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
   eslint: {
     config: {
@@ -15,6 +16,11 @@ export default defineNuxtConfig({
   extends: [
     // 'github:happydesigns/ui-base',
   ],
+  fonts: {
+    experimental: {
+      processCSSVariables: true,
+    },
+  },
   image: {
     provider: 'cloudflare',
     cloudflare: {
