@@ -1,12 +1,16 @@
 export default defineAppConfig({
   ui: {
-    primary: 'red',
-    gray: 'zinc',
+    colors: {
+      primary: 'red',
+      neutral: 'zinc',
+    },
     button: {
       variant: {
         solid: 'bg-primary-900 hover:bg-primary-800 disabled:bg-primary-900 focus-visible:outline-primary-800',
       },
     },
+  },
+  uiPro: {
     footer: {
       wrapper: 'bg-cool-800 dark:bg-cool-800',
       menu: { background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } },
@@ -17,7 +21,6 @@ export default defineAppConfig({
         right: 'xl:col-span-2',
       },
     },
-
   },
   links: {
     header: [
