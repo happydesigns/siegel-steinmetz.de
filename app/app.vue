@@ -29,9 +29,11 @@ const { data: page } = await useAsyncData(
 </script>
 
 <template>
-  <AppHeader :ui="page?.ui?.header" />
-  <NuxtPage />
-  <AppFooter :ui="page?.ui?.footer" />
+  <UApp>
+    <AppHeader :ui="page?.ui?.header" />
+    <NuxtPage />
+    <AppFooter :ui="page?.ui?.footer" />
+  </UApp>
 </template>
 
 <style>
