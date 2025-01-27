@@ -1,12 +1,27 @@
-import { z } from 'zod'
+import { z } from '@nuxt/content'
 
 const buttonSizeEnum = z.enum(['2xs', 'xs', 'sm', 'md', 'lg', 'xl'])
 const alignEnum = z.enum(['left', 'right', 'center'])
+const orientationEnum = z.enum(['vertical', 'horizontal'])
+const targetEnum = z.enum(['_blank', '_parent', '_self', '_top'])
 
-const featureSchema = z.object({
+export const featureSchema = z.object({
+  as: z.string().optional(),
   icon: z.string().optional(),
-  name: z.string(),
+  title: z.string().optional(),
   description: z.string().optional(),
+  orientation: orientationEnum.optional(),
+  to: z.union([z.string(), z.any()]).optional(),
+  target: targetEnum.nullable().optional(),
+  class: z.any().optional(),
+  ui: z.object({
+    root: z.string().optional(),
+    wrapper: z.string().optional(),
+    leading: z.string().optional(),
+    leadingIcon: z.string().optional(),
+    title: z.string().optional(),
+    description: z.string().optional(),
+  }).optional(),
 })
 
 const linkSchema = z.object({
@@ -23,16 +38,28 @@ export const imageSchema = z.object({
   class: z.string().optional(),
 })
 
-export const landingSectionSchema = z.object({
+export const pageSectionSchema = z.object({
+  as: z.string().optional(),
+  headline: z.string().optional(),
+  icon: z.string().optional(),
   title: z.string().optional(),
   description: z.string().optional(),
-  icon: z.string().optional(),
-  align: alignEnum.optional(),
-  headline: z.string().optional(),
-  features: z.array(featureSchema).optional(),
   links: z.array(linkSchema).optional(),
-  slot: z.string().optional(),
-  ui: z.any().optional(),
+  features: z.array(featureSchema).optional(),
+  orientation: orientationEnum.optional(),
+  reverse: z.boolean().optional(),
+  ui: z.object({
+    root: z.string().optional(),
+    container: z.string().optional(),
+    wrapper: z.string().optional(),
+    headline: z.string().optional(),
+    leading: z.string().optional(),
+    leadingIcon: z.string().optional(),
+    title: z.string().optional(),
+    description: z.string().optional(),
+    links: z.string().optional(),
+    features: z.string().optional(),
+  }).optional(),
 })
 
 export const pageHeroSchema = z.object({

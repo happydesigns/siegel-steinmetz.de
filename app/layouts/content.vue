@@ -13,36 +13,34 @@ useSeoMeta({
   ogDescription: page.value.seo?.description || page.value.description,
 })
 
-const preferredMetaComponent = page.value.layout?.metadataComponent || 'header'
-const useHero = !!page.value.hero || preferredMetaComponent === 'hero'
-const useHeader = !!page.value.header || preferredMetaComponent === 'header'
+const preferredMetaComponent = computed(() => page.value?.layout?.metadataComponent || 'header')
+const useHero = computed(() => !!page.value?.hero || preferredMetaComponent.value === 'hero')
+const useHeader = computed(() => !!page.value?.header || preferredMetaComponent.value === 'header')
 
-if (useHero) {
-  page.value.hero = {
-    title: page.value.hero?.title || page.value.title,
-    description: page.value.hero?.description || page.value.description,
+watchEffect(() => {
+  if (useHero.value && page.value) {
+    page.value.hero = {
+      title: page.value.hero?.title || page.value.title,
+      description: page.value.hero?.description || page.value.description,
+    }
   }
-}
 
-if (useHeader) {
-  page.value.header = {
-    title: page.value.header?.title || page.value.title,
-    description: page.value.header?.description || page.value.description,
+  if (useHeader.value && page.value) {
+    page.value.header = {
+      title: page.value.header?.title || page.value.title,
+      description: page.value.header?.description || page.value.description,
+    }
   }
-}
+})
 
 const containerClass = computed(() =>
   page.value?.layout?.container === false ? '' : undefined,
-)
-const pageBodyWrapper = computed(() =>
-  page.value?.header ? '' : 'mt-0',
 )
 </script>
 
 <template>
   <UMain v-if="page" :ui="page.ui?.main" class="break-words">
     <UContainer :ui="{ padding: containerClass, constrained: containerClass, ...page.ui?.container }">
-      <!-- Render components based on resolvedComponents -->
       <UPageHero
         v-if="page.hero"
         :ui="page.ui?.hero"
@@ -64,7 +62,7 @@ const pageBodyWrapper = computed(() =>
         <UPageBody
           :prose="page.layout?.prose !== false"
           class="pb-32"
-          :ui="{ wrapper: pageBodyWrapper, ...page.ui?.body }"
+          :class="page.ui?.body"
         >
           <slot />
         </UPageBody>

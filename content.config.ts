@@ -1,5 +1,5 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
-import { imageSchema, landingSectionSchema, pageHeroSchema } from './types'
+import { imageSchema, pageHeroSchema, pageSectionSchema } from './types'
 
 export default defineContentConfig({
   collections: {
@@ -7,11 +7,11 @@ export default defineContentConfig({
       type: 'page',
       source: '**/*.yaml',
       schema: z.object({
-        hero: landingSectionSchema.extend({
+        hero: pageSectionSchema.extend({
           image: imageSchema.optional(),
         }),
         sections: z.array(
-          landingSectionSchema.extend({
+          pageSectionSchema.extend({
             image: imageSchema.optional(),
           }),
         ),
