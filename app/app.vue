@@ -50,18 +50,21 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-serif;
+  font-family: var(--font-serif);
 }
 
 img.default {
-  @apply rounded-md border border-gray-200 dark:border-gray-800;
+  border: 1px solid var(--color-neutral-200);
 }
 
 p .iconify {
-  @apply inline-block align-middle mb-0.5 mr-1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: calc(var(--spacing) * 0.5);
+  margin-right: var(--spacing);
 }
 
 footer p .iconify {
-  @apply text-base;
+  font-size: var(--text-base);
 }
 </style>
