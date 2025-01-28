@@ -20,17 +20,17 @@ function selectAlbum(path: string, images: { src: string, alt: string | undefine
 </script>
 
 <template>
-  <UPage class="gap-8">
+  <UPage>
     <template #left>
-      <UAside class="block -mt-8">
+      <UPageAside class="block -mt-8 pr-0!">
         <UPageColumns class="overflow-x-auto flex lg:flex-col gap-4 sm:gap-6 lg:gap-8 w-full">
           <Album v-for="album in albums" :key="album.path" :path="album.path" :title="album.title" @select-album="selectAlbum" />
         </UPageColumns>
-      </UAside>
+      </UPageAside>
     </template>
 
     <UPageColumns>
-      <img v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full m-0 rounded-md border border-gray-200 dark:border-gray-800">
+      <img v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full rounded-md border border-neutral-200 dark:border-neutral-800">
     </UPageColumns>
   </UPage>
 </template>
