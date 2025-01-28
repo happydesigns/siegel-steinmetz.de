@@ -1,7 +1,15 @@
 <script setup lang="ts">
+import type { FooterProps } from '@nuxt/ui-pro'
+import { tv } from 'tailwind-variants'
+
+type FooterUiProps = Partial<FooterProps['ui'] & {
+  wave: string
+  columns: any
+}>
+
 const props = withDefaults(defineProps<{
-  ui?: Partial<typeof config>
-  class?: any
+  ui?: FooterUiProps
+  class?: string
 }>(), {
   ui: () => ({}),
   class: undefined,
@@ -9,63 +17,63 @@ const props = withDefaults(defineProps<{
 
 const appConfig = useAppConfig()
 
-const config = {
-  wrapper: '',
-  menu: {},
-  wave: '',
-}
+const footer = tv({
+  slots: appConfig.uiPro?.footer?.slots || {},
+  extend: props.ui,
+})
 
-const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, 'class'), true)
+const footerColumns = tv({
+  slots: appConfig.uiPro?.footerColumns?.slots || {},
+  extend: props.ui?.columns,
+})
+
+const ui = footer({ class: props.class })
+const columnsUi = footerColumns()
 </script>
 
-<!-- eslint-disable vue/no-extra-parens -->
 <template>
-  <div v-bind="attrs" :class="props.class">
-    <Wave class="rotate-180" :class="ui.wave" />
-    <UFooter
-      :ui="{
-        wrapper: 'dark dark:bg-raisinCool',
-        bottom: { wrapper: 'border-t border-gray-200 dark:border-cool-700', container: '!py-6', left: '~', center: '~', right: '~' },
-        top: { wrapper: '', container: 'py-8 lg:py-12' },
-      }"
-    >
+  <div>
+    <Wave :class="ui.wave?.({ class: props.ui?.wave })" />
+    <UFooter>
       <template #top>
-        <UFooterColumns :links="appConfig.links?.footer">
-          <template #right>
-            <div class="flex flex-col lg:grid grid-flow-col auto cols-fr gap-8 xl:col-span-2 grid-cols-3 xl:grid-cols-none text-gray-600 dark:text-gray-300 text-sm">
-              <div class="space-y-4">
-                <h3 class="font-semibold text-gray-900 dark:text-white mb-6">
-                  Anschrift
-                </h3>
-                <p>Bernd Siegel<br>Steingestaltung</p>
-                <p>Bahnhofstraße 13<br>74861 Neudenau</p>
+        <UContainer>
+          <UFooterColumns :columns="appConfig.links?.footer">
+            <template #right>
+              <div class="flex flex-col lg:grid grid-flow-col auto cols-fr gap-8 xl:col-span-2 grid-cols-3 xl:grid-cols-none text-gray-600 dark:text-gray-300 text-sm prose">
+                <div :class="columnsUi.center?.()">
+                  <h3 class="font-semibold text-neutral-900 dark:text-white mb-6">
+                    Anschrift
+                  </h3>
+                  <ProseP>Bernd Siegel<br>Steingestaltung</ProseP>
+                  <ProseP>Bahnhofstraße 13<br>74861 Neudenau</ProseP>
+                </div>
+                <div :class="columnsUi.right?.()">
+                  <h3 class="text-sm font-semibold text-neutral-900 dark:text-white mb-6">
+                    Kontakt
+                  </h3>
+                  <ProseP>
+                    <UIcon name="i-ph-phone-fill" /> 06264 / 92 64 44<br>
+                    <UIcon name="i-ph-printer-fill" /> 06264 / 92 64 45<br>
+                  </ProseP>
+                  <ProseP>
+                    <UIcon name="i-ph-envelope-fill" /> info@siegel-steinmetz.de
+                  </ProseP>
+                </div>
               </div>
-              <div class="space-y-4">
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-6">
-                  Kontakt
-                </h3>
-                <p>
-                  <UIcon name="i-ph-phone-fill" /> 06264 / 92 64 44<br>
-                  <UIcon name="i-ph-printer-fill" /> 06264 / 92 64 45<br>
-                </p>
-                <p>
-                  <UIcon name="i-ph-envelope-fill" /> info@siegel-steinmetz.de
-                </p>
-              </div>
-            </div>
-          </template>
-        </UFooterColumns>
+            </template>
+          </UFooterColumns>
+        </UContainer>
       </template>
       <template #left>
-        <p class="text-gray-500 dark:text-gray-400 text-sm">
+        <p class="text-neutral-500 dark:text-neutral-400 text-sm">
           Copyright © {{ new Date().getFullYear() }}
-          <NuxtLink to="https://www.happydesigns.de/" target="_blank">
+          <ULink to="https://www.happydesigns.de/" target="_blank">
             happydesigns
-          </NuxtLink>
+          </ULink>
         </p>
       </template>
       <template #right>
-        <UColorModeSelect class="w-32" select-class="dark:bg-inherit" :ui-menu="ui.menu" />
+        <UColorModeSelect :ui="{ base: 'w-32 dark:bg-raisin-cool', content: 'dark:bg-raisin-cool' }" />
       </template>
     </UFooter>
   </div>

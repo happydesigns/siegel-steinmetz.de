@@ -12,11 +12,16 @@ export default defineAppConfig({
   },
   uiPro: {
     footer: {
-      wrapper: 'bg-cool-800 dark:bg-cool-800',
-      menu: { background: 'dark:bg-cool-800', option: { active: 'dark:bg-cool-900' } },
-      wave: 'fill-cool-800 dark:fill-raisinCool',
-      columns: {
-        wrapper: 'xl:grid-cols-5',
+      slots: {
+        root: 'bg-gradient-to-b from-gray-800 to-raisin-cool dark:raisin-cool',
+        container: 'dark',
+        top: 'dark border-b border-neutral-200 dark:border-gray-700',
+        wave: 'bg-gray-800 dark:bg-raisin-cool fill-white dark:fill-neutral-900',
+      },
+    },
+    footerColumns: {
+      slots: {
+        root: 'xl:grid-cols-5',
         center: 'xl:col-span-3',
         right: 'xl:col-span-2',
       },
@@ -26,7 +31,7 @@ export default defineAppConfig({
     header: [
       {
         label: 'Über uns',
-        icon: 'i-ph-user-duotone',
+        icon: 'i-ph-users-duotone',
         to: '/ueber-uns',
       },
       {
