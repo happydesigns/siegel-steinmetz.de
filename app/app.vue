@@ -34,7 +34,7 @@ const { data: page } = await useAsyncData(
     <NuxtPage />
     <AppFooter :ui="page?.ui?.footer" />
   </UApp>
-  <span class="display-none lg:col-span-5 fill-neutral-100 dark:fill-raisin dark:fill-neutral-900 pb-0 sm:pb-0 lg:pb-0 bg-gradient-to-b from:gray-800 to:raisin-cool" />
+  <span class="display-none lg:col-span-5 fill-neutral-100 dark:fill-raisin pb-0 sm:pb-0 lg:pb-0 bg-gradient-to-b from:gray-800 to:raisin-cool" />
 </template>
 
 <style>

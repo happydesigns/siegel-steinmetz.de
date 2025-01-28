@@ -13,7 +13,7 @@ export default defineAppConfig({
   uiPro: {
     footer: {
       slots: {
-        root: 'bg-gradient-to-b from-gray-800 to-raisin-cool dark:raisin-cool',
+        root: 'bg-gradient-to-b from-gray-800 to-raisin-cool dark:from-raisin-cool dark:to-raisin-cool',
         container: 'dark',
         top: 'dark border-b border-neutral-200 dark:border-gray-700',
         wave: 'bg-gray-800 dark:bg-raisin-cool fill-white dark:fill-neutral-900',
