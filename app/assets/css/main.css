@@ -47,6 +47,10 @@
   --color-raisin-cool: #242A32;
 
   --ui-primary: var(--color-primary-900);
+
+  /* Sizing */
+  --radius: var(--radius-sm);
+  --ui-radius: var(--radius);
 }
 
 @layer theme {

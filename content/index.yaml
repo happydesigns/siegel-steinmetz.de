@@ -56,7 +56,7 @@ sections:
     image:
       src: /images/home-2.jpg
       alt: Grabmale Image
-      class: 'rounded-md'
+      class: 'rounded'
   - icon: i-ph-bank-duotone
     title: Restaurierungen
     description: >
@@ -81,7 +81,7 @@ sections:
     image:
       src: /images/home-1.jpg
       alt: Restaurierungen Image
-      class: 'rounded-md'
+      class: 'rounded'
 ui:
   footer:
     wave: fill-neutral-100 dark:fill-raisin

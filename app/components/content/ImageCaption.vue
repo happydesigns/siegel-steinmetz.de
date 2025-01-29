@@ -12,7 +12,7 @@ defineProps<{
     <slot name="image">
       <NuxtImg
         placeholder :src :alt :class="imgClass"
-        class="mb-1 border border-neutral-200 dark:border-neutral-800 w-96 lg:w-[28rem] group-left:min-w-full group-right:min-w-full"
+        class="mb-1 border border-neutral-200 dark:border-neutral-800 w-96 rounded lg:w-[28rem] group-left:min-w-full group-right:min-w-full"
       />
     </slot>
 
