@@ -1,21 +1,23 @@
 ---
 title: Impressum
 description: Kontaktdaten und rechtliche Informationen des Webseitenbetreibers.
-container: true
 ---
 
-::page
+::u-page
 ---
-ui: { left: 'lg:col-span-5', center.base: 'lg:col-span-5' }
+ui: { left: 'lg:col-span-5', center: 'lg:col-span-5' }
 ---
+
 #left
-Bernd Siegel\
+<div>
+
+Bernd Siegel :br
 Steingestaltung
 
-Bahnhofstraße 13\
+Bahnhofstraße 13 :br
 74861 Neudenau
 
-:icon{name="i-ph-phone-fill"} Tel.: 06264 92 64 44\
+:icon{name="i-ph-phone-fill"} Tel.: 06264 92 64 44 :br
 :icon{name="i-ph-printer-fill"} Fax: 06264 92 64 45
 
 E-Mail: info@siegel-steinmetz.de
@@ -24,12 +26,14 @@ Inhaltlich Verantwortlicher gemäß §&nbsp;55 Abs.&nbsp;2 RStV: Bernd Siegel (A
 
 Umsatzsteuer-Identifikationsnummer gemäß §&nbsp;27&nbsp;a Umsatzsteuergesetz: DE&nbsp;212&nbsp;603&nbsp;016
 
+</div>
+
 #default
 ### Zuständige Kammer
 
-Handwerkskammer Heilbronn-Franken\
-Allee 76, 74072 Heilbronn\
-Tel.: +49 711 61 94 80\
+Handwerkskammer Heilbronn-Franken :br
+Allee 76, 74072 Heilbronn :br
+Tel.: +49 711 61 94 80 :br
 https://www.hwk-heilbronn.de/
 
 ### Urheberrecht / Leistungsschutzrecht

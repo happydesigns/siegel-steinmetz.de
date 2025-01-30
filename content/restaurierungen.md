@@ -1,7 +1,6 @@
 ---
 title: Restaurierungen
 description: Fachgerechte Restaurierung von historischen Gebäuden, Denkmälern und Skulpturen.
-container: true
 ---
 
 ::text-flow{side="right"}

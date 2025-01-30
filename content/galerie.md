@@ -1,7 +1,6 @@
 ---
 title: Galerie
 description: Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
-container: true
 ---
 
 ::gallery

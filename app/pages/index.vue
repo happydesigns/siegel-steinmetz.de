@@ -1,42 +1,29 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
+const { data: page } = await useAsyncData('landing', () => queryCollection('landing').path('/').first())
 
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'Landing page not found', fatal: true })
 }
 
 useSeoMeta({
-  title: page.value.title,
-  ogTitle: page.value.title,
-  description: page.value.description,
-  ogDescription: page.value.description,
+  title: page.value.seo?.title,
+  ogTitle: page.value.seo?.title,
+  description: page.value.seo?.description,
+  ogDescription: page.value.seo?.description,
 })
 </script>
 
 <template>
-  <div v-if="page">
-    <ULandingSection
+  <NuxtLayout v-if="page">
+    <UPageSection
       v-if="page.hero"
-      v-bind="page.hero"
+      v-bind="(page.hero as any)"
       :ui="{
-        wrapper: 'pt-0 pb-28 sm:pt-6 md:pb-32 lg:py-32 2xl:py-36 overflow-hidden',
-        headline: 'mb-8',
+        root: 'overflow-hidden',
         title: 'lg:font-medium text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl',
-        container: 'relative overflow-visible flex flex-col-reverse lg:grid !gap-8',
+        container: 'relative overflow-visible flex flex-col-reverse lg:grid !gap-8 pt-0 pb-28 sm:pt-6 sm:pb-32 lg:py-32 2xl:py-36',
       }"
     >
-      <template v-if="page.hero.headline" #headline>
-        <NuxtLink :to="page.hero.headline.to">
-          <UBadge color="white" size="md" class="relative px-3 rounded-full font-semibold dark:hover:bg-gray-400/15 dark:hover:ring-gray-700">
-            {{ page.hero.headline.label }}
-            <UIcon
-              v-if="page.hero?.headline.icon" :name="page.hero.headline.icon"
-              class="ml-1 w-4 h-4 pointer-events-none"
-            />
-          </UBadge>
-        </NuxtLink>
-      </template>
-
       <template #links>
         <div class="w-full">
           <h2 class="font-bold text-lg mb-2">
@@ -46,41 +33,40 @@ useSeoMeta({
         <UButton
           v-for="(link, index) in page.hero.links"
           :key="index"
-          v-bind="link"
+          v-bind="(link as any)"
           @click="link.click"
         />
       </template>
 
-      <HeroGradient class="lg:block absolute h-[1152px] left-[-18rem] bottom-[-12rem] z-[-1] box-border" />
+      <HeroGradient class="lg:block absolute h-[1152px] left-[-18rem] -bottom-16 z-[-1] box-border" />
 
       <div class="lg:absolute md:right-0 lg:right-[-1rem] xl:right-[-8rem] 2xl:right-[-15rem] -mx-4 sm:m-0">
         <div class="relative">
           <img
-            :src="page.hero.image.src"
-            class="lg:block relative w-full lg:h-[360px] xl:h-[380px] 2xl:h-[420px] sm:rounded-lg aspect-[19/9] sm:aspect-[20/9] md:aspect-[21/9] lg:aspect-[7/5] xl:aspect-[16/9] object-cover md:object-[25%]"
+            :src="page.hero.image?.src"
+            class="lg:block relative w-full lg:h-[360px] xl:h-[380px] 2xl:h-[420px] sm:rounded aspect-[19/9] sm:aspect-[20/9] md:aspect-[21/9] lg:aspect-[7/5] xl:aspect-[16/9] object-cover md:object-[25%]"
             alt=""
           >
-          <div class="hidden lg:block absolute inset-2 border border-4 border-white dark:border-gray-900 rounded-md" />
+          <div class="hidden lg:block absolute inset-2 border border-4 border-white dark:border-neutral-900 rounded" />
         </div>
       </div>
-    </ULandingSection>
+    </UPageSection>
 
-    <!-- Landing Sections -->
-    <div class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-raisin">
-      <ULandingSection
-        v-for="(section, index) in page.sections"
+    <div class="bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-900 dark:to-raisin">
+      <UPageSection
+        v-for="(section, index) in (page.sections as any)"
         :key="index"
         v-bind="section"
       >
         <template #default>
           <img
-            :src="section.image.src"
-            :alt="section.image.alt"
-            :class="section.image.class"
+            :src="section.image?.src"
+            :alt="section.image?.alt"
+            :class="section.image?.class"
             class="aspect-[10/7] object-cover"
           >
         </template>
-      </ULandingSection>
+      </UPageSection>
     </div>
-  </div>
+  </NuxtLayout>
 </template>

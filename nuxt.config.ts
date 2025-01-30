@@ -5,11 +5,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
   },
-  content: {
-    documentDriven: {
-      layoutFallbacks: ['content'],
-    },
-  },
+  css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
   eslint: {
     config: {
@@ -18,9 +14,13 @@ export default defineNuxtConfig({
     },
   },
   extends: [
-    '@nuxt/ui-pro',
     // 'github:happydesigns/ui-base',
   ],
+  fonts: {
+    experimental: {
+      processCSSVariables: true,
+    },
+  },
   image: {
     provider: 'cloudflare',
     cloudflare: {
@@ -30,13 +30,11 @@ export default defineNuxtConfig({
     format: ['avif', 'webp', 'jpg'],
   },
   modules: [
+    '@nuxtjs/seo',
+    '@nuxt/ui-pro',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxt/ui',
-    // '@nuxthq/studio',
-    '@nuxt/fonts',
-    '@nuxtjs/seo',
   ],
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },

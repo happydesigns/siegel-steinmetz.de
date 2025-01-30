@@ -1,55 +1,75 @@
 <script setup lang="ts">
-import type { Button } from '#ui/types'
-import { defu } from 'defu'
+const route = useRoute()
+const { data: page } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first())
 
-export interface Props {
-  container?: boolean
-  description?: string
-  links?: (Button & { click?: (() => void) | undefined })[]
-  prose?: boolean
-  ui?: { wrapper?: string, body?: string }
-  header?: boolean
-  toc?: boolean
-  title?: string
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: `Content page ${route.path} not found`, fatal: true })
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  container: true,
-  prose: true,
-  header: true,
-  toc: true,
-})
-
-const { page: pageContent } = useContent()
-const page = defu(pageContent.value, props)
-
-const title = computed(() => page.title ?? '')
-const headline = computed(() => pageContent?.value?._dir ? findPageHeadline(pageContent?.value) : '')
-
 useSeoMeta({
-  title: title.value,
+  title: page.value.seo?.title || page.value.title,
+  ogTitle: page.value.seo?.title || page.value.title,
+  description: page.value.seo?.description || page.value.description,
+  ogDescription: page.value.seo?.description || page.value.description,
 })
 
-const pageBodyWrapper = computed(() => page.header ? '' : 'mt-0')
+const preferredMetaComponent = computed(() => page.value?.layout?.metadataComponent || 'header')
+const useHero = computed(() => !!page.value?.hero || preferredMetaComponent.value === 'hero')
+const useHeader = computed(() => !!page.value?.header || preferredMetaComponent.value === 'header')
+
+watchEffect(() => {
+  if (useHero.value && page.value) {
+    page.value.hero = {
+      title: page.value.hero?.title || page.value.title,
+      description: page.value.hero?.description || page.value.description,
+    }
+  }
+
+  if (useHeader.value && page.value) {
+    page.value.header = {
+      title: page.value.header?.title || page.value.title,
+      description: page.value.header?.description || page.value.description,
+    }
+  }
+})
+
+const containerClass = computed(() =>
+  page.value?.layout?.container === false ? '' : undefined,
+)
 </script>
 
 <template>
-  <UMain :class="page.ui?.wrapper" class="break-words">
-    <UContainer :ui="{ padding: page?.container ? undefined : '', constrained: page.container ? undefined : '' }">
-      <!-- <UPageHero v-if="page?.header !== false" v-bind="page.header" :title :headline>
+  <UMain v-if="page" :ui="page.ui?.main" class="break-words">
+    <UContainer :ui="{ padding: containerClass, constrained: containerClass, ...page.ui?.container }">
+      <UPageHero
+        v-if="page.hero"
+        :ui="page.ui?.hero"
+        v-bind="(page.hero as any)"
+      >
         <template #description>
-          <p>{{ page.description }}</p>
+          <p>{{ page.hero.description }}</p>
           <slot name="description" />
         </template>
-      </UPageHero> -->
+      </UPageHero>
+      <UPageHeader
+        v-if="page.header"
+        :ui="page.ui?.header"
+        v-bind="(page.header as any)"
+      />
+
+      <!-- Main Page Content -->
       <UPage>
-        <UPageHeader v-if="page?.header !== false" :title="title" :description="page?.description" :links="page?.links" :headline="headline" />
-        <UPageBody :prose="page?.prose !== false" class="pb-32" :ui="{ wrapper: pageBodyWrapper }" :class="[page.ui?.body]">
+        <UPageBody
+          :prose="page.layout?.prose !== false"
+          class="pb-32"
+          :class="page.ui?.body"
+        >
           <slot />
         </UPageBody>
 
-        <template v-if="page.toc" #right>
-          <UContentToc :links="page?.body?.toc?.links" class="bg-transparent" title="Inhaltsverzeichnis" />
+        <!-- Table of Contents -->
+        <template v-if="page.layout?.toc" #right>
+          <UContentToc :links="page.body?.toc?.links" :ui="page.ui?.toc" class="bg-transparent" title="Inhaltsverzeichnis" />
         </template>
       </UPage>
     </UContainer>

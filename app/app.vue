@@ -18,13 +18,23 @@ useSeoMeta({
   description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.',
 })
 
-const { page } = useContent()
+const route = useRoute()
+const { data: page } = await useAsyncData(
+  route.path,
+  () => queryCollection('content').path(route.path).first(),
+  {
+    watch: [route],
+  },
+)
 </script>
 
 <template>
-  <AppHeader :ui="page?.ui?.header" />
-  <NuxtPage />
-  <AppFooter :ui="page?.ui?.footer" />
+  <UApp>
+    <AppHeader :ui="page?.ui?.header" />
+    <NuxtPage />
+    <AppFooter :ui="page?.ui?.footer" />
+  </UApp>
+  <span class="display-none lg:col-span-5 fill-neutral-100 dark:fill-raisin pb-0 sm:pb-0 lg:pb-0 bg-gradient-to-b from:gray-800 to:raisin-cool" />
 </template>
 
 <style>
@@ -43,18 +53,21 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-serif;
+  font-family: var(--font-serif);
 }
 
 img.default {
-  @apply rounded-md border border-gray-200 dark:border-gray-800;
+  border: 1px solid var(--color-neutral-200);
 }
 
 p .iconify {
-  @apply inline-block align-middle mb-0.5 mr-1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: calc(var(--spacing) * 0.5);
+  margin-right: var(--spacing);
 }
 
 footer p .iconify {
-  @apply text-base;
+  font-size: var(--text-base);
 }
 </style>

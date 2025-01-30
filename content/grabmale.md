@@ -1,17 +1,6 @@
 ---
 title: Grabmale
 description: Ein Grabmal ist ein sichtbares und individuelles Andenken an einen geliebten Menschen.
-layout: content
-container: true
-toc: false
-header:
-  image: '/images/tombs-1.jpg'
-  class: relative z-10
-  icon: i-ph-cross-duotone
-  links:
-    - label: Galerie
-      to: '/galerie?album=grabmalreferenzen'
-      icon: i-ph-image-duotone
 ---
 
 ::text-flow{side="right"}

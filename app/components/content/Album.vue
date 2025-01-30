@@ -17,15 +17,15 @@ const previewImage = images[0]
 
 <template>
   <figure class="!my-0 pt-2 cursor-pointer overflow-hidden min-w-[12rem] lg:min-w-0 flex-1" @click="$emit('selectAlbum', path, images)">
-    <div class="relative w-full aspect-1">
-      <div class="absolute -top-2 h-full inset-x-2.5 rounded-md opacity-50 bg-gray-400 border border-gray-200 dark:border-gray-900" />
-      <div class="absolute -top-1 h-full inset-x-1.5 rounded-md bg-gray-400 border border-gray-200 dark:border-gray-900" />
-      <img :src="previewImage?.src" :alt="previewImage?.alt" class="absolute h-full w-full top-0 rounded-md m-0 object-cover border border-gray-200 dark:border-gray-900">
+    <div class="relative w-full aspect-square">
+      <div class="absolute -top-2 h-full inset-x-2.5 rounded opacity-50 bg-neutral-400 border border-neutral-200 dark:border-neutral-900" />
+      <div class="absolute -top-1 h-full inset-x-1.5 rounded bg-neutral-400 border border-neutral-200 dark:border-neutral-900" />
+      <img :src="previewImage?.src" :alt="previewImage?.alt" class="absolute h-full w-full top-0 rounded m-0 object-cover border border-neutral-200 dark:border-neutral-900 ">
     </div>
-    <figcaption class="font-medium">
-      <h3 class="m-0 font-sans">
+    <figcaption class="font-medium text-sm mt-3">
+      <ProseH3 class="m-0 font-sans! text-lg">
         {{ title }}
-      </h3>
+      </ProseH3>
       {{ images.length }} Bilder
     </figcaption>
   </figure>
