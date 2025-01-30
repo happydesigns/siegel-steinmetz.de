@@ -58,4 +58,12 @@
     --ui-primary: var(--color-primary-400);
     color: var(--ui-text);
   }
+
+  :root {
+    figcaption {
+      color: var(--ui-text-muted);
+      font-size: var(--text-sm);
+      margin-top: calc(var(--spacing) * 3);
+    }
+  }
 }
