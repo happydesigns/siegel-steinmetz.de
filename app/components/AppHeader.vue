@@ -15,7 +15,7 @@ const appConfig = useAppConfig()
     </template>
 
     <template #content>
-      <UNavigationMenu :items="appConfig.links.header" orientation="vertical" :ui="{ active: 'text-primary-900 dark:text-primary-400', icon: { active: 'bg-primary-900 dark:bg-primary', inactive: 'group-hover:bg-primary-900 dark:group-hover:bg-primary', wrapper: '~', base: '~' } }" />
+      <UNavigationMenu :items="appConfig.links.header" orientation="vertical" />
       <USeparator class="my-6" />
       <UButton to="/kontakt" label="Kontakt" icon="i-ph-phone-duotone" block />
     </template>
