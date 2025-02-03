@@ -16,7 +16,7 @@
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",
     "@iconify-json/ph": "^1.2.2",
-    "@nuxt/content": "^3.0.1",
+    "@nuxt/content": "^3.1.0",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "^3.0.0-alpha.12",
     "@nuxtjs/seo": "^2.1.1",
@@ -25,13 +25,13 @@
     "vue-google-maps-community-fork": "^0.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.1.0",
+    "@antfu/eslint-config": "^4.1.1",
     "@iconify-json/lucide": "^1.2.25",
     "@nuxt/eslint": "^1.0.0",
     "@nuxthub/core": "^0.8.15",
     "changelogen": "^0.5.7",
     "eslint": "^9.19.0",
     "typescript": "^5.7.3",
-    "wrangler": "^3.107.0"
+    "wrangler": "^3.107.2"
   }
 }
