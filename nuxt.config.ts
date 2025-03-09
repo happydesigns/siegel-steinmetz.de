@@ -29,9 +29,6 @@ export default defineNuxtConfig({
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
   },
-  ogImage: {
-    enabled: false,
-  },
   modules: [
     '@nuxtjs/seo',
     '@nuxt/ui-pro',
