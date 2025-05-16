@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { useContentPage } from '~~/composables/useContentPage'
+
 definePageMeta({
   validate: route => !/^\/[^.]*\.[0-9a-z]+(?:\/.*)?$/i.test(route.fullPath),
 })
 
-const route = useRoute()
-const { data: page } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first())
+const { data: page } = await useContentPage()
 </script>
 
 <template>

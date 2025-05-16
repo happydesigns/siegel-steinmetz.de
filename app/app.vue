@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useContentPage } from '~~/composables/useContentPage'
+
 useHead({
   title: 'Bernd Siegel Steingestaltung',
   titleTemplate: '%s | Bernd Siegel Steingestaltung',
@@ -18,14 +20,7 @@ useSeoMeta({
   description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.',
 })
 
-const route = useRoute()
-const { data: page } = await useAsyncData(
-  route.path,
-  () => queryCollection('content').path(route.path).first(),
-  {
-    watch: [route],
-  },
-)
+const { data: page } = await useContentPage()
 </script>
 
 <template>
