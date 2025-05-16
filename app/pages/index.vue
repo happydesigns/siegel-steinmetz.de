@@ -41,11 +41,11 @@ useSeoMeta({
 
       <div class="lg:absolute md:right-0 lg:right-[-1rem] xl:right-[-8rem] 2xl:right-[-15rem] -mx-4 sm:m-0">
         <div class="relative">
-          <img
+          <NuxtImg
             :src="page.hero.image?.src"
             class="lg:block relative w-full lg:h-[360px] xl:h-[380px] 2xl:h-[420px] sm:rounded aspect-[19/9] sm:aspect-[20/9] md:aspect-[21/9] lg:aspect-[7/5] xl:aspect-[16/9] object-cover md:object-[25%]"
             alt=""
-          >
+          />
           <div class="hidden lg:block absolute inset-2 border-4 border-white dark:border-neutral-900 rounded" />
         </div>
       </div>
@@ -58,12 +58,12 @@ useSeoMeta({
         v-bind="section"
       >
         <template #default>
-          <img
+          <NuxtImg
             :src="section.image?.src"
             :alt="section.image?.alt"
             :class="section.image?.class"
-            class="aspect-[10/7] object-cover"
-          >
+            class="aspect-[10/7] object-cover w-full"
+          />
         </template>
       </UPageSection>
     </div>
