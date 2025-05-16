@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
   },
   extends: [
-    // 'github:happydesigns/ui-base',
+    'github:happydesigns/ui-base',
   ],
   fonts: {
     experimental: {
