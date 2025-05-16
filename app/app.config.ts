@@ -4,11 +4,6 @@ export default defineAppConfig({
       primary: 'red',
       neutral: 'zinc',
     },
-    button: {
-      variant: {
-        solid: 'bg-primary-900 hover:bg-primary-800 disabled:bg-primary-900 focus-visible:outline-primary-800',
-      },
-    },
   },
   uiPro: {
     footer: {
