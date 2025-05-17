@@ -11,7 +11,12 @@
     "preview": "nuxt preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:ts": "tsc --noEmit"
+    "lint:ts": "tsc --noEmit",
+    "release": "changelogen --release",
+    "release:pre": "changelogen --release --prerelease",
+    "release:alpha": "changelogen --release --versionSuffix alpha.0",
+    "release:beta": "changelogen --release --versionSuffix beta.0",
+    "release:rc": "changelogen --release --versionSuffix rc.0"
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",
