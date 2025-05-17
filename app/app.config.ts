@@ -1,22 +1,76 @@
 export default defineAppConfig({
+  app: {
+    meta: {
+      copyright: {
+        copyrightYear: new Date().getFullYear(),
+        copyrightHolder: 'happydesigns',
+        copyrightHomepage: 'https://happydesigns.de',
+      },
+    },
+
+    links: {
+      footer: [
+        {
+          label: 'Unternehmen',
+          children: [
+            {
+              label: 'Startseite',
+              to: '/',
+            },
+            {
+              label: 'Über uns',
+              to: '/ueber-uns',
+            },
+            {
+              label: 'Kontakt',
+              to: '/kontakt',
+            },
+          ],
+        },
+        {
+          label: 'Unsere Leistungen',
+          children: [
+            {
+              label: 'Grabmale',
+              to: '/grabmale',
+            },
+            {
+              label: 'Restaurierungen',
+              to: '/restaurierungen',
+            },
+            {
+              label: 'Galerien',
+              to: '/galerie',
+            },
+          ],
+        },
+        {
+          label: 'Rechtliches',
+          children: [{
+            label: 'Impressum',
+            to: '/impressum',
+          }, {
+            label: 'Datenschutz',
+            to: '/datenschutz',
+          }],
+        },
+      ],
+    },
+  },
+
   ui: {
     colors: {
       primary: 'red',
       neutral: 'zinc',
     },
-    button: {
-      variant: {
-        solid: 'bg-primary-900 hover:bg-primary-800 disabled:bg-primary-900 focus-visible:outline-primary-800',
-      },
-    },
   },
+
   uiPro: {
     footer: {
       slots: {
-        root: 'bg-gradient-to-b from-gray-800 to-raisin-cool dark:from-raisin-cool dark:to-raisin-cool',
+        root: 'bg-gradient-to-b from-gray-800 to-raisin-cool dark:from-raisin-cool dark:to-raisin',
+        top: 'dark border-b border-neutral-700',
         container: 'dark',
-        top: 'dark border-b border-neutral-200 dark:border-gray-700',
-        wave: 'bg-gray-800 dark:bg-raisin-cool fill-white dark:fill-neutral-900',
       },
     },
     footerColumns: {
@@ -27,6 +81,7 @@ export default defineAppConfig({
       },
     },
   },
+
   links: {
     header: [
       {

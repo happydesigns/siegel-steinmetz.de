@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useContentPage } from '~~/composables/useContentPage'
+
 const route = useRoute()
-const { data: page } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first())
+
+const { data: page } = await useContentPage()
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: `Content page ${route.path} not found`, fatal: true })

@@ -25,7 +25,7 @@
   --ui-primary: var(--color-primary-900);
 
   /* Sizing */
-  --radius: var(--radius-sm);
+  --radius: 0.25rem;
   --ui-radius: var(--radius);
 }
 
