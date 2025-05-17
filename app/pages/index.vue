@@ -5,12 +5,7 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Landing page not found', fatal: true })
 }
 
-useSeoMeta({
-  title: page.value?.seo?.title,
-  ogTitle: page.value?.seo?.title,
-  description: page.value?.seo?.description,
-  ogDescription: page.value?.seo?.description,
-})
+usePageSeo(page)
 </script>
 
 <template>
