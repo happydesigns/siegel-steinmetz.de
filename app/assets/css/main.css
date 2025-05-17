@@ -25,7 +25,7 @@
   --ui-primary: var(--color-primary-900);
 
   /* Sizing */
-  --radius: 0.25rem;
+  --ui-radius: 0.25rem;
 }
 
 @layer theme {
