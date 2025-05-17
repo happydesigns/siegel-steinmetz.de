@@ -5,7 +5,7 @@ const appConfig = useAppConfig()
 <template>
   <UHeader>
     <template #title>
-      <Logo class="w-auto h-12 dark:bg-white rounded p-1" />
+      <Logo class="w-auto h-12 dark:bg-white rounded-sm p-1" />
     </template>
 
     <UNavigationMenu :items="appConfig.links.header" />

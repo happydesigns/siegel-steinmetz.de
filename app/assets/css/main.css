@@ -26,7 +26,6 @@
 
   /* Sizing */
   --radius: 0.25rem;
-  --ui-radius: var(--radius);
 }
 
 @layer theme {

@@ -30,7 +30,7 @@ function selectAlbum(path: string, images: { src: string, alt: string | undefine
     </template>
 
     <UPageColumns>
-      <img v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full rounded border border-neutral-200 dark:border-neutral-800">
+      <img v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full rounded-sm border border-neutral-200 dark:border-neutral-800">
     </UPageColumns>
   </UPage>
 </template>

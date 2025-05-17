@@ -43,10 +43,10 @@ useSeoMeta({
         <div class="relative">
           <NuxtImg
             :src="page.hero.image?.src"
-            class="lg:block relative w-full lg:h-[360px] xl:h-[380px] 2xl:h-[420px] sm:rounded aspect-[19/9] sm:aspect-[20/9] md:aspect-[21/9] lg:aspect-[7/5] xl:aspect-[16/9] object-cover md:object-[25%]"
+            class="lg:block relative w-full lg:h-[360px] xl:h-[380px] 2xl:h-[420px] sm:rounded-sm aspect-[19/9] sm:aspect-[20/9] md:aspect-[21/9] lg:aspect-[7/5] xl:aspect-[16/9] object-cover md:object-[25%]"
             alt=""
           />
-          <div class="hidden lg:block absolute inset-2 border-4 border-white dark:border-neutral-900 rounded" />
+          <div class="hidden lg:block absolute inset-2 border-4 border-white dark:border-neutral-900 rounded-sm" />
         </div>
       </div>
     </UPageSection>
