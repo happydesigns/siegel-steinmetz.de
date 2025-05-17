@@ -1,44 +1,17 @@
 <script setup lang="ts">
 import { useContentPage } from '~~/composables/useContentPage'
+import { usePageLayout } from '~~/composables/usePageLayout'
+import { usePageSeo } from '~~/composables/usePageSeo'
 
 const route = useRoute()
-
 const { data: page } = await useContentPage()
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: `Content page ${route.path} not found`, fatal: true })
 }
 
-useSeoMeta({
-  title: page.value.seo?.title || page.value.title,
-  ogTitle: page.value.seo?.title || page.value.title,
-  description: page.value.seo?.description || page.value.description,
-  ogDescription: page.value.seo?.description || page.value.description,
-})
-
-const preferredMetaComponent = computed(() => page.value?.layout?.metadataComponent || 'header')
-const useHero = computed(() => !!page.value?.hero || preferredMetaComponent.value === 'hero')
-const useHeader = computed(() => !!page.value?.header || preferredMetaComponent.value === 'header')
-
-watchEffect(() => {
-  if (useHero.value && page.value) {
-    page.value.hero = {
-      title: page.value.hero?.title || page.value.title,
-      description: page.value.hero?.description || page.value.description,
-    }
-  }
-
-  if (useHeader.value && page.value) {
-    page.value.header = {
-      title: page.value.header?.title || page.value.title,
-      description: page.value.header?.description || page.value.description,
-    }
-  }
-})
-
-const containerClass = computed(() =>
-  page.value?.layout?.container === false ? '' : undefined,
-)
+usePageSeo(page)
+const { containerClass } = usePageLayout(page)
 </script>
 
 <template>
