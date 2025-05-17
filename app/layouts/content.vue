@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { useContentPage } from '~~/composables/useContentPage'
-import { usePageLayout } from '~~/composables/usePageLayout'
-import { usePageSeo } from '~~/composables/usePageSeo'
-
 const route = useRoute()
 const { data: page } = await useContentPage()
 

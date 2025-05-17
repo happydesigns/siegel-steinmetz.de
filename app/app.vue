@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useContentPage } from '~~/composables/useContentPage'
-
 useHead({
   title: 'Bernd Siegel Steingestaltung',
   titleTemplate: '%s | Bernd Siegel Steingestaltung',

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useContentPage } from '~~/composables/useContentPage'
-
 const { data: page } = await useContentPage()
 
 useSeoMeta({

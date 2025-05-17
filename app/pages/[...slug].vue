@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useContentPage } from '~~/composables/useContentPage'
-
 definePageMeta({
   validate: route => !/^\/[^.]*\.[0-9a-z]+(?:\/.*)?$/i.test(route.fullPath),
 })
