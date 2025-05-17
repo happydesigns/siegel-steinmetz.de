@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v2.1.2
+
+[compare changes](https://github.com/happydesigns/siegel-steinmetz.de/compare/v2.1.1...v2.1.2)
+
+### 💅 Refactors
+
+- Add useContentPage composable ([94d650e](https://github.com/happydesigns/siegel-steinmetz.de/commit/94d650e))
+- Replace removed radius variable ([d35a68e](https://github.com/happydesigns/siegel-steinmetz.de/commit/d35a68e))
+- Clean up index.vue ([9f8078e](https://github.com/happydesigns/siegel-steinmetz.de/commit/9f8078e))
+- Remove custom button styles ([fe85cf7](https://github.com/happydesigns/siegel-steinmetz.de/commit/fe85cf7))
+- **footer:** Use ui-base footer components ([b722f53](https://github.com/happydesigns/siegel-steinmetz.de/commit/b722f53))
+- Use NuxtImg on index page ([a12c83a](https://github.com/happydesigns/siegel-steinmetz.de/commit/a12c83a))
+
+### 🏡 Chore
+
+- Update vscode settings ([8550495](https://github.com/happydesigns/siegel-steinmetz.de/commit/8550495))
+- Update deps ([63c14a5](https://github.com/happydesigns/siegel-steinmetz.de/commit/63c14a5))
+- Add release scripts ([e87a229](https://github.com/happydesigns/siegel-steinmetz.de/commit/e87a229))
+
+### ❤️ Contributors
+
+- Jan Fröhlich ([@janfrl](https://github.com/janfrl))
+
 ## v2.1.1
 
 [compare changes](https://github.com/happydesigns/siegel-steinmetz.de/compare/v2.1.0...v2.1.1)
