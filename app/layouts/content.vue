@@ -16,7 +16,7 @@ const { containerClass } = usePageLayout(page)
       <UPageHero
         v-if="page.hero"
         :ui="page.ui?.hero"
-        v-bind="(page.hero as any)"
+        v-bind="page.hero"
       >
         <template #description>
           <p>{{ page.hero.description }}</p>
@@ -26,7 +26,7 @@ const { containerClass } = usePageLayout(page)
       <UPageHeader
         v-if="page.header"
         :ui="page.ui?.header"
-        v-bind="(page.header as any)"
+        v-bind="page.header"
       />
 
       <!-- Main Page Content -->

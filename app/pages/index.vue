@@ -12,7 +12,7 @@ usePageSeo(page)
   <NuxtLayout v-if="page">
     <UPageSection
       v-if="page.hero"
-      v-bind="(page.hero as any)"
+      v-bind="page.hero"
       :ui="{
         root: 'overflow-hidden',
         title: 'lg:font-medium text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl',
@@ -28,7 +28,7 @@ usePageSeo(page)
         <UButton
           v-for="(link, index) in page.hero.links"
           :key="index"
-          v-bind="(link as any)"
+          v-bind="link"
         />
       </template>
 
@@ -48,7 +48,7 @@ usePageSeo(page)
 
     <div class="bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-900 dark:to-raisin">
       <UPageSection
-        v-for="(section, index) in (page.sections as any)"
+        v-for="(section, index) in page.sections"
         :key="index"
         v-bind="section"
       >
