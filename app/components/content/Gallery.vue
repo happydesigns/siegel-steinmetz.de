@@ -10,7 +10,7 @@ const gallery = ref([] as {
 }[])
 
 watchEffect(() => {
-  gallery.value = useImages(route.query.album as string)
+  gallery.value = useGalleryImages(route.query.album as string)
 })
 
 function selectAlbum(path: string, images: { src: string, alt: string | undefined }[]) {

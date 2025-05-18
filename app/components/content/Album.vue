@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 defineEmits(['selectAlbum'])
 
-const images = useImages(props.path)
+const images = useGalleryImages(props.path)
 const previewImage = images[0]
 </script>
 
