@@ -18,7 +18,7 @@ useSeoMeta({
   description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.',
 })
 
-const { data: page } = await useContentPage()
+const { data: page } = await usePageContent()
 </script>
 
 <template>

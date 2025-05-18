@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: page } = await useContentPage()
+const { data: page } = await usePageContent()
 
 usePageSeo(page)
 </script>

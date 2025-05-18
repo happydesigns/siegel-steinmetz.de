@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: page } = await useContentPage()
+const { data: page } = await usePageContent()
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: `Content page ${route.path} not found`, fatal: true })

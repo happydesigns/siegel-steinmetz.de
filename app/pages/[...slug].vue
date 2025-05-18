@@ -3,7 +3,7 @@ definePageMeta({
   validate: route => !/^\/[^.]*\.[0-9a-z]+(?:\/.*)?$/i.test(route.fullPath),
 })
 
-const { data: page } = await useContentPage()
+const { data: page } = await usePageContent()
 </script>
 
 <template>
