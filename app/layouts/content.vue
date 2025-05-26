@@ -16,6 +16,8 @@ const { containerClass } = usePageLayout(page)
 </script>
 
 <template>
+  <AppHeader />
+
   <UMain v-if="page" :ui="page.ui?.main" class="break-words">
     <UContainer :ui="{ padding: containerClass, constrained: containerClass, ...page.ui?.container }">
       <UPageHero
@@ -51,4 +53,6 @@ const { containerClass } = usePageLayout(page)
       </UPage>
     </UContainer>
   </UMain>
+
+  <AppFooter />
 </template>
