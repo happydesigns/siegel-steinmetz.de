@@ -5,7 +5,6 @@ export interface GalleryImage {
 }
 
 export function useGalleryImages(albumPathInput: Ref<string> | string) {
-  console.log('useGalleryImages called with:', unref(albumPathInput))
   const path = computed(() => unref(albumPathInput))
 
   const requestUrl = computed(() => {
