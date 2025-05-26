@@ -52,6 +52,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-08-18',
   nitro: {
     prerender: {
+      crawlLinks: true,
       routes: [
         '/api/gallery/grabmallager',
         '/api/gallery/grabmalreferenzen',
