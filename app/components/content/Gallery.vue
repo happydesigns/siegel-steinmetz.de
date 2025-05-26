@@ -5,8 +5,10 @@ defineProps<{
 
 const route = useRoute()
 const currentAlbumPath = computed(() => Array.isArray(route.params.slug) ? route.params.slug.join('/') : route.params.slug ?? '')
+console.log('Current Album Path:', currentAlbumPath.value, route.params.slug)
 
 const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
+console.log('Loaded Images:', images.value)
 </script>
 
 <template>
@@ -49,7 +51,7 @@ const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
       description="In diesem Album sind keine Bilder vorhanden."
     />
     <!-- Gallery Images -->
-    <UPageColumns v-else>
+    <UPageColumns>
       <template v-for="img in images" :key="img.src">
         <UTooltip :text="img.title" :content="{ sideOffset: 0 }">
           <img
