@@ -41,4 +41,12 @@
       margin-top: calc(var(--spacing) * 3);
     }
   }
+
+  body {
+    background-image: linear-gradient(to bottom, var(--color-white), var(--color-neutral-100));
+  }
+
+  .dark body {
+    background-image: linear-gradient(to bottom, var(--color-neutral-900), var(--color-raisin));
+  }
 }

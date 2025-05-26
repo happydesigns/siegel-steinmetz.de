@@ -82,6 +82,3 @@ sections:
       src: /assets/images/content/index/index-restorations.jpg
       alt: Restaurierungen Image
       class: 'rounded-sm'
-ui:
-  footer:
-    wave: fill-neutral-100 dark:fill-raisin

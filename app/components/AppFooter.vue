@@ -1,35 +1,12 @@
 <script setup lang="ts">
-import type { FooterProps } from '@nuxt/ui-pro'
 import { HFooterColumnHeading } from '#components'
-import { tv } from 'tailwind-variants'
-
-type FooterUiProps = Partial<FooterProps['ui'] & {
-  wave: string
-  columns: any
-}>
-
-const props = withDefaults(defineProps<{
-  ui?: FooterUiProps
-  class?: string
-}>(), {
-  ui: () => ({}),
-  class: undefined,
-})
 
 const appConfig = useAppConfig()
-
-const ui = tv({
-  slots: {
-    wave: 'bg-gray-800 dark:bg-raisin-cool fill-white dark:fill-neutral-900',
-  },
-})
-
-const { wave } = ui()
 </script>
 
 <template>
   <div>
-    <Wave :class="wave?.({ class: props.ui?.wave })" />
+    <Wave />
     <UFooter>
       <template #top>
         <UContainer>

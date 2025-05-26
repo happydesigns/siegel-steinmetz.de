@@ -46,21 +46,19 @@ usePageSeo(page)
       </div>
     </UPageSection>
 
-    <div class="bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-900 dark:to-raisin">
-      <UPageSection
-        v-for="(section, index) in page.sections"
-        :key="index"
-        v-bind="section"
-      >
-        <template #default>
-          <NuxtImg
-            :src="section.image?.src"
-            :alt="section.image?.alt"
-            :class="section.image?.class"
-            class="aspect-[10/7] object-cover w-full"
-          />
-        </template>
-      </UPageSection>
-    </div>
+    <UPageSection
+      v-for="(section, index) in page.sections"
+      :key="index"
+      v-bind="section"
+    >
+      <template #default>
+        <NuxtImg
+          :src="section.image?.src"
+          :alt="section.image?.alt ?? section.title"
+          :class="section.image?.class"
+          class="aspect-[10/7] object-cover w-full"
+        />
+      </template>
+    </UPageSection>
   </NuxtLayout>
 </template>
