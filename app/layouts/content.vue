@@ -1,9 +1,14 @@
 <script setup lang="ts">
+const props = defineProps<{
+  path?: string
+}>()
+
 const route = useRoute()
-const { data: page } = await usePageContent()
+const path = computed(() => props.path)
+const { data: page } = await usePageContent(path.value)
 
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: `Content page ${route.path} not found`, fatal: true })
+  throw createError({ statusCode: 404, statusMessage: `Content page ${props.path || route.path} not found`, fatal: true })
 }
 
 usePageSeo(page)
