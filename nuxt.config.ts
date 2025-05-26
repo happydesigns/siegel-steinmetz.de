@@ -22,10 +22,6 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    provider: 'cloudflare',
-    cloudflare: {
-      baseURL: 'https://www.siegel-steinmetz.de',
-    },
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
   },
@@ -54,4 +50,22 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   compatibilityDate: '2024-08-18',
+  nitro: {
+    prerender: {
+      routes: [
+        '/api/gallery/grabmallager',
+        '/api/gallery/grabmalreferenzen',
+        '/api/gallery/restaurierungen',
+        '/galerie/grabmallager',
+        '/galerie/grabmalreferenzen',
+        '/galerie/restaurierungen',
+      ],
+    },
+    serverAssets: [
+      {
+        baseName: 'gallery',
+        dir: 'public/assets/images/gallery',
+      },
+    ],
+  },
 })

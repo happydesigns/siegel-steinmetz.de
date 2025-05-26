@@ -1,22 +1,12 @@
 <script setup lang="ts">
 defineProps<{
-  albums?: { path: string, title: string }[]
+  albums?: { title: string, path: string }[]
 }>()
 
 const route = useRoute()
-const gallery = ref([] as {
-  src: string
-  alt: string | undefined
-}[])
+const currentAlbumPath = computed(() => Array.isArray(route.params.slug) ? route.params.slug.join('/') : route.params.slug ?? '')
 
-watchEffect(() => {
-  gallery.value = useGalleryImages(route.query.album as string)
-})
-
-function selectAlbum(path: string, images: { src: string, alt: string | undefined }[]) {
-  gallery.value.splice(0, gallery.value.length, ...images)
-  navigateTo({ query: { album: path } })
-}
+const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
 </script>
 
 <template>
@@ -24,13 +14,54 @@ function selectAlbum(path: string, images: { src: string, alt: string | undefine
     <template #left>
       <UPageAside class="block -mt-8 pr-0!">
         <UPageColumns class="overflow-x-auto flex lg:flex-col gap-4 sm:gap-6 lg:gap-8 w-full">
-          <Album v-for="album in albums" :key="album.path" :path="album.path" :title="album.title" @select-album="selectAlbum" />
+          <Album
+            v-for="album in albums"
+            :key="album.path"
+            :title="album.title"
+            :path="album.path"
+          />
         </UPageColumns>
       </UPageAside>
     </template>
 
-    <UPageColumns>
-      <img v-for="img in gallery" :key="img.src" :src="img.src" :alt="img.alt" class="w-full rounded-sm border border-neutral-200 dark:border-neutral-800">
-    </UPageColumns>
+    <ClientOnly>
+      <!-- Error State Card -->
+      <UPageCard
+        v-if="error"
+        icon="ph-warning-octagon-duotone"
+        title="Fehler beim Laden der Bilder"
+        variant="subtle"
+        description="Die Bilder konnten nicht geladen werden. Bitte versuchen Sie es später erneut."
+      />
+      <!-- Placeholder: No Album Selected -->
+      <UPageCard
+        v-else-if="currentAlbumPath === ''"
+        icon="ph-image-duotone"
+        title="Album auswählen"
+        variant="subtle"
+        description="Bitte wählen Sie ein Album aus, um die Bilder anzuzeigen."
+      />
+      <!-- Placeholder: No Images in Album -->
+      <UPageCard
+        v-else-if="images?.length === 0"
+        icon="ph-images-duotone"
+        title="Keine Bilder gefunden"
+        variant="subtle"
+        description="In diesem Album sind keine Bilder vorhanden."
+      />
+      <!-- Gallery Images -->
+      <UPageColumns v-else>
+        <template v-for="img in images" :key="img.src">
+          <UTooltip :text="img.title" :content="{ sideOffset: 0 }">
+            <img
+              :src="img.src"
+              :alt="img.alt"
+              class="w-full rounded-sm border border-neutral-200 dark:border-neutral-800"
+              loading="lazy"
+            >
+          </UTooltip>
+        </template>
+      </UPageColumns>
+    </ClientOnly>
   </UPage>
 </template>

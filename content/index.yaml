@@ -43,7 +43,7 @@ sections:
       title: 'lg:font-medium'
     links:
       - label: Galerie
-        to: '/galerie?album=grabmalreferenzen'
+        to: '/galerie/grabmalreferenzen'
         color: primary
         icon: i-ph-image-duotone
         size: lg
@@ -68,7 +68,7 @@ sections:
       title: 'lg:font-medium'
     links:
       - label: Galerie
-        to: '/galerie?album=restaurierungen'
+        to: '/galerie/restaurierungen'
         color: primary
         icon: i-ph-image-duotone
         size: lg
