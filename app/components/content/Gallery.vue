@@ -5,6 +5,7 @@ defineProps<{
 
 const route = useRoute()
 const currentAlbumPath = computed(() => Array.isArray(route.params.slug) ? route.params.slug.join('/') : route.params.slug ?? '')
+console.log('Current Album Path:', currentAlbumPath.value, 'Route Params:', route.params)
 
 const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
 </script>
