@@ -1,6 +1,45 @@
 # Changelog
 
 
+## v2.2.0
+
+[compare changes](https://github.com/happydesigns/siegel-steinmetz.de/compare/v2.1.2...v2.2.0)
+
+### 🚀 Enhancements
+
+- Global background gradient ([f426c07](https://github.com/happydesigns/siegel-steinmetz.de/commit/f426c07))
+- Overhaul gallery and add tooltips ([6e5a6d6](https://github.com/happydesigns/siegel-steinmetz.de/commit/6e5a6d6))
+
+### 🩹 Fixes
+
+- Use ui-radius variable for radii ([84071dc](https://github.com/happydesigns/siegel-steinmetz.de/commit/84071dc))
+- Remove ClientOnly from gallery ([9fb6ae0](https://github.com/happydesigns/siegel-steinmetz.de/commit/9fb6ae0))
+- Remove trailing slash from album path ([e14c178](https://github.com/happydesigns/siegel-steinmetz.de/commit/e14c178))
+
+### 💅 Refactors
+
+- Use rounded-sm as base unit for border radii ([8b133c9](https://github.com/happydesigns/siegel-steinmetz.de/commit/8b133c9))
+- Add usePageLayout and usePageSeo composables ([44e68f4](https://github.com/happydesigns/siegel-steinmetz.de/commit/44e68f4))
+- Move composables to app/composables ([6c7c8be](https://github.com/happydesigns/siegel-steinmetz.de/commit/6c7c8be))
+- Replace useSeoMeta with usePageSeo ([d7a3c2f](https://github.com/happydesigns/siegel-steinmetz.de/commit/d7a3c2f))
+- Rename and overhaul useGalleryImages composable ([037b905](https://github.com/happydesigns/siegel-steinmetz.de/commit/037b905))
+- Rename useContentPage to usePageContent ([d079301](https://github.com/happydesigns/siegel-steinmetz.de/commit/d079301))
+- Remove unnecessary type any assertions ([39fbfff](https://github.com/happydesigns/siegel-steinmetz.de/commit/39fbfff))
+- **gallery:** Server-side api for album images ([8f094f8](https://github.com/happydesigns/siegel-steinmetz.de/commit/8f094f8))
+- Use sfc for gallery page ([0aa310d](https://github.com/happydesigns/siegel-steinmetz.de/commit/0aa310d))
+- Move header and footer inside layouts ([e33faff](https://github.com/happydesigns/siegel-steinmetz.de/commit/e33faff))
+
+### 🏡 Chore
+
+- Remove Tailwind v3 settings ([a05cebe](https://github.com/happydesigns/siegel-steinmetz.de/commit/a05cebe))
+- Update deps ([96e220b](https://github.com/happydesigns/siegel-steinmetz.de/commit/96e220b))
+- Crawl links to prerender ([c1aa106](https://github.com/happydesigns/siegel-steinmetz.de/commit/c1aa106))
+- Remove prerender config ([076e42f](https://github.com/happydesigns/siegel-steinmetz.de/commit/076e42f))
+
+### ❤️ Contributors
+
+- Jan Fröhlich ([@janfrl](https://github.com/janfrl))
+
 ## v2.1.2
 
 [compare changes](https://github.com/happydesigns/siegel-steinmetz.de/compare/v2.1.1...v2.1.2)

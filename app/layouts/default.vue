@@ -5,7 +5,11 @@ usePageSeo(page)
 </script>
 
 <template>
-  <UMain :class="page?.ui?.main" class="break-words">
+  <AppHeader />
+
+  <UMain class="break-words">
     <slot />
   </UMain>
+
+  <AppFooter />
 </template>

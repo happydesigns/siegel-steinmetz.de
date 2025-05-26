@@ -17,17 +17,13 @@ useHead({
 useSeoMeta({
   description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.',
 })
-
-const { data: page } = await usePageContent()
 </script>
 
 <template>
   <UApp>
-    <AppHeader :ui="page?.ui?.header" />
     <NuxtPage />
-    <AppFooter :ui="page?.ui?.footer" />
   </UApp>
-  <span class="display-none lg:col-span-5 fill-neutral-100 dark:fill-raisin pb-0 sm:pb-0 lg:pb-0 bg-gradient-to-b from:gray-800 to:raisin-cool" />
+  <span class="lg:col-span-5 pb-0 sm:pb-0 lg:pb-0 bg-gradient-to-b" />
 </template>
 
 <style>

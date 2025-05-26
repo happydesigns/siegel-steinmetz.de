@@ -28,7 +28,7 @@ hero:
       class: '[&>*:last-child]:hidden sm:[&>*:last-child]:block'
   orientation: horizontal
   image:
-    src: /images/banner.webp
+    src: /assets/images/content/index/hero.webp
     alt: Banner Image
     class: border border-red-500
 sections:
@@ -43,7 +43,7 @@ sections:
       title: 'lg:font-medium'
     links:
       - label: Galerie
-        to: '/galerie?album=grabmalreferenzen'
+        to: '/galerie/grabmalreferenzen'
         color: primary
         icon: i-ph-image-duotone
         size: lg
@@ -54,7 +54,7 @@ sections:
         trailing-icon: i-ph-arrow-right
         size: lg
     image:
-      src: /images/home-2.jpg
+      src: /assets/images/content/index/index-tombstones.jpg
       alt: Grabmale Image
       class: 'rounded-sm'
   - icon: i-ph-bank-duotone
@@ -68,7 +68,7 @@ sections:
       title: 'lg:font-medium'
     links:
       - label: Galerie
-        to: '/galerie?album=restaurierungen'
+        to: '/galerie/restaurierungen'
         color: primary
         icon: i-ph-image-duotone
         size: lg
@@ -79,9 +79,6 @@ sections:
         trailing-icon: i-ph-arrow-right
         size: lg
     image:
-      src: /images/home-1.jpg
+      src: /assets/images/content/index/index-restorations.jpg
       alt: Restaurierungen Image
       class: 'rounded-sm'
-ui:
-  footer:
-    wave: fill-neutral-100 dark:fill-raisin
