@@ -16,6 +16,6 @@ export function useGalleryImages(albumPathInput: Ref<string> | string) {
 
   return useFetch<GalleryImage[]>(requestUrl, {
     default: () => [],
-    // immediate: !!path.value,
+    immediate: !!path.value,
   })
 }
