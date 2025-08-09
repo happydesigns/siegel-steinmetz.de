@@ -14,17 +14,22 @@ const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
 </script>
 
 <template>
-  <UPage>
+  <UPage :ui="{ root: 'lg:[grid-template-columns:minmax(80px,1fr)_minmax(80px,1fr)_repeat(8,minmax(0,1fr))]!' }">
     <template #left>
       <UPageAside class="block -mt-8 pr-0!">
-        <UPageColumns class="overflow-x-auto flex lg:flex-col gap-4 sm:gap-6 lg:gap-8 w-full">
-          <Album
-            v-for="album in albums"
-            :key="album.path"
-            :title="album.title"
-            :path="album.path"
-          />
-        </UPageColumns>
+        <div class="overflow-y-auto max-h-[calc(100vh-var(--ui-header-height)-4rem)]">
+          <UPageColumns
+            class="flex lg:flex-col gap-4 sm:gap-6 lg:gap-8 w-full space-y-0"
+          >
+            <Album
+              v-for="album in albums"
+              :key="album.path"
+              :title="album.title"
+              :path="album.path"
+              class="box-border"
+            />
+          </UPageColumns>
+        </div>
       </UPageAside>
     </template>
 
