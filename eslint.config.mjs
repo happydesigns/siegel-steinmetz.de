@@ -1,21 +1,32 @@
+// @ts-check
 import antfu from '@antfu/eslint-config'
-import nuxt from './.nuxt/eslint.config.mjs'
+import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default antfu(
-  {},
-  {
-    name: 'tailwind/yaml/rules',
-    files: ['**/*.yaml', '**/*.yml'],
-    rules: {
-      'yaml/plain-scalar': ['off'],
+export default withNuxt(
+  antfu(
+    {
+
     },
-  },
-  {
-    name: 'nuxt-studio/md/rules',
-    files: ['**/*.md'],
-    rules: {
-      'no-irregular-whitespace': ['off'],
+    {
+      name: 'tailwind/yaml/rules',
+      files: ['**/*.yaml', '**/*.yml'],
+      rules: {
+        'yaml/plain-scalar': ['off'],
+      },
     },
-  },
-  nuxt,
+    {
+      name: 'nuxt-studio/md/rules',
+      files: ['**/*.md'],
+      rules: {
+        'no-irregular-whitespace': ['off'],
+      },
+    },
+    {
+      name: 'happydesigns/stylistic/rules',
+      rules: {
+        'curly': ['error', 'all'],
+        'style/brace-style': ['error', 'stroustrup'],
+      },
+    },
+  ),
 )
