@@ -11,7 +11,7 @@ Seit Jahrtausenden werden für Grabmale grob behauene Steine verwendet. Das robu
 ::
 
 ::text-flow{side="left"}
-:image-caption{src="/assets/images/content/tombstones/tombstones-002.jpg" alt="Doppelgrabmal Tarno Diorit" caption="Doppelgrabmal Tarno Diorit"}
+:image-caption{src="/assets/images/content/tombstones/tombstones-002.png" alt="Doppelgrabmal Tarno Diorit" caption="Doppelgrabmal Tarno Diorit"}
 Sie kennen Ihren geliebten Verstorbenen am besten. Gemeinsam mit Ihnen erarbeiten wir Ihre ganz persönliche Erinnerung an Ihren Angehörigen.
 
 Sie haben eine große Auswahl an verschiedenen Materialien. Das beginnt bei der Farbe des Steins und seiner Größe. Bei der Form haben Sie die Wahl von schmalen Stelen bis zu großen, imposanten Steinen. Das Grabmal kann fein und glatt gearbeitet oder ein grob behauener Stein, eine Bruchraue oder ein Findling sein. Wir versehen es mit Symbolen, Ornamenten und Verzierungen, die die Persönlichkeit Ihres Angehörigen widerspiegeln.
