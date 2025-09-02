@@ -3,7 +3,7 @@ import process from 'node:process'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: [
-    'github:happydesigns/ui-base',
+    'github:happydesigns/ui',
   ],
   modules: [
     '@nuxtjs/seo',
