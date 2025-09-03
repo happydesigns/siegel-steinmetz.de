@@ -24,4 +24,6 @@ Aus denkmalpflegerischer Sicht darf die ursprüngliche Oberflächenstruktur nich
 Sie können von uns perfekte, handwerkliche und traditionelle Arbeit erwarten. Wir führen diese Arbeiten mit viel Erfahrung, Engagement und Hingabe aus. Dabei setzen wir modernste Technik ein, um optimale Ergebnisse zu erzielen, die Sie zufrieden stellen.
 
 Selbstverständlich führen wir diese Arbeiten auch in regelmäßigen Abständen für Sie aus, um jederzeit ein perfektes Ergebnis zu gewährleisten.
+
+![](/assets/images/content/restorations/restorations-004.jpg){.w-96}
 ::
