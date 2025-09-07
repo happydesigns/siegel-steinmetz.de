@@ -523,39 +523,54 @@ export default defineAppConfig({
         ],
         restaurierungen: [
           {
-            src: 'restorations-001.jpg',
+            src: 'restorations-historic-facade.jpg',
             alt: 'Gesamtansicht Fassade',
             title: 'Dreistöckiges historisches Sandsteinhaus mit Stufengiebel, Rundbogenportal und mehrteiligen Fenstern.',
           },
           {
-            src: 'restorations-002.jpg',
+            src: 'restorations-gothic-arch-windows.jpg',
             alt: 'Spitzbogenfenster',
             title: 'Paar gotischer Spitzbogenfenster in gelb-ockerfarbener Backsteinwand mit geschlossenen Klappläden.',
           },
           {
-            src: 'restorations-003.jpg',
+            src: 'restorations-facade-detail-gable.jpg',
             alt: 'Oberer Fassadendetail',
             title: 'Zwei offene Fenster mit breiter Steinfassung und rundem Wappenornament im Gesims.',
           },
           {
-            src: 'restorations-004.jpg',
+            src: 'restorations-column-base.jpg',
             alt: 'Säulenfuß',
             title: 'Frisch gearbeitete Rundsäule auf quadratischem Plinth aus hellem Sandstein am Sockel.',
           },
           {
-            src: 'restorations-005.jpg',
+            src: 'restorations-window-sill.jpg',
             alt: 'Fensterlaibung unten',
             title: 'Unterer Steinsims einer Laibung mit temporärem Holzverschluss und Putzresten.',
           },
           {
-            src: 'restorations-006.jpg',
+            src: 'restorations-sandstone-block.jpg',
             alt: 'Sandsteinecke im Bau',
             title: 'Neu zugeschnittener Sandsteinblock als Wandaufsatz, daneben Holzverschalung und Baukette.',
           },
           {
-            src: 'restorations-007.jpg',
+            src: 'restorations-steel-frame-window.jpg',
             alt: 'Metallfenster',
             title: 'Rechteckiges Stahlprofilfenster mit neuer Verglasung, eingebettet in raues Natursteinmauerwerk.',
+          },
+          {
+            src: 'restorations-historic-door-entrance.jpg',
+            alt: 'Historische Holztür mit Sandsteinrahmung',
+            title: 'Dunkle Doppelflügeltür aus Holz mit dekorativem Sandsteinportal und schmiedeeisernem Geländer.',
+          },
+          {
+            src: 'restorations-historic-door-detail.jpg',
+            alt: 'Detailaufnahme Holztür',
+            title: 'Nahaufnahme der geschnitzten Holztür mit Zierbeschlägen und schwarzem Türklopfer.',
+          },
+          {
+            src: 'restorations-stone-statue-jesus-cross.jpg',
+            alt: 'Sandsteinfigur mit Kreuz',
+            title: 'Restaurierte Sandsteinfigur Jesu mit Kreuz, Sockelinschrift von 1883 und Erneuerung 1981.',
           },
         ],
       },
