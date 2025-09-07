@@ -1,32 +1,46 @@
+interface AlbumEntry {
+  src: string
+  alt?: string
+  title?: string
+}
+
+interface GalleryConfig {
+  sourceDir: string
+  albums: Record<string, AlbumEntry[]>
+}
+
 export default defineEventHandler(async (event) => {
   const album = event.context.params?.album
   if (!album) {
     throw createError({ statusCode: 400, statusMessage: 'Album is required' })
   }
 
-  const galleryConfig = (useAppConfig().app.gallery || {})
-  const albumMeta = ((galleryConfig.albums || {}) as Record<string, Record<string, { alt?: string, title?: string }>>)[album] || {}
+  const appCfg = useAppConfig() as { app?: { gallery?: Partial<GalleryConfig> } }
+  const galleryConfig = appCfg.app?.gallery ?? {}
+  const sourceDir = galleryConfig.sourceDir ?? '/assets/images/gallery'
+
+  // Keep the array as-is (order is preserved here)
+  const albumMetaArray = (galleryConfig.albums?.[album] ?? []) as AlbumEntry[]
 
   const storage = useStorage('assets:gallery')
   const imageKeys = await storage.getKeys(album)
 
-  return imageKeys.map((key) => {
-    // key is like "my-album:foo.jpg"
-    const fileName = key.slice(album.length + 1) // -> "foo.jpg"
-    const alt = albumMeta[fileName]?.alt || ''
-    const title = albumMeta[fileName]?.title || ''
+  // Build a set for quick existence check
+  const keySet = new Set(imageKeys.map(key => key.split(':', 2)[1]))
 
-    const baseDir = galleryConfig.sourceDir
-    const imagePath = key.replaceAll(':', '/') // Converts "my-album:foo.jpg" to "my-album/foo.jpg"
+  return albumMetaArray
+    .filter(item => keySet.has(item.src)) // only include if it exists in storage
+    .map((item) => {
+      const key = `${album}:${item.src}`
+      const imagePath = key.replaceAll(':', '/')
+      const src = sourceDir.endsWith('/')
+        ? `${sourceDir}${imagePath}`
+        : `${sourceDir}/${imagePath}`
 
-    const src = baseDir.endsWith('/')
-      ? `${baseDir}${imagePath}`
-      : `${baseDir}/${imagePath}`
-
-    return {
-      src,
-      alt,
-      title,
-    }
-  })
+      return {
+        src,
+        alt: item.alt ?? '',
+        title: item.title ?? '',
+      }
+    })
 })
