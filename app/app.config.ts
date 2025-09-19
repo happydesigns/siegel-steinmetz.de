@@ -519,7 +519,11 @@ export default defineAppConfig({
             alt: 'Zweiteiliges Grabmal mit Rautenornament',
             title: 'Grabmal aus zwei kontrastierenden Steinen mit eingelassener Raute im dunklen Teil',
           },
-
+          {
+            src: 'tombstone-references-hamberger-kilimanjaro.jpg',
+            alt: 'Zweiteiliger Grabstein mit Berggravur',
+            title: 'Moderner Grabstein der Familie Hamberger, zweiteilig aus grauem und schwarzem Stein, mit Gravur eines Bergpanoramas und bepflanzter Grabeinfassung.',
+          },
         ],
         restaurierungen: [
           {
