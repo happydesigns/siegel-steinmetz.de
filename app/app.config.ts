@@ -586,9 +586,6 @@ export default defineAppConfig({
       primary: 'red',
       neutral: 'zinc',
     },
-  },
-
-  uiPro: {
     footer: {
       slots: {
         root: 'bg-gradient-to-b from-gray-800 to-raisin-cool dark:from-raisin-cool dark:to-raisin',
