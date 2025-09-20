@@ -177,11 +177,6 @@ export default defineAppConfig({
             title: 'Schlicht gestalteter grauer Grabstein mit drei waagerechten Wellenlinien',
           },
           {
-            src: 'tombstone-stock-brown-cross-circle.jpg',
-            alt: 'Brauner Grabstein mit Kreis- und Kreuzrelief',
-            title: 'Aufrecht stehender brauner Naturstein-Grabstein mit eingraviertem Kreuz im Kreis',
-          },
-          {
             src: 'tombstone-stock-cylinder-granite.jpg',
             alt: 'Zylindrischer Granit-Grabstein',
             title: 'Moderner zylindrischer Granit-Grabstein auf quadratischer Umrandung mit Kiesbett',
