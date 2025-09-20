@@ -355,159 +355,9 @@ export default defineAppConfig({
         ],
         grabmalreferenzen: [
           {
-            src: 'tombstone-references-split-dark-light.jpg',
-            alt: 'Zweifarbiger Grabstein mit Datumsgravur',
-            title: 'Hell- und dunkelgrauer Grabstein mit Geburts- und Sterbedatum',
-          },
-          {
-            src: 'tombstone-references-stairs-motif.jpg',
-            alt: 'Heller Grabstein mit Treppen-Motiv',
-            title: 'Hellgrauer Grabstein mit Stufenornament, Messingfigur und weißen Blumen',
-          },
-          {
-            src: 'tombstone-references-split-stone-lantern.jpg',
-            alt: 'Zweifarbiger Grabstein mit Kiesbett und Laterne',
-            title: 'Split-Design-Grabstein aus hellem und dunklem Granit, umgeben von schwarzem Kies und Laterne',
-          },
-          {
-            src: 'tombstone-references-light-gravestone-groundcover.jpg',
-            alt: 'Hellgrauer Grabstein mit Bodendeckerpflanzen',
-            title: 'Grauer Grabstein umgeben von weiß blühenden Bodendeckern und Laterne',
-          },
-          {
-            src: 'tombstone-references-organic-shape.jpg',
-            alt: 'Weißer Ovalgrabstein mit Reliefformen',
-            title: 'Organisch geformter weißer Grabstein mit Blattelementen und Heidepflanzen',
-          },
-          {
-            src: 'tombstone-references-rectangular-opening.jpg',
-            alt: 'Moderner Grabstein mit rechteckiger Aussparung',
-            title: 'Geradliniger heller Grabstein mit rechteckiger Aussparung, Laterne und umlaufendem Rahmen',
-          },
-          {
-            src: 'tombstone-references-oval-pink.jpg',
-            alt: 'Ovaler rosa Grabstein mit Kreuz',
-            title: 'Ovaler rosafarbener Grabstein mit eingraviertem Kreuz und bepflanztem Blumenbeet',
-          },
-          {
-            src: 'tombstone-references-contrasting-colors.jpg',
-            alt: 'Beiger und schwarzer Grabstein mit Kerze',
-            title: 'Zweifarbiger Grabstein mit integriertem Laternenfach und bunten Pflanzen',
-          },
-          {
-            src: 'tombstone-references-dry-arrangement.jpg',
-            alt: 'Heller Grabstein mit Trockenarrangement',
-            title: 'Hellbeiger Grabstein mit Trockenblumen, Wurzelholz und Sukkulenten',
-          },
-          {
-            src: 'tombstone-references-triple-dark.jpg',
-            alt: 'Dreiteiliger Grabstein mit goldener Schrift',
-            title: 'Dunkler Dreiteiler mit goldenen Namen und Lavendelbepflanzung',
-          },
-          {
-            src: 'tombstone-references-symbolic-steps.jpg',
-            alt: 'Speckiger Grabstein mit Stufensymbol',
-            title: 'Speckgranitgrabstein mit goldener Stufen-Silhouette und Namensgravur',
-          },
-          {
-            src: 'tombstone-references-natural-boulder.jpg',
-            alt: 'Grüner Findling als Grabstein',
-            title: 'Unregelmäßiger grüner Stein mit Inschrift und Bodendeckerpflanzen',
-          },
-          {
-            src: 'tombstone-references-tree-natural.jpg',
-            alt: 'Grabmal aus hellem Naturstein mit Baumstamm',
-            title: 'Grabmal aus hellem Naturstein mit integriertem Baumstamm und bepflanzter Grabeinfassung',
-          },
-          {
-            src: 'tombstone-references-light-dark-combination.jpg',
-            alt: 'Grabmal aus hellem Stein mit dunklem Akzent',
-            title: 'Modernes Grabmal mit hellem Steinblock und dunklem Querbalken für die Inschrift',
-          },
-          {
-            src: 'tombstone-references-lighthouse.jpg',
-            alt: 'Grabmal mit Leuchtturm-Relief',
-            title: 'Zweiteiliges Grabmal mit Leuchtturm-Relief im hellen Stein und dunklem Inschriftenstein daneben',
-          },
-          {
-            src: 'tombstone-references-cross-dark-light.jpg',
-            alt: 'Grabmal mit Kreuz und zweifarbigem Stein',
-            title: 'Grabmal mit modernem Kreuzornament, Kombination aus hellem und dunklem Naturstein',
-          },
-          {
-            src: 'tombstone-references-bird-branch.jpg',
-            alt: 'Grabmal mit Vogel und Blattornament',
-            title: 'Dunkler Stein mit plastischem Vogel auf Ast und Blattornament, bepflanzte Grabeinfassung',
-          },
-          {
-            src: 'tombstone-references-double-curved.jpg',
-            alt: 'Zweiteiliges Grabmal mit gebogenen Steinen',
-            title: 'Zweiteiliges Grabmal aus dunkelgrauem Stein mit geschwungenen Formen',
-          },
-          {
-            src: 'tombstone-references-red-curved-polished.jpg',
-            alt: 'Rot-graues Grabmal mit geschwungener Form',
-            title: 'Grabmal aus rot-grauem Naturstein mit polierter Front und gebogener Form',
-          },
-          {
-            src: 'tombstone-references-light-double-cross.jpg',
-            alt: 'Helles Doppelgrabmal mit Kreuzornament',
-            title: 'Zweiteiliges helles Grabmal mit Kreuz und Ährenmotiv, bepflanzte Grabeinfassung',
-          },
-          {
-            src: 'tombstone-references-rounded-gray.jpg',
-            alt: 'Abgerundetes graues Grabmal',
-            title: 'Schlichtes graues Grabmal mit abgerundetem Kopfteil und polierter Oberfläche',
-          },
-          {
-            src: 'tombstone-references-double-light-cross.jpg',
-            alt: 'Helles Doppelgrabmal mit Kreuzausschnitt',
-            title: 'Zweiteiliges helles Grabmal mit mittigem Kreuzausschnitt und bepflanzter Grabeinfassung',
-          },
-          {
-            src: 'tombstone-references-light-rounded-tree.jpg',
-            alt: 'Helles Grabmal mit abgerundetem Kopfteil',
-            title: 'Schlichtes helles Grabmal mit abgerundetem Kopfteil und bepflanzter Grabeinfassung',
-          },
-          {
-            src: 'tombstone-references-light-pebbles-side.jpg',
-            alt: 'Helles Grabmal mit Kieseleinlage seitlich',
-            title: 'Helles Grabmal mit seitlicher Kieseleinlage und modernem Aufbau',
-          },
-          {
-            src: 'tombstone-references-light-cross-relief.jpg',
-            alt: 'Helles Grabmal mit Kreuzrelief',
-            title: 'Aufrecht stehendes helles Grabmal mit plastischem Kreuzrelief und runder Einfassung',
-          },
-          {
-            src: 'tombstone-references-flower-moon-shape.jpg',
-            alt: 'Grabmal in Blütenform mit Mondsichel',
-            title: 'Rundes Grabmal in Blütenform aus grauem Naturstein mit eingearbeiteter Mondsichel',
-          },
-          {
-            src: 'tombstone-references-book-praying-hands.jpg',
-            alt: 'Grabmal in Buchform mit betenden Händen',
-            title: 'Graues Grabmal in offener Buchform mit bronzenen betenden Händen und Inschrift',
-          },
-          {
-            src: 'tombstone-references-sun-relief-double.jpg',
-            alt: 'Zweiteiliges Grabmal mit Sonnenrelief',
-            title: 'Zweiteiliges Grabmal aus hellem und dunklem Stein mit großem Sonnenrelief und Pflanzenornamenten',
-          },
-          {
-            src: 'tombstone-references-dark-light-cross-split.jpg',
-            alt: 'Zweiteiliges Grabmal aus dunklem und hellem Granit mit Kreuz',
-            title: 'Zweiteiliges modernes Grabmal in dunklem und hellem Granit mit eingelassenem Kreuzornament',
-          },
-          {
-            src: 'tombstone-references-floral-engraving-dark.jpg',
-            alt: 'Dunkles Grabmal mit floralem Ornament',
-            title: 'Dunkler Naturstein mit geschwungenem Schnitt und eingravierten Blumenmotiven',
-          },
-          {
-            src: 'tombstone-references-faceted-dark.jpg',
-            alt: 'Grabmal mit facettierter Oberfläche',
-            title: 'Modernes dunkles Grabmal mit geometrisch facettierter Oberfläche',
+            src: 'tombstone-references-hamberger-kilimanjaro.jpg',
+            alt: 'Zweiteiliger Grabstein mit Berggravur',
+            title: 'Moderner Grabstein der Familie Hamberger, zweiteilig aus grauem und schwarzem Stein, mit Gravur eines Bergpanoramas und bepflanzter Grabeinfassung.',
           },
           {
             src: 'tombstone-references-dark-light-diamond.jpg',
@@ -515,9 +365,159 @@ export default defineAppConfig({
             title: 'Grabmal aus zwei kontrastierenden Steinen mit eingelassener Raute im dunklen Teil',
           },
           {
-            src: 'tombstone-references-hamberger-kilimanjaro.jpg',
-            alt: 'Zweiteiliger Grabstein mit Berggravur',
-            title: 'Moderner Grabstein der Familie Hamberger, zweiteilig aus grauem und schwarzem Stein, mit Gravur eines Bergpanoramas und bepflanzter Grabeinfassung.',
+            src: 'tombstone-references-faceted-dark.jpg',
+            alt: 'Grabmal mit facettierter Oberfläche',
+            title: 'Modernes dunkles Grabmal mit geometrisch facettierter Oberfläche',
+          },
+          {
+            src: 'tombstone-references-floral-engraving-dark.jpg',
+            alt: 'Dunkles Grabmal mit floralem Ornament',
+            title: 'Dunkler Naturstein mit geschwungenem Schnitt und eingravierten Blumenmotiven',
+          },
+          {
+            src: 'tombstone-references-dark-light-cross-split.jpg',
+            alt: 'Zweiteiliges Grabmal aus dunklem und hellem Granit mit Kreuz',
+            title: 'Zweiteiliges modernes Grabmal in dunklem und hellem Granit mit eingelassenem Kreuzornament',
+          },
+          {
+            src: 'tombstone-references-sun-relief-double.jpg',
+            alt: 'Zweiteiliges Grabmal mit Sonnenrelief',
+            title: 'Zweiteiliges Grabmal aus hellem und dunklem Stein mit großem Sonnenrelief und Pflanzenornamenten',
+          },
+          {
+            src: 'tombstone-references-book-praying-hands.jpg',
+            alt: 'Grabmal in Buchform mit betenden Händen',
+            title: 'Graues Grabmal in offener Buchform mit bronzenen betenden Händen und Inschrift',
+          },
+          {
+            src: 'tombstone-references-flower-moon-shape.jpg',
+            alt: 'Grabmal in Blütenform mit Mondsichel',
+            title: 'Rundes Grabmal in Blütenform aus grauem Naturstein mit eingearbeiteter Mondsichel',
+          },
+          {
+            src: 'tombstone-references-light-cross-relief.jpg',
+            alt: 'Helles Grabmal mit Kreuzrelief',
+            title: 'Aufrecht stehendes helles Grabmal mit plastischem Kreuzrelief und runder Einfassung',
+          },
+          {
+            src: 'tombstone-references-light-pebbles-side.jpg',
+            alt: 'Helles Grabmal mit Kieseleinlage seitlich',
+            title: 'Helles Grabmal mit seitlicher Kieseleinlage und modernem Aufbau',
+          },
+          {
+            src: 'tombstone-references-light-rounded-tree.jpg',
+            alt: 'Helles Grabmal mit abgerundetem Kopfteil',
+            title: 'Schlichtes helles Grabmal mit abgerundetem Kopfteil und bepflanzter Grabeinfassung',
+          },
+          {
+            src: 'tombstone-references-double-light-cross.jpg',
+            alt: 'Helles Doppelgrabmal mit Kreuzausschnitt',
+            title: 'Zweiteiliges helles Grabmal mit mittigem Kreuzausschnitt und bepflanzter Grabeinfassung',
+          },
+          {
+            src: 'tombstone-references-rounded-gray.jpg',
+            alt: 'Abgerundetes graues Grabmal',
+            title: 'Schlichtes graues Grabmal mit abgerundetem Kopfteil und polierter Oberfläche',
+          },
+          {
+            src: 'tombstone-references-light-double-cross.jpg',
+            alt: 'Helles Doppelgrabmal mit Kreuzornament',
+            title: 'Zweiteiliges helles Grabmal mit Kreuz und Ährenmotiv, bepflanzte Grabeinfassung',
+          },
+          {
+            src: 'tombstone-references-red-curved-polished.jpg',
+            alt: 'Rot-graues Grabmal mit geschwungener Form',
+            title: 'Grabmal aus rot-grauem Naturstein mit polierter Front und gebogener Form',
+          },
+          {
+            src: 'tombstone-references-double-curved.jpg',
+            alt: 'Zweiteiliges Grabmal mit gebogenen Steinen',
+            title: 'Zweiteiliges Grabmal aus dunkelgrauem Stein mit geschwungenen Formen',
+          },
+          {
+            src: 'tombstone-references-bird-branch.jpg',
+            alt: 'Grabmal mit Vogel und Blattornament',
+            title: 'Dunkler Stein mit plastischem Vogel auf Ast und Blattornament, bepflanzte Grabeinfassung',
+          },
+          {
+            src: 'tombstone-references-cross-dark-light.jpg',
+            alt: 'Grabmal mit Kreuz und zweifarbigem Stein',
+            title: 'Grabmal mit modernem Kreuzornament, Kombination aus hellem und dunklem Naturstein',
+          },
+          {
+            src: 'tombstone-references-lighthouse.jpg',
+            alt: 'Grabmal mit Leuchtturm-Relief',
+            title: 'Zweiteiliges Grabmal mit Leuchtturm-Relief im hellen Stein und dunklem Inschriftenstein daneben',
+          },
+          {
+            src: 'tombstone-references-light-dark-combination.jpg',
+            alt: 'Grabmal aus hellem Stein mit dunklem Akzent',
+            title: 'Modernes Grabmal mit hellem Steinblock und dunklem Querbalken für die Inschrift',
+          },
+          {
+            src: 'tombstone-references-tree-natural.jpg',
+            alt: 'Grabmal aus hellem Naturstein mit Baumstamm',
+            title: 'Grabmal aus hellem Naturstein mit integriertem Baumstamm und bepflanzter Grabeinfassung',
+          },
+          {
+            src: 'tombstone-references-natural-boulder.jpg',
+            alt: 'Grüner Findling als Grabstein',
+            title: 'Unregelmäßiger grüner Stein mit Inschrift und Bodendeckerpflanzen',
+          },
+          {
+            src: 'tombstone-references-symbolic-steps.jpg',
+            alt: 'Speckiger Grabstein mit Stufensymbol',
+            title: 'Speckgranitgrabstein mit goldener Stufen-Silhouette und Namensgravur',
+          },
+          {
+            src: 'tombstone-references-triple-dark.jpg',
+            alt: 'Dreiteiliger Grabstein mit goldener Schrift',
+            title: 'Dunkler Dreiteiler mit goldenen Namen und Lavendelbepflanzung',
+          },
+          {
+            src: 'tombstone-references-dry-arrangement.jpg',
+            alt: 'Heller Grabstein mit Trockenarrangement',
+            title: 'Hellbeiger Grabstein mit Trockenblumen, Wurzelholz und Sukkulenten',
+          },
+          {
+            src: 'tombstone-references-contrasting-colors.jpg',
+            alt: 'Beiger und schwarzer Grabstein mit Kerze',
+            title: 'Zweifarbiger Grabstein mit integriertem Laternenfach und bunten Pflanzen',
+          },
+          {
+            src: 'tombstone-references-oval-pink.jpg',
+            alt: 'Ovaler rosa Grabstein mit Kreuz',
+            title: 'Ovaler rosafarbener Grabstein mit eingraviertem Kreuz und bepflanztem Blumenbeet',
+          },
+          {
+            src: 'tombstone-references-rectangular-opening.jpg',
+            alt: 'Moderner Grabstein mit rechteckiger Aussparung',
+            title: 'Geradliniger heller Grabstein mit rechteckiger Aussparung, Laterne und umlaufendem Rahmen',
+          },
+          {
+            src: 'tombstone-references-organic-shape.jpg',
+            alt: 'Weißer Ovalgrabstein mit Reliefformen',
+            title: 'Organisch geformter weißer Grabstein mit Blattelementen und Heidepflanzen',
+          },
+          {
+            src: 'tombstone-references-light-gravestone-groundcover.jpg',
+            alt: 'Hellgrauer Grabstein mit Bodendeckerpflanzen',
+            title: 'Grauer Grabstein umgeben von weiß blühenden Bodendeckern und Laterne',
+          },
+          {
+            src: 'tombstone-references-split-stone-lantern.jpg',
+            alt: 'Zweifarbiger Grabstein mit Kiesbett und Laterne',
+            title: 'Split-Design-Grabstein aus hellem und dunklem Granit, umgeben von schwarzem Kies und Laterne',
+          },
+          {
+            src: 'tombstone-references-stairs-motif.jpg',
+            alt: 'Heller Grabstein mit Treppen-Motiv',
+            title: 'Hellgrauer Grabstein mit Stufenornament, Messingfigur und weißen Blumen',
+          },
+          {
+            src: 'tombstone-references-split-dark-light.jpg',
+            alt: 'Zweifarbiger Grabstein mit Datumsgravur',
+            title: 'Hell- und dunkelgrauer Grabstein mit Geburts- und Sterbedatum',
           },
         ],
         restaurierungen: [
@@ -593,6 +593,11 @@ export default defineAppConfig({
         root: 'xl:grid-cols-5',
         center: 'xl:col-span-3',
         right: 'xl:col-span-2',
+      },
+    },
+    contentToc: {
+      slots: {
+        root: 'lg:backdrop-blur-none',
       },
     },
   },
