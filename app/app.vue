@@ -23,7 +23,7 @@ useSeoMeta({
   <UApp>
     <NuxtPage />
   </UApp>
-  <span class="lg:col-span-5 pb-0 sm:pb-0 lg:pb-0 bg-gradient-to-b" />
+  <span class="lg:col-span-5 pb-0 sm:pb-0 lg:pb-0 bg-gradient-to-b w-lg" />
 </template>
 
 <style>
