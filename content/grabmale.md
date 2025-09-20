@@ -11,7 +11,7 @@ Seit Jahrtausenden werden für Grabmale grob behauene Steine verwendet. Das robu
 ::
 
 ::text-flow{side="left"}
-:image-caption{src="/assets/images/content/tombstones/tombstones-002.png" alt="Doppelgrabmal Tarno Diorit" caption="Doppelgrabmal Tarno Diorit"}
+:image-caption{src="/assets/images/content/tombstones/tombstones-002.png" alt="Urnensteine" caption="Urnensteine"}
 Sie kennen Ihren geliebten Verstorbenen am besten. Gemeinsam mit Ihnen erarbeiten wir Ihre ganz persönliche Erinnerung an Ihren Angehörigen.
 
 Sie haben eine große Auswahl an verschiedenen Materialien. Das beginnt bei der Farbe des Steins und seiner Größe. Bei der Form haben Sie die Wahl von schmalen Stelen bis zu großen, imposanten Steinen. Das Grabmal kann fein und glatt gearbeitet oder ein grob behauener Stein, eine Bruchraue oder ein Findling sein. Wir versehen es mit Symbolen, Ornamenten und Verzierungen, die die Persönlichkeit Ihres Angehörigen widerspiegeln.
@@ -24,7 +24,7 @@ Grabzubehör wie Grablaternen aus Bronze, Aluminium oder Stahl sowie robuste Pfl
 ::
 
 ::text-flow{side="right"}
-:image-caption{src="/assets/images/content/tombstones/tombstones-003.jpg" alt="Urnengrab Kalkstein" caption="Urnengrab Kalkstein"}
+:image-caption{src="/assets/images/content/tombstones/tombstones-003.jpg" alt="Urnengrabanlage" caption="Urnengrabanlage"}
 Grabsteine sind im Laufe der Jahre und Jahrzehnte ständig wechselnden Witterungseinflüssen ausgesetzt. Feuchtigkeit, Kälte, aber auch Hitze setzen ihnen mit der Zeit zu. Inschriften verblassen, angebrachte Buchstaben, Inschriften und Ornamente lockern sich und können verloren gehen. Gerne erneuern wir die Inschrift auf dem Grabmal Ihrer Lieben. Auch Moos oder Verschmutzungen entfernen wir. So wird der Grabstein wieder in seinen einwandfreien Originalzustand versetzt.
 
 Für Beerdigungen bauen wir die Grabanlagen ab und nach einer angemessenen Zeit wieder auf – sorgfältig, liebevoll und mit Respekt vor den Verstorbenen. Des Weiteren bieten wir Ihnen eine regelmäßige und umfassende Betreuung des Grabmals Ihrer Angehörigen. Hierzu gehören die Reinigung und bei Bedarf die Instandsetzung des Steins. Gerne präsentieren wir Ihnen die unterschiedlichen Möglichkeiten der Pflege.
