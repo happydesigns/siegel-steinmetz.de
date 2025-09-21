@@ -25,6 +25,7 @@
     "@nuxt/image": "^1.11.0",
     "@nuxt/ui": "4.0.0-alpha.2",
     "@nuxtjs/seo": "^3.2.2",
+    "@unhead/vue": "^2.0.17",
     "better-sqlite3": "^12.2.0",
     "nuxt": "^4.1.2",
     "vue-google-maps-community-fork": "^0.3.1"
@@ -40,6 +41,9 @@
     "wrangler": "^4.38.0"
   },
   "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    },
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "@tailwindcss/oxide",
