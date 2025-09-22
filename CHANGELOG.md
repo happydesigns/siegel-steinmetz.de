@@ -1,6 +1,57 @@
 # Changelog
 
 
+## v2.3.0
+
+[compare changes](https://github.com/happydesigns/siegel-steinmetz.de/compare/v2.2.0...v2.3.0)
+
+### 🚀 Enhancements
+
+- Update landing schema ([8b17d5d](https://github.com/happydesigns/siegel-steinmetz.de/commit/8b17d5d))
+- Highlight selected album, outsource styles to AlbumEffect ([80f9b6a](https://github.com/happydesigns/siegel-steinmetz.de/commit/80f9b6a))
+- Update background color in light mode ([413f1be](https://github.com/happydesigns/siegel-steinmetz.de/commit/413f1be))
+- Update image on landing page ([dfb1859](https://github.com/happydesigns/siegel-steinmetz.de/commit/dfb1859))
+- Update images on about page ([626d429](https://github.com/happydesigns/siegel-steinmetz.de/commit/626d429))
+- Update images for tombstones ([32ed59e](https://github.com/happydesigns/siegel-steinmetz.de/commit/32ed59e))
+- Update images for restorations ([472fb7a](https://github.com/happydesigns/siegel-steinmetz.de/commit/472fb7a))
+- **gallery:** Remove tooltip from images ([ed8e5f3](https://github.com/happydesigns/siegel-steinmetz.de/commit/ed8e5f3))
+- **gallery:** Loop over App Config ([4a6e6ca](https://github.com/happydesigns/siegel-steinmetz.de/commit/4a6e6ca))
+- Update images in gallery ([5545d10](https://github.com/happydesigns/siegel-steinmetz.de/commit/5545d10))
+- Update images in gallery/references ([d6fa119](https://github.com/happydesigns/siegel-steinmetz.de/commit/d6fa119))
+- Update images in gallery/references ([af043a7](https://github.com/happydesigns/siegel-steinmetz.de/commit/af043a7))
+- Update images in gallery/restaurations ([abbcf31](https://github.com/happydesigns/siegel-steinmetz.de/commit/abbcf31))
+- Highlight link when on subpage ([7d07136](https://github.com/happydesigns/siegel-steinmetz.de/commit/7d07136))
+
+### 🩹 Fixes
+
+- Add snippets to content.config ([95a7a4c](https://github.com/happydesigns/siegel-steinmetz.de/commit/95a7a4c))
+
+### 💅 Refactors
+
+- Remove unneccessary template component ([c5ab8fc](https://github.com/happydesigns/siegel-steinmetz.de/commit/c5ab8fc))
+- Move layouts to ui-base ([d57f372](https://github.com/happydesigns/siegel-steinmetz.de/commit/d57f372))
+
+### 🏡 Chore
+
+- Update deps ([6ae6443](https://github.com/happydesigns/siegel-steinmetz.de/commit/6ae6443))
+- Update deps ([c1af8ab](https://github.com/happydesigns/siegel-steinmetz.de/commit/c1af8ab))
+- Rename layer to happydesigns/ui ([37c39e6](https://github.com/happydesigns/siegel-steinmetz.de/commit/37c39e6))
+- Update deps ([5b62aad](https://github.com/happydesigns/siegel-steinmetz.de/commit/5b62aad))
+- Remove giget auth .env variable ([6990a30](https://github.com/happydesigns/siegel-steinmetz.de/commit/6990a30))
+- **gallery:** Add image ([b2c2312](https://github.com/happydesigns/siegel-steinmetz.de/commit/b2c2312))
+- Update deps ([db3b84e](https://github.com/happydesigns/siegel-steinmetz.de/commit/db3b84e))
+- **gallery:** Remove duplicate image ([20cae39](https://github.com/happydesigns/siegel-steinmetz.de/commit/20cae39))
+- **gallery:** Reverse order of grabmalreferenzen ([c14fe34](https://github.com/happydesigns/siegel-steinmetz.de/commit/c14fe34))
+- Update image captions ([ad8e822](https://github.com/happydesigns/siegel-steinmetz.de/commit/ad8e822))
+- Remove rolldown ([daa8191](https://github.com/happydesigns/siegel-steinmetz.de/commit/daa8191))
+- Remove nuxt.schema ([d7dffeb](https://github.com/happydesigns/siegel-steinmetz.de/commit/d7dffeb))
+- **gallery:** Reverse order of album grabmallager ([5dfea0e](https://github.com/happydesigns/siegel-steinmetz.de/commit/5dfea0e))
+- Fix typo ([ef9fa9b](https://github.com/happydesigns/siegel-steinmetz.de/commit/ef9fa9b))
+
+### ❤️ Contributors
+
+- Jan Fröhlich ([@janfrl](https://github.com/janfrl))
+
 ## v2.2.0
 
 [compare changes](https://github.com/happydesigns/siegel-steinmetz.de/compare/v2.1.2...v2.2.0)
