@@ -9,6 +9,31 @@ export default defineAppConfig({
     },
 
     links: {
+      header: [
+        {
+          label: 'Über uns',
+          icon: 'i-ph-users-duotone',
+          to: '/ueber-uns',
+        },
+        {
+          label: 'Grabmale',
+          description: 'Ein sichtbares und individuelles Andenken an einen geliebten Menschen.',
+          icon: 'i-ph-cross-duotone',
+          to: '/grabmale',
+        },
+        {
+          label: 'Restaurierungen',
+          description: 'Fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.',
+          icon: 'i-ph-bank-duotone',
+          to: '/restaurierungen',
+        },
+        {
+          label: 'Galerie',
+          icon: 'i-ph-image-duotone',
+          to: '/galerie',
+          exact: false,
+        },
+      ],
       footer: [
         {
           label: 'Unternehmen',
@@ -599,66 +624,5 @@ export default defineAppConfig({
         root: 'lg:backdrop-blur-none',
       },
     },
-  },
-
-  links: {
-    header: [
-      {
-        label: 'Über uns',
-        icon: 'i-ph-users-duotone',
-        to: '/ueber-uns',
-      },
-      {
-        label: 'Grabmale',
-        description: 'Ein sichtbares und individuelles Andenken an einen geliebten Menschen.',
-        icon: 'i-ph-cross-duotone',
-        to: '/grabmale',
-      },
-      {
-        label: 'Restaurierungen',
-        description: 'Fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.',
-        icon: 'i-ph-bank-duotone',
-        to: '/restaurierungen',
-      },
-      {
-        label: 'Galerie',
-        icon: 'i-ph-image-duotone',
-        to: '/galerie',
-      },
-    ],
-    footer: [{
-      label: 'Unternehmen',
-      children: [{
-        label: 'Startseite',
-        to: '/',
-      }, {
-        label: 'Über uns',
-        to: '/ueber-uns',
-      }, {
-        label: 'Kontakt',
-        to: '/kontakt',
-      }],
-    }, {
-      label: 'Unsere Leistungen',
-      children: [{
-        label: 'Grabmale',
-        to: '/grabmale',
-      }, {
-        label: 'Restaurierungen',
-        to: '/restaurierungen',
-      }, {
-        label: 'Galerie',
-        to: '/galerie',
-      }],
-    }, {
-      label: 'Rechtliches',
-      children: [{
-        label: 'Impressum',
-        to: '/impressum',
-      }, {
-        label: 'Datenschutz',
-        to: '/datenschutz',
-      }],
-    }],
   },
 })
