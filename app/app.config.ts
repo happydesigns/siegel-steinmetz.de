@@ -64,7 +64,7 @@ export default defineAppConfig({
               to: '/restaurierungen',
             },
             {
-              label: 'Galerien',
+              label: 'Galerie',
               to: '/galerie',
             },
           ],
