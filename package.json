@@ -39,17 +39,5 @@
     "eslint": "^9.36.0",
     "typescript": "^5.9.2",
     "wrangler": "^4.38.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "@tailwindcss/oxide",
-      "better-sqlite3",
-      "esbuild",
-      "sharp",
-      "unrs-resolver",
-      "vue-demi",
-      "workerd"
-    ]
   }
 }
