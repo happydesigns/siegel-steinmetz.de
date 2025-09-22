@@ -59,17 +59,13 @@ const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
     />
     <!-- Gallery Images -->
     <UPageColumns v-else>
-      <UTooltip
+      <img
         v-for="img in images" :key="img.src"
-        :text="img.title" :content="{ sideOffset: 0 }"
+        :src="img.src"
+        :alt="img.alt"
+        class="w-full rounded-sm border border-neutral-200 dark:border-neutral-800"
+        loading="lazy"
       >
-        <img
-          :src="img.src"
-          :alt="img.alt"
-          class="w-full rounded-sm border border-neutral-200 dark:border-neutral-800"
-          loading="lazy"
-        >
-      </UTooltip>
     </UPageColumns>
   </UPage>
 </template>

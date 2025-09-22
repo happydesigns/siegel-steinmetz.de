@@ -1,5 +1,5 @@
 @import "tailwindcss" theme(static);
-@import "@nuxt/ui-pro";
+@import "@nuxt/ui";
 
 @theme static {
   /* Fonts */
@@ -43,7 +43,7 @@
   }
 
   body {
-    background-image: linear-gradient(to bottom, var(--color-white), var(--color-neutral-100));
+    background-image: linear-gradient(to bottom, var(--color-white), var(--color-stone-100));
   }
 
   .dark body {

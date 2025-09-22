@@ -3,8 +3,10 @@ title: Über uns
 description: Bernd Siegel Steingestaltung – Ihr Steinmetzmeister in Neudenau.
 ---
 
+![Betriebsgebäude Bernd Siegel](/assets/images/content/about-us/about-us-000.jpg)
+
 ::text-flow{side="right"}
-:image-caption{src="/assets/images/content/about-us/about-us-001.jpg" alt="Betriebsgelände Bernd Siegel" caption="Betriebsgelände Bernd Siegel"}
+:image-caption{src="/assets/images/content/about-us/about-us-001.jpg" alt="Betriebsgelände" caption="Betriebsgelände"}
 
 Sie finden uns in 74861 Neudenau direkt am Bahnhof.
 
@@ -23,8 +25,10 @@ Außenfassaden von Gebäuden reinigen wir mit dem Niederdruckstrahlverfahren, ve
 
 <br>
 
+<img src="/assets/images/content/about-us/about-us-002.jpg" alt="Betriebsgelände Bernd Siegel" class="float-right ml-4 mb-4" />
+
 ::text-flow{side="left"}
-:image-caption{src="/assets/images/content/about-us/about-us-002.jpg" alt="Ausstellungsfläche" caption="Ausstellungsfläche"}
+:image-caption{src="/assets/images/content/about-us/about-us-003.jpg" alt="Ausstellung Neudenau" caption="Ausstellung Neudenau"}
 
 Auf unseren Ausstellungsflächen in Neudenau am Bahnhof und in Möckmühl, Roigheimer Straße 45 (beim Bestattungshaus Strässer) bieten wir Grabmale in verschiedenen Steinarten und Formen an. Diese stammen entweder aus eigener Produktion oder werden zugekauft, unter anderem von der Firma Gräf Granit GmbH aus dem Fichtelgebirge.
 
