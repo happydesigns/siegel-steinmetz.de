@@ -1,5 +1,13 @@
 <script setup lang="ts">
 const appConfig = useAppConfig()
+const route = useRoute()
+
+const headerLinks = computed(() =>
+  appConfig.app.links.header.map(link => ({
+    ...link,
+    active: link.to !== '/' && route.path.startsWith(link.to),
+  })),
+)
 </script>
 
 <template>
@@ -8,7 +16,7 @@ const appConfig = useAppConfig()
       <Logo class="w-auto h-12 dark:bg-white rounded-sm p-1" />
     </template>
 
-    <UNavigationMenu :items="appConfig.links.header" />
+    <UNavigationMenu :items="headerLinks" />
 
     <template #right>
       <UButton
@@ -22,7 +30,7 @@ const appConfig = useAppConfig()
 
     <template #body>
       <UNavigationMenu
-        :items="appConfig.links.header"
+        :items="headerLinks"
         orientation="vertical"
       />
       <USeparator class="my-6" />

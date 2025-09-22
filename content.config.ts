@@ -39,5 +39,9 @@ export default defineContentConfig({
         }),
       }),
     }),
+    snippet: defineCollection({
+      type: 'page',
+      source: 'snippets/**/*.{md,yaml}',
+    }),
   },
 })

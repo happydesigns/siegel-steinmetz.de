@@ -9,6 +9,31 @@ export default defineAppConfig({
     },
 
     links: {
+      header: [
+        {
+          label: 'Über uns',
+          icon: 'i-ph-users-duotone',
+          to: '/ueber-uns',
+        },
+        {
+          label: 'Grabmale',
+          description: 'Ein sichtbares und individuelles Andenken an einen geliebten Menschen.',
+          icon: 'i-ph-cross-duotone',
+          to: '/grabmale',
+        },
+        {
+          label: 'Restaurierungen',
+          description: 'Fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.',
+          icon: 'i-ph-bank-duotone',
+          to: '/restaurierungen',
+        },
+        {
+          label: 'Galerie',
+          icon: 'i-ph-image-duotone',
+          to: '/galerie',
+          exact: false,
+        },
+      ],
       footer: [
         {
           label: 'Unternehmen',
@@ -39,7 +64,7 @@ export default defineAppConfig({
               to: '/restaurierungen',
             },
             {
-              label: 'Galerien',
+              label: 'Galerie',
               to: '/galerie',
             },
           ],
@@ -62,284 +87,9 @@ export default defineAppConfig({
       albums: {
         grabmallager: [
           {
-            src: 'tombstone-stock-limestone-vase.jpg',
-            alt: 'Kalkstein-Grabstein mit Bronzevase',
-            title: 'Lichtgrauer Kalkstein-Grabstein mit rechteckiger Aussparung und Bronzevase',
-          },
-          {
-            src: 'tombstone-stock-duotone-rose.jpg',
-            alt: 'Zweifarbiger Grabstein mit Rosenmuster',
-            title: 'Schwebender zweifarbiger Grabstein aus dunklem und hellem Granit mit Rosenmotiv',
-          },
-          {
-            src: 'tombstone-stock-sandstone-bark.jpg',
-            alt: 'Sandstein-Grabstein mit Maserung',
-            title: 'Hoher Sandstein-Grabstein mit natürlicher Rindenoptik und hellem Farbspiel',
-          },
-          {
-            src: 'tombstone-stock-split-rose-relief.jpg',
-            alt: 'Geteilter Grabstein mit Rosenrelief',
-            title: 'Zweiseitiger Granit-Grabstein mit eingesetztem Rosenrelief und polierter Fläche',
-          },
-          {
-            src: 'tombstone-stock-black-rose.jpg',
-            alt: 'Schwarzer Grabstein mit Rosenornament',
-            title: 'Schwarzer Granitgrabstein mit eingravierter Rosenblüte',
-          },
-          {
-            src: 'tombstone-stock-lightgray-rose.jpg',
-            alt: 'Hellgrauer Grabstein mit Rosenrelief',
-            title: 'Hellgrauer Grabstein mit floraler Rosengravur am Kopf',
-          },
-          {
-            src: 'tombstone-stock-red-cross-cutout.jpg',
-            alt: 'Roter Grabstein mit Kreuzausschnitt',
-            title: 'Rötlicher Granitgrabstein mit negativem Kreuzausschnitt und Namensgravur',
-          },
-          {
-            src: 'tombstone-stock-split-rose-medallion.jpg',
-            alt: 'Geteilter Grabstein mit Rosenmedaille',
-            title: 'Geteilter blaugrauer Granitgrabstein mit eingearbeitetem Rosenmedaillon',
-          },
-          {
-            src: 'tombstone-stock-cylinder-insert.jpg',
-            alt: 'Grabstein mit zylindrischem Einsatz',
-            title: 'Grabstein mit dunkler Platte und hellem zylindrischem Mittelsäule',
-          },
-          {
-            src: 'tombstone-stock-brown-cross-cutout.jpg',
-            alt: 'Brauner Grabstein mit Kreuzausschnitt',
-            title: 'Brauner Grabstein mit eingearbeitetem Kreuzausschnitt in runder Vertiefung',
-          },
-          {
-            src: 'tombstone-stock-rough-brown-block.jpg',
-            alt: 'Rauer Naturstein-Grabstein',
-            title: 'Unregelmäßig geformter rauer Naturstein-Grabstein',
-          },
-          {
-            src: 'tombstone-stock-red-black-cross-rose.jpg',
-            alt: 'Rötlich-schwarzer Grabstein mit Rosenkreuz',
-            title: 'Rötlich-schwarzer Granit-Grabstein mit Kreuz- und Rosenrelief',
-          },
-          {
-            src: 'tombstone-stock-green-veins.jpg',
-            alt: 'Dunkelgrüner Grabstein mit weißen Adern',
-            title: 'Dunkelgrüner Naturstein-Grabstein mit kontrastreichen weißen Maserungsadern',
-          },
-          {
-            src: 'tombstone-stock-angel-sculpture.jpg',
-            alt: 'Grabstein mit Engelsskulptur',
-            title: 'Rötlich-grauer Granitgrabstein, flankiert von steinerner Engelsskulptur',
-          },
-          {
-            src: 'tombstone-stock-sandstone-blue-flower.jpg',
-            alt: 'Sandstein-Grabstein mit blauer Blüte',
-            title: 'Rauer Sandstein-Grabstein mit handbemaltem blauen Blumenmotiv',
-          },
-          {
-            src: 'tombstone-stock-black-red-split.jpg',
-            alt: 'Geteilter rot-schwarzer Granit-Grabstein',
-            title: 'Moderner rot-schwarzer Granit-Grabstein mit kontrastierendem schwarzem Segment',
-          },
-          {
-            src: 'tombstone-stock-sandstone-vertical.jpg',
-            alt: 'Heller Sandstein-Grabstein mit Maserung',
-            title: 'Hoher heller Sandstein-Grabstein mit natürlicher senkrechter Maserung',
-          },
-          {
-            src: 'tombstone-stock-split-rose-arc.jpg',
-            alt: 'Geteilter Grabstein mit Rosenmotiv',
-            title: 'Geschwungener zweiteiliger Grabstein mit eingraviertem Rosenornament',
-          },
-          {
-            src: 'tombstone-stock-gray-cross-rays.jpg',
-            alt: 'Grauer Grabstein mit Kreuz und Strahlenmotiv',
-            title: 'Zweiteiliger Granit-Grabstein mit Kreuz und radialem Strahlenrelief',
-          },
-          {
-            src: 'tombstone-stock-light-sandstone-cross.jpg',
-            alt: 'Heller Grabstein mit schwarzem Kreuz',
-            title: 'Heller Sandstein-Grabstein mit aufgesetztem schwarzem Kreuz und Sockel',
-          },
-          {
-            src: 'tombstone-stock-black-rose-colored.jpg',
-            alt: 'Schwarzer Grabstein mit farbiger Rose',
-            title: 'Schwarzer Grabstein mit aufgesetztem Rosenrelief in Rot und Grün',
-          },
-          {
-            src: 'tombstone-stock-red-black-cross-stars.jpg',
-            alt: 'Roter Grabstein mit Kreuz und Sternornament',
-            title: 'Rot-schwarzer Granit-Grabstein mit eingravierten Sternen und aufgesetztem Kreuz',
-          },
-          {
-            src: 'tombstone-stock-gray-waves.jpg',
-            alt: 'Grauer Grabstein mit Wellenrelief',
-            title: 'Schlicht gestalteter grauer Grabstein mit drei waagerechten Wellenlinien',
-          },
-          {
-            src: 'tombstone-stock-cylinder-granite.jpg',
-            alt: 'Zylindrischer Granit-Grabstein',
-            title: 'Moderner zylindrischer Granit-Grabstein auf quadratischer Umrandung mit Kiesbett',
-          },
-          {
-            src: 'tombstone-stock-split-willow.jpg',
-            alt: 'Geteilter Grabstein mit Weidenmotiv',
-            title: 'Schwarzer und heller Granit-Grabstein mit eingraviertem Weidenzweig',
-          },
-          {
-            src: 'tombstone-stock-red-roses-relief.jpg',
-            alt: 'Roter Granit-Grabstein mit Rosenornament',
-            title: 'Dunkelroter Granit-Grabstein mit appliziertem silbernen Rosenrelief',
-          },
-          {
-            src: 'tombstone-stock-black-leaf-shape.jpg',
-            alt: 'Schwarzer Grabstein in Blattform',
-            title: 'Polierter schwarzer Naturstein-Grabstein in geschwungener Blattform',
-          },
-          {
-            src: 'tombstone-stock-green-split-rose.jpg',
-            alt: 'Grüner Grabstein mit Rosenrelief',
-            title: 'Grün gemaserter Granit-Grabstein mit schwarzer Seite und eingravierter Rose',
-          },
-          {
-            src: 'tombstone-stock-heart-white-black.jpg',
-            alt: 'Herzförmiger Grabstein in Schwarz und Weiß',
-            title: 'Schwarzer Grabstein mit hellem Herzfeld und floraler Rosenverzierung',
-          },
-          {
-            src: 'tombstone-stock-gray-pebble-inlay.jpg',
-            alt: 'Grauer Grabstein mit Kieselstein-Einlage',
-            title: 'Schlichter grauer Naturstein-Grabstein mit vertikaler Einlage aus runden Kieselsteinen',
-          },
-          {
-            src: 'tombstone-stock-split-cross-stars.jpg',
-            alt: 'Geteilter Grabstein mit Kreuz und Sternen',
-            title: 'Zweiteiliger Grabstein aus dunklem und rötlichem Naturstein mit aufgesetztem Metallkreuz und Sternenmotiv',
-          },
-          {
-            src: 'tombstone-stock-butterflies-split.jpg',
-            alt: 'Geteilter Grabstein mit Schmetterlingsmotiv',
-            title: 'Moderner geteilter Grabstein aus hellem und dunklem Granit mit farbigen Schmetterlingsornamenten',
-          },
-          {
-            src: 'tombstone-stock-green-stairs-door.jpg',
-            alt: 'Grüner Grabstein mit Treppen- und Türrelief',
-            title: 'Grünlicher Naturstein-Grabstein mit reliefartigen Treppenstufen und Türmotiv',
-          },
-          {
-            src: 'tombstone-stock-rough-gray-block.jpg',
-            alt: 'Grauer Naturstein-Grabstein',
-            title: 'Rauer grauer Naturstein-Grabstein in blockartiger Form mit heller Maserung',
-          },
-          {
-            src: 'tombstone-stock-dark-curved-slab.jpg',
-            alt: 'Dunkler Grabstein in geschwungener Form',
-            title: 'Schwarzer Granit-Grabstein mit leicht gebogener, polierter Oberfläche',
-          },
-          {
-            src: 'tombstone-stock-brown-pebble-inlay.jpg',
-            alt: 'Brauner Grabstein mit Kieseleinlage',
-            title: 'Brauner Naturstein-Grabstein mit vertikal eingelassener Kieselsteinreihe',
-          },
-          {
-            src: 'tombstone-stock-black-metal-inlay.jpg',
-            alt: 'Schwarzer Grabstein mit Metalleinlage',
-            title: 'Rechteckiger schwarzer Grabstein mit horizontaler und vertikaler Metalleinlage in Kreuzform',
-          },
-          {
-            src: 'tombstone-stock-gray-rectangle-flat.jpg',
-            alt: 'Grauer liegender Grabstein',
-            title: 'Schlichter rechteckiger Grabstein aus grauem Granit mit feiner Maserung, flach liegend',
-          },
-          {
-            src: 'tombstone-stock-brown-rectangle-flat.jpg',
-            alt: 'Brauner liegender Grabstein',
-            title: 'Polierter rechteckiger Grabstein aus braun-grauem Granit, flach liegend',
-          },
-          {
-            src: 'tombstone-stock-light-pebble-inlay.jpg',
-            alt: 'Heller Grabstein mit Kieseleinlage',
-            title: 'Moderner heller Grabstein mit vertikal eingelassener bunten Kieselsteinreihe',
-          },
-          {
-            src: 'tombstone-stock-black-heart-pebbles.jpg',
-            alt: 'Schwarzer Grabstein mit Herzform aus Kieseln',
-            title: 'Moderner schwarzer Grabstein mit eingelassenem Herzornament aus kleinen Kieseln',
-          },
-          {
-            src: 'tombstone-stock-gray-arched-pebbles.jpg',
-            alt: 'Grauer Grabstein mit Kieselbogen',
-            title: 'Schlichter grauer Grabstein mit bogenförmig eingelassener Kieselsteinreihe',
-          },
-          {
-            src: 'tombstone-stock-gray-butterfly-relief.jpg',
-            alt: 'Grauer Grabstein mit Schmetterlingsrelief',
-            title: 'Naturstein-Grabstein mit eingearbeitetem Schmetterlingsrelief im oberen Bereich',
-          },
-          {
-            src: 'tombstone-stock-red-curved-design.jpg',
-            alt: 'Roter Grabstein mit geschwungenem Relief',
-            title: 'Roter Granit-Grabstein mit geschwungener Relieflinie über die gesamte Höhe',
-          },
-          {
-            src: 'tombstone-stock-gray-leaves-relief.jpg',
-            alt: 'Grauer Grabstein mit Blätterrelief',
-            title: 'Schlichter grauer Grabstein mit plastisch ausgearbeitetem Blätterornament im oberen Bereich',
-          },
-          {
-            src: 'tombstone-stock-green-pebble-inlay.jpg',
-            alt: 'Grünlicher Grabstein mit Kieseleinlage',
-            title: 'Grünlich-grauer Granit-Grabstein mit schmaler vertikaler Kieseleinlage auf der linken Seite',
-          },
-          {
-            src: 'tombstone-stock-sunset-sea.jpg',
-            alt: 'Grabstein mit Sonnenuntergang und Meer',
-            title: 'Grünlich-grauer Grabstein mit eingravierter Darstellung von Sonnenuntergang, Meer, Möwen und Muscheln',
-          },
-          {
-            src: 'tombstone-stock-dark-wavy-line.jpg',
-            alt: 'Dunkler Grabstein mit geschwungener Linie',
-            title: 'Dunkler Granit-Grabstein mit heller geschwungener Zierlinie und Mustergravur',
-          },
-          {
-            src: 'tombstone-stock-sunset-sea-inscription.jpg',
-            alt: 'Grabstein mit Sonnenuntergang und Gravur',
-            title: 'Grabstein mit Sonnenuntergangs-Relief, Meer und Möwen, kombiniert mit eingravierter Inschrift',
-          },
-          {
-            src: 'tombstone-stock-brown-leaf-cutout.jpg',
-            alt: 'Brauner Grabstein mit Blätterausschnitt',
-            title: 'Brauner Naturstein-Grabstein mit seitlichem Ausschnitt und plastischem Blätterrelief',
-          },
-          {
-            src: 'tombstone-stock-gray-heart-cutout.jpg',
-            alt: 'Grauer Grabstein mit Herz-Ausschnitt',
-            title: 'Schlichter grauer Grabstein mit herzförmigem Ausschnitt im oberen Bereich',
-          },
-          {
-            src: 'tombstone-stock-dark-pebble-vertical.jpg',
-            alt: 'Dunkler Grabstein mit Kieseleinlage',
-            title: 'Moderner dunkler Grabstein mit vertikaler Reihe eingelassener Kieselsteine',
-          },
-          {
-            src: 'tombstone-stock-gray-flat-inscription.jpg',
-            alt: 'Grauer liegender Grabstein mit Inschrift',
-            title: 'Rechteckiger grauer Naturstein-Grabstein mit dezent eingravierter Inschrift, flach liegend',
-          },
-          {
-            src: 'tombstone-stock-red-pebble-vertical.jpg',
-            alt: 'Roter Grabstein mit Kieseleinlage',
-            title: 'Roter Naturstein-Grabstein mit vertikal eingelassener Kieselsteinreihe',
-          },
-          {
-            src: 'tombstone-stock-gray-butterfly-cutout.jpg',
-            alt: 'Grauer Grabstein mit Schmetterlingsausschnitt',
-            title: 'Moderner grauer Grabstein mit schmetterlingsförmigem Kieselausschnitt im oberen Bereich',
-          },
-          {
-            src: 'tombstone-stock-heart-shape-bicolor.jpg',
-            alt: 'Herzförmiger Grabstein aus zwei Steinsorten',
-            title: 'Herzförmiger Grabstein aus dunklem und rötlichem Stein kombiniert, auf schwarzem Sockel',
+            src: 'tombstone-stock-red-arched-lines.jpg',
+            alt: 'Roter Grabstein mit geschwungenem Linienmuster',
+            title: 'Roter Naturstein-Grabstein mit feinen, gebogenen Linienornamenten im oberen Bereich',
           },
           {
             src: 'tombstone-stock-green-wavy-pebbles.jpg',
@@ -347,11 +97,285 @@ export default defineAppConfig({
             title: 'Grünlicher Naturstein-Grabstein mit geschwungener Kieseleinlage am oberen Rand',
           },
           {
-            src: 'tombstone-stock-red-arched-lines.jpg',
-            alt: 'Roter Grabstein mit geschwungenem Linienmuster',
-            title: 'Roter Naturstein-Grabstein mit feinen, gebogenen Linienornamenten im oberen Bereich',
+            src: 'tombstone-stock-heart-shape-bicolor.jpg',
+            alt: 'Herzförmiger Grabstein aus zwei Steinsorten',
+            title: 'Herzförmiger Grabstein aus dunklem und rötlichem Stein kombiniert, auf schwarzem Sockel',
           },
-
+          {
+            src: 'tombstone-stock-gray-butterfly-cutout.jpg',
+            alt: 'Grauer Grabstein mit Schmetterlingsausschnitt',
+            title: 'Moderner grauer Grabstein mit schmetterlingsförmigem Kieselausschnitt im oberen Bereich',
+          },
+          {
+            src: 'tombstone-stock-red-pebble-vertical.jpg',
+            alt: 'Roter Grabstein mit Kieseleinlage',
+            title: 'Roter Naturstein-Grabstein mit vertikal eingelassener Kieselsteinreihe',
+          },
+          {
+            src: 'tombstone-stock-gray-flat-inscription.jpg',
+            alt: 'Grauer liegender Grabstein mit Inschrift',
+            title: 'Rechteckiger grauer Naturstein-Grabstein mit dezent eingravierter Inschrift, flach liegend',
+          },
+          {
+            src: 'tombstone-stock-dark-pebble-vertical.jpg',
+            alt: 'Dunkler Grabstein mit Kieseleinlage',
+            title: 'Moderner dunkler Grabstein mit vertikaler Reihe eingelassener Kieselsteine',
+          },
+          {
+            src: 'tombstone-stock-gray-heart-cutout.jpg',
+            alt: 'Grauer Grabstein mit Herz-Ausschnitt',
+            title: 'Schlichter grauer Grabstein mit herzförmigem Ausschnitt im oberen Bereich',
+          },
+          {
+            src: 'tombstone-stock-brown-leaf-cutout.jpg',
+            alt: 'Brauner Grabstein mit Blätterausschnitt',
+            title: 'Brauner Naturstein-Grabstein mit seitlichem Ausschnitt und plastischem Blätterrelief',
+          },
+          {
+            src: 'tombstone-stock-sunset-sea-inscription.jpg',
+            alt: 'Grabstein mit Sonnenuntergang und Gravur',
+            title: 'Grabstein mit Sonnenuntergangs-Relief, Meer und Möwen, kombiniert mit eingravierter Inschrift',
+          },
+          {
+            src: 'tombstone-stock-dark-wavy-line.jpg',
+            alt: 'Dunkler Grabstein mit geschwungener Linie',
+            title: 'Dunkler Granit-Grabstein mit heller geschwungener Zierlinie und Mustergravur',
+          },
+          {
+            src: 'tombstone-stock-sunset-sea.jpg',
+            alt: 'Grabstein mit Sonnenuntergang und Meer',
+            title: 'Grünlich-grauer Grabstein mit eingravierter Darstellung von Sonnenuntergang, Meer, Möwen und Muscheln',
+          },
+          {
+            src: 'tombstone-stock-green-pebble-inlay.jpg',
+            alt: 'Grünlicher Grabstein mit Kieseleinlage',
+            title: 'Grünlich-grauer Granit-Grabstein mit schmaler vertikaler Kieseleinlage auf der linken Seite',
+          },
+          {
+            src: 'tombstone-stock-gray-leaves-relief.jpg',
+            alt: 'Grauer Grabstein mit Blätterrelief',
+            title: 'Schlichter grauer Grabstein mit plastisch ausgearbeitetem Blätterornament im oberen Bereich',
+          },
+          {
+            src: 'tombstone-stock-red-curved-design.jpg',
+            alt: 'Roter Grabstein mit geschwungenem Relief',
+            title: 'Roter Granit-Grabstein mit geschwungener Relieflinie über die gesamte Höhe',
+          },
+          {
+            src: 'tombstone-stock-gray-butterfly-relief.jpg',
+            alt: 'Grauer Grabstein mit Schmetterlingsrelief',
+            title: 'Naturstein-Grabstein mit eingearbeitetem Schmetterlingsrelief im oberen Bereich',
+          },
+          {
+            src: 'tombstone-stock-gray-arched-pebbles.jpg',
+            alt: 'Grauer Grabstein mit Kieselbogen',
+            title: 'Schlichter grauer Grabstein mit bogenförmig eingelassener Kieselsteinreihe',
+          },
+          {
+            src: 'tombstone-stock-black-heart-pebbles.jpg',
+            alt: 'Schwarzer Grabstein mit Herzform aus Kieseln',
+            title: 'Moderner schwarzer Grabstein mit eingelassenem Herzornament aus kleinen Kieseln',
+          },
+          {
+            src: 'tombstone-stock-light-pebble-inlay.jpg',
+            alt: 'Heller Grabstein mit Kieseleinlage',
+            title: 'Moderner heller Grabstein mit vertikal eingelassener bunten Kieselsteinreihe',
+          },
+          {
+            src: 'tombstone-stock-brown-rectangle-flat.jpg',
+            alt: 'Brauner liegender Grabstein',
+            title: 'Polierter rechteckiger Grabstein aus braun-grauem Granit, flach liegend',
+          },
+          {
+            src: 'tombstone-stock-gray-rectangle-flat.jpg',
+            alt: 'Grauer liegender Grabstein',
+            title: 'Schlichter rechteckiger Grabstein aus grauem Granit mit feiner Maserung, flach liegend',
+          },
+          {
+            src: 'tombstone-stock-black-metal-inlay.jpg',
+            alt: 'Schwarzer Grabstein mit Metalleinlage',
+            title: 'Rechteckiger schwarzer Grabstein mit horizontaler und vertikaler Metalleinlage in Kreuzform',
+          },
+          {
+            src: 'tombstone-stock-brown-pebble-inlay.jpg',
+            alt: 'Brauner Grabstein mit Kieseleinlage',
+            title: 'Brauner Naturstein-Grabstein mit vertikal eingelassener Kieselsteinreihe',
+          },
+          {
+            src: 'tombstone-stock-dark-curved-slab.jpg',
+            alt: 'Dunkler Grabstein in geschwungener Form',
+            title: 'Schwarzer Granit-Grabstein mit leicht gebogener, polierter Oberfläche',
+          },
+          {
+            src: 'tombstone-stock-rough-gray-block.jpg',
+            alt: 'Grauer Naturstein-Grabstein',
+            title: 'Rauer grauer Naturstein-Grabstein in blockartiger Form mit heller Maserung',
+          },
+          {
+            src: 'tombstone-stock-green-stairs-door.jpg',
+            alt: 'Grüner Grabstein mit Treppen- und Türrelief',
+            title: 'Grünlicher Naturstein-Grabstein mit reliefartigen Treppenstufen und Türmotiv',
+          },
+          {
+            src: 'tombstone-stock-butterflies-split.jpg',
+            alt: 'Geteilter Grabstein mit Schmetterlingsmotiv',
+            title: 'Moderner geteilter Grabstein aus hellem und dunklem Granit mit farbigen Schmetterlingsornamenten',
+          },
+          {
+            src: 'tombstone-stock-split-cross-stars.jpg',
+            alt: 'Geteilter Grabstein mit Kreuz und Sternen',
+            title: 'Zweiteiliger Grabstein aus dunklem und rötlichem Naturstein mit aufgesetztem Metallkreuz und Sternenmotiv',
+          },
+          {
+            src: 'tombstone-stock-gray-pebble-inlay.jpg',
+            alt: 'Grauer Grabstein mit Kieselstein-Einlage',
+            title: 'Schlichter grauer Naturstein-Grabstein mit vertikaler Einlage aus runden Kieselsteinen',
+          },
+          {
+            src: 'tombstone-stock-heart-white-black.jpg',
+            alt: 'Herzförmiger Grabstein in Schwarz und Weiß',
+            title: 'Schwarzer Grabstein mit hellem Herzfeld und floraler Rosenverzierung',
+          },
+          {
+            src: 'tombstone-stock-green-split-rose.jpg',
+            alt: 'Grüner Grabstein mit Rosenrelief',
+            title: 'Grün gemaserter Granit-Grabstein mit schwarzer Seite und eingravierter Rose',
+          },
+          {
+            src: 'tombstone-stock-black-leaf-shape.jpg',
+            alt: 'Schwarzer Grabstein in Blattform',
+            title: 'Polierter schwarzer Naturstein-Grabstein in geschwungener Blattform',
+          },
+          {
+            src: 'tombstone-stock-red-roses-relief.jpg',
+            alt: 'Roter Granit-Grabstein mit Rosenornament',
+            title: 'Dunkelroter Granit-Grabstein mit appliziertem silbernen Rosenrelief',
+          },
+          {
+            src: 'tombstone-stock-split-willow.jpg',
+            alt: 'Geteilter Grabstein mit Weidenmotiv',
+            title: 'Schwarzer und heller Granit-Grabstein mit eingraviertem Weidenzweig',
+          },
+          {
+            src: 'tombstone-stock-cylinder-granite.jpg',
+            alt: 'Zylindrischer Granit-Grabstein',
+            title: 'Moderner zylindrischer Granit-Grabstein auf quadratischer Umrandung mit Kiesbett',
+          },
+          {
+            src: 'tombstone-stock-gray-waves.jpg',
+            alt: 'Grauer Grabstein mit Wellenrelief',
+            title: 'Schlicht gestalteter grauer Grabstein mit drei waagerechten Wellenlinien',
+          },
+          {
+            src: 'tombstone-stock-red-black-cross-stars.jpg',
+            alt: 'Roter Grabstein mit Kreuz und Sternornament',
+            title: 'Rot-schwarzer Granit-Grabstein mit eingravierten Sternen und aufgesetztem Kreuz',
+          },
+          {
+            src: 'tombstone-stock-black-rose-colored.jpg',
+            alt: 'Schwarzer Grabstein mit farbiger Rose',
+            title: 'Schwarzer Grabstein mit aufgesetztem Rosenrelief in Rot und Grün',
+          },
+          {
+            src: 'tombstone-stock-light-sandstone-cross.jpg',
+            alt: 'Heller Grabstein mit schwarzem Kreuz',
+            title: 'Heller Sandstein-Grabstein mit aufgesetztem schwarzem Kreuz und Sockel',
+          },
+          {
+            src: 'tombstone-stock-gray-cross-rays.jpg',
+            alt: 'Grauer Grabstein mit Kreuz und Strahlenmotiv',
+            title: 'Zweiteiliger Granit-Grabstein mit Kreuz und radialem Strahlenrelief',
+          },
+          {
+            src: 'tombstone-stock-split-rose-arc.jpg',
+            alt: 'Geteilter Grabstein mit Rosenmotiv',
+            title: 'Geschwungener zweiteiliger Grabstein mit eingraviertem Rosenornament',
+          },
+          {
+            src: 'tombstone-stock-sandstone-vertical.jpg',
+            alt: 'Heller Sandstein-Grabstein mit Maserung',
+            title: 'Hoher heller Sandstein-Grabstein mit natürlicher senkrechter Maserung',
+          },
+          {
+            src: 'tombstone-stock-black-red-split.jpg',
+            alt: 'Geteilter rot-schwarzer Granit-Grabstein',
+            title: 'Moderner rot-schwarzer Granit-Grabstein mit kontrastierendem schwarzem Segment',
+          },
+          {
+            src: 'tombstone-stock-sandstone-blue-flower.jpg',
+            alt: 'Sandstein-Grabstein mit blauer Blüte',
+            title: 'Rauer Sandstein-Grabstein mit handbemaltem blauen Blumenmotiv',
+          },
+          {
+            src: 'tombstone-stock-angel-sculpture.jpg',
+            alt: 'Grabstein mit Engelsskulptur',
+            title: 'Rötlich-grauer Granitgrabstein, flankiert von steinerner Engelsskulptur',
+          },
+          {
+            src: 'tombstone-stock-green-veins.jpg',
+            alt: 'Dunkelgrüner Grabstein mit weißen Adern',
+            title: 'Dunkelgrüner Naturstein-Grabstein mit kontrastreichen weißen Maserungsadern',
+          },
+          {
+            src: 'tombstone-stock-red-black-cross-rose.jpg',
+            alt: 'Rötlich-schwarzer Grabstein mit Rosenkreuz',
+            title: 'Rötlich-schwarzer Granit-Grabstein mit Kreuz- und Rosenrelief',
+          },
+          {
+            src: 'tombstone-stock-rough-brown-block.jpg',
+            alt: 'Rauer Naturstein-Grabstein',
+            title: 'Unregelmäßig geformter rauer Naturstein-Grabstein',
+          },
+          {
+            src: 'tombstone-stock-brown-cross-cutout.jpg',
+            alt: 'Brauner Grabstein mit Kreuzausschnitt',
+            title: 'Brauner Grabstein mit eingearbeitetem Kreuzausschnitt in runder Vertiefung',
+          },
+          {
+            src: 'tombstone-stock-cylinder-insert.jpg',
+            alt: 'Grabstein mit zylindrischem Einsatz',
+            title: 'Grabstein mit dunkler Platte und hellem zylindrischem Mittelsäule',
+          },
+          {
+            src: 'tombstone-stock-split-rose-medallion.jpg',
+            alt: 'Geteilter Grabstein mit Rosenmedaille',
+            title: 'Geteilter blaugrauer Granitgrabstein mit eingearbeitetem Rosenmedaillon',
+          },
+          {
+            src: 'tombstone-stock-red-cross-cutout.jpg',
+            alt: 'Roter Grabstein mit Kreuzausschnitt',
+            title: 'Rötlicher Granitgrabstein mit negativem Kreuzausschnitt und Namensgravur',
+          },
+          {
+            src: 'tombstone-stock-lightgray-rose.jpg',
+            alt: 'Hellgrauer Grabstein mit Rosenrelief',
+            title: 'Hellgrauer Grabstein mit floraler Rosengravur am Kopf',
+          },
+          {
+            src: 'tombstone-stock-black-rose.jpg',
+            alt: 'Schwarzer Grabstein mit Rosenornament',
+            title: 'Schwarzer Granitgrabstein mit eingravierter Rosenblüte',
+          },
+          {
+            src: 'tombstone-stock-split-rose-relief.jpg',
+            alt: 'Geteilter Grabstein mit Rosenrelief',
+            title: 'Zweiseitiger Granit-Grabstein mit eingesetztem Rosenrelief und polierter Fläche',
+          },
+          {
+            src: 'tombstone-stock-sandstone-bark.jpg',
+            alt: 'Sandstein-Grabstein mit Maserung',
+            title: 'Hoher Sandstein-Grabstein mit natürlicher Rindenoptik und hellem Farbspiel',
+          },
+          {
+            src: 'tombstone-stock-duotone-rose.jpg',
+            alt: 'Zweifarbiger Grabstein mit Rosenmuster',
+            title: 'Schwebender zweifarbiger Grabstein aus dunklem und hellem Granit mit Rosenmotiv',
+          },
+          {
+            src: 'tombstone-stock-limestone-vase.jpg',
+            alt: 'Kalkstein-Grabstein mit Bronzevase',
+            title: 'Lichtgrauer Kalkstein-Grabstein mit rechteckiger Aussparung und Bronzevase',
+          },
         ],
         grabmalreferenzen: [
           {
@@ -600,66 +624,5 @@ export default defineAppConfig({
         root: 'lg:backdrop-blur-none',
       },
     },
-  },
-
-  links: {
-    header: [
-      {
-        label: 'Über uns',
-        icon: 'i-ph-users-duotone',
-        to: '/ueber-uns',
-      },
-      {
-        label: 'Grabmale',
-        description: 'Ein sichtbares und individuelles Andenken an einen geliebten Menschen.',
-        icon: 'i-ph-cross-duotone',
-        to: '/grabmale',
-      },
-      {
-        label: 'Restaurierungen',
-        description: 'Fachgemäße Restaurierung von historischen Gebäuden, Baudenkmalen und Bildhauerarbeiten.',
-        icon: 'i-ph-bank-duotone',
-        to: '/restaurierungen',
-      },
-      {
-        label: 'Galerie',
-        icon: 'i-ph-image-duotone',
-        to: '/galerie',
-      },
-    ],
-    footer: [{
-      label: 'Unternehmen',
-      children: [{
-        label: 'Startseite',
-        to: '/',
-      }, {
-        label: 'Über uns',
-        to: '/ueber-uns',
-      }, {
-        label: 'Kontakt',
-        to: '/kontakt',
-      }],
-    }, {
-      label: 'Unsere Leistungen',
-      children: [{
-        label: 'Grabmale',
-        to: '/grabmale',
-      }, {
-        label: 'Restaurierungen',
-        to: '/restaurierungen',
-      }, {
-        label: 'Galerie',
-        to: '/galerie',
-      }],
-    }, {
-      label: 'Rechtliches',
-      children: [{
-        label: 'Impressum',
-        to: '/impressum',
-      }, {
-        label: 'Datenschutz',
-        to: '/datenschutz',
-      }],
-    }],
   },
 })
