@@ -1,6 +1,30 @@
 # Changelog
 
 
+## v2.4.0
+
+[compare changes](https://github.com/happydesigns/siegel-steinmetz.de/compare/v2.3.0...v2.4.0)
+
+### 🚀 Enhancements
+
+- New layout for info pages ([397266e](https://github.com/happydesigns/siegel-steinmetz.de/commit/397266e))
+
+### 🏡 Chore
+
+- Disable strict peer dependencies ([52e032f](https://github.com/happydesigns/siegel-steinmetz.de/commit/52e032f))
+- Update lockfile ([eaebef8](https://github.com/happydesigns/siegel-steinmetz.de/commit/eaebef8))
+- Update readme badge for Nuxt UI 4 ([c1c01e8](https://github.com/happydesigns/siegel-steinmetz.de/commit/c1c01e8))
+- Disable rolldown ([80385c6](https://github.com/happydesigns/siegel-steinmetz.de/commit/80385c6))
+- Install unhead ([902bfb4](https://github.com/happydesigns/siegel-steinmetz.de/commit/902bfb4))
+- Remove rolldown ([aa7ff3e](https://github.com/happydesigns/siegel-steinmetz.de/commit/aa7ff3e))
+- Update lockfile ([a02b616](https://github.com/happydesigns/siegel-steinmetz.de/commit/a02b616))
+- Remove unhead ([0308399](https://github.com/happydesigns/siegel-steinmetz.de/commit/0308399))
+- Update deps ([0e123c6](https://github.com/happydesigns/siegel-steinmetz.de/commit/0e123c6))
+
+### ❤️ Contributors
+
+- Jan Fröhlich ([@janfrl](https://github.com/janfrl))
+
 ## v2.3.0
 
 [compare changes](https://github.com/happydesigns/siegel-steinmetz.de/compare/v2.2.0...v2.3.0)
