@@ -10,7 +10,8 @@ const currentAlbumPath = computed(() =>
     : route.params.slug ?? '',
 )
 
-const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
+const { data: album, error } = await useAlbum(currentAlbumPath)
+const images = computed(() => album.value?.images ?? [])
 </script>
 
 <template>

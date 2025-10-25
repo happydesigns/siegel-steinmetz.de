@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import AlbumEffect from '../AlbumEffect.vue'
-
 export interface Props {
   path?: string
   title?: string
@@ -13,11 +11,10 @@ const props = withDefaults(defineProps<Props>(), {
 
 const route = useRoute()
 
-const { data: images, pending, error } = await useGalleryImages(props.path)
+const { data: album, pending, error } = await useAlbum(props.path)
 
-const coverImage = computed(() => {
-  return images.value?.length > 0 ? images.value[0] : null
-})
+const imageCount = computed(() => album.value?.images.length ?? 0)
+const coverImage = computed(() => album.value?.coverImage ?? album.value?.images?.[0] ?? null)
 
 const variant = 'naked'
 </script>
@@ -26,7 +23,7 @@ const variant = 'naked'
   <NuxtLink :to="{ path: `/galerie/${props.path}`, replace: true }">
     <UPageCard
       :title="props.title"
-      :description="`${images ? images.length : 0} Bilder`"
+      :description="`${imageCount} Bilder`"
       :variant="variant"
       reverse
       :ui="{ container: 'p-0 sm:p-0 gap-0', wrapper: 'py-4 rounded-sm order-last' }"

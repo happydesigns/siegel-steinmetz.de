@@ -1,6 +1,21 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 import { imageSchema, pageHeaderSchema, pageHeroSchema, pageSectionSchema } from './types'
 
+const albumImageSchema = z.object({
+  src: z.string(),
+  alt: z.string().optional(),
+  caption: z.string().optional(),
+})
+
+const albumSchema = z.object({
+  title: z.string(),
+  path: z.string(),
+  description: z.string().optional(),
+  coverImage: albumImageSchema.optional(),
+  order: z.number().optional(),
+  images: z.array(albumImageSchema),
+})
+
 export default defineContentConfig({
   collections: {
     landing: defineCollection({
@@ -16,6 +31,11 @@ export default defineContentConfig({
           }),
         ),
       }),
+    }),
+    albums: defineCollection({
+      type: 'data',
+      source: 'albums/*.{yaml,yml,json}',
+      schema: albumSchema,
     }),
     content: defineCollection({
       type: 'page',

@@ -25,14 +25,6 @@ export default defineNuxtConfig({
     transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
   },
   compatibilityDate: '2024-08-18',
-  nitro: {
-    serverAssets: [
-      {
-        baseName: 'gallery',
-        dir: 'public/assets/images/gallery',
-      },
-    ],
-  },
   vite: {
     optimizeDeps: {
       include: [

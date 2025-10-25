@@ -1,15 +1,11 @@
 <script setup lang="ts">
 const path = ref('/galerie')
 
-const albums = [
-  { title: 'Grabmallager', path: 'grabmallager' },
-  { title: 'Grabmalreferenzen', path: 'grabmalreferenzen' },
-  { title: 'Restaurierungen', path: 'restaurierungen' },
-]
+const { data: albums } = await useAlbums()
 </script>
 
 <template>
   <NuxtLayout :key="$route.fullPath" name="content" :path="path">
-    <Gallery :albums />
+    <Gallery :albums="albums" />
   </NuxtLayout>
 </template>
