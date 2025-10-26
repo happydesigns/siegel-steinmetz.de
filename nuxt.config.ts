@@ -24,6 +24,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
   },
+  experimental: {
+    extractAsyncDataHandlers: true,
+  },
   compatibilityDate: '2024-08-18',
   vite: {
     optimizeDeps: {
