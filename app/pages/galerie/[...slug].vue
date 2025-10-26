@@ -3,7 +3,7 @@ const path = ref('/galerie')
 
 const { data: albums } = await useAlbums()
 
-console.log({ albums })
+console.log({ albums: albums.value })
 </script>
 
 <template>
