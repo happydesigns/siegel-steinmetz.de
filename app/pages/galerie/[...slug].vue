@@ -2,6 +2,8 @@
 const path = ref('/galerie')
 
 const { data: albums } = await useAlbums()
+
+console.log({ albums })
 </script>
 
 <template>
