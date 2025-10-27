@@ -474,11 +474,6 @@ export default defineAppConfig({
             title: 'Zweiteiliges Grabmal mit Leuchtturm-Relief im hellen Stein und dunklem Inschriftenstein daneben',
           },
           {
-            src: 'tombstone-references-light-dark-combination.jpg',
-            alt: 'Grabmal aus hellem Stein mit dunklem Akzent',
-            title: 'Modernes Grabmal mit hellem Steinblock und dunklem Querbalken für die Inschrift',
-          },
-          {
             src: 'tombstone-references-tree-natural.jpg',
             alt: 'Grabmal aus hellem Naturstein mit Baumstamm',
             title: 'Grabmal aus hellem Naturstein mit integriertem Baumstamm und bepflanzter Grabeinfassung',
