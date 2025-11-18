@@ -34,7 +34,7 @@ export default defineContentConfig({
     }),
     albums: defineCollection({
       type: 'data',
-      source: 'albums/*.{yaml,yml,json}',
+      source: 'albums/**/*.{yaml,json}',
       schema: albumSchema,
     }),
     content: defineCollection({
