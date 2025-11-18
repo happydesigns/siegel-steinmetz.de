@@ -15,7 +15,7 @@ const images = computed(() => album.value?.images ?? [])
 </script>
 
 <template>
-  <UPage :ui="{ root: 'lg:[grid-template-columns:minmax(80px,1fr)_minmax(80px,1fr)_repeat(8,minmax(0,1fr))]!' }">
+  <UPage :ui="{ root: 'lg:grid-cols-[minmax(80px,1fr)_minmax(80px,1fr)_repeat(8,minmax(0,1fr))]!' }">
     <template #left>
       <UPageAside class="block -mt-8 pr-0!">
         <div class="overflow-y-auto max-h-[calc(100vh-var(--ui-header-height)-4rem)]">
