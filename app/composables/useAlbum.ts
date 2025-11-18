@@ -3,6 +3,6 @@ export function useAlbum(path: MaybeRefOrGetter<string>) {
 
   return useAsyncData(`albums:${pathRef.value}`, () =>
     queryCollection('albums')
-      .path(`${pathRef.value}`)
+      .path(pathRef.value)
       .first())
 }
