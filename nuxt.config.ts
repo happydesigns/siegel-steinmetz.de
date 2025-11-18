@@ -3,7 +3,7 @@ import process from 'node:process'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: [
-    'github:happydesigns/ui',
+    'github:happydesigns/ui#v0.4.1',
   ],
   modules: [
     '@nuxtjs/seo',
@@ -14,10 +14,6 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  site: {
-    url: 'https://www.siegel-steinmetz.de',
-    name: 'Bernd Siegel Steingestaltung',
-  },
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
@@ -27,7 +23,7 @@ export default defineNuxtConfig({
   experimental: {
     extractAsyncDataHandlers: true,
   },
-  compatibilityDate: '2024-08-18',
+  compatibilityDate: '2025-10-30',
   vite: {
     optimizeDeps: {
       include: [
