@@ -31,6 +31,20 @@ export default defineNuxtConfig({
     extractAsyncDataHandlers: true,
   },
 
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      autoSubfolderIndex: false,
+      failOnError: false,
+      routes: ['/', '/sitemap.xml'],
+    },
+    preset: 'cloudflare_module',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
+  },
+
   vite: {
     optimizeDeps: {
       include: [
