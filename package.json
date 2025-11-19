@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.22.0",
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "eslint .",
@@ -35,6 +35,7 @@
     "@nuxt/eslint": "^1.10.0",
     "@nuxthub/core": "^0.9.0",
     "changelogen": "^0.6.2",
+    "cross-env": "^10.1.0",
     "eslint": "^9.39.1",
     "typescript": "^5.9.3",
     "wrangler": "^4.49.0"
