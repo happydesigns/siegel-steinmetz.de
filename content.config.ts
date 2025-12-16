@@ -20,7 +20,7 @@ export default defineContentConfig({
   collections: {
     landing: defineCollection({
       type: 'page',
-      source: '**/*.yaml',
+      source: 'index.yaml',
       schema: z.object({
         hero: pageSectionSchema.extend({
           image: imageSchema.optional(),
@@ -46,7 +46,7 @@ export default defineContentConfig({
           container: z.boolean().optional(),
           toc: z.boolean().optional(),
           prose: z.boolean().optional(),
-        }),
+        }).optional(),
         hero: pageHeroSchema.optional(),
         header: pageHeaderSchema.optional(),
         ui: z.object({
@@ -56,7 +56,7 @@ export default defineContentConfig({
           body: z.any().optional(),
           toc: z.any().optional(),
           footer: z.any().optional(),
-        }),
+        }).optional(),
       }),
     }),
     snippet: defineCollection({
