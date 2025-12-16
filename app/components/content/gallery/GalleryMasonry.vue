@@ -11,7 +11,7 @@ defineProps<{
       :key="img.src"
       :src="img.src"
       :alt="img.alt"
-      class="w-full h-auto mb-4 rounded-sm border border-neutral-200 dark:border-neutral-800"
+      class="w-full h-auto mb-4 rounded-sm border border-default"
       loading="lazy"
     >
   </UPageColumns>

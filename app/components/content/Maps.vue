@@ -97,7 +97,7 @@ const options = {
     :center="center"
     :zoom="16"
     :options="options"
-    class="w-full min-h-96 h-[60dvh] rounded-sm overflow-hidden border border-neutral-200 dark:border-neutral-800"
+    class="w-full min-h-96 h-[60dvh] rounded-sm overflow-hidden border border-default"
   >
     <GMapCluster>
       <GMapMarker

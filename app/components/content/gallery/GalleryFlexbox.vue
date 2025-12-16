@@ -11,7 +11,7 @@ defineProps<{
       :key="img.src"
       :src="img.src"
       :alt="img.alt"
-      class="h-108 grow object-cover rounded-sm border border-neutral-200 dark:border-neutral-800"
+      class="h-108 grow object-cover rounded-sm border border-default"
       loading="lazy"
     >
   </div>
