@@ -1,6 +1,11 @@
 <script setup lang="ts">
 defineProps<{
-  albums?: { title: string, path: string }[]
+  albums?: {
+    title: string
+    path: string
+    coverImage: { src: string, alt?: string } | null
+    imageCount: number
+  }[]
 }>()
 
 const route = useRoute()
@@ -10,11 +15,12 @@ const currentAlbumPath = computed(() =>
     : route.params.slug ?? '',
 )
 
-const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
+const { data: album, error } = await useAlbum(currentAlbumPath)
+const images = computed(() => album.value?.images ?? [])
 </script>
 
 <template>
-  <UPage :ui="{ root: 'lg:[grid-template-columns:minmax(80px,1fr)_minmax(80px,1fr)_repeat(8,minmax(0,1fr))]!' }">
+  <UPage :ui="{ root: 'lg:grid-cols-[minmax(80px,1fr)_minmax(80px,1fr)_repeat(8,minmax(0,1fr))]!' }">
     <template #left>
       <UPageAside class="block -mt-8 pr-0!">
         <div class="overflow-y-auto max-h-[calc(100vh-var(--ui-header-height)-4rem)]">
@@ -26,6 +32,8 @@ const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
               :key="album.path"
               :title="album.title"
               :path="album.path"
+              :image-count="album.imageCount"
+              :cover-image="album.coverImage"
               class="box-border"
             />
           </UPageColumns>
@@ -33,7 +41,6 @@ const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
       </UPageAside>
     </template>
 
-    <!-- Error State Card -->
     <UPageCard
       v-if="error"
       icon="ph-warning-octagon-duotone"
@@ -41,7 +48,6 @@ const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
       variant="subtle"
       description="Die Bilder konnten nicht geladen werden. Bitte versuchen Sie es später erneut."
     />
-    <!-- Placeholder: No Album Selected -->
     <UPageCard
       v-else-if="currentAlbumPath === ''"
       icon="ph-image-duotone"
@@ -49,7 +55,6 @@ const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
       variant="subtle"
       description="Bitte wählen Sie ein Album aus, um die Bilder anzuzeigen."
     />
-    <!-- Placeholder: No Images in Album -->
     <UPageCard
       v-else-if="images?.length === 0"
       icon="ph-images-duotone"
@@ -57,7 +62,6 @@ const { data: images, error } = await useGalleryImages(currentAlbumPath.value)
       variant="subtle"
       description="In diesem Album sind keine Bilder vorhanden."
     />
-    <!-- Gallery Images -->
     <UPageColumns v-else>
       <img
         v-for="img in images" :key="img.src"

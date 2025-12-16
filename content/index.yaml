@@ -28,7 +28,7 @@ hero:
       class: '[&>*:last-child]:hidden sm:[&>*:last-child]:block'
   orientation: horizontal
   image:
-    src: /assets/images/content/index/hero.webp
+    src: /assets/index/hero.webp
     alt: Banner Image
     class: border border-red-500
 sections:
@@ -54,7 +54,7 @@ sections:
         trailing-icon: i-ph-arrow-right
         size: lg
     image:
-      src: /assets/images/content/index/index-tombstones.jpg
+      src: /assets/index/index-tombstones.jpg
       alt: Grabmale Image
       class: 'rounded-sm'
   - icon: i-ph-bank-duotone
@@ -79,6 +79,6 @@ sections:
         trailing-icon: i-ph-arrow-right
         size: lg
     image:
-      src: /assets/images/content/index/index-restorations.jpg
+      src: /assets/index/index-restorations.jpg
       alt: Restaurierungen Image
       class: 'rounded-sm'

@@ -9,7 +9,7 @@ layout:
 
 Ein weiterer Schwerpunkt unserer Firma ist die komplette und fachgerechte Restaurierung von historischen Gebäuden, Denkmälern und Skulpturen.
 
-![Restaurierung Fensterumrahmung Solitudestr. Ludwigsburg](/assets/images/content/restorations/restorations-001.jpg){.w-lg .mx-auto}
+![Restaurierung Fensterumrahmung Solitudestr. Ludwigsburg](/assets/restorations/restorations-001.jpg){.w-lg .mx-auto}
 
 ## Vorgehensweise in der Denkmalpflege
 
@@ -23,7 +23,7 @@ Für die Reinigung von Natursteinoberflächen setzen wir das **Niederdruckstrahl
 
 Aus denkmalpflegerischer Sicht darf die ursprüngliche Oberflächenstruktur nicht zerstört werden. Das ist manchmal eine Gratwanderung. So können zum Beispiel schwarze Krusten nur **aufgehellt** werden, um die wertvolle originale Oberflächenstruktur zu erhalten.
 
-![Restaurierung Kirche Kochendorf St. Sebastian](/assets/images/content/restorations/restorations-002.jpg){.w-lg .mx-auto}
+![Restaurierung Kirche Kochendorf St. Sebastian](/assets/restorations/restorations-002.jpg){.w-lg .mx-auto}
 
 ## Handwerk, Technik und Qualität
 
@@ -33,8 +33,8 @@ Selbstverständlich führen wir diese Arbeiten auch in **regelmäßigen Abständ
 
 <div class="flex gap-4">
 
-![Restaurierung Christusskulptur Offenau](/assets/images/content/restorations/restorations-003.jpg){.w-lg .mx-auto}
+![Restaurierung Christusskulptur Offenau](/assets/restorations/restorations-003.jpg){.w-lg .mx-auto}
 
-![Beispiel einer gereinigten Oberfläche](/assets/images/content/restorations/restorations-004.jpg){.w-lg .mx-auto}
+![Beispiel einer gereinigten Oberfläche](/assets/restorations/restorations-004.jpg){.w-lg .mx-auto}
 
 </div>

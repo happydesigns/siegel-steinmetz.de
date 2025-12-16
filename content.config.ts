@@ -1,11 +1,26 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 import { imageSchema, pageHeaderSchema, pageHeroSchema, pageSectionSchema } from './types'
 
+const albumImageSchema = z.object({
+  src: z.string(),
+  alt: z.string().optional(),
+  caption: z.string().optional(),
+})
+
+const albumSchema = z.object({
+  title: z.string(),
+  path: z.string(),
+  description: z.string().optional(),
+  coverImage: albumImageSchema.optional(),
+  order: z.number().optional(),
+  images: z.array(albumImageSchema),
+})
+
 export default defineContentConfig({
   collections: {
     landing: defineCollection({
       type: 'page',
-      source: '**/*.yaml',
+      source: 'index.yaml',
       schema: z.object({
         hero: pageSectionSchema.extend({
           image: imageSchema.optional(),
@@ -17,6 +32,11 @@ export default defineContentConfig({
         ),
       }),
     }),
+    albums: defineCollection({
+      type: 'data',
+      source: 'albums/**/*.{yaml,json}',
+      schema: albumSchema,
+    }),
     content: defineCollection({
       type: 'page',
       source: '**/*.{md,yaml}',
@@ -26,7 +46,7 @@ export default defineContentConfig({
           container: z.boolean().optional(),
           toc: z.boolean().optional(),
           prose: z.boolean().optional(),
-        }),
+        }).optional(),
         hero: pageHeroSchema.optional(),
         header: pageHeaderSchema.optional(),
         ui: z.object({
@@ -36,7 +56,7 @@ export default defineContentConfig({
           body: z.any().optional(),
           toc: z.any().optional(),
           footer: z.any().optional(),
-        }),
+        }).optional(),
       }),
     }),
     snippet: defineCollection({
