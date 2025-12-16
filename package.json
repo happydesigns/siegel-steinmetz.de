@@ -9,6 +9,7 @@
     "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "preview:remote": "wrangler dev --remote",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:ts": "tsc --noEmit",
