@@ -19,6 +19,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  site: {
+    url: 'siegel-steinmetz.de',
+  },
+
   runtimeConfig: {
     public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
   },
