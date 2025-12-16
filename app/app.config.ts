@@ -91,7 +91,7 @@ export default defineAppConfig({
     },
     footer: {
       slots: {
-        root: 'bg-gradient-to-b from-gray-800 to-raisin-cool dark:from-raisin-cool dark:to-raisin',
+        root: 'bg-linear-to-b from-gray-800 to-raisin-cool dark:from-raisin-cool dark:to-raisin',
         top: 'dark border-b border-neutral-700',
         container: 'dark',
       },
