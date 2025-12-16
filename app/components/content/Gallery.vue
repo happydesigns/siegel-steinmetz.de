@@ -1,12 +1,17 @@
 <script setup lang="ts">
-defineProps<{
+import { GalleryBento, GalleryFlexbox, GalleryMasonry } from '#components'
+
+const props = withDefaults(defineProps<{
   albums?: {
     title: string
     path: string
     coverImage: { src: string, alt?: string } | null
     imageCount: number
   }[]
-}>()
+  layout?: 'bento' | 'flexbox' | 'masonry'
+}>(), {
+  layout: 'masonry',
+})
 
 const route = useRoute()
 const currentAlbumPath = computed(() =>
@@ -17,6 +22,18 @@ const currentAlbumPath = computed(() =>
 
 const { data: album, error } = await useAlbum(currentAlbumPath)
 const images = computed(() => album.value?.images ?? [])
+
+const GalleryComponent = computed(() => {
+  switch (props.layout) {
+    case 'flexbox':
+      return GalleryFlexbox
+    case 'masonry':
+      return GalleryMasonry
+    case 'bento':
+    default:
+      return GalleryBento
+  }
+})
 </script>
 
 <template>
@@ -62,14 +79,6 @@ const images = computed(() => album.value?.images ?? [])
       variant="subtle"
       description="In diesem Album sind keine Bilder vorhanden."
     />
-    <UPageColumns v-else>
-      <img
-        v-for="img in images" :key="img.src"
-        :src="img.src"
-        :alt="img.alt"
-        class="w-full rounded-sm border border-neutral-200 dark:border-neutral-800"
-        loading="lazy"
-      >
-    </UPageColumns>
+    <component :is="GalleryComponent" v-else :images="images" />
   </UPage>
 </template>
