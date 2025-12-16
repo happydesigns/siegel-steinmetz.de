@@ -2,20 +2,18 @@
 export interface Props {
   path?: string
   title?: string
+  imageCount?: number
+  coverImage?: { src: string, alt?: string } | null
 }
 
 const props = withDefaults(defineProps<Props>(), {
   path: '',
   title: '',
+  imageCount: 0,
+  coverImage: null,
 })
 
 const route = useRoute()
-
-const { data: album, pending, error } = await useAlbum(props.path)
-
-const imageCount = computed(() => album.value?.images.length ?? 0)
-const coverImage = computed(() => album.value?.coverImage ?? album.value?.images?.[0] ?? null)
-
 const variant = 'naked'
 </script>
 
@@ -23,25 +21,23 @@ const variant = 'naked'
   <NuxtLink :to="{ path: `/galerie/${props.path}`, replace: true }">
     <UPageCard
       :title="props.title"
-      :description="`${imageCount} Bilder`"
+      :description="props.imageCount > 0 ? `${props.imageCount} Bilder` : undefined"
       :variant="variant"
       reverse
       :ui="{ container: 'p-0 sm:p-0 gap-0', wrapper: 'py-4 rounded-sm order-last' }"
       class="h-full"
     >
       <AlbumEffect :backgrounds="3" :rounded="true" :ui="{ layer: 'rounded-t-sm' }" class="lg:min-w-0 mx-1">
-        <USkeleton
-          v-if="pending"
-          class="h-full w-full rounded-sm m-0 bg-neutral-200 dark:bg-neutral-700 border border-default flex items-center justify-center"
-        />
         <img
-          v-else-if="coverImage"
-          :src="coverImage.src"
-          :alt="coverImage.alt"
+          v-if="props.coverImage"
+          :src="props.coverImage.src"
+          :alt="props.coverImage.alt"
           class="h-60 lg:h-full w-full rounded-sm m-0 object-cover border border-default"
           :class="{ 'outline-2 outline-border': route.path === `/galerie/${props.path}` }"
         >
-        <span v-else-if="error" class="inset-0 flex items-center justify-center text-red-600 bg-white/80 rounded-sm border border-default">Fehler beim Laden des Albums</span>
+        <div v-else class="h-60 lg:h-full w-full rounded-sm m-0 bg-neutral-100 dark:bg-neutral-800 border border-default flex items-center justify-center">
+          <UIcon name="ph-image-duotone" class="w-8 h-8 text-neutral-400" />
+        </div>
       </AlbumEffect>
     </UPageCard>
   </NuxtLink>

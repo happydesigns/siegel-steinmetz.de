@@ -1,6 +1,11 @@
 <script setup lang="ts">
 defineProps<{
-  albums?: { title: string, path: string }[]
+  albums?: {
+    title: string
+    path: string
+    coverImage: { src: string, alt?: string } | null
+    imageCount: number
+  }[]
 }>()
 
 const route = useRoute()
@@ -27,6 +32,8 @@ const images = computed(() => album.value?.images ?? [])
               :key="album.path"
               :title="album.title"
               :path="album.path"
+              :image-count="album.imageCount"
+              :cover-image="album.coverImage"
               class="box-border"
             />
           </UPageColumns>
