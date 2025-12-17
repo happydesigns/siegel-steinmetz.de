@@ -9,7 +9,9 @@ layout:
 
 Die Beschaffenheit des Materials, die Größe, Farbe und Form des Steins, seine Verarbeitung, die enthaltenen Symbole und Inschriften – all das legt Zeugnis ab über das Leben des lieben Verstorbenen und ist ein Ankerplatz, an dem wir die unauflösliche Verbindung zu ihm spüren dürfen. Das Grabmal drückt die Wertschätzung für den Verstorbenen aus und ist eine tröstende Erinnerung.
 
-![Doppelstein Jura mit Bronze](/assets/tombstones/tombstones-001.jpg){.w-lg .mx-auto}
+::div{.w-lg.mx-auto}
+![Doppelstein Jura mit Bronze](/assets/tombstones/tombstones-001.jpg)
+::
 
 Seit Jahrtausenden werden für Grabmale grob behauene Steine verwendet. Das robuste, witterungsbeständige und langlebige Naturmaterial symbolisiert die unvergängliche Liebe und Verbundenheit zu einem geliebten Menschen und schmückt die Gräber der Angehörigen.
 
@@ -17,7 +19,9 @@ Seit Jahrtausenden werden für Grabmale grob behauene Steine verwendet. Das robu
 
 Sie kennen Ihren geliebten Verstorbenen am besten. Gemeinsam mit Ihnen erarbeiten wir Ihre ganz persönliche Erinnerung an Ihren Angehörigen.
 
-![Urnensteine](/assets/tombstones/tombstones-002.png){.w-lg .mx-auto}
+::div{.w-lg.mx-auto}
+![Urnensteine](/assets/tombstones/tombstones-002.png)
+::
 
 Sie haben eine große Auswahl an verschiedenen Materialien. Das beginnt bei der Farbe des Steins und seiner Größe. Bei der Form haben Sie die Wahl von schmalen Stelen bis zu großen, imposanten Steinen. Das Grabmal kann fein und glatt gearbeitet oder ein grob behauener Stein, eine Bruchraue oder ein Findling sein. Wir versehen es mit Symbolen, Ornamenten und Verzierungen, die die Persönlichkeit Ihres Angehörigen widerspiegeln.
 
@@ -31,7 +35,9 @@ Grabzubehör wie Grablaternen aus Bronze, Aluminium oder Stahl sowie robuste Pfl
 
 ## Pflege, Erneuerung und Betreuung
 
-![Urnengrabanlage](/assets/tombstones/tombstones-003.jpg){.w-lg .mx-auto}
+::div{.w-lg.mx-auto}
+![Urnengrabanlage](/assets/tombstones/tombstones-003.jpg)
+::
 
 Grabsteine sind im Laufe der Jahre und Jahrzehnte ständig wechselnden Witterungseinflüssen ausgesetzt. Feuchtigkeit, Kälte, aber auch Hitze setzen ihnen mit der Zeit zu. Inschriften verblassen, angebrachte Buchstaben, Inschriften und Ornamente lockern sich und können verloren gehen. Gerne erneuern wir die Inschrift auf dem Grabmal Ihrer Lieben. Auch Moos oder Verschmutzungen entfernen wir. So wird der Grabstein wieder in seinen einwandfreien Originalzustand versetzt.
 
@@ -41,4 +47,4 @@ Für Beerdigungen bauen wir die Grabanlagen ab und nach einer angemessenen Zeit 
 
 Wir beraten Sie gerne. Einfühlsamkeit, gepaart mit jahrelanger Erfahrung, Fachkönnen und Kompetenz zeichnen uns aus. Bei uns sind Sie in den besten Händen.
 
-Rufen Sie uns unter der Tel.-Nr.: 06264&nbsp;/&nbsp;92&nbsp;64&nbsp;44 an und vereinbaren Sie einen persönlichen, ausführlichen Beratungstermin.
+Rufen Sie uns unter der Tel.-Nr.: 06264 / 92 64 44 an und vereinbaren Sie einen persönlichen, ausführlichen Beratungstermin.
