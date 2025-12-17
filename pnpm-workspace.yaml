@@ -1,36 +1,34 @@
+# eslint-disable pnpm/yaml-enforce-settings
 catalogMode: prefer
 cleanupUnusedCatalogs: true
 
 shellEmulator: true
 
-trustPolicy: no-downgrade
-
 catalogs:
   icons:
-    '@iconify-json/lucide': ^1.2.79
-
+    '@iconify-json/lucide': ^1.2.81
     '@iconify-json/ph': ^1.2.2
   maps:
     '@fawmi/vue-google-maps': ^0.9.79
     vue-google-maps-community-fork: ^0.3.1
-
   nuxt:
     '@nuxt/content': 3.8.2
-    '@nuxt/eslint': ^1.11.0
+    '@nuxt/eslint': ^1.12.1
     '@nuxt/image': ^2.0.0
     '@nuxt/ui': ^4.2.1
-    '@nuxthub/core': ^0.9.1
-
-    '@nuxtjs/seo': ^3.2.2
-    nuxt: ^4.2.1
+    '@nuxthub/core': ^0.10.2
+    '@nuxtjs/seo': ^3.3.0
+    nuxt: ^4.2.2
+    nuxt-studio: 1.0.0-beta.0
   tools:
-    '@antfu/eslint-config': ^6.4.2
+    '@antfu/eslint-config': ^6.7.1
     better-sqlite3: 12.4.1
     changelogen: ^0.6.2
     cross-env: ^10.1.0
-    eslint: ^9.39.1
+    eslint: ^9.39.2
     typescript: ^5.9.3
-    wrangler: ^4.53.0
+    wrangler: ^4.55.0
+
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - '@tailwindcss/oxide'

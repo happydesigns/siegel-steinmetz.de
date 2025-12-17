@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/content',
+    'nuxt-studio',
     '@nuxt/eslint',
   ],
 
