@@ -15,8 +15,8 @@ catalogs:
     '@nuxt/content': 3.8.2
     '@nuxt/eslint': ^1.12.1
     '@nuxt/image': ^2.0.0
-    '@nuxt/ui': ^4.2.1
-    '@nuxthub/core': ^0.10.2
+    '@nuxt/ui': ^4.3.0
+    '@nuxthub/core': ^0.10.3
     '@nuxtjs/seo': ^3.3.0
     nuxt: ^4.2.2
     nuxt-studio: 1.0.0-beta.0
