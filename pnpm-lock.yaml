@@ -60,6 +60,9 @@ catalogs:
     eslint:
       specifier: ^9.39.2
       version: 9.39.2
+    mdclint:
+      specifier: ^0.1.2
+      version: 0.1.2
     typescript:
       specifier: ^5.9.3
       version: 5.9.3
@@ -123,6 +126,9 @@ importers:
       eslint:
         specifier: catalog:tools
         version: 9.39.2(jiti@2.6.1)
+      mdclint:
+        specifier: catalog:tools
+        version: 0.1.2(eslint@9.39.2(jiti@2.6.1))
       typescript:
         specifier: catalog:tools
         version: 5.9.3
@@ -5094,6 +5100,12 @@ packages:
 
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
+
+  mdclint@0.1.2:
+    resolution: {integrity: sha512-7lhDk0bGog4uHrL1/7TBcyBSM2/hpyl2otqLlsk4QhCLE5fsRfPyktLNZFDvXRkyQF6ibr8gKGBkvsMoIwT2JA==}
+    hasBin: true
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
 
   mdn-data@2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
@@ -12768,6 +12780,11 @@ snapshots:
   mdast-util-to-string@4.0.0:
     dependencies:
       '@types/mdast': 4.0.4
+
+  mdclint@0.1.2(eslint@9.39.2(jiti@2.6.1)):
+    dependencies:
+      citty: 0.1.6
+      eslint: 9.39.2(jiti@2.6.1)
 
   mdn-data@2.0.28: {}
 

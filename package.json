@@ -39,6 +39,7 @@
     "changelogen": "catalog:tools",
     "cross-env": "catalog:tools",
     "eslint": "catalog:tools",
+    "mdclint": "catalog:tools",
     "typescript": "catalog:tools",
     "wrangler": "catalog:tools"
   }
