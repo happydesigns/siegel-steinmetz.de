@@ -57,7 +57,7 @@ const showLoginButton = computed(() => studioEnabled.value && !isLoggedIn.value)
     :to="loginTo"
     :external="true"
     aria-label="Login"
-    icon="i-ph-sign-in-duotone"
+    icon="i-lucide-log-in"
     color="neutral"
     variant="outline"
     size="sm"
