@@ -75,4 +75,13 @@ export default defineNuxtConfig({
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
   },
+
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'happydesigns',
+      repo: 'siegel-steinmetz.de',
+      branch: 'main',
+    },
+  },
 })
