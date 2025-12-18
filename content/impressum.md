@@ -27,9 +27,7 @@ Die auf dieser Webseite veröffentlichten Inhalte, Werke und bereitgestellten In
   Bahnhofstraße 13 :br
   74861 Neudenau
 
-  :icon{name="i-ph-phone-fill"} Tel.: 06264 92 64 44 :br :icon{name="i-ph-printer-fill"} Fax: 06264 92 64 45
-
-  E-Mail: <info@siegel-steinmetz.de>
+  :icon{name="i-ph-phone-fill"} Tel.: 06264 92 64 44 :br :icon{name="i-ph-printer-fill"} Fax: 06264 92 64 45 :br :icon{name="i-ph-envelope-fill"} E-Mail: <info@siegel-steinmetz.de>
 
   Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV: Bernd Siegel (Anschrift wie oben)
 
