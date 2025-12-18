@@ -22,6 +22,9 @@ useSeoMeta({
 <template>
   <UApp>
     <NuxtPage />
+    <ClientOnly>
+      <StudioLoginButton />
+    </ClientOnly>
   </UApp>
 </template>
 
