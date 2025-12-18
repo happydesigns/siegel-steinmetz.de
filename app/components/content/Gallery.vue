@@ -20,8 +20,8 @@ const currentAlbumPath = computed(() =>
     : route.params.slug ?? '',
 )
 
-const { data: album, error } = await useAlbum(currentAlbumPath)
-const images = computed(() => album.value?.images ?? [])
+const { data: currentAlbum, error } = await useAlbum(currentAlbumPath)
+const images = computed(() => currentAlbum.value?.images ?? [])
 
 const GalleryComponent = computed(() => {
   switch (props.layout) {
