@@ -12,13 +12,13 @@ hero:
       icon: i-ph-bank-duotone
   links:
     - label: Gräf Granit
-      to: 'https://www.graef-granit.de/index.php?Itemid=204'
+      to: https://www.graef-granit.de/index.php?Itemid=204
       icon: i-ph-hammer-duotone
       size: lg
       external: true
       target: _blank
     - label: Mainzer Grabmaldesign
-      to: 'https://www.mainzer-grabmale.de/produktuebersicht/moderne-grabsteine/page/9/'
+      to: https://www.mainzer-grabmale.de/produktuebersicht/moderne-grabsteine/page/9/
       trailingIcon: i-ph-arrow-right
       size: lg
       variant: subtle
@@ -34,21 +34,20 @@ hero:
 sections:
   - icon: i-ph-cross-duotone
     title: Grabmale
-    description: >
-      Wir gestalten gemeinsam mit Ihnen ein ganz persönliches Andenken an Ihren verstorbenen Angehörigen, ein individuelles Grabmal. Sie können aus einer Vielzahl von Materialien, Inschriften und Ornamenten wählen. Handwerkliche Grabmale fertigen wir direkt in Neudenau. Industriell gefertigte Steine beziehen wir von unseren Lieferanten.
+    description: Wir gestalten gemeinsam mit Ihnen ein ganz persönliches Andenken an Ihren verstorbenen Angehörigen, ein individuelles Grabmal. Sie können aus einer Vielzahl von Materialien, Inschriften und Ornamenten wählen. Handwerkliche Grabmale fertigen wir direkt in Neudenau. Industriell gefertigte Steine beziehen wir von unseren Lieferanten.
     orientation: horizontal
     reverse: true
     ui:
-      container: 'pb-0 sm:pb-0 lg:pb-0'
-      title: 'lg:font-medium'
+      container: pb-0 sm:pb-0 lg:pb-0
+      title: lg:font-medium
     links:
       - label: Galerie
-        to: '/galerie/grabmalreferenzen'
+        to: /galerie/grabmalreferenzen
         color: primary
         icon: i-ph-image-duotone
         size: lg
       - label: Mehr erfahren
-        to: '/grabmale'
+        to: /grabmale
         variant: link
         color: black
         trailing-icon: i-ph-arrow-right
@@ -56,24 +55,23 @@ sections:
     image:
       src: /assets/index/index-tombstones.jpg
       alt: Grabmale Image
-      class: 'rounded-sm'
+      class: rounded-sm
   - icon: i-ph-bank-duotone
     title: Restaurierungen
-    description: >
-      Unsere Firma hat als zweiten Schwerpunkt die kompetente und fachgerechte Restaurierung, Aufbereitung und Pflege historischer Kirchen, Gebäude, Grabmäler, Denkmäler und Bildhauerarbeiten im Programm.
+    description: Unsere Firma hat als zweiten Schwerpunkt die kompetente und fachgerechte Restaurierung, Aufbereitung und Pflege historischer Kirchen, Gebäude, Grabmäler, Denkmäler und Bildhauerarbeiten im Programm.
     orientation: horizontal
     reverse: true
     ui:
-      container: 'pt-12 sm:pt-16'
-      title: 'lg:font-medium'
+      container: pt-12 sm:pt-16
+      title: lg:font-medium
     links:
       - label: Galerie
-        to: '/galerie/restaurierungen'
+        to: /galerie/restaurierungen
         color: primary
         icon: i-ph-image-duotone
         size: lg
       - label: Mehr erfahren
-        to: '/restaurierungen'
+        to: /restaurierungen
         variant: link
         color: black
         trailing-icon: i-ph-arrow-right
@@ -81,4 +79,4 @@ sections:
     image:
       src: /assets/index/index-restorations.jpg
       alt: Restaurierungen Image
-      class: 'rounded-sm'
+      class: rounded-sm
