@@ -83,5 +83,8 @@ export default defineNuxtConfig({
       repo: 'siegel-steinmetz.de',
       branch: 'main',
     },
+    i18n: {
+      defaultLocale: 'de',
+    },
   },
 })
