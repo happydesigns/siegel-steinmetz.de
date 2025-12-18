@@ -6,22 +6,22 @@ shellEmulator: true
 
 catalogs:
   icons:
-    '@iconify-json/lucide': ^1.2.81
-    '@iconify-json/ph': ^1.2.2
+    "@iconify-json/lucide": ^1.2.81
+    "@iconify-json/ph": ^1.2.2
   maps:
-    '@fawmi/vue-google-maps': ^0.9.79
+    "@fawmi/vue-google-maps": ^0.9.79
     vue-google-maps-community-fork: ^0.3.1
   nuxt:
-    '@nuxt/content': 3.8.2
-    '@nuxt/eslint': ^1.12.1
-    '@nuxt/image': ^2.0.0
-    '@nuxt/ui': ^4.3.0
-    '@nuxthub/core': ^0.10.3
-    '@nuxtjs/seo': ^3.3.0
+    "@nuxt/content": 3.8.2
+    "@nuxt/eslint": ^1.12.1
+    "@nuxt/image": ^2.0.0
+    "@nuxt/ui": ^4.3.0
+    "@nuxthub/core": ^0.10.3
+    "@nuxtjs/seo": ^3.3.0
     nuxt: ^4.2.2
     nuxt-studio: 1.0.0-beta.0
   tools:
-    '@antfu/eslint-config': ^6.7.1
+    "@antfu/eslint-config": ^6.7.1
     better-sqlite3: 12.4.1
     changelogen: ^0.6.2
     cross-env: ^10.1.0
@@ -31,8 +31,8 @@ catalogs:
     wrangler: ^4.55.0
 
 onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@tailwindcss/oxide'
+  - "@parcel/watcher"
+  - "@tailwindcss/oxide"
   - better-sqlite3
   - esbuild
   - sharp

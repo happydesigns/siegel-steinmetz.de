@@ -6,7 +6,11 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 export default withNuxt(
   antfu(
     {
-
+      yaml: {
+        overrides: {
+          'yaml/quotes': ['error', { prefer: 'double' }], // Enforce double quotes to match Studio
+        },
+      },
     },
     {
       name: 'tailwind/yaml/rules',

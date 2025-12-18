@@ -1,8 +1,8 @@
 title: Home
-description: 'Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr.'
+description: "Steingestaltung in Neudenau: Grabmale, Restaurierungen und mehr."
 hero:
   title: Herzlich Willkommen!
-  description: 'Wir bieten einen umfassenden Service rund um den Naturstoff Stein:'
+  description: "Wir bieten einen umfassenden Service rund um den Naturstoff Stein:"
   features:
     - title: Einzigartige Grabmale nach Maß
       description: Gestaltung von individuellen Grabmalen
@@ -25,7 +25,7 @@ hero:
       color: neutral
       external: true
       target: _blank
-      class: '[&>*:last-child]:hidden sm:[&>*:last-child]:block'
+      class: "[&>*:last-child]:hidden sm:[&>*:last-child]:block"
   orientation: horizontal
   image:
     src: /assets/index/hero.webp
