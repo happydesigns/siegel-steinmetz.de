@@ -32,13 +32,13 @@ usePageSeo(page)
         />
       </template>
 
-      <HeroGradient class="lg:block absolute h-[1152px] -left-72 -bottom-16 z-[-1] box-border" />
+      <HeroGradient class="lg:block absolute h-288 -left-72 -bottom-16 z-[-1] box-border" />
 
       <div class="lg:absolute md:right-0 lg:-right-4 xl:-right-32 2xl:-right-60 -mx-4 sm:m-0">
         <div class="relative">
           <NuxtImg
             :src="page.hero.image?.src"
-            class="lg:block relative w-full lg:h-[360px] xl:h-[380px] 2xl:h-[420px] sm:rounded-sm aspect-19/9 sm:aspect-20/9 md:aspect-21/9 lg:aspect-7/5 xl:aspect-video object-cover md:object-[25%]"
+            class="lg:block relative w-full lg:h-90 xl:h-95 2xl:h-105 sm:rounded-sm aspect-19/9 sm:aspect-20/9 md:aspect-21/9 lg:aspect-7/5 xl:aspect-video object-cover md:object-[25%]"
             alt=""
           />
           <div class="hidden lg:block absolute inset-2 border-4 border-white dark:border-neutral-900 rounded-sm" />
