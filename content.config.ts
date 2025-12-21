@@ -40,14 +40,17 @@ export default defineContentConfig({
     }),
     content: defineCollection({
       type: 'page',
-      source: '**/*.{md,yaml}',
+      source: {
+        include: 'pages/**/*.{md,yaml}',
+        prefix: '/',
+      },
       schema: z.object({
         layout: z.object({
           metadataComponent: z.enum(['none', 'header', 'hero']).default('header'),
           container: z.boolean().optional(),
           toc: z.boolean().optional(),
           prose: z.boolean().optional(),
-        }).optional(),
+        }),
         hero: pageHeroSchema.optional(),
         header: pageHeaderSchema.optional(),
         ui: z.object({
@@ -57,7 +60,7 @@ export default defineContentConfig({
           body: z.any().optional(),
           toc: z.any().optional(),
           footer: z.any().optional(),
-        }).optional(),
+        }),
       }),
     }),
     snippet: defineCollection({
