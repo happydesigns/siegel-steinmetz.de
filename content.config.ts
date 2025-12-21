@@ -1,4 +1,5 @@
-import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineCollection, defineContentConfig } from '@nuxt/content'
+import { z } from 'zod/v4'
 import { imageSchema, pageHeaderSchema, pageHeroSchema, pageSectionSchema } from './types'
 
 const albumImageSchema = z.object({

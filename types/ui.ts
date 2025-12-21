@@ -1,4 +1,5 @@
-import { z } from '@nuxt/content'
+import { property } from '@nuxt/content'
+import { z } from 'zod/v4'
 
 const variantEnum = z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link'])
 const colorEnum = z.enum(['primary', 'secondary', 'neutral', 'error', 'warning', 'success', 'info'])
@@ -9,7 +10,7 @@ const targetEnum = z.enum(['_blank', '_parent', '_self', '_top'])
 const as = z.any().optional()
 const title = z.string().nonempty()
 const description = z.string().nonempty()
-const icon = z.string().nonempty().editor({ input: 'icon' })
+const icon = property(z.string()).editor({ input: 'icon' })
 const orientation = orientationEnum.optional()
 const label = z.string().nonempty()
 const to = z.string().nonempty()
