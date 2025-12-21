@@ -9,7 +9,7 @@ layout:
 
 Die Beschaffenheit des Materials, die Größe, Farbe und Form des Steins, seine Verarbeitung, die enthaltenen Symbole und Inschriften – all das legt Zeugnis ab über das Leben des lieben Verstorbenen und ist ein Ankerplatz, an dem wir die unauflösliche Verbindung zu ihm spüren dürfen. Das Grabmal drückt die Wertschätzung für den Verstorbenen aus und ist eine tröstende Erinnerung.
 
-::div{.w-lg.mx-auto}
+::div{.max-w-lg.mx-auto}
 ![Doppelstein Jura mit Bronze](/assets/tombstones/tombstones-001.jpg)
 ::
 
@@ -19,7 +19,7 @@ Seit Jahrtausenden werden für Grabmale grob behauene Steine verwendet. Das robu
 
 Sie kennen Ihren geliebten Verstorbenen am besten. Gemeinsam mit Ihnen erarbeiten wir Ihre ganz persönliche Erinnerung an Ihren Angehörigen.
 
-::div{.w-lg.mx-auto}
+::div{.max-w-lg.mx-auto}
 ![Urnensteine](/assets/tombstones/tombstones-002.png)
 ::
 
@@ -35,7 +35,7 @@ Grabzubehör wie Grablaternen aus Bronze, Aluminium oder Stahl sowie robuste Pfl
 
 ## Pflege, Erneuerung und Betreuung
 
-::div{.w-lg.mx-auto}
+::div{.maxw-lg.mx-auto}
 ![Urnengrabanlage](/assets/tombstones/tombstones-003.jpg)
 ::
 
