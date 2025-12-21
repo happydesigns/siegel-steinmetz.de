@@ -4,7 +4,7 @@ import process from 'node:process'
 export default defineNuxtConfig({
 
   extends: [
-    'github:happydesigns/ui#v0.4.2',
+    'github:happydesigns/ui#v0.5.1',
   ],
 
   modules: [

@@ -38,7 +38,7 @@ export default defineContentConfig({
       source: 'albums/**/*.{yaml,json}',
       schema: albumSchema,
     }),
-    content: defineCollection({
+    page: defineCollection({
       type: 'page',
       source: {
         include: 'pages/**/*.{md,yaml}',
