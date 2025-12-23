@@ -1,4 +1,6 @@
 title: Grabmallager
+path: grabmallager
+order: 1
 coverImage:
   src: /assets/gallery/grabmallager/tombstone-stock-red-arched-lines.jpg
   alt: Roter Grabstein mit geschwungenem Linienmuster
@@ -178,4 +180,3 @@ images:
     alt: Kalkstein-Grabstein mit Bronzevase
     caption: Lichtgrauer Kalkstein-Grabstein mit rechteckiger Aussparung und Bronzevase
   - src: /assets/gallery/grabmallager/E106.jpg
-order: 1
