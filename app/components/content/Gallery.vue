@@ -4,7 +4,7 @@ import { GalleryBento, GalleryFlexbox, GalleryMasonry } from '#components'
 const props = withDefaults(defineProps<{
   albums?: {
     title: string
-    path: string
+    slug: string
     coverImage: { src: string, alt?: string } | null
     imageCount: number
   }[]
@@ -14,13 +14,13 @@ const props = withDefaults(defineProps<{
 })
 
 const route = useRoute()
-const currentAlbumPath = computed(() =>
+const currentAlbumSlug = computed(() =>
   Array.isArray(route.params.slug)
     ? route.params.slug.filter(Boolean).join('/')
     : route.params.slug ?? '',
 )
 
-const { data: currentAlbum, error } = await useAlbum(currentAlbumPath)
+const { data: currentAlbum, error } = await useAlbum(currentAlbumSlug)
 const images = computed(() => currentAlbum.value?.images ?? [])
 
 const GalleryComponent = computed(() => {
@@ -46,9 +46,9 @@ const GalleryComponent = computed(() => {
           >
             <Album
               v-for="album in albums"
-              :key="album.path"
+              :key="album.slug"
               :title="album.title"
-              :path="album.path"
+              :slug="album.slug"
               :image-count="album.imageCount"
               :cover-image="album.coverImage"
               class="box-border"
@@ -66,7 +66,7 @@ const GalleryComponent = computed(() => {
       description="Die Bilder konnten nicht geladen werden. Bitte versuchen Sie es später erneut."
     />
     <UPageCard
-      v-else-if="currentAlbumPath === ''"
+      v-else-if="currentAlbumSlug === ''"
       icon="ph-image-duotone"
       title="Album auswählen"
       variant="subtle"

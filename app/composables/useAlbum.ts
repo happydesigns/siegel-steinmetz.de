@@ -1,8 +1,8 @@
-export function useAlbum(path: MaybeRefOrGetter<string>) {
-  const pathRef = toRef(path)
+export function useAlbum(slug: MaybeRefOrGetter<string>) {
+  const slugRef = toRef(slug)
 
-  return useAsyncData(`albums:${pathRef.value}`, () =>
+  return useAsyncData(`albums:${slugRef.value}`, () =>
     queryCollection('albums')
-      .path(pathRef.value)
+      .where('slug', '=', slugRef.value)
       .first())
 }

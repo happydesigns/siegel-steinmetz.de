@@ -10,7 +10,7 @@ const albumImageSchema = z.object({
 
 const albumSchema = z.object({
   title: z.string(),
-  path: z.string(),
+  slug: z.string(),
   description: z.string().optional(),
   coverImage: albumImageSchema.optional(),
   order: z.number().optional(),
