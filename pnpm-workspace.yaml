@@ -6,7 +6,7 @@ shellEmulator: true
 
 catalogs:
   icons:
-    "@iconify-json/lucide": ^1.2.81
+    "@iconify-json/lucide": ^1.2.82
     "@iconify-json/ph": ^1.2.2
   maps:
     "@fawmi/vue-google-maps": ^0.9.79
@@ -16,19 +16,19 @@ catalogs:
     "@nuxt/eslint": ^1.12.1
     "@nuxt/image": ^2.0.0
     "@nuxt/ui": ^4.3.0
-    "@nuxthub/core": ^0.10.3
+    "@nuxthub/core": ^0.10.4
     "@nuxtjs/seo": ^3.3.0
     nuxt: ^4.2.2
-    nuxt-studio: 1.0.0-beta.0
+    nuxt-studio: ^1.0.0-beta.1
   tools:
-    "@antfu/eslint-config": ^6.7.1
+    "@antfu/eslint-config": ^6.7.3
     better-sqlite3: 12.4.1
     changelogen: ^0.6.2
     cross-env: ^10.1.0
     eslint: ^9.39.2
     mdclint: ^0.1.2
     typescript: ^5.9.3
-    wrangler: ^4.55.0
+    wrangler: ^4.56.0
 
 onlyBuiltDependencies:
   - "@parcel/watcher"
