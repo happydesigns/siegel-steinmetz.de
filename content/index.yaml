@@ -31,10 +31,6 @@ hero:
     src: /assets/index/hero.webp
     alt: Banner Image
     class: border border-red-500
-header:
-  title: ""
-ui:
-  main: ""
 sections:
   - icon: i-ph-cross-duotone
     title: Grabmale
