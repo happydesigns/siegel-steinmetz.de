@@ -19,7 +19,7 @@ catalogs:
     "@nuxthub/core": ^0.10.4
     "@nuxtjs/seo": ^3.3.0
     nuxt: ^4.2.2
-    nuxt-studio: ^1.0.0-beta.1
+    nuxt-studio: ^1.0.0-beta.3
   tools:
     "@antfu/eslint-config": ^6.7.3
     better-sqlite3: 12.4.1
