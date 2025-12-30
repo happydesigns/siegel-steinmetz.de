@@ -1,13 +1,13 @@
 <script setup lang="ts">
 export interface Props {
-  slug?: string
+  path?: string
   title?: string
   imageCount?: number
   coverImage?: { src: string, alt?: string } | null
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  slug: '',
+  path: '',
   title: '',
   imageCount: 0,
   coverImage: null,
@@ -18,7 +18,7 @@ const variant = 'naked'
 </script>
 
 <template>
-  <NuxtLink :to="{ path: `/galerie/${props.slug}`, replace: true }">
+  <NuxtLink :to="{ path: props.path, replace: true }">
     <UPageCard
       :title="props.title"
       :description="props.imageCount > 0 ? `${props.imageCount} Bilder` : undefined"
@@ -33,7 +33,7 @@ const variant = 'naked'
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
           class="h-60 lg:h-full w-full rounded-sm m-0 object-cover border border-default"
-          :class="{ 'outline-2 outline-border': route.path === `/galerie/${props.slug}` }"
+          :class="{ 'outline-2 outline-border': route.path === props.path }"
         >
         <div v-else class="h-60 lg:h-full w-full rounded-sm m-0 bg-neutral-100 dark:bg-neutral-800 border border-default flex items-center justify-center">
           <UIcon name="ph-image-duotone" class="w-8 h-8 text-neutral-400" />

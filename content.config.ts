@@ -10,7 +10,6 @@ const albumImageSchema = z.object({
 
 const albumSchema = z.object({
   title: z.string(),
-  slug: z.string(),
   description: z.string().optional(),
   coverImage: albumImageSchema.optional(),
   order: z.number().optional(),
@@ -34,8 +33,8 @@ export default defineContentConfig({
       }),
     }),
     albums: defineCollection({
-      type: 'data',
-      source: 'albums/**/*.{yaml,json}',
+      type: 'page',
+      source: 'galerie/**/*.yaml',
       schema: albumSchema,
     }),
     page: defineCollection({
