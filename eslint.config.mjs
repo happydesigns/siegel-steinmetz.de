@@ -33,6 +33,16 @@ export default withNuxt(
         'style/brace-style': ['error', 'stroustrup'],
       },
     },
+    {
+      name: 'happydesigns/pnpm/rules',
+      rules: {
+        'pnpm/yaml-enforce-settings': ['error', {
+          settings: {
+            shellEmulator: true,
+          },
+        }],
+      },
+    },
   ).append(await mdcLint({
     files: ['content/**/*.md'],
     preset: 'mdc',

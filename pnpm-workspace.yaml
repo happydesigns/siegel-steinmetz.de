@@ -1,7 +1,5 @@
-# eslint-disable pnpm/yaml-enforce-settings
 catalogMode: prefer
 cleanupUnusedCatalogs: true
-
 shellEmulator: true
 
 catalogs:
