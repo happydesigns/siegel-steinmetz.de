@@ -28,7 +28,7 @@ catalogs:
     eslint: ^9.39.2
     mdclint: ^0.1.2
     typescript: ^5.9.3
-    wrangler: ^4.56.0
+    wrangler: ^4.59.1
 
 onlyBuiltDependencies:
   - "@parcel/watcher"
