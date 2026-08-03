@@ -1,13 +1,5 @@
 <script setup lang="ts">
-const appConfig = useAppConfig()
-const route = useRoute()
-
-const headerLinks = computed(() =>
-  appConfig.app.links.header.map(link => ({
-    ...link,
-    active: link.to !== '/' && route.path.startsWith(link.to),
-  })),
-)
+const { headerLinks } = useHeaderLinks()
 </script>
 
 <template>
