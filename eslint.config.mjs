@@ -24,6 +24,7 @@ export default withNuxt(
       files: ['**/*.md'],
       rules: {
         'no-irregular-whitespace': ['off'],
+        'markdown/no-missing-atx-heading-space': ['off'],
       },
     },
     {
@@ -31,16 +32,6 @@ export default withNuxt(
       rules: {
         'curly': ['error', 'all'],
         'style/brace-style': ['error', 'stroustrup'],
-      },
-    },
-    {
-      name: 'happydesigns/pnpm/rules',
-      rules: {
-        'pnpm/yaml-enforce-settings': ['error', {
-          settings: {
-            shellEmulator: true,
-          },
-        }],
       },
     },
   ).append(await mdcLint({

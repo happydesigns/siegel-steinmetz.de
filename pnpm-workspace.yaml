@@ -1,8 +1,21 @@
 catalogMode: prefer
 cleanupUnusedCatalogs: true
+minimumReleaseAgeExclude:
+  - "@happydesigns/ui@0.17.0"
 shellEmulator: true
 
+trustPolicy: no-downgrade
+
+overrides:
+  "@ai-sdk/gateway": 3.0.145
+  "@ai-sdk/provider-utils": 4.0.37
+  semver@6: 6.3.0
+
 catalogs:
+  happydesigns:
+    "@happydesigns/nuxt-variants": ^0.0.6
+    "@happydesigns/ui": ^0.17.0
+
   icons:
     "@iconify-json/lucide": ^1.2.82
     "@iconify-json/ph": ^1.2.2
@@ -10,30 +23,35 @@ catalogs:
     "@fawmi/vue-google-maps": ^0.9.79
     vue-google-maps-community-fork: ^0.3.1
   nuxt:
-    "@nuxt/content": 3.8.2
-    "@nuxt/eslint": ^1.12.1
+    "@nuxt/content": 3.15.0
+    "@nuxt/eslint": 1.16.0
     "@nuxt/image": ^2.0.0
-    "@nuxt/ui": ^4.3.0
+    "@nuxt/ui": 4.10.0
     "@nuxthub/core": ^0.10.4
-    "@nuxtjs/seo": ^3.3.0
-    nuxt: ^4.2.2
-    nuxt-studio: ^1.0.0-beta.3
+    "@nuxtjs/seo": 5.3.6
+    nuxt: 4.5.1
+    nuxt-studio: 1.7.0
+    tailwindcss: 4.3.2
   tools:
-    "@antfu/eslint-config": ^6.7.3
-    better-sqlite3: 12.4.1
+    "@antfu/eslint-config": 9.1.0
+    "@types/node": 26.1.1
+    better-sqlite3: 12.11.1
     changelogen: ^0.6.2
-    cross-env: ^10.1.0
-    eslint: ^9.39.2
+    cross-env: 10.1.0
+    eslint: 10.6.0
     mdclint: ^0.1.2
-    typescript: ^5.9.3
-    wrangler: ^4.56.0
+    typescript: 6.0.3
+    vitest: 4.1.10
+    vue-tsc: 3.3.7
+    wrangler: 4.110.0
 
-onlyBuiltDependencies:
-  - "@parcel/watcher"
-  - "@tailwindcss/oxide"
-  - better-sqlite3
-  - esbuild
-  - sharp
-  - unrs-resolver
-  - vue-demi
-  - workerd
+    zod: 4.4.3
+allowBuilds:
+  "@parcel/watcher": true
+  "@tailwindcss/oxide": true
+  better-sqlite3: true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vue-demi: true
+  workerd: true
