@@ -12,11 +12,11 @@ definePageMeta({
   },
 })
 
-const { data: page } = await usePageContent()
+const { data: page } = await usePageContent({ collection: 'content' })
 </script>
 
 <template>
-  <NuxtLayout :name="page?.layout ?? 'content'">
+  <NuxtLayout name="content" collection="content">
     <ContentRenderer v-if="page" :value="page" />
   </NuxtLayout>
 </template>

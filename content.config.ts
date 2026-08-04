@@ -42,10 +42,19 @@ export default defineContentConfig({
       schema: albumSchema,
     }),
 
-    page: defineCollection({
+    content: defineCollection({
       type: 'page',
       source: {
         include: 'pages/**/*.{md,yaml}',
+        prefix: '/',
+      },
+      schema: mergeVariantSchemas(['content'], variantSchemas),
+    }),
+
+    page: defineCollection({
+      type: 'page',
+      source: {
+        include: 'page/**/*.{md,yaml}',
         prefix: '/',
       },
       schema: mergeVariantSchemas(['page'], variantSchemas),

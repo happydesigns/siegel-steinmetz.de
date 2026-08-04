@@ -5,6 +5,7 @@ import { parse } from 'yaml'
 const tocPages = [
   'content/pages/datenschutz.md',
   'content/pages/grabmale.md',
+  'content/pages/kontakt.md',
   'content/pages/restaurierungen.md',
   'content/pages/ueber-uns.md',
 ]
@@ -22,7 +23,7 @@ async function readFrontmatter(path: string): Promise<Record<string, unknown>> {
 
 describe('content configuration', () => {
   it('renders the legal notice with the shared page layout', async () => {
-    const frontmatter = await readFrontmatter('content/pages/impressum.md')
+    const frontmatter = await readFrontmatter('content/page/impressum.md')
 
     expect(frontmatter.layout).toBe('page')
   })
