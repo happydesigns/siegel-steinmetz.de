@@ -1,7 +1,7 @@
 catalogMode: prefer
 cleanupUnusedCatalogs: true
 minimumReleaseAgeExclude:
-  - '@happydesigns/ui@0.17.0 || 0.17.1'
+  - "@happydesigns/ui@0.17.0 || 0.17.1"
 shellEmulator: true
 
 trustPolicy: no-downgrade
