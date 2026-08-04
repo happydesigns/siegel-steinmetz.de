@@ -32,10 +32,11 @@ describe('application shell', () => {
     expect(app).not.toContain('<HContentSearch')
   })
 
-  it('renders the media gallery at the full container width', () => {
-    expect(galleryPage).toContain('<UContainer v-if="page">')
-    expect(galleryPage).toContain('<UPageHeader v-if="header"')
+  it('renders the media gallery through the shared full-width page layout', () => {
+    expect(galleryPage).toContain('<NuxtLayout name="page" :path="rootPath">')
     expect(galleryPage).toContain('<Gallery :albums="albums" />')
     expect(galleryPage).not.toContain('name="content"')
+    expect(galleryPage).not.toContain('usePageContent')
+    expect(galleryPage).not.toContain('usePageSeo')
   })
 })
