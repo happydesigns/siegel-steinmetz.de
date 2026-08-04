@@ -24,6 +24,7 @@ export default withNuxt(
       files: ['**/*.md'],
       rules: {
         'no-irregular-whitespace': ['off'],
+        'markdown/no-missing-atx-heading-space': ['off'],
       },
     },
     {

@@ -4,15 +4,12 @@ import process from 'node:process'
 export default defineNuxtConfig({
 
   extends: [
-    'github:happydesigns/ui#v0.5.1',
+    '@happydesigns/ui',
   ],
 
   modules: [
     '@nuxtjs/seo',
     '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxt/content',
-    'nuxt-studio',
     '@nuxt/eslint',
   ],
 
@@ -22,6 +19,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'siegel-steinmetz.de',
+    defaultLocale: 'de',
   },
 
   runtimeConfig: {
@@ -36,25 +34,19 @@ export default defineNuxtConfig({
     extractAsyncDataHandlers: true,
   },
 
+  compatibilityDate: '2026-07-09',
+
   nitro: {
     prerender: {
       crawlLinks: true,
       autoSubfolderIndex: false,
-      failOnError: false,
+      failOnError: true,
       routes: ['/', '/sitemap.xml'],
     },
     preset: 'cloudflare_module',
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
-    },
-  },
-
-  vite: {
-    optimizeDeps: {
-      include: [
-        'fast-deep-equal',
-      ],
     },
   },
 
@@ -65,15 +57,42 @@ export default defineNuxtConfig({
     },
   },
 
-  fonts: {
-    experimental: {
-      processCSSVariables: true,
+  icon: {
+    clientBundle: {
+      icons: [
+        'lucide:chevron-down',
+        'lucide:hash',
+        'lucide:log-in',
+        'ph:arrow-right',
+        'ph:bank-duotone',
+        'ph:cross-duotone',
+        'ph:envelope-fill',
+        'ph:hammer-duotone',
+        'ph:image-duotone',
+        'ph:images-duotone',
+        'ph:phone-duotone',
+        'ph:phone-fill',
+        'ph:printer-fill',
+        'ph:users-duotone',
+        'ph:warning-octagon-duotone',
+      ],
+    },
+    serverBundle: {
+      collections: ['lucide', 'ph'],
     },
   },
 
   image: {
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
+  },
+
+  ogImage: {
+    enabled: false,
+  },
+
+  sitemap: {
+    zeroRuntime: true,
   },
 
   studio: {

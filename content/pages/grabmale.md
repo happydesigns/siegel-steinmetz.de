@@ -1,8 +1,7 @@
 ---
 title: Grabmale
 description: Ein Grabmal ist ein sichtbares und individuelles Andenken an einen geliebten Menschen.
-layout:
-  toc: true
+toc: true
 ---
 
 ## Bedeutung und Erinnerungsort

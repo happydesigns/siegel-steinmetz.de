@@ -36,7 +36,7 @@ const variant = 'naked'
           :class="{ 'outline-2 outline-border': route.path === props.path }"
         >
         <div v-else class="h-60 lg:h-full w-full rounded-sm m-0 bg-neutral-100 dark:bg-neutral-800 border border-default flex items-center justify-center">
-          <UIcon name="ph-image-duotone" class="w-8 h-8 text-neutral-400" />
+          <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
         </div>
       </AlbumEffect>
     </UPageCard>

@@ -1,8 +1,7 @@
 ---
 title: Datenschutzerklärung
 description: Informationen über die Datenerhebung, -verarbeitung und -schutzrichtlinien der Webseite.
-layout:
-  toc: true
+toc: true
 ---
 
 ## 1. Datenschutz auf einen Blick

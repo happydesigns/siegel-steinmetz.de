@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { de } from '@nuxt/ui/locale'
+
 useHead({
   title: 'Bernd Siegel Steingestaltung',
   titleTemplate: '%s | Bernd Siegel Steingestaltung',
@@ -20,11 +22,15 @@ useSeoMeta({
 </script>
 
 <template>
-  <UApp>
-    <NuxtPage />
-    <ClientOnly>
-      <StudioLoginButton />
-    </ClientOnly>
+  <UApp :locale="de">
+    <AppHeader />
+
+    <UMain>
+      <NuxtPage />
+    </UMain>
+
+    <AppFooter />
+    <HStudioLoginButton aria-label="Nuxt Studio öffnen" />
   </UApp>
 </template>
 

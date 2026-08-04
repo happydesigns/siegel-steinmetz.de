@@ -1,8 +1,7 @@
 ---
 title: Über uns
 description: Bernd Siegel Steingestaltung – Ihr Steinmetzmeister in Neudenau.
-layout:
-  toc: true
+toc: true
 ---
 
 ## Standort und Erfahrung
