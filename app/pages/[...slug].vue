@@ -16,7 +16,7 @@ const { data: page } = await usePageContent()
 </script>
 
 <template>
-  <NuxtLayout name="content">
+  <NuxtLayout :name="page?.layout ?? 'content'">
     <ContentRenderer v-if="page" :value="page" />
   </NuxtLayout>
 </template>

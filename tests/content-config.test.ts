@@ -21,10 +21,10 @@ async function readFrontmatter(path: string): Promise<Record<string, unknown>> {
 }
 
 describe('content configuration', () => {
-  it('keeps the legal notice free of a table of contents', async () => {
+  it('renders the legal notice with the shared page layout', async () => {
     const frontmatter = await readFrontmatter('content/pages/impressum.md')
 
-    expect(frontmatter.toc).toBe(false)
+    expect(frontmatter.layout).toBe('page')
   })
 
   it.each(tocPages)('uses the shared root-level toc field in %s', async (path) => {
