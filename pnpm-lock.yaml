@@ -10,8 +10,8 @@ catalogs:
       specifier: ^0.0.6
       version: 0.0.6
     '@happydesigns/ui':
-      specifier: ^0.17.2
-      version: 0.17.2
+      specifier: ^0.17.3
+      version: 0.17.3
   icons:
     '@iconify-json/lucide':
       specifier: ^1.2.82
@@ -109,7 +109,7 @@ importers:
         version: 0.0.6(magic-string@1.1.0)(magicast@0.5.4)(oxc-parser@0.140.0)(rolldown@1.2.1)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.4)(vite@8.2.0(@types/node@26.1.1)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0)))(vite@8.2.0(@types/node@26.1.1)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
       '@happydesigns/ui':
         specifier: catalog:happydesigns
-        version: 0.17.2(e99517eda071619e77f53bb0321ed976)
+        version: 0.17.3(e99517eda071619e77f53bb0321ed976)
       '@iconify-json/ph':
         specifier: catalog:icons
         version: 1.2.2
@@ -992,8 +992,8 @@ packages:
   '@happydesigns/nuxt-variants@0.0.6':
     resolution: {integrity: sha512-X6+XXseyl9Wti5AebOM0fYm0hD+DyRhDDxKnA2SiWxlpvMKzSnaTbSKZZCL1u+Q3qezkM9J+bRoARg5O8X5Aqw==}
 
-  '@happydesigns/ui@0.17.2':
-    resolution: {integrity: sha512-yy9dxVwFR4ByDTiH1hX/mIeW3M5CKiVnMcIz+PijxfCbPvARJCsYl3e7YpVklynVZo8JCWM+C9f7m9664aT48A==}
+  '@happydesigns/ui@0.17.3':
+    resolution: {integrity: sha512-eLMufNCqYb6kLHAnQ39mjtvtuEvfk3rRkaHUM2rx+cV8QwO2kAcdaOntI5aytbP6sXVtLN2fOlliz1a4ybaP8Q==}
     peerDependencies:
       tailwindcss: ^4.3.2
 
@@ -8551,7 +8551,7 @@ snapshots:
       - unplugin
       - vite
 
-  '@happydesigns/ui@0.17.2(e99517eda071619e77f53bb0321ed976)':
+  '@happydesigns/ui@0.17.3(e99517eda071619e77f53bb0321ed976)':
     dependencies:
       '@happydesigns/nuxt-variants': 0.0.6(magic-string@1.1.0)(magicast@0.5.4)(oxc-parser@0.140.0)(rolldown@1.2.1)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.4)(vite@8.2.0(@types/node@26.1.1)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0)))(vite@8.2.0(@types/node@26.1.1)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
       '@iconify-json/heroicons': 1.2.3

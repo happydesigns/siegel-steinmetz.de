@@ -1,7 +1,7 @@
 catalogMode: prefer
 cleanupUnusedCatalogs: true
 minimumReleaseAgeExclude:
-  - "@happydesigns/ui@0.17.0 || 0.17.1 || 0.17.2"
+  - "@happydesigns/ui@0.17.0 || 0.17.1 || 0.17.2 || 0.17.3"
 shellEmulator: true
 
 trustPolicy: no-downgrade
@@ -14,7 +14,7 @@ overrides:
 catalogs:
   happydesigns:
     "@happydesigns/nuxt-variants": ^0.0.6
-    "@happydesigns/ui": ^0.17.2
+    "@happydesigns/ui": ^0.17.3
 
   icons:
     "@iconify-json/lucide": ^1.2.82
