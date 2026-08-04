@@ -47,6 +47,15 @@ export default defineNuxtConfig({
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
+      wrangler: {
+        // @ts-expect-error Wrangler 4.110 supports required secrets; Nitro's config type has not caught up yet.
+        secrets: {
+          required: [
+            'STUDIO_GITHUB_CLIENT_ID',
+            'STUDIO_GITHUB_CLIENT_SECRET',
+          ],
+        },
+      },
     },
   },
 
