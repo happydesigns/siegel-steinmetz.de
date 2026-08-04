@@ -44,6 +44,7 @@ catalogs:
     vitest: 4.1.10
     vue-tsc: 3.3.7
     wrangler: 4.110.0
+    yaml: 2.9.0
 
     zod: 4.4.3
 allowBuilds:

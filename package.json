@@ -52,6 +52,7 @@
     "typescript": "catalog:tools",
     "vitest": "catalog:tools",
     "vue-tsc": "catalog:tools",
-    "wrangler": "catalog:tools"
+    "wrangler": "catalog:tools",
+    "yaml": "catalog:tools"
   }
 }

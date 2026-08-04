@@ -88,6 +88,9 @@ catalogs:
     wrangler:
       specifier: 4.110.0
       version: 4.110.0
+    yaml:
+      specifier: 2.9.0
+      version: 2.9.0
     zod:
       specifier: 4.4.3
       version: 4.4.3
@@ -183,6 +186,9 @@ importers:
       wrangler:
         specifier: catalog:tools
         version: 4.110.0
+      yaml:
+        specifier: catalog:tools
+        version: 2.9.0
 
 packages:
 
