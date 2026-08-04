@@ -11,10 +11,30 @@ const rootPath = computed(() => {
 })
 
 const { data: albums } = await useAlbums()
+const { data: page } = await usePageContent({
+  path: () => rootPath.value,
+  collection: () => 'page',
+})
+
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: `page ${rootPath.value} not found`,
+    fatal: true,
+  })
+}
+
+usePageSeo(page)
+
+const header = computed(() => resolvePageHeader(page.value))
 </script>
 
 <template>
-  <NuxtLayout :key="$route.fullPath" name="content" :path="rootPath">
-    <Gallery :albums="albums" />
-  </NuxtLayout>
+  <UContainer v-if="page">
+    <UPageHeader v-if="header" v-bind="header" />
+
+    <UPageBody>
+      <Gallery :albums="albums" />
+    </UPageBody>
+  </UContainer>
 </template>

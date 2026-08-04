@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest'
 const app = readFileSync(new URL('../app/app.vue', import.meta.url), 'utf8')
 const nuxtConfig = readFileSync(new URL('../nuxt.config.ts', import.meta.url), 'utf8')
 const footer = readFileSync(new URL('../app/components/AppFooter.vue', import.meta.url), 'utf8')
+const galleryPage = readFileSync(new URL('../app/pages/galerie/[...slug].vue', import.meta.url), 'utf8')
 
 describe('application shell', () => {
   it('configures German as the site locale', () => {
@@ -29,5 +30,12 @@ describe('application shell', () => {
 
   it('does not introduce content search', () => {
     expect(app).not.toContain('<HContentSearch')
+  })
+
+  it('renders the media gallery at the full container width', () => {
+    expect(galleryPage).toContain('<UContainer v-if="page">')
+    expect(galleryPage).toContain('<UPageHeader v-if="header"')
+    expect(galleryPage).toContain('<Gallery :albums="albums" />')
+    expect(galleryPage).not.toContain('name="content"')
   })
 })
