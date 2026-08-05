@@ -34,7 +34,7 @@ Grabzubehör wie Grablaternen aus Bronze, Aluminium oder Stahl sowie robuste Pfl
 
 ## Pflege, Erneuerung und Betreuung
 
-::div{.maxw-lg.mx-auto}
+::div{.max-w-lg.mx-auto}
 ![Urnengrabanlage](/assets/tombstones/tombstones-003.jpg)
 ::
 
