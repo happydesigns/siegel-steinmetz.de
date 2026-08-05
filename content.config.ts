@@ -1,5 +1,4 @@
-import { mergeVariantSchemas } from '@happydesigns/nuxt-variants/schemas'
-import { variantSchemas } from '@happydesigns/ui/schemas'
+import { collectionSchemas } from '@happydesigns/ui/schemas'
 import { defineCollection, defineContentConfig, property } from '@nuxt/content'
 import { z } from 'zod'
 
@@ -48,7 +47,7 @@ export default defineContentConfig({
         include: 'pages/**/*.{md,yaml}',
         prefix: '/',
       },
-      schema: mergeVariantSchemas(['content'], variantSchemas),
+      schema: collectionSchemas.content,
     }),
 
     snippet: defineCollection({

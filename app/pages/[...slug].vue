@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/valid-template-root -->
 <script setup lang="ts">
 definePageMeta({
+  variant: 'content',
   validate: (route) => {
     const path = route.fullPath
     // Static Exclusions

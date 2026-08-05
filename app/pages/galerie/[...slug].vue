@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  variant: 'content',
+})
+
 const route = useRoute()
 const rootPath = computed(() => {
   const slugParam = route.params.slug

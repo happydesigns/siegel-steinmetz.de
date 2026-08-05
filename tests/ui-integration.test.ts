@@ -16,12 +16,17 @@ describe('shared UI integration', () => {
     expect(galleryPage).toContain('<Gallery :albums="albums" />')
   })
 
+  it('declares the content runtime variant for shared-layout routes', () => {
+    expect(contentPage).toContain('variant: \'content\'')
+    expect(galleryPage).toContain('variant: \'content\'')
+  })
+
   it('renders all content-backed pages through one collection and layout', () => {
     expect(contentPage).toContain('usePageContent({ collection: \'page\' })')
     expect(contentPage).toContain('<NuxtLayout name="content" collection="page">')
     expect(contentPage).not.toContain('layout === \'page\'')
-    expect(contentConfig).toContain('mergeVariantSchemas([\'content\'], variantSchemas)')
-    expect(contentConfig).not.toContain('mergeVariantSchemas([\'page\'], variantSchemas)')
+    expect(contentConfig).toContain('schema: collectionSchemas.content')
+    expect(contentConfig).not.toContain('mergeVariantSchemas')
     expect(contentConfig).not.toContain('include: \'page/**/*.{md,yaml}\'')
   })
 })
