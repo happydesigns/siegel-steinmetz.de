@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "catalog:maps",
-    "@happydesigns/nuxt-variants": "catalog:happydesigns",
     "@happydesigns/ui": "catalog:happydesigns",
     "@iconify-json/ph": "catalog:icons",
     "@nuxt/content": "catalog:nuxt",
