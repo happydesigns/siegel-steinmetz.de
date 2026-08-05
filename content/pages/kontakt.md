@@ -1,7 +1,7 @@
 ---
 title: Kontakt
 description: Für Anfragen, individuelle Beratung oder weitere Informationen stehen wir Ihnen gerne zur Verfügung.
-toc: true
+toc: false
 ---
 
 ## Anschrift

@@ -1,7 +1,7 @@
 ---
 title: Impressum
 description: Kontaktdaten und rechtliche Informationen des Webseitenbetreibers.
-layout: page
+toc: false
 ---
 
 ::u-page

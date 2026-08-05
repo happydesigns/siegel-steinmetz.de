@@ -51,15 +51,6 @@ export default defineContentConfig({
       schema: mergeVariantSchemas(['content'], variantSchemas),
     }),
 
-    page: defineCollection({
-      type: 'page',
-      source: {
-        include: 'page/**/*.{md,yaml}',
-        prefix: '/',
-      },
-      schema: mergeVariantSchemas(['page'], variantSchemas),
-    }),
-
     snippet: defineCollection({
       type: 'page',
       source: 'snippets/**/*.{md,yaml}',
