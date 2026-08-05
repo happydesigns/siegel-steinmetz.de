@@ -14,7 +14,7 @@ const { data: albums } = await useAlbums()
 </script>
 
 <template>
-  <NuxtLayout name="content" :path="rootPath" collection="content">
+  <NuxtLayout name="content" :path="rootPath" collection="page">
     <Gallery :albums="albums" />
   </NuxtLayout>
 </template>
