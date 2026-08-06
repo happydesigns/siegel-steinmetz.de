@@ -1,5 +1,3 @@
-import process from 'node:process'
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
@@ -10,6 +8,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/seo',
     '@nuxt/image',
+    '@nuxt/scripts',
     '@nuxt/eslint',
   ],
 
@@ -23,11 +22,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    public: { GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY },
-  },
-
-  build: {
-    transpile: ['vue-google-maps-community-fork', '@googlemaps/markercluster'],
+    public: {
+      googleMapsMapId: '',
+    },
   },
 
   experimental: {
@@ -51,10 +48,19 @@ export default defineNuxtConfig({
         // @ts-expect-error Wrangler 4.110 supports required secrets; Nitro's config type has not caught up yet.
         secrets: {
           required: [
+            'NUXT_SCRIPTS_PROXY_SECRET',
             'STUDIO_GITHUB_CLIENT_ID',
             'STUDIO_GITHUB_CLIENT_SECRET',
           ],
         },
+      },
+    },
+  },
+
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        types: ['google.maps'],
       },
     },
   },
@@ -70,7 +76,10 @@ export default defineNuxtConfig({
     clientBundle: {
       icons: [
         'lucide:chevron-down',
+        'lucide:external-link',
         'lucide:hash',
+        'lucide:loader-circle',
+        'lucide:locate-fixed',
         'lucide:log-in',
         'ph:arrow-right',
         'ph:bank-duotone',
@@ -79,6 +88,7 @@ export default defineNuxtConfig({
         'ph:hammer-duotone',
         'ph:image-duotone',
         'ph:images-duotone',
+        'ph:map-pin-duotone',
         'ph:phone-duotone',
         'ph:phone-fill',
         'ph:printer-fill',
@@ -98,6 +108,12 @@ export default defineNuxtConfig({
 
   ogImage: {
     enabled: false,
+  },
+
+  scripts: {
+    registry: {
+      googleMaps: {},
+    },
   },
 
   sitemap: {

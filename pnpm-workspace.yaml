@@ -18,13 +18,11 @@ catalogs:
   icons:
     "@iconify-json/lucide": ^1.2.82
     "@iconify-json/ph": ^1.2.2
-  maps:
-    "@fawmi/vue-google-maps": ^0.9.79
-    vue-google-maps-community-fork: ^0.3.1
   nuxt:
     "@nuxt/content": 3.15.0
     "@nuxt/eslint": 1.16.0
     "@nuxt/image": ^2.0.0
+    "@nuxt/scripts": ^1.3.2
     "@nuxt/ui": 4.10.0
     "@nuxthub/core": ^0.10.4
     "@nuxtjs/seo": 5.3.6
@@ -33,6 +31,7 @@ catalogs:
     tailwindcss: 4.3.2
   tools:
     "@antfu/eslint-config": 9.1.0
+    "@types/google.maps": ^3.65.3
     "@types/node": 26.1.1
     better-sqlite3: 12.11.1
     changelogen: ^0.6.2

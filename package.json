@@ -24,18 +24,17 @@
     "release:rc": "changelogen --release --versionSuffix rc.0"
   },
   "dependencies": {
-    "@fawmi/vue-google-maps": "catalog:maps",
     "@happydesigns/ui": "catalog:happydesigns",
     "@iconify-json/ph": "catalog:icons",
     "@nuxt/content": "catalog:nuxt",
     "@nuxt/image": "catalog:nuxt",
+    "@nuxt/scripts": "catalog:nuxt",
     "@nuxt/ui": "catalog:nuxt",
     "@nuxtjs/seo": "catalog:nuxt",
     "better-sqlite3": "catalog:tools",
     "nuxt": "catalog:nuxt",
     "nuxt-studio": "catalog:nuxt",
     "tailwindcss": "catalog:nuxt",
-    "vue-google-maps-community-fork": "catalog:maps",
     "zod": "catalog:tools"
   },
   "devDependencies": {
@@ -43,6 +42,7 @@
     "@iconify-json/lucide": "catalog:icons",
     "@nuxt/eslint": "catalog:nuxt",
     "@nuxthub/core": "catalog:nuxt",
+    "@types/google.maps": "catalog:tools",
     "@types/node": "catalog:tools",
     "changelogen": "catalog:tools",
     "cross-env": "catalog:tools",
