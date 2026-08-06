@@ -3,6 +3,7 @@ import { createRequire } from 'node:module'
 import { dirname, extname, join, relative, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { describe, expect, it } from 'vitest'
+import { parse as parseYaml } from 'yaml'
 
 interface StudioDocument extends Record<string, unknown> {
   id: string
@@ -46,10 +47,48 @@ async function loadStudioGenerator(): Promise<StudioDocumentGenerator> {
   return await import(/* @vite-ignore */ generatorUrl) as StudioDocumentGenerator
 }
 
+function parseMetadata(path: string, source: string): Record<string, unknown> {
+  if (extname(path) === '.json') {
+    return JSON.parse(source) as Record<string, unknown>
+  }
+
+  if (extname(path) === '.md') {
+    const frontmatter = source.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)
+
+    if (!frontmatter?.[1]) {
+      throw new Error(`${path} should contain YAML frontmatter`)
+    }
+
+    return parseYaml(frontmatter[1]) as Record<string, unknown>
+  }
+
+  return parseYaml(source) as Record<string, unknown>
+}
+
+function expectedMetadataOrder(metadata: Record<string, unknown>): string[] {
+  return Object.keys(metadata).sort((left, right) => {
+    if (left === 'title') {
+      return -1
+    }
+    if (right === 'title') {
+      return 1
+    }
+    return left.localeCompare(right, 'en')
+  })
+}
+
 const contentFiles = await findContentFiles(contentRoot)
 const studioGenerator = await loadStudioGenerator()
 
 describe('studio content formatting', () => {
+  it.each(contentFiles)('keeps title first and remaining metadata alphabetical in %s', async (path) => {
+    const metadata = parseMetadata(path, await readFile(path, 'utf8'))
+    const actualOrder = Object.keys(metadata)
+
+    expect(actualOrder[0]).toBe('title')
+    expect(actualOrder).toEqual(expectedMetadataOrder(metadata))
+  })
+
   it.each(contentFiles)('roundtrips %s without formatting changes', async (path) => {
     const source = (await readFile(path, 'utf8')).replaceAll('\r\n', '\n')
     const id = relative(contentRoot, path).replaceAll('\\', '/')
