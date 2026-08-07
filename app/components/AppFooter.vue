@@ -22,7 +22,7 @@ const { footerLinks } = useFooterLinks()
         <HFooterCopyright />
       </template>
       <template #right>
-        <UColorModeSelect :ui="{ base: 'w-32 dark:bg-raisin-cool', content: 'dark:bg-raisin-cool' }" />
+        <UColorModeButton />
       </template>
     </UFooter>
   </div>
