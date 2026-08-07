@@ -65,6 +65,16 @@ export default defineNuxtConfig({
     },
   },
 
+  hooks: {
+    'build:manifest': (manifest) => {
+      for (const chunk of Object.values(manifest)) {
+        if (chunk.resourceType === 'script') {
+          chunk.preload = false
+        }
+      }
+    },
+  },
+
   eslint: {
     config: {
       stylistic: true,

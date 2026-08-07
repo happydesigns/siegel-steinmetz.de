@@ -7,6 +7,7 @@ const logoAsset = readFileSync(new URL('../public/logo.svg', import.meta.url), '
 const contentPage = readFileSync(new URL('../app/pages/[...slug].vue', import.meta.url), 'utf8')
 const contentConfig = readFileSync(new URL('../content.config.ts', import.meta.url), 'utf8')
 const galleryPage = readFileSync(new URL('../app/pages/galerie/[...slug].vue', import.meta.url), 'utf8')
+const nuxtConfig = readFileSync(new URL('../nuxt.config.ts', import.meta.url), 'utf8')
 
 describe('shared UI integration', () => {
   it('uses the public prefixed snippet component', () => {
@@ -20,6 +21,11 @@ describe('shared UI integration', () => {
     expect(logo).toContain('alt="Bernd Siegel Steingestaltung"')
     expect(logo).not.toContain('<svg')
     expect(logoAsset).toContain('<svg')
+  })
+
+  it('does not preload the complete shared component registry', () => {
+    expect(nuxtConfig).toContain('\'build:manifest\': (manifest)')
+    expect(nuxtConfig).toContain('chunk.preload = false')
   })
 
   it('renders the media gallery through the shared content layout without a toc', () => {
