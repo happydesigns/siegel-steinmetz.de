@@ -1,14 +1,8 @@
-<script setup lang="ts">
-const { headerLinks } = useHeaderLinks()
-</script>
-
 <template>
-  <UHeader>
+  <HSiteHeader title="Bernd Siegel Steingestaltung">
     <template #title>
       <Logo class="w-auto h-12 dark:bg-white rounded-sm p-1" />
     </template>
-
-    <UNavigationMenu :items="headerLinks" />
 
     <template #right>
       <UButton
@@ -20,11 +14,7 @@ const { headerLinks } = useHeaderLinks()
       />
     </template>
 
-    <template #body>
-      <UNavigationMenu
-        :items="headerLinks"
-        orientation="vertical"
-      />
+    <template #body-after>
       <USeparator class="my-6" />
       <UButton
         to="/kontakt"
@@ -33,5 +23,5 @@ const { headerLinks } = useHeaderLinks()
         block
       />
     </template>
-  </UHeader>
+  </HSiteHeader>
 </template>

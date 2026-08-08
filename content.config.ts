@@ -1,9 +1,8 @@
-import { collectionSchemas } from '@happydesigns/ui/schemas'
-import { defineCollection, defineContentConfig, property } from '@nuxt/content'
+import { collectionSchemas, contentImageSchema, createPageSectionSchema } from '@happydesigns/ui/schemas'
+import { defineCollection, defineContentConfig } from '@nuxt/content'
 import { z } from 'zod'
 
-const imageSchema = z.object({
-  src: property(z.string()).editor({ input: 'media' }),
+const imageSchema = contentImageSchema.extend({
   alt: z.string().optional(),
   class: z.string().optional(),
 })
@@ -12,9 +11,9 @@ const albumImageSchema = imageSchema.extend({
   caption: z.string().optional(),
 })
 
-const landingSectionSchema = property(z.object({
+const landingSectionSchema = createPageSectionSchema({
   image: imageSchema.optional(),
-})).inherit('@nuxt/ui/components/PageSection.vue')
+})
 
 const albumSchema = z.object({
   title: z.string(),
