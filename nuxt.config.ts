@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/eslint',
+    '@nuxt/hints',
   ],
 
   devtools: { enabled: true },

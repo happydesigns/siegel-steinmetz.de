@@ -32,12 +32,17 @@ catalogs:
     tailwindcss: 4.3.2
   tools:
     "@antfu/eslint-config": 9.1.0
+    "@nuxt/hints": ^1.1.4
+    "@nuxt/test-utils": ^3.20.1
     "@types/google.maps": ^3.65.4
     "@types/node": 26.1.1
+    "@vue/test-utils": ^2.4.11
     better-sqlite3: 12.11.1
     changelogen: ^0.6.2
     cross-env: 10.1.0
     eslint: 10.6.0
+    h3: 1.15.11
+    happy-dom: ^20.11.1
     mdclint: ^0.1.2
     typescript: 6.0.3
     vitest: 4.1.10
