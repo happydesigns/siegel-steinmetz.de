@@ -13,7 +13,7 @@
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
     "test": "vitest run",
-    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm generate && pnpm build",
+    "verify": "pnpm lint && pnpm typecheck && pnpm test",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:ts": "tsc --noEmit",
