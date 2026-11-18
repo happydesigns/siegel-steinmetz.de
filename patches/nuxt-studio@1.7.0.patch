@@ -1,0 +1,68 @@
+diff --git a/dist/module/runtime/host.dev.js b/dist/module/runtime/host.dev.js
+index 90b762120def07fb64351041d9097ecfe405530c..db9c11f002f28248e544f5c7698ff6eab393c018 100644
+--- a/dist/module/runtime/host.dev.js
++++ b/dist/module/runtime/host.dev.js
+@@ -16,6 +16,32 @@ export function useStudioHost(user, repository) {
+   const devStorage = createStorage({
+     driver: httpDriver({ base: "/__nuxt_studio/dev/content" })
+   });
++  // The client SQL snapshot can predate local saves. Reopen from the file itself.
++  const getIndexedDocument = host.document.db.get;
++  host.document.db.get = async (fsPath) => {
++    const collectionInfo = getCollectionByFilePath(fsPath, collections);
++    if (!collectionInfo) {
++      throw new Error(`Collection not found for fsPath: ${fsPath}`);
++    }
++    const content = await $fetch("/__nuxt_studio/dev/content/" + fsPath, {
++      responseType: "text",
++      headers: { accept: "application/octet-stream" }
++    }).catch((error) => {
++      if (error.statusCode === 404) return void 0;
++      throw error;
++    });
++    if (typeof content !== "string") {
++      return void 0;
++    }
++    const id = generateIdFromFsPath(fsPath, collectionInfo);
++    const document = await host.document.generate.documentFromContent(id, content);
++    if (!document) {
++      throw new Error(`Could not parse content at fsPath: ${fsPath}`);
++    }
++    const indexedDocument = await getIndexedDocument(fsPath);
++    const normalizedDocument = applyCollectionSchema(id, collectionInfo, document);
++    return sanitizeDocumentTree({ ...normalizedDocument, path: indexedDocument?.path ?? normalizedDocument.path, fsPath }, collectionInfo);
++  };
+   host.app.requestRerender = () => {
+   };
+   host.document.db.upsert = debounce(async (fsPath, upsertedDocument) => {
+diff --git a/dist/app/main-CcK4joxm.js b/dist/app/main-CcK4joxm.js
+--- a/dist/app/main-CcK4joxm.js
++++ b/dist/app/main-CcK4joxm.js
+@@ -0,0 +1,2 @@
++// nuxt-studio 1.7.0: expose the existing useStudio singleton to the entry point.
++export { uU as useStudioSession };
+diff --git a/dist/app/main.js b/dist/app/main.js
+--- a/dist/app/main.js
++++ b/dist/app/main.js
+@@ -0,0 +1,12 @@
++import { useStudioSession } from "./main-CcK4joxm.js";
++if (typeof window !== "undefined") {
++  window.addEventListener("siegel:album-editor", (event) => {
++    if (!document.querySelector("nuxt-studio") || typeof window.useStudioHost !== "function") return;
++    const { isReady, documentTree, mediaTree, host } = useStudioSession();
++    if (isReady.value) event.detail.connect({
++      documents: documentTree.draft, media: mediaTree.draft,
++      getMediaTree: () => mediaTree.root.value,
++      hostDocument: host.document.db, hostMedia: host.media, dev: host.meta.dev,
++    });
++  });
++}
+diff --git a/dist/module/module.mjs b/dist/module/module.mjs
+--- a/dist/module/module.mjs
++++ b/dist/module/module.mjs
+@@ -416,1 +416,1 @@
+-            return { id: `/_studio-app/${version}/main.js`, external: true };
++            return { id: `/_studio-app/${version}-album2/main.js`, external: true };
+@@ -432,1 +432,1 @@
+-          baseURL: `/_studio-app/${version}`,
++          baseURL: `/_studio-app/${version}-album2`,

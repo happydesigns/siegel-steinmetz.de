@@ -13,6 +13,9 @@ overrides:
   "@ai-sdk/provider-utils@4": 4.0.37
   semver@6: 6.3.0
 
+patchedDependencies:
+  nuxt-studio@1.7.0: patches/nuxt-studio@1.7.0.patch
+
 catalogs:
   icons:
     "@iconify-json/lucide": ^1.2.155
