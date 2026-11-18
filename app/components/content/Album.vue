@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <NuxtLink
     :to="props.path" prefetch-on="interaction" :aria-current="selected ? 'true' : undefined"
-    class="group block rounded-sm focus-visible:outline-2 focus-visible:outline-primary"
+    class="group block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
   >
     <UPageCard
       :title="props.title"
@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
       :ui="{
         container: 'p-1 sm:p-1 flex-row items-center gap-3 lg:grid lg:p-0 lg:gap-0',
         wrapper: 'order-last lg:py-4',
-        title: selected ? 'text-primary' : 'group-hover:text-primary',
+        title: selected ? 'underline decoration-2 underline-offset-4' : 'group-hover:underline underline-offset-4',
         description: 'mt-0 lg:mt-1',
       }"
       class="h-full"
@@ -42,7 +42,6 @@ const props = withDefaults(defineProps<Props>(), {
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
           class="h-12 lg:h-full w-full rounded-sm m-0 object-cover border border-default"
-          :class="{ 'outline-2 outline-primary': selected }"
         />
         <div v-else class="h-12 lg:h-full w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
           <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
