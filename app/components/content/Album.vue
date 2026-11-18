@@ -24,7 +24,7 @@ const coverRatio = computed(() => {
 <template>
   <NuxtLink
     :to="props.path" prefetch-on="interaction" :aria-current="selected ? 'true' : undefined"
-    class="block rounded-sm hover:bg-elevated focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
+    class="group block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
   >
     <UPageCard
       :title="props.title"
@@ -51,10 +51,10 @@ const coverRatio = computed(() => {
           v-if="props.coverImage"
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
-          class="block w-full max-lg:h-12 rounded-sm m-0 object-cover border border-default"
+          class="block w-full max-lg:h-12 rounded-sm m-0 object-cover border border-default group-hover:border-neutral-400 dark:group-hover:border-neutral-500"
           :class="{ 'lg:aspect-(--album-cover-ratio)': coverRatio }"
         />
-        <div v-else class="max-lg:h-12 lg:aspect-[var(--album-cover-ratio,1)] w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
+        <div v-else class="max-lg:h-12 lg:aspect-[var(--album-cover-ratio,1)] w-full rounded-sm m-0 bg-muted border border-default group-hover:border-neutral-400 dark:group-hover:border-neutral-500 flex items-center justify-center">
           <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
         </div>
       </AlbumEffect>
