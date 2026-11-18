@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { GalleryBento, GalleryFlexbox, GalleryMasonry } from '#components'
+import GalleryBento from './gallery/GalleryBento.vue'
+import GalleryFlexbox from './gallery/GalleryFlexbox.vue'
+import GalleryMasonry from './gallery/GalleryMasonry.vue'
 
 const props = withDefaults(defineProps<{
   albums?: {
@@ -14,7 +16,7 @@ const props = withDefaults(defineProps<{
 })
 
 const route = useRoute()
-const { data: currentAlbum, error } = await useAlbum(route.path)
+const { data: currentAlbum, error } = await useAlbum(() => route.path)
 const images = computed(() => currentAlbum.value?.images ?? [])
 
 const GalleryComponent = computed(() => {
@@ -60,7 +62,7 @@ const GalleryComponent = computed(() => {
       description="Die Bilder konnten nicht geladen werden. Bitte versuchen Sie es später erneut."
     />
     <UPageCard
-      v-else-if="route.params.slug === ''"
+      v-else-if="!route.params.slug?.length"
       icon="ph-image-duotone"
       title="Album auswählen"
       variant="subtle"
