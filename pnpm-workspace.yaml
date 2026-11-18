@@ -44,6 +44,7 @@ catalogs:
     eslint: 10.15.0
     h3: 1.15.11
     happy-dom: ^20.14.6
+    image-meta: 0.3.1
     mdclint: ^0.1.2
     typescript: 6.0.3
     vitest: 4.1.10

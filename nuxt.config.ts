@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     '@nuxt/hints',
   ],
 
+  $development: {
+    image: { provider: 'ipx' },
+  },
+
   devtools: { enabled: true },
 
   css: ['~/assets/css/main.css'],
@@ -128,6 +132,8 @@ export default defineNuxtConfig({
   },
 
   image: {
+    provider: 'ipxStatic',
+    none: {},
     quality: 80,
     format: ['avif', 'webp', 'jpg'],
   },

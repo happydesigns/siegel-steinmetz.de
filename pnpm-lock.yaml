@@ -80,6 +80,9 @@ catalogs:
     happy-dom:
       specifier: ^20.14.6
       version: 20.14.6
+    image-meta:
+      specifier: 0.3.1
+      version: 0.3.1
     mdclint:
       specifier: ^0.1.2
       version: 0.1.2
@@ -193,6 +196,9 @@ importers:
       happy-dom:
         specifier: catalog:tools
         version: 20.14.6
+      image-meta:
+        specifier: catalog:tools
+        version: 0.3.1
       mdclint:
         specifier: catalog:tools
         version: 0.1.2(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))

@@ -52,6 +52,7 @@
     "eslint": "catalog:tools",
     "h3": "catalog:tools",
     "happy-dom": "catalog:tools",
+    "image-meta": "catalog:tools",
     "mdclint": "catalog:tools",
     "typescript": "catalog:tools",
     "vitest": "catalog:tools",

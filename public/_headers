@@ -1,0 +1,3 @@
+# IPX keeps the source filename even when the generated asset is WebP.
+/_ipx/f_webp*
+  Content-Type: image/webp
