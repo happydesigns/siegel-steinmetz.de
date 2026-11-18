@@ -28,13 +28,17 @@ const props = withDefaults(defineProps<Props>(), {
       :ui="{
         container: 'p-1 sm:p-1 flex-row items-center gap-3 lg:grid lg:p-0 lg:gap-0',
         wrapper: 'order-last lg:py-4',
-        title: selected ? 'underline decoration-2 underline-offset-4' : 'group-hover:underline underline-offset-4',
+        title: 'group-hover:underline underline-offset-4',
         description: 'mt-0 lg:mt-1',
       }"
       class="h-full"
     >
       <AlbumEffect
-        :backgrounds="3" :ui="{ layer: 'hidden lg:block rounded-t-sm' }"
+        :backgrounds="3"
+        :ui="{
+          layer: 'hidden lg:block rounded-t-sm',
+          content: selected ? 'rounded-sm outline-2 outline-offset-1 outline-neutral-600 dark:outline-neutral-400' : '',
+        }"
         class="max-lg:size-12 max-lg:min-w-0 max-lg:shrink-0 lg:mx-1"
       >
         <SitePhoto
