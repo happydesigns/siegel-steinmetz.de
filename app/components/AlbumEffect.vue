@@ -49,7 +49,7 @@ function getLayerClass(i: number, n: number) {
 </script>
 
 <template>
-  <div class="aspect-square min-w-[12rem] lg:min-w-0 flex flex-col items-stretch" :class="props.ui?.wrapper">
+  <div class="min-w-0 flex flex-col items-stretch" :class="props.ui?.wrapper">
     <template v-for="i in backgrounds" :key="i">
       <div
         class="self-stretch h-1 bg-neutral-400 border-[0.5px] border-default pointer-events-none"
@@ -57,7 +57,7 @@ function getLayerClass(i: number, n: number) {
         :style="getLayerStyle(i, backgrounds)"
       />
     </template>
-    <div class="flex-1 w-full z-10" :class="props.ui?.content">
+    <div class="w-full z-10" :class="props.ui?.content">
       <slot />
     </div>
   </div>

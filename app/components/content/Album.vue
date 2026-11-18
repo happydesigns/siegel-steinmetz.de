@@ -44,17 +44,17 @@ const coverRatio = computed(() => {
           layer: 'hidden lg:block rounded-t-sm',
           content: selected ? 'rounded-sm outline-2 outline-offset-1 outline-neutral-600 dark:outline-neutral-400' : '',
         }"
-        class="max-lg:size-12 max-lg:min-w-0 max-lg:shrink-0 lg:mx-1 lg:aspect-auto"
+        class="max-lg:w-12 max-lg:shrink-0 lg:mx-1"
         :style="{ '--album-cover-ratio': coverRatio }"
       >
         <SitePhoto
           v-if="props.coverImage"
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
-          class="h-12 lg:h-auto w-full rounded-sm m-0 object-cover border border-default"
+          class="block w-full max-lg:h-12 rounded-sm m-0 object-cover border border-default"
           :class="{ 'lg:aspect-(--album-cover-ratio)': coverRatio }"
         />
-        <div v-else class="h-12 lg:h-auto lg:aspect-[var(--album-cover-ratio,1)] w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
+        <div v-else class="max-lg:h-12 lg:aspect-[var(--album-cover-ratio,1)] w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
           <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
         </div>
       </AlbumEffect>
