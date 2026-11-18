@@ -9,7 +9,7 @@ toc: true
 Die Beschaffenheit des Materials, die Größe, Farbe und Form des Steins, seine Verarbeitung, die enthaltenen Symbole und Inschriften – all das legt Zeugnis ab über das Leben des lieben Verstorbenen und ist ein Ankerplatz, an dem wir die unauflösliche Verbindung zu ihm spüren dürfen. Das Grabmal drückt die Wertschätzung für den Verstorbenen aus und ist eine tröstende Erinnerung.
 
 ::div{.max-w-lg.mx-auto}
-![Doppelstein Jura mit Bronze](/assets/tombstones/tombstones-001.jpg)
+![Doppelstein Jura mit Bronze](/assets/tombstones/tombstones-001.jpg){loading="eager"}
 ::
 
 Seit Jahrtausenden werden für Grabmale grob behauene Steine verwendet. Das robuste, witterungsbeständige und langlebige Naturmaterial symbolisiert die unvergängliche Liebe und Verbundenheit zu einem geliebten Menschen und schmückt die Gräber der Angehörigen.

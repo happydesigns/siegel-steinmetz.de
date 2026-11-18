@@ -10,7 +10,7 @@ Sie finden uns in 74861 Neudenau direkt am Bahnhof.
 
 Mit über 25 Jahren Erfahrung bieten wir Ihnen umfangreiches Fachwissen und viel Freude an der kreativen Gestaltung und Bearbeitung des Naturmaterials Stein.
 
-![Betriebsgelände](/assets/about-us/about-us-000.jpg)
+![Betriebsgelände](/assets/about-us/about-us-000.jpg){loading="eager"}
 
 ## Firmengründer und Team
 

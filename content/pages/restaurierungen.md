@@ -9,7 +9,7 @@ toc: true
 Ein weiterer Schwerpunkt unserer Firma ist die komplette und fachgerechte Restaurierung von historischen Gebäuden, Denkmälern und Skulpturen.
 
 ::div{.max-w-lg.mx-auto}
-![Restaurierung Fensterumrahmung Solitudestr. Ludwigsburg](/assets/restorations/restorations-001.jpg)
+![Restaurierung Fensterumrahmung Solitudestr. Ludwigsburg](/assets/restorations/restorations-001.jpg){loading="eager"}
 ::
 
 ## Vorgehensweise in der Denkmalpflege
@@ -34,12 +34,12 @@ Sie können von uns perfekte, handwerkliche und traditionelle Arbeit erwarten. W
 
 Selbstverständlich führen wir diese Arbeiten auch in **regelmäßigen Abständen** für Sie aus, um jederzeit ein perfektes Ergebnis zu gewährleisten.
 
-::div{.flex.gap-4.-my-5}
-  :::div{.max-w-lg.mx-auto}
+::div{.grid.grid-cols-2.gap-4.-my-5}
+  :::div
   ![Restaurierung Christusskulptur Offenau](/assets/restorations/restorations-003.jpg)
   :::
 
-  :::div{.max-w-lg.mx-auto}
+  :::div
   ![Beispiel einer gereinigten Oberfläche](/assets/restorations/restorations-004.jpg)
   :::
 ::
