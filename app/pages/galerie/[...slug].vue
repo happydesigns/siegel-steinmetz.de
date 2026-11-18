@@ -14,7 +14,7 @@ const rootPath = computed(() => {
   return route.path.replace(new RegExp(`/${slugPath}$`), '')
 })
 
-const { data: albums } = await useAlbums()
+const { data: albums, error: albumsError } = await useAlbums()
 const { data: page } = await usePageContent({ path: rootPath, collection: 'page' })
 const album = computed(() => albums.value?.find(item => item.path === route.path))
 const editor = useTemplateRef('editor')
@@ -47,7 +47,15 @@ const galleryPage = computed(() => {
 
 <template>
   <NuxtLayout name="content" :page="galleryPage" collection="page">
-    <Gallery :albums="albums" />
+    <template v-if="!route.params.slug?.length">
+      <GalleryAlbumOverview v-if="albums?.length" :albums="albums" />
+      <UPageCard
+        v-else
+        :title="albumsError ? 'Die Alben konnten nicht geladen werden.' : 'Hier sind noch keine Alben veröffentlicht.'"
+        variant="subtle"
+      />
+    </template>
+    <Gallery v-else :albums="albums" />
     <GalleryStudioAlbumEditor v-if="canEdit && album" :key="album.path" ref="editor" :path="album.path" :title="album.title" />
   </NuxtLayout>
 </template>

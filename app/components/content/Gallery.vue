@@ -62,13 +62,6 @@ const GalleryComponent = computed(() => {
       description="Die Bilder konnten nicht geladen werden. Bitte versuchen Sie es später erneut."
     />
     <UPageCard
-      v-else-if="!route.params.slug?.length"
-      icon="ph-image-duotone"
-      title="Album auswählen"
-      variant="subtle"
-      description="Bitte wählen Sie ein Album aus, um die Bilder anzuzeigen."
-    />
-    <UPageCard
       v-else-if="images?.length === 0"
       icon="ph-images-duotone"
       title="Keine Bilder gefunden"

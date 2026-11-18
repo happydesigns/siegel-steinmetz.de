@@ -1,13 +1,26 @@
+export interface AlbumSummary {
+  title: string
+  path: string
+  coverImage: { src: string, alt?: string } | null
+  imageCount: number
+  previewSources: string[]
+}
+
 export function useAlbums() {
   return useAsyncData('albums-list', () => queryCollection('albums')
     .order('order', 'ASC')
     .select('title', 'path', 'coverImage', 'images')
     .all(), {
-    transform: albums => albums.map(album => ({
-      title: album.title,
-      path: album.path,
-      coverImage: album.coverImage ?? album.images?.[0] ?? null,
-      imageCount: album.images?.length ?? 0,
-    })),
+    transform: albums => albums.map((album): AlbumSummary => {
+      const images = album.images ?? []
+      const coverImage = album.coverImage ?? images[0] ?? null
+      return {
+        title: album.title,
+        path: album.path,
+        coverImage,
+        imageCount: images.length,
+        previewSources: coverImage ? [...new Set([coverImage.src, ...images.map(image => image.src)])].slice(0, 3) : [],
+      }
+    }),
   })
 }
