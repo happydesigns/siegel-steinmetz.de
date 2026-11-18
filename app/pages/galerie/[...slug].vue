@@ -40,7 +40,7 @@ const galleryPage = computed(() => {
 
 <template>
   <NuxtLayout name="content" :page="galleryPage" collection="page">
-    <Gallery v-if="albums?.length" :albums="albums" :album-path="album?.path ?? route.path" />
+    <Gallery v-if="albums?.length" :albums="albums" :album-path="album?.path ?? route.path" :cover-aspect-ratio="3 / 4" />
     <UPageCard
       v-else
       :title="albumsError ? 'Die Alben konnten nicht geladen werden.' : 'Hier sind noch keine Alben veröffentlicht.'"
