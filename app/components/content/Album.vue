@@ -31,7 +31,7 @@ const coverRatio = computed(() => {
       variant="naked"
       reverse
       :ui="{
-        container: 'p-1 sm:p-1 flex-row items-center gap-3 lg:grid lg:p-0 lg:gap-0',
+        container: 'p-1 sm:p-1 flex-row items-center gap-3 lg:grid lg:grid-cols-[minmax(0,1fr)] lg:p-0 lg:gap-0',
         wrapper: 'order-last lg:pt-2',
         description: 'mt-0 lg:mt-1',
       }"
@@ -49,7 +49,7 @@ const coverRatio = computed(() => {
         :backgrounds="3"
         :ui="{
           layer: 'hidden lg:block rounded-t-sm',
-          content: `rounded-sm outline-2 outline-offset-1 ${selected
+          content: `${coverRatio || !props.coverImage ? 'album-cover-frame' : ''} rounded-sm outline-2 outline-offset-1 ${selected
             ? 'outline-neutral-600 dark:outline-neutral-400'
             : 'outline-transparent group-hover:outline-neutral-600/40 dark:group-hover:outline-neutral-400/40 motion-safe:transition-[outline-color] motion-safe:duration-[120ms] forced-colors:outline-none forced-colors:group-hover:outline-solid'}`,
         }"
@@ -61,12 +61,31 @@ const coverRatio = computed(() => {
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
           class="block w-full max-lg:h-12 rounded-sm m-0 object-cover border border-default"
-          :class="{ 'lg:aspect-(--album-cover-ratio)': coverRatio }"
         />
-        <div v-else class="max-lg:h-12 lg:aspect-[var(--album-cover-ratio,1)] w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
+        <div v-else class="w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
           <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
         </div>
       </AlbumEffect>
     </UPageCard>
   </NuxtLink>
 </template>
+
+<style scoped>
+:deep(.album-cover-frame) {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+@media (width >= 64rem) {
+  :deep(.album-cover-frame) {
+    aspect-ratio: var(--album-cover-ratio, 1);
+  }
+}
+
+:deep(.album-cover-frame > *) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
