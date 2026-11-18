@@ -6,13 +6,13 @@ defineProps<{
 
 <template>
   <UPageColumns class="gap-4">
-    <img
-      v-for="img in images"
+    <SitePhoto
+      v-for="(img, index) in images"
       :key="img.src"
       :src="img.src"
       :alt="img.alt"
       class="w-full h-auto mb-4 rounded-sm border border-default"
-      loading="lazy"
-    >
+      :loading="index === 0 ? 'eager' : 'lazy'"
+    />
   </UPageColumns>
 </template>

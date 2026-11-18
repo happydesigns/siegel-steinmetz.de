@@ -28,13 +28,13 @@ const variant = 'naked'
       class="h-full"
     >
       <AlbumEffect :backgrounds="3" :rounded="true" :ui="{ layer: 'rounded-t-sm' }" class="lg:min-w-0 mx-1">
-        <img
+        <SitePhoto
           v-if="props.coverImage"
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
           class="h-60 lg:h-full w-full rounded-sm m-0 object-cover border border-default"
           :class="{ 'outline-2 outline-border': route.path === props.path }"
-        >
+        />
         <div v-else class="h-60 lg:h-full w-full rounded-sm m-0 bg-neutral-100 dark:bg-neutral-800 border border-default flex items-center justify-center">
           <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
         </div>
