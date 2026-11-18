@@ -49,7 +49,9 @@ const coverRatio = computed(() => {
         :backgrounds="3"
         :ui="{
           layer: 'hidden lg:block rounded-t-sm',
-          content: selected ? 'rounded-sm outline-2 outline-offset-1 outline-neutral-600 dark:outline-neutral-400' : '',
+          content: `rounded-sm outline-offset-1 ${selected
+            ? 'outline-2 outline-neutral-600 dark:outline-neutral-400'
+            : 'group-hover:outline-2 outline-neutral-600/40 dark:outline-neutral-400/40'}`,
         }"
         class="max-lg:w-12 max-lg:shrink-0"
         :style="{ '--album-cover-ratio': coverRatio }"
@@ -58,10 +60,10 @@ const coverRatio = computed(() => {
           v-if="props.coverImage"
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
-          class="block w-full max-lg:h-12 rounded-sm m-0 object-cover border border-default group-hover:border-neutral-400 dark:group-hover:border-neutral-500"
+          class="block w-full max-lg:h-12 rounded-sm m-0 object-cover border border-default"
           :class="{ 'lg:aspect-(--album-cover-ratio)': coverRatio }"
         />
-        <div v-else class="max-lg:h-12 lg:aspect-[var(--album-cover-ratio,1)] w-full rounded-sm m-0 bg-muted border border-default group-hover:border-neutral-400 dark:group-hover:border-neutral-500 flex items-center justify-center">
+        <div v-else class="max-lg:h-12 lg:aspect-[var(--album-cover-ratio,1)] w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
           <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
         </div>
       </AlbumEffect>
