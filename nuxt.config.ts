@@ -99,12 +99,14 @@ export default defineNuxtConfig({
   icon: {
     clientBundle: {
       icons: [
+        'lucide:check',
         'lucide:chevron-down',
         'lucide:external-link',
         'lucide:hash',
         'lucide:loader-circle',
         'lucide:locate-fixed',
         'lucide:log-in',
+        'lucide:search',
         'ph:arrow-right',
         'ph:bank-duotone',
         'ph:cross-duotone',
