@@ -1,3 +1,4 @@
 # IPX keeps the source filename even when the generated asset is WebP.
 /_ipx/f_webp*
   Content-Type: image/webp
+  Cache-Control: public, max-age=900, must-revalidate
