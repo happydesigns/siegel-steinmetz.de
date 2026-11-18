@@ -16,6 +16,33 @@ const props = withDefaults(defineProps<{
 
 const route = useRoute()
 const selectedPath = computed(() => props.albumPath ?? route.path)
+const albumNav = useTemplateRef('albumNav')
+
+function revealSelectedAlbum() {
+  const nav = albumNav.value
+  if (!nav || nav.scrollWidth <= nav.clientWidth) {
+    return
+  }
+
+  const active = nav.querySelector('a[aria-current="true"]')
+  if (!active) {
+    return
+  }
+
+  const card = active.getBoundingClientRect()
+  const strip = nav.getBoundingClientRect()
+  const inset = Number.parseFloat(getComputedStyle(nav).paddingInlineStart)
+  if (card.left < strip.left + inset) {
+    nav.scrollLeft += card.left - strip.left - inset
+  }
+  else if (card.right > strip.right - inset) {
+    nav.scrollLeft += card.right - strip.right + inset
+  }
+}
+
+onMounted(revealSelectedAlbum)
+watch(selectedPath, revealSelectedAlbum, { flush: 'post' })
+
 const { data: currentAlbum, error } = await useAlbum(selectedPath)
 const images = computed(() => currentAlbum.value?.images ?? [])
 
@@ -37,11 +64,11 @@ const GalleryComponent = computed(() => {
     :ui="{
       root: 'lg:grid-cols-[13rem_minmax(0,1fr)]!',
       left: 'lg:col-span-1',
-      center: 'lg:col-span-1',
+      center: '@container min-w-0 lg:col-span-1',
     }"
   >
     <template #left>
-      <nav aria-label="Fotoalben" class="grid gap-2 pb-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 lg:self-start lg:gap-8 lg:pb-0">
+      <nav ref="albumNav" aria-label="Fotoalben" class="flex gap-4 max-lg:-mx-1 max-lg:mb-6 max-lg:overflow-x-auto max-lg:p-1 lg:grid lg:self-start lg:gap-8">
         <Album
           v-for="album in albums"
           :key="album.path"
@@ -51,6 +78,7 @@ const GalleryComponent = computed(() => {
           :cover-image="album.coverImage"
           :cover-aspect-ratio="props.coverAspectRatio"
           :selected="album.path === selectedPath"
+          class="max-lg:w-38 max-lg:shrink-0 sm:max-lg:w-48"
         />
       </nav>
     </template>

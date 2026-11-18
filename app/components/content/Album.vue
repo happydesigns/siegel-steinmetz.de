@@ -31,9 +31,9 @@ const coverRatio = computed(() => {
       variant="naked"
       reverse
       :ui="{
-        container: 'p-1 sm:p-1 flex-row items-center gap-3 lg:grid lg:grid-cols-[minmax(0,1fr)] lg:p-0 lg:gap-0',
-        wrapper: 'order-last lg:pt-2',
-        description: 'mt-0 lg:mt-1',
+        container: 'grid grid-cols-[minmax(0,1fr)] items-start gap-0 p-0 sm:p-0',
+        wrapper: 'order-last pt-2',
+        description: 'mt-1',
       }"
       class="h-full"
     >
@@ -48,19 +48,18 @@ const coverRatio = computed(() => {
       <AlbumEffect
         :backgrounds="3"
         :ui="{
-          layer: 'hidden lg:block rounded-t-sm',
+          layer: 'rounded-t-sm',
           content: `${coverRatio || !props.coverImage ? 'album-cover-frame' : ''} rounded-sm outline-2 outline-offset-1 ${selected
             ? 'outline-neutral-600 dark:outline-neutral-400'
             : 'outline-transparent group-hover:outline-neutral-600/40 dark:group-hover:outline-neutral-400/40 motion-safe:transition-[outline-color] motion-safe:duration-[120ms] forced-colors:outline-none forced-colors:group-hover:outline-solid'}`,
         }"
-        class="max-lg:w-12 max-lg:shrink-0"
         :style="{ '--album-cover-ratio': coverRatio }"
       >
         <SitePhoto
           v-if="props.coverImage"
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
-          class="block w-full max-lg:h-12 rounded-sm m-0 object-cover border border-default"
+          class="block w-full max-lg:aspect-square rounded-sm m-0 object-cover border border-default"
         />
         <div v-else class="w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
           <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
