@@ -22,6 +22,7 @@ usePageSeo(page)
     <UPageSection
       v-if="page.hero"
       v-bind="asPageSectionProps(page.hero)"
+      :as="{ title: 'h1' }"
       :ui="{
         root: 'overflow-hidden',
         title: 'lg:font-medium text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl',
