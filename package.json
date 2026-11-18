@@ -5,7 +5,7 @@
   "private": true,
   "packageManager": "pnpm@11.20.0",
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "cross-env NODE_OPTIONS='--max-old-space-size=8192' nuxt dev",
     "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -24,7 +24,7 @@
     "release:rc": "changelogen --release --versionSuffix rc.0"
   },
   "dependencies": {
-    "@happydesigns/ui": "catalog:happydesigns",
+    "@happydesigns/ui": "link:../ui",
     "@iconify-json/ph": "catalog:icons",
     "@nuxt/content": "catalog:nuxt",
     "@nuxt/image": "catalog:nuxt",

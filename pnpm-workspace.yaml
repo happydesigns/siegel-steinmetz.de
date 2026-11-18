@@ -2,55 +2,53 @@ catalogMode: prefer
 cleanupUnusedCatalogs: true
 minimumReleaseAgeExclude:
   - "@happydesigns/ui@0.17.0 || 0.17.1 || 0.17.2 || 0.17.3 || 0.17.4 || 0.17.5 || 0.18.0 || 0.19.0 || 0.19.1 || 0.19.2"
-  - "@happydesigns/nuxt-variants@0.1.1"
+  - "@happydesigns/nuxt-variants@0.2.0"
+shamefullyHoist: true
 shellEmulator: true
 
 trustPolicy: no-downgrade
 
 overrides:
-  "@ai-sdk/gateway": 3.0.145
-  "@ai-sdk/provider-utils": 4.0.37
+  "@ai-sdk/gateway@3": 3.0.145
+  "@ai-sdk/provider-utils@4": 4.0.37
   semver@6: 6.3.0
 
 catalogs:
-  happydesigns:
-    "@happydesigns/ui": ^0.19.2
-
   icons:
-    "@iconify-json/lucide": ^1.2.121
+    "@iconify-json/lucide": ^1.2.155
     "@iconify-json/ph": ^1.2.2
   nuxt:
-    "@nuxt/content": 3.15.0
-    "@nuxt/eslint": 1.16.0
-    "@nuxt/image": ^2.1.0
-    "@nuxt/scripts": ^1.3.2
-    "@nuxt/ui": 4.10.0
-    "@nuxthub/core": ^0.10.8
-    "@nuxtjs/seo": 5.3.6
-    nuxt: 4.5.1
+    "@nuxt/content": 3.16.2
+    "@nuxt/eslint": 1.17.0
+    "@nuxt/image": ^2.2.1
+    "@nuxt/scripts": ^1.3.12
+    "@nuxt/ui": 4.12.2
+    "@nuxthub/core": ^0.10.12
+    "@nuxtjs/seo": 5.3.16
+    nuxt: 4.6.4
     nuxt-studio: 1.7.0
-    tailwindcss: 4.3.2
+    tailwindcss: 4.3.5
   tools:
     "@antfu/eslint-config": 9.1.0
-    "@nuxt/hints": ^1.1.4
-    "@nuxt/test-utils": ^3.20.1
-    "@types/google.maps": ^3.65.4
-    "@types/node": 26.1.1
-    "@vue/test-utils": ^2.4.11
+    "@nuxt/hints": ^1.1.5
+    "@nuxt/test-utils": ^4.4.0
+    "@types/google.maps": ^3.66.10
+    "@types/node": 26.6.6
+    "@vue/test-utils": ^2.6.0
     better-sqlite3: 12.11.1
     changelogen: ^0.6.2
     cross-env: 10.1.0
-    eslint: 10.6.0
+    eslint: 10.15.0
     h3: 1.15.11
-    happy-dom: ^20.11.1
+    happy-dom: ^20.14.6
     mdclint: ^0.1.2
     typescript: 6.0.3
     vitest: 4.1.10
-    vue-tsc: 3.3.7
-    wrangler: 4.110.0
-    yaml: 2.9.0
+    vue-tsc: 3.3.14
+    wrangler: 4.163.0
+    yaml: 2.9.1
 
-    zod: 4.4.3
+    zod: 4.6.7
 allowBuilds:
   "@parcel/watcher": true
   "@tailwindcss/oxide": true

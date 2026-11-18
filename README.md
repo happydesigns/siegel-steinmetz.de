@@ -22,6 +22,9 @@ Start the development server on http://localhost:3000
 pnpm dev
 ```
 
+The current preview uses the adjacent `../ui` checkout for the
+`@happydesigns/ui/content` layer. A standalone build needs that checkout too.
+
 ## Production
 
 Build the application for production:

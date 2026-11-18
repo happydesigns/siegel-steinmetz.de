@@ -12,10 +12,27 @@ export default defineConfig({
         },
       },
       await defineVitestProject({
+        resolve: {
+          dedupe: ['vue', '@vue/runtime-core', '@vue/runtime-dom', '@vue/reactivity', '@vue/shared'],
+        },
         test: {
           name: 'nuxt',
+          hookTimeout: 60000,
           include: ['tests/nuxt/*.test.ts'],
           environment: 'nuxt',
+          environmentOptions: {
+            nuxt: {
+              overrides: {
+                studio: false,
+                experimental: { viteEnvironmentApi: false },
+              },
+            },
+          },
+          server: {
+            deps: {
+              inline: [/[/\\]ui[/\\]/, /@vue[+/\\]/],
+            },
+          },
         },
       }),
     ],

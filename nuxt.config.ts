@@ -1,8 +1,10 @@
+import { fileURLToPath } from 'node:url'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
   extends: [
-    '@happydesigns/ui',
+    '@happydesigns/ui/content',
   ],
 
   modules: [
@@ -26,6 +28,11 @@ export default defineNuxtConfig({
     public: {
       googleMapsMapId: '',
     },
+  },
+
+  // The local UI link must use the application's Content runtime in Nitro too.
+  alias: {
+    '@nuxt/content/server': fileURLToPath(import.meta.resolve('@nuxt/content/server')),
   },
 
   experimental: {
@@ -55,6 +62,12 @@ export default defineNuxtConfig({
           ],
         },
       },
+    },
+  },
+
+  vite: {
+    resolve: {
+      dedupe: ['vue', '@vue/runtime-core', '@vue/runtime-dom', '@vue/reactivity', '@vue/shared', '@nuxt/content', '@nuxt/ui'],
     },
   },
 
