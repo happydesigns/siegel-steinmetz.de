@@ -33,7 +33,7 @@ const coverRatio = computed(() => {
       reverse
       :ui="{
         container: 'p-1 sm:p-1 flex-row items-center gap-3 lg:grid lg:p-0 lg:gap-0',
-        wrapper: 'order-last lg:py-4',
+        wrapper: 'order-last lg:pt-2',
         description: 'mt-0 lg:mt-1',
       }"
       class="h-full"
@@ -44,7 +44,7 @@ const coverRatio = computed(() => {
           layer: 'hidden lg:block rounded-t-sm',
           content: selected ? 'rounded-sm outline-2 outline-offset-1 outline-neutral-600 dark:outline-neutral-400' : '',
         }"
-        class="max-lg:w-12 max-lg:shrink-0 lg:mx-1"
+        class="max-lg:w-12 max-lg:shrink-0"
         :style="{ '--album-cover-ratio': coverRatio }"
       >
         <SitePhoto
