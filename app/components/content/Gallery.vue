@@ -33,19 +33,17 @@ const GalleryComponent = computed(() => {
 <template>
   <UPage :ui="{ root: 'lg:grid-cols-[minmax(80px,1fr)_minmax(80px,1fr)_repeat(8,minmax(0,1fr))]!' }">
     <template #left>
-      <UPageAside class="block py-0 pb-6 lg:py-8 lg:-mt-8 pr-0!">
-        <nav aria-label="Fotoalben" class="grid gap-2 sm:grid-cols-3 lg:grid-cols-1 lg:gap-8">
-          <Album
-            v-for="album in albums"
-            :key="album.path"
-            :title="album.title"
-            :path="album.path"
-            :image-count="album.imageCount"
-            :cover-image="album.coverImage"
-            :selected="album.path === selectedPath"
-          />
-        </nav>
-      </UPageAside>
+      <nav aria-label="Fotoalben" class="grid gap-2 pb-6 sm:grid-cols-3 lg:grid-cols-1 lg:self-start lg:gap-8 lg:pb-0">
+        <Album
+          v-for="album in albums"
+          :key="album.path"
+          :title="album.title"
+          :path="album.path"
+          :image-count="album.imageCount"
+          :cover-image="album.coverImage"
+          :selected="album.path === selectedPath"
+        />
+      </nav>
     </template>
 
     <UPageCard
