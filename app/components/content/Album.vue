@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <NuxtLink
     :to="props.path" prefetch-on="interaction" :aria-current="selected ? 'true' : undefined"
-    class="group block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
+    class="block rounded-sm hover:bg-elevated focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
   >
     <UPageCard
       :title="props.title"
@@ -28,7 +28,6 @@ const props = withDefaults(defineProps<Props>(), {
       :ui="{
         container: 'p-1 sm:p-1 flex-row items-center gap-3 lg:grid lg:p-0 lg:gap-0',
         wrapper: 'order-last lg:py-4',
-        title: 'group-hover:underline underline-offset-4',
         description: 'mt-0 lg:mt-1',
       }"
       class="h-full"
