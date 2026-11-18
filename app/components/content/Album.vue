@@ -49,9 +49,9 @@ const coverRatio = computed(() => {
         :backgrounds="3"
         :ui="{
           layer: 'hidden lg:block rounded-t-sm',
-          content: `rounded-sm outline-offset-1 ${selected
-            ? 'outline-2 outline-neutral-600 dark:outline-neutral-400'
-            : 'group-hover:outline-2 outline-neutral-600/40 dark:outline-neutral-400/40'}`,
+          content: `rounded-sm outline-2 outline-offset-1 ${selected
+            ? 'outline-neutral-600 dark:outline-neutral-400'
+            : 'outline-transparent group-hover:outline-neutral-600/40 dark:group-hover:outline-neutral-400/40 motion-safe:transition-[outline-color] motion-safe:duration-[120ms] forced-colors:outline-none forced-colors:group-hover:outline-solid'}`,
         }"
         class="max-lg:w-12 max-lg:shrink-0"
         :style="{ '--album-cover-ratio': coverRatio }"
