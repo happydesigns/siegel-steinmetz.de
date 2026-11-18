@@ -33,9 +33,15 @@ const GalleryComponent = computed(() => {
 </script>
 
 <template>
-  <UPage :ui="{ root: 'lg:grid-cols-[minmax(80px,1fr)_minmax(80px,1fr)_repeat(8,minmax(0,1fr))]!' }">
+  <UPage
+    :ui="{
+      root: 'lg:grid-cols-[13rem_minmax(0,1fr)]!',
+      left: 'lg:col-span-1',
+      center: 'lg:col-span-1',
+    }"
+  >
     <template #left>
-      <nav aria-label="Fotoalben" class="grid gap-2 pb-6 sm:grid-cols-3 lg:grid-cols-1 lg:self-start lg:gap-8 lg:pb-0">
+      <nav aria-label="Fotoalben" class="grid gap-2 pb-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 lg:self-start lg:gap-8 lg:pb-0">
         <Album
           v-for="album in albums"
           :key="album.path"
