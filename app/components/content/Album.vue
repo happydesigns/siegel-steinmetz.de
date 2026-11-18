@@ -27,7 +27,6 @@ const coverRatio = computed(() => {
     class="group block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
   >
     <UPageCard
-      :title="props.title"
       :description="`${props.imageCount} ${props.imageCount === 1 ? 'Bild' : 'Bilder'}`"
       variant="naked"
       reverse
@@ -38,6 +37,14 @@ const coverRatio = computed(() => {
       }"
       class="h-full"
     >
+      <template #title>
+        {{ props.title }}
+        <UIcon
+          name="i-lucide-arrow-right" aria-hidden="true"
+          class="size-3.5 align-middle opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
+        />
+      </template>
+
       <AlbumEffect
         :backgrounds="3"
         :ui="{
