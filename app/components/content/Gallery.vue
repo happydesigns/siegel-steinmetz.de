@@ -68,7 +68,7 @@ const GalleryComponent = computed(() => {
     }"
   >
     <template #left>
-      <nav ref="albumNav" aria-label="Fotoalben" class="flex gap-4 max-lg:-mx-1 max-lg:mb-6 max-lg:overflow-x-auto max-lg:p-1 lg:grid lg:self-start lg:gap-8">
+      <nav ref="albumNav" aria-label="Fotoalben" class="flex gap-3 max-lg:-mx-1 max-lg:mb-6 max-lg:overflow-x-auto max-lg:p-1 sm:gap-4 lg:grid lg:self-start lg:gap-8">
         <Album
           v-for="album in albums"
           :key="album.path"
@@ -78,7 +78,7 @@ const GalleryComponent = computed(() => {
           :cover-image="album.coverImage"
           :cover-aspect-ratio="props.coverAspectRatio"
           :selected="album.path === selectedPath"
-          class="max-lg:w-38 max-lg:shrink-0 sm:max-lg:w-48"
+          class="max-lg:w-40 max-lg:shrink-0 sm:max-lg:w-48"
         />
       </nav>
     </template>

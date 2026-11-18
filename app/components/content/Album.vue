@@ -31,8 +31,9 @@ const coverRatio = computed(() => {
       variant="naked"
       reverse
       :ui="{
-        container: 'grid grid-cols-[minmax(0,1fr)] items-start gap-0 p-0 sm:p-0',
+        container: 'grid grid-cols-[minmax(0,1fr)] content-start items-start gap-0 p-0 sm:p-0',
         wrapper: 'order-last pt-2',
+        title: 'flex items-center gap-1',
         description: 'mt-1',
       }"
       class="h-full"
