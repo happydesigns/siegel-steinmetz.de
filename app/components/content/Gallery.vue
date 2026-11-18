@@ -7,6 +7,8 @@ import GalleryMasonry from './gallery/GalleryMasonry.vue'
 const props = withDefaults(defineProps<{
   albums?: AlbumSummary[]
   albumPath?: string
+  /** Desktop cover width divided by height. Omit to keep each photo's original ratio. */
+  coverAspectRatio?: number
   layout?: 'bento' | 'flexbox' | 'masonry'
 }>(), {
   layout: 'masonry',
@@ -41,6 +43,7 @@ const GalleryComponent = computed(() => {
           :path="album.path"
           :image-count="album.imageCount"
           :cover-image="album.coverImage"
+          :cover-aspect-ratio="props.coverAspectRatio"
           :selected="album.path === selectedPath"
         />
       </nav>
