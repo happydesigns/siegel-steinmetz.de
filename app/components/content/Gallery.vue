@@ -1,22 +1,20 @@
 <script setup lang="ts">
+import type { AlbumSummary } from '~/composables/useAlbums'
 import GalleryBento from './gallery/GalleryBento.vue'
 import GalleryFlexbox from './gallery/GalleryFlexbox.vue'
 import GalleryMasonry from './gallery/GalleryMasonry.vue'
 
 const props = withDefaults(defineProps<{
-  albums?: {
-    title: string
-    path: string
-    coverImage: { src: string, alt?: string } | null
-    imageCount: number
-  }[]
+  albums?: AlbumSummary[]
+  albumPath?: string
   layout?: 'bento' | 'flexbox' | 'masonry'
 }>(), {
   layout: 'masonry',
 })
 
 const route = useRoute()
-const { data: currentAlbum, error } = await useAlbum(() => route.path)
+const selectedPath = computed(() => props.albumPath ?? route.path)
+const { data: currentAlbum, error } = await useAlbum(selectedPath)
 const images = computed(() => currentAlbum.value?.images ?? [])
 
 const GalleryComponent = computed(() => {
@@ -35,22 +33,18 @@ const GalleryComponent = computed(() => {
 <template>
   <UPage :ui="{ root: 'lg:grid-cols-[minmax(80px,1fr)_minmax(80px,1fr)_repeat(8,minmax(0,1fr))]!' }">
     <template #left>
-      <UPageAside class="block -mt-8 pr-0!">
-        <div class="overflow-y-auto max-h-[calc(100vh-var(--ui-header-height)-4rem)]">
-          <UPageColumns
-            class="flex lg:flex-col gap-4 sm:gap-6 lg:gap-8 w-full space-y-0"
-          >
-            <Album
-              v-for="album in albums"
-              :key="album.path"
-              :title="album.title"
-              :path="album.path"
-              :image-count="album.imageCount"
-              :cover-image="album.coverImage"
-              class="box-border"
-            />
-          </UPageColumns>
-        </div>
+      <UPageAside class="block py-0 pb-6 lg:py-8 lg:-mt-8 pr-0!">
+        <nav aria-label="Fotoalben" class="grid gap-2 sm:grid-cols-3 lg:grid-cols-1 lg:gap-8">
+          <Album
+            v-for="album in albums"
+            :key="album.path"
+            :title="album.title"
+            :path="album.path"
+            :image-count="album.imageCount"
+            :cover-image="album.coverImage"
+            :selected="album.path === selectedPath"
+          />
+        </nav>
       </UPageAside>
     </template>
 

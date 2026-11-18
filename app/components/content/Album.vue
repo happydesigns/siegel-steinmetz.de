@@ -4,6 +4,7 @@ export interface Props {
   title?: string
   imageCount?: number
   coverImage?: { src: string, alt?: string } | null
+  selected?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -12,30 +13,38 @@ const props = withDefaults(defineProps<Props>(), {
   imageCount: 0,
   coverImage: null,
 })
-
-const route = useRoute()
-const variant = 'naked'
 </script>
 
 <template>
-  <NuxtLink :to="{ path: props.path, replace: true }">
+  <NuxtLink
+    :to="props.path" prefetch-on="interaction" :aria-current="selected ? 'true' : undefined"
+    class="group block rounded-sm focus-visible:outline-2 focus-visible:outline-primary"
+  >
     <UPageCard
       :title="props.title"
-      :description="props.imageCount > 0 ? `${props.imageCount} Bilder` : undefined"
-      :variant="variant"
+      :description="`${props.imageCount} ${props.imageCount === 1 ? 'Bild' : 'Bilder'}`"
+      variant="naked"
       reverse
-      :ui="{ container: 'p-0 sm:p-0 gap-0', wrapper: 'py-4 rounded-sm order-last' }"
+      :ui="{
+        container: 'p-1 sm:p-1 flex-row items-center gap-3 lg:grid lg:p-0 lg:gap-0',
+        wrapper: 'order-last lg:py-4',
+        title: selected ? 'text-primary' : 'group-hover:text-primary',
+        description: 'mt-0 lg:mt-1',
+      }"
       class="h-full"
     >
-      <AlbumEffect :backgrounds="3" :rounded="true" :ui="{ layer: 'rounded-t-sm' }" class="lg:min-w-0 mx-1">
+      <AlbumEffect
+        :backgrounds="3" :ui="{ layer: 'hidden lg:block rounded-t-sm' }"
+        class="max-lg:size-12 max-lg:min-w-0 max-lg:shrink-0 lg:mx-1"
+      >
         <SitePhoto
           v-if="props.coverImage"
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
-          class="h-60 lg:h-full w-full rounded-sm m-0 object-cover border border-default"
-          :class="{ 'outline-2 outline-border': route.path === props.path }"
+          class="h-12 lg:h-full w-full rounded-sm m-0 object-cover border border-default"
+          :class="{ 'outline-2 outline-primary': selected }"
         />
-        <div v-else class="h-60 lg:h-full w-full rounded-sm m-0 bg-neutral-100 dark:bg-neutral-800 border border-default flex items-center justify-center">
+        <div v-else class="h-12 lg:h-full w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
           <UIcon name="i-ph-image-duotone" class="w-8 h-8 text-neutral-400" />
         </div>
       </AlbumEffect>

@@ -1,22 +1,15 @@
 <script setup lang="ts">
 definePageMeta({
+  key: 'galerie',
   variant: 'content',
 })
 
 const route = useRoute()
-const rootPath = computed(() => {
-  const slugParam = route.params.slug
-
-  const slugPath = Array.isArray(slugParam)
-    ? slugParam.join('/')
-    : (slugParam || '')
-
-  return route.path.replace(new RegExp(`/${slugPath}$`), '')
-})
-
 const { data: albums, error: albumsError } = await useAlbums()
-const { data: page } = await usePageContent({ path: rootPath, collection: 'page' })
-const album = computed(() => albums.value?.find(item => item.path === route.path))
+const { data: page } = await usePageContent({ path: '/galerie', collection: 'page' })
+const album = computed(() => route.params.slug?.length
+  ? albums.value?.find(item => item.path === route.path.replace(/\/$/, ''))
+  : albums.value?.find(item => item.imageCount > 0) ?? albums.value?.[0])
 const editor = useTemplateRef('editor')
 const studio = useRuntimeConfig().public.studio
 const studioUser = useState<{ email?: string } | null>('studio-session')
@@ -47,15 +40,12 @@ const galleryPage = computed(() => {
 
 <template>
   <NuxtLayout name="content" :page="galleryPage" collection="page">
-    <template v-if="!route.params.slug?.length">
-      <GalleryAlbumOverview v-if="albums?.length" :albums="albums" />
-      <UPageCard
-        v-else
-        :title="albumsError ? 'Die Alben konnten nicht geladen werden.' : 'Hier sind noch keine Alben veröffentlicht.'"
-        variant="subtle"
-      />
-    </template>
-    <Gallery v-else :albums="albums" />
+    <Gallery v-if="albums?.length" :albums="albums" :album-path="album?.path ?? route.path" />
+    <UPageCard
+      v-else
+      :title="albumsError ? 'Die Alben konnten nicht geladen werden.' : 'Hier sind noch keine Alben veröffentlicht.'"
+      variant="subtle"
+    />
     <GalleryStudioAlbumEditor v-if="canEdit && album" :key="album.path" ref="editor" :path="album.path" :title="album.title" />
   </NuxtLayout>
 </template>

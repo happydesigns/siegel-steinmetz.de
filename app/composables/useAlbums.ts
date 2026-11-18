@@ -3,7 +3,6 @@ export interface AlbumSummary {
   path: string
   coverImage: { src: string, alt?: string } | null
   imageCount: number
-  previewSources: string[]
 }
 
 export function useAlbums() {
@@ -19,7 +18,6 @@ export function useAlbums() {
         path: album.path,
         coverImage,
         imageCount: images.length,
-        previewSources: coverImage ? [...new Set([coverImage.src, ...images.map(image => image.src)])].slice(0, 3) : [],
       }
     }),
   })
