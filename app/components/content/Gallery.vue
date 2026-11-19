@@ -17,6 +17,8 @@ const props = withDefaults(defineProps<{
 const route = useRoute()
 const selectedPath = computed(() => props.albumPath ?? route.path)
 const albumNav = useTemplateRef('albumNav')
+const pastAlbums = ref(false)
+let albumObserver: IntersectionObserver | undefined
 
 function revealSelectedAlbum() {
   const nav = albumNav.value
@@ -40,7 +42,30 @@ function revealSelectedAlbum() {
   }
 }
 
-onMounted(revealSelectedAlbum)
+function returnToAlbums() {
+  const nav = albumNav.value
+  if (!nav) {
+    return
+  }
+  nav.focus({ preventScroll: true })
+  nav.scrollIntoView({
+    block: 'start',
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+  })
+}
+
+onMounted(() => {
+  revealSelectedAlbum()
+  if (albumNav.value) {
+    albumObserver = new IntersectionObserver(([entry]) => {
+      if (entry) {
+        pastAlbums.value = !entry.isIntersecting && entry.boundingClientRect.bottom <= 0
+      }
+    })
+    albumObserver.observe(albumNav.value)
+  }
+})
+onBeforeUnmount(() => albumObserver?.disconnect())
 watch(selectedPath, revealSelectedAlbum, { flush: 'post' })
 
 const { data: currentAlbum, error } = await useAlbum(selectedPath)
@@ -68,7 +93,7 @@ const GalleryComponent = computed(() => {
     }"
   >
     <template #left>
-      <nav ref="albumNav" aria-label="Fotoalben" class="flex gap-3 max-lg:-mx-1 max-lg:mb-6 max-lg:overflow-x-auto max-lg:p-1 sm:gap-4 lg:grid lg:self-start lg:gap-8">
+      <nav ref="albumNav" aria-label="Fotoalben" tabindex="-1" class="flex scroll-mt-[calc(var(--ui-header-height)+1rem)] gap-3 max-lg:-mx-1 max-lg:mb-6 max-lg:overflow-x-auto max-lg:p-1 sm:gap-4 lg:grid lg:self-start lg:gap-8">
         <Album
           v-for="album in albums"
           :key="album.path"
@@ -99,4 +124,13 @@ const GalleryComponent = computed(() => {
     />
     <component :is="GalleryComponent" v-else :images="images" />
   </UPage>
+  <UButton
+    v-if="pastAlbums && albums?.length"
+    label="Zu den Alben"
+    icon="i-lucide-arrow-up"
+    color="neutral"
+    variant="outline"
+    class="fixed end-[max(1rem,env(safe-area-inset-right))] bottom-[max(1rem,env(safe-area-inset-bottom))] z-20 min-h-11 rounded-full bg-default px-4 shadow-sm"
+    @click="returnToAlbums"
+  />
 </template>
