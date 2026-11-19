@@ -4,13 +4,18 @@
 
 @source "../../../content/**/*";
 
-/* Studio reserves space on the body only while its sidebar is expanded. */
+/* Keep body overflow on the viewport so Studio's scroll lock can compensate
+   for the scrollbar. Both Nuxt roots share the remaining content width. */
 body[data-studio-active][data-expand-sidebar] {
-  container: studio-page / inline-size;
+  > #__nuxt,
+  > #teleports {
+    container: studio-page / inline-size;
+  }
 
   .studio-header-menu {
     width: 100cqw;
     margin-inline-start: auto;
+    inset-inline-end: var(--scrollbar-width, 0px);
   }
 }
 

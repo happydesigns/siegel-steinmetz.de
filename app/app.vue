@@ -22,7 +22,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UApp :locale="de">
+  <UApp :locale="de" portal="#teleports">
     <AppHeader />
 
     <UMain>

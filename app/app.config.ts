@@ -91,7 +91,7 @@ export default defineAppConfig({
     },
     header: {
       slots: {
-        // The fullscreen menu is portaled to body. Keep it in the page area.
+        // Keep the fullscreen menu aligned with the page beside Studio.
         overlay: 'studio-header-menu',
         content: 'studio-header-menu',
       },
