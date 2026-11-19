@@ -126,11 +126,11 @@ const GalleryComponent = computed(() => {
   </UPage>
   <UButton
     v-if="pastAlbums && albums?.length"
-    label="Zu den Alben"
+    aria-label="Zu den Alben"
     icon="i-lucide-arrow-up"
     color="neutral"
     variant="outline"
-    class="fixed end-[max(1rem,env(safe-area-inset-right))] bottom-[max(1rem,env(safe-area-inset-bottom))] z-20 min-h-11 rounded-full bg-default px-4 shadow-sm"
+    class="fixed end-[max(1rem,env(safe-area-inset-right))] bottom-[max(1rem,env(safe-area-inset-bottom))] z-20 size-11 justify-center rounded-full bg-default shadow-sm"
     @click="returnToAlbums"
   />
 </template>
