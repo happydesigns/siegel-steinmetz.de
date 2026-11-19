@@ -1,3 +1,4 @@
+import { env } from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -157,7 +158,7 @@ export default defineNuxtConfig({
       provider: 'github',
       owner: 'happydesigns',
       repo: 'siegel-steinmetz.de',
-      branch: 'main',
+      branch: env.STUDIO_GIT_BRANCH || 'main',
     },
     i18n: {
       defaultLocale: 'de',

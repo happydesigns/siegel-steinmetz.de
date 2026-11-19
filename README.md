@@ -22,10 +22,10 @@ Start the development server on http://localhost:3000
 pnpm dev
 ```
 
-Studio stays on 1.7.0 while the 1.8 Markdown editor rewrites existing source on
-opening. The pnpm patch rereads the file when reopening a local document and
-exposes the active Studio draft session to the album editor. The content
-roundtrip and local reopening tests cover the document adapter.
+Studio 1.8.2 uses Comark to edit the Nuxt Content collections. The pnpm patch
+reads the current file when reopening local documents and connects the album
+editor to Studio's active draft session. Preview builds can set
+`STUDIO_GIT_BRANCH` to store Studio edits on the preview branch.
 
 ## Production
 
