@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ObjectDirective } from 'vue'
 
-const props = defineProps<{ src?: string, alt?: string, sizes?: string, loading?: 'eager' | 'lazy' }>()
+const props = defineProps<{ src?: string, alt?: string, sizes?: string, quality?: number, loading?: 'eager' | 'lazy' }>()
 const { photo, useOriginal } = useSitePhoto(() => props.src)
 const image = useImage()
 const element = useTemplateRef('element')
@@ -23,7 +23,7 @@ const sources = computed(() => {
   const variants = image.getSizes(props.src, {
     sizes: props.sizes ?? '384px sm:320px',
     densities: '1x 2x',
-    modifiers: { width, height, format, quality: image.options.quality },
+    modifiers: { width, height, format, quality: props.quality ?? image.options.quality },
   })
   return {
     sizes: props.loading === 'lazy' ? `auto, ${variants.sizes}` : variants.sizes,
