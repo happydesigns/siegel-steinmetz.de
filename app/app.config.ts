@@ -89,6 +89,13 @@ export default defineAppConfig({
       primary: 'red',
       neutral: 'zinc',
     },
+    header: {
+      slots: {
+        // The fullscreen menu is portaled to body. Keep it in the page area.
+        overlay: 'w-[100cqw] ms-auto',
+        content: 'w-[100cqw] ms-auto',
+      },
+    },
     footer: {
       slots: {
         root: 'bg-linear-to-b from-gray-800 to-raisin-cool dark:from-raisin-cool dark:to-raisin',

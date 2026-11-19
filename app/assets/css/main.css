@@ -4,6 +4,26 @@
 
 @source "../../../content/**/*";
 
+/* Studio makes room for its sidebar on the body. Use that same width for
+   the site's responsive utilities, including Nuxt UI menus portaled to body. */
+body {
+  container: site / inline-size;
+}
+
+@custom-variant sm (@container site (width >= theme(--breakpoint-sm)));
+@custom-variant md (@container site (width >= theme(--breakpoint-md)));
+@custom-variant lg (@container site (width >= theme(--breakpoint-lg)));
+@custom-variant xl (@container site (width >= theme(--breakpoint-xl)));
+@custom-variant 2xl (@container site (width >= theme(--breakpoint-2xl)));
+@custom-variant max-lg (@container site (width < theme(--breakpoint-lg)));
+
+/* The shared footer uses a media query directly for its desktop grid. */
+@container site (width < theme(--breakpoint-lg)) {
+  .footer-cols-root {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @theme static {
   /* Fonts */
   --font-serif: 'Lora';

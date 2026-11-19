@@ -78,7 +78,7 @@ const coverRatio = computed(() => {
   aspect-ratio: 1;
 }
 
-@media (width >= 64rem) {
+@container site (width >= 64rem) {
   :deep(.album-cover-frame) {
     aspect-ratio: var(--album-cover-ratio, 1);
   }
