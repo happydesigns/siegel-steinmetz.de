@@ -14,7 +14,7 @@ overrides:
   semver@6: 6.3.0
 
 patchedDependencies:
-  nuxt-studio@1.7.0: patches/nuxt-studio@1.7.0.patch
+  nuxt-studio@1.8.2: patches/nuxt-studio@1.8.2.patch
 
 catalogs:
   happydesigns:
@@ -23,7 +23,7 @@ catalogs:
     "@iconify-json/lucide": ^1.2.155
     "@iconify-json/ph": ^1.2.2
   nuxt:
-    "@nuxt/content": 3.16.2
+    "@nuxt/content": 3.17.0
     "@nuxt/eslint": 1.17.0
     "@nuxt/image": ^2.2.1
     "@nuxt/scripts": ^1.3.12
@@ -31,7 +31,7 @@ catalogs:
     "@nuxthub/core": ^0.10.12
     "@nuxtjs/seo": 5.3.16
     nuxt: 4.6.4
-    nuxt-studio: 1.7.0
+    nuxt-studio: 1.8.2
     tailwindcss: 4.3.5
   tools:
     "@antfu/eslint-config": 9.1.0

@@ -10,8 +10,8 @@ interface StudioDocument extends Record<string, unknown> {
 }
 
 interface StudioDocumentGenerator {
-  generateContentFromDocument: (document: StudioDocument) => Promise<string | null>
-  generateDocumentFromContent: (
+  contentFromDocument: (document: StudioDocument) => Promise<string | null>
+  documentFromContent: (
     id: string,
     content: string,
     options: { collectionType: 'page', compress: false },
@@ -75,7 +75,7 @@ function expectedMetadataOrder(metadata: Record<string, unknown>): string[] {
 const contentFiles = await findContentFiles(contentRoot)
 const studioGenerator: StudioDocumentGenerator = await loadStudioDocumentModule('generate')
 const { areDocumentsEqual } = await loadStudioDocumentModule('compare') as {
-  areDocumentsEqual: (original: StudioDocument, draft: StudioDocument) => boolean
+  areDocumentsEqual: (original: StudioDocument, draft: StudioDocument) => Promise<boolean>
 }
 
 describe('visual Markdown drafts', () => {
@@ -91,19 +91,19 @@ describe('visual Markdown drafts', () => {
     body: { type: 'minimark', value: [['div', { class: 'mx-auto' }, image]] },
   }
 
-  it('keeps equivalent visual-editor markup clean', () => {
-    expect(areDocumentsEqual(original, draft)).toBe(true)
+  it('keeps equivalent visual-editor markup clean', async () => {
+    expect(await areDocumentsEqual(original, draft)).toBe(true)
   })
 
-  it('detects a changed image, new text, and added frontmatter', () => {
+  it('detects a changed image, new text, and added frontmatter', async () => {
     for (const edit of [
       { ...draft, body: { type: 'minimark', value: [['div', { class: 'mx-auto' }, ['img', { src: '/neu.jpg', alt: 'Grabstein' }]]] } },
       { ...draft, body: { ...draft.body, value: [...draft.body.value, ['p', {}, 'Neuer Absatz']] } },
       { ...draft, description: 'Neue Beschreibung' },
     ]) {
-      expect(areDocumentsEqual(original, edit)).toBe(false)
+      expect(await areDocumentsEqual(original, edit)).toBe(false)
     }
-    expect(areDocumentsEqual(original, draft)).toBe(true)
+    expect(await areDocumentsEqual(original, draft)).toBe(true)
   })
 })
 
@@ -119,7 +119,7 @@ describe('studio content formatting', () => {
   it.each(contentFiles)('roundtrips %s without formatting changes', async (path) => {
     const source = (await readFile(path, 'utf8')).replaceAll('\r\n', '\n')
     const id = relative(contentRoot, path).replaceAll('\\', '/')
-    const document = await studioGenerator.generateDocumentFromContent(id, source, {
+    const document = await studioGenerator.documentFromContent(id, source, {
       collectionType: 'page',
       compress: false,
     })
@@ -130,7 +130,7 @@ describe('studio content formatting', () => {
       throw new Error(`Nuxt Studio could not parse ${path}`)
     }
 
-    const generated = await studioGenerator.generateContentFromDocument(document)
+    const generated = await studioGenerator.contentFromDocument(document)
 
     expect(generated?.replaceAll('\r\n', '\n')).toBe(source)
   })

@@ -1,7 +1,7 @@
 export default defineNuxtPlugin(() => {
   const style = document.createElement('style')
 
-  // Studio 1.7 renders the launcher in its own shadow root without a CSS part.
+  // Studio renders the launcher in its own shadow root without a CSS part.
   // Keep the override on the floating buttons and use Studio's light/dark tokens.
   style.textContent = `
     .fixed.bottom-2.left-2 button.bg-transparent.backdrop-blur-md {
