@@ -177,6 +177,8 @@ images:
   - src: /assets/gallery/grabmallager/tombstone-stock-limestone-vase.jpg
     alt: Kalkstein-Grabstein mit Bronzevase
     caption: Lichtgrauer Kalkstein-Grabstein mit rechteckiger Aussparung und Bronzevase
-  - src: /assets/gallery/grabmallager/E106.jpg
+  - src: /assets/gallery/grabmallager/tombstone-stock-duotone-rectangular-inlay.jpg
+    alt: Zweiteiliger Grabstein mit heller Platte und höherer dunkler Stele
+    caption: Die helle Platte ist grau geadert. Oben in der dunklen Stele sitzt ein heller rechteckiger Einsatz.
 order: 1
 slug: grabmallager
