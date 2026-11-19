@@ -1,4 +1,8 @@
-# IPX keeps the source filename even when the generated asset is WebP.
+# IPX keeps the source filename for converted images.
+/_ipx/f_avif*
+  Content-Type: image/avif
+  Cache-Control: public, max-age=900, must-revalidate
+
 /_ipx/f_webp*
   Content-Type: image/webp
   Cache-Control: public, max-age=900, must-revalidate

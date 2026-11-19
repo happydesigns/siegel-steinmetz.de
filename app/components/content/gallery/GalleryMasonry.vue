@@ -48,7 +48,7 @@ const columnStarts = computed(() => {
       :src="img.src"
       :alt="img.alt"
       sizes="320px 364:192px 440:256px 560:320px 672:256px 848:320px"
-      :quality="70"
+      gallery-thumbnail
       class="block w-full h-auto rounded-sm border border-default"
       :class="{ 'start-two': columnStarts.two.has(index), 'start-three': columnStarts.three.has(index) }"
       :loading="index === 0 || columnStarts.two.has(index) || columnStarts.three.has(index) ? 'eager' : 'lazy'"

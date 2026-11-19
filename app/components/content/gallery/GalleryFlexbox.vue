@@ -11,7 +11,7 @@ defineProps<{
       :key="img.src"
       :src="img.src"
       :alt="img.alt"
-      :quality="70"
+      gallery-thumbnail
       class="h-108 grow object-cover rounded-sm border border-default"
       :loading="index === 0 ? 'eager' : 'lazy'"
     />

@@ -61,7 +61,7 @@ const coverRatio = computed(() => {
           :src="props.coverImage.src"
           :alt="props.coverImage.alt"
           sizes="160px sm:192px"
-          :quality="70"
+          gallery-thumbnail
           class="block w-full max-lg:aspect-square rounded-sm m-0 object-cover border border-default"
         />
         <div v-else class="w-full rounded-sm m-0 bg-muted border border-default flex items-center justify-center">
