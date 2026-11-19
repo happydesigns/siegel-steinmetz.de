@@ -34,7 +34,7 @@ export default defineNuxtConfig({
     },
   },
 
-  // The local UI link must use the application's Content runtime in Nitro too.
+  // Resolve Content server queries from the UI layer through the app's Nitro runtime.
   alias: {
     '@nuxt/content/server': fileURLToPath(import.meta.resolve('@nuxt/content/server')),
   },

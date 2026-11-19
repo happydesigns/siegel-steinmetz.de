@@ -24,7 +24,7 @@
     "release:rc": "changelogen --release --versionSuffix rc.0"
   },
   "dependencies": {
-    "@happydesigns/ui": "link:../ui",
+    "@happydesigns/ui": "catalog:happydesigns",
     "@iconify-json/ph": "catalog:icons",
     "@nuxt/content": "catalog:nuxt",
     "@nuxt/image": "catalog:nuxt",

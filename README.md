@@ -22,9 +22,6 @@ Start the development server on http://localhost:3000
 pnpm dev
 ```
 
-The current preview uses the adjacent `../ui` checkout for the
-`@happydesigns/ui/content` layer. A standalone build needs that checkout too.
-
 Studio stays on 1.7.0 while the 1.8 Markdown editor rewrites existing source on
 opening. The pnpm patch rereads the file when reopening a local document and
 exposes the active Studio draft session to the album editor. The content
