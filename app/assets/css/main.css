@@ -4,21 +4,64 @@
 
 @source "../../../content/**/*";
 
-/* Studio makes room for its sidebar on the body. Use that same width for
-   the site's responsive utilities, including Nuxt UI menus portaled to body. */
-body {
-  container: site / inline-size;
+/* Studio reserves space on the body only while its sidebar is expanded. */
+body[data-studio-active][data-expand-sidebar] {
+  container: studio-page / inline-size;
+
+  .studio-header-menu {
+    width: 100cqw;
+    margin-inline-start: auto;
+  }
 }
 
-@custom-variant sm (@container site (width >= theme(--breakpoint-sm)));
-@custom-variant md (@container site (width >= theme(--breakpoint-md)));
-@custom-variant lg (@container site (width >= theme(--breakpoint-lg)));
-@custom-variant xl (@container site (width >= theme(--breakpoint-xl)));
-@custom-variant 2xl (@container site (width >= theme(--breakpoint-2xl)));
-@custom-variant max-lg (@container site (width < theme(--breakpoint-lg)));
+/* Keep native media queries for visitors and collapsed Studio. The zero-specificity
+   condition preserves the normal cascade for Nuxt UI and compound variants. */
+@custom-variant viewport-layout (&:where(:not(body[data-studio-active][data-expand-sidebar] *)));
+
+@custom-variant sm {
+  @media (width >= theme(--breakpoint-sm)) {
+    @variant viewport-layout { @slot; }
+  }
+  @container studio-page (width >= theme(--breakpoint-sm)) { @slot; }
+}
+
+@custom-variant md {
+  @media (width >= theme(--breakpoint-md)) {
+    @variant viewport-layout { @slot; }
+  }
+  @container studio-page (width >= theme(--breakpoint-md)) { @slot; }
+}
+
+@custom-variant lg {
+  @media (width >= theme(--breakpoint-lg)) {
+    @variant viewport-layout { @slot; }
+  }
+  @container studio-page (width >= theme(--breakpoint-lg)) { @slot; }
+}
+
+@custom-variant xl {
+  @media (width >= theme(--breakpoint-xl)) {
+    @variant viewport-layout { @slot; }
+  }
+  @container studio-page (width >= theme(--breakpoint-xl)) { @slot; }
+}
+
+@custom-variant 2xl {
+  @media (width >= theme(--breakpoint-2xl)) {
+    @variant viewport-layout { @slot; }
+  }
+  @container studio-page (width >= theme(--breakpoint-2xl)) { @slot; }
+}
+
+@custom-variant max-lg {
+  @media (width < theme(--breakpoint-lg)) {
+    @variant viewport-layout { @slot; }
+  }
+  @container studio-page (width < theme(--breakpoint-lg)) { @slot; }
+}
 
 /* The shared footer uses a media query directly for its desktop grid. */
-@container site (width < theme(--breakpoint-lg)) {
+@container studio-page (width < theme(--breakpoint-lg)) {
   .footer-cols-root {
     grid-template-columns: minmax(0, 1fr);
   }

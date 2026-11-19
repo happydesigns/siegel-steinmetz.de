@@ -50,7 +50,7 @@ const coverRatio = computed(() => {
         :backgrounds="3"
         :ui="{
           layer: 'rounded-t-sm',
-          content: `${coverRatio || !props.coverImage ? 'album-cover-frame' : ''} rounded-sm outline-2 outline-offset-1 ${selected
+          content: `${coverRatio || !props.coverImage ? 'album-cover-frame relative aspect-square lg:aspect-[var(--album-cover-ratio,1)]' : ''} rounded-sm outline-2 outline-offset-1 ${selected
             ? 'outline-neutral-600 dark:outline-neutral-400'
             : 'outline-transparent group-hover:outline-neutral-600/40 dark:group-hover:outline-neutral-400/40 motion-safe:transition-[outline-color] motion-safe:duration-[120ms] forced-colors:outline-none forced-colors:group-hover:outline-solid'}`,
         }"
@@ -73,17 +73,6 @@ const coverRatio = computed(() => {
 </template>
 
 <style scoped>
-:deep(.album-cover-frame) {
-  position: relative;
-  aspect-ratio: 1;
-}
-
-@container site (width >= 64rem) {
-  :deep(.album-cover-frame) {
-    aspect-ratio: var(--album-cover-ratio, 1);
-  }
-}
-
 :deep(.album-cover-frame > *) {
   position: absolute;
   inset: 0;
