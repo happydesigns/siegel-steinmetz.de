@@ -20,7 +20,7 @@ onMounted(() => {
 
 const canEdit = computed(() => mounted.value && album.value && (studio.dev || studioUser.value?.email))
 const galleryPage = computed(() => {
-  if (!page.value || !canEdit.value) {
+  if (!page.value || !canEdit.value || !editor.value) {
     return page.value
   }
   const header = resolvePageHeader(page.value)
@@ -46,6 +46,6 @@ const galleryPage = computed(() => {
       :title="albumsError ? 'Die Alben konnten nicht geladen werden.' : 'Hier sind noch keine Alben veröffentlicht.'"
       variant="subtle"
     />
-    <GalleryStudioAlbumEditor v-if="canEdit && album" :key="album.path" ref="editor" :path="album.path" :title="album.title" />
+    <LazyGalleryStudioAlbumEditor v-if="canEdit && album" :key="album.path" ref="editor" :path="album.path" :title="album.title" />
   </NuxtLayout>
 </template>
