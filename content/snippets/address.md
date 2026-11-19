@@ -4,8 +4,6 @@ title: Anschrift
 
 ### Anschrift
 
-Bernd Siegel :br
-Steingestaltung
+Bernd Siegel :br Steingestaltung
 
-Bahnhofstraße 13 :br
-74861 Neudenau
+Bahnhofstraße 13 :br 74861 Neudenau

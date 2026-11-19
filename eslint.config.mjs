@@ -8,7 +8,7 @@ export default withNuxt(
     {
       yaml: {
         overrides: {
-          'yaml/quotes': ['error', { prefer: 'double' }], // Enforce double quotes to match Studio
+          'yaml/quotes': ['error', { prefer: 'double' }],
         },
       },
     },
@@ -17,6 +17,13 @@ export default withNuxt(
       files: ['**/*.yaml', '**/*.yml'],
       rules: {
         'yaml/plain-scalar': ['off'],
+      },
+    },
+    {
+      name: 'nuxt-studio/yaml/quotes',
+      files: ['content/**/*.{yaml,yml}'],
+      rules: {
+        'yaml/quotes': ['error', { prefer: 'single' }],
       },
     },
     {

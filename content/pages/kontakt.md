@@ -6,12 +6,11 @@ toc: false
 
 ## Anschrift
 
-Bernd Siegel :br
-Steingestaltung
+Bernd Siegel :br Steingestaltung
 
-Bahnhofstraße 13 :br
-74861 Neudenau
+Bahnhofstraße 13 :br 74861 Neudenau
 
-:icon{name="i-ph-phone-fill"} 06264 / 92 64 44 :br :icon{name="i-ph-printer-fill"} 06264 / 92 64 45 :br :icon{name="i-ph-envelope-fill"} <info@siegel-steinmetz.de>
+:icon{name="i-ph-phone-fill"} 06264 / 92 64 44 :br :icon{name="i-ph-printer-fill"} 06264 / 92 64 45 :br :icon{name="i-ph-envelope-fill"} [info@siegel-steinmetz.de](mailto:info@siegel-steinmetz.de)
 
-:maps{.not-prose.mt-8}
+::maps{.not-prose.mt-8}
+::

@@ -52,13 +52,7 @@ Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies z
 
 Wir setzen folgende(n) Hoster ein:
 
-**Cloudflare, Inc.** :br
-101 Townsend Street :br
-San Francisco, CA 94107 :br
-USA :br
-Telefon: +1 (650) 319 8930 :br
-E-Mail: <support@cloudflare.com> :br
-Website: <https://www.cloudflare.com>
+**Cloudflare, Inc.** :br 101 Townsend Street :br San Francisco, CA 94107 :br USA :br Telefon: +1 (650) 319 8930 :br E-Mail: [support@cloudflare.com](mailto:support@cloudflare.com) :br Website: <https://www.cloudflare.com>
 
 Cloudflare bietet mit „Cloudflare Pages“ eine Hosting-Plattform für statische und dynamische Websites an. Dabei werden personenbezogene Daten, wie IP-Adressen, verarbeitet. Weitere Informationen finden Sie in der Datenschutzerklärung von Cloudflare: <https://www.cloudflare.com/privacypolicy>.
 
@@ -76,13 +70,9 @@ Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Ko
 
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 
-Bernd Siegel :br
-Steingestaltung :br
-Bahnhofstraße 13 :br
-74861 Neudenau
+Bernd Siegel :br Steingestaltung :br Bahnhofstraße 13 :br 74861 Neudenau
 
-Telefon: 06264 92 64 44 :br
-E-Mail: <info@siegel-steinmetz.de>
+Telefon: 06264 92 64 44 :br E-Mail: [info@siegel-steinmetz.de](mailto:info@siegel-steinmetz.de)
 
 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
 
@@ -102,7 +92,7 @@ Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen S
 
 Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
 
-### Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)
+### Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO) {#widerspruchsrecht-gegen-die-datenerhebung-in-besonderen-fällen-sowie-gegen-direktwerbung-art21-dsgvo}
 
 WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
 
@@ -133,7 +123,7 @@ Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben, d�
 
 ### SSL- bzw. TLS-Verschlüsselung
 
-Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http\://“ auf „https\://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
 
 Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
 

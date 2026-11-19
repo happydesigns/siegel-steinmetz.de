@@ -12,9 +12,7 @@ ui:
 ---
 ## Zuständige Kammer
 
-Handwerkskammer Heilbronn-Franken :br
-Allee 76, 74072 Heilbronn :br
-Tel.: +49 711 61 94 80 :br <https://www.hwk-heilbronn.de/>
+Handwerkskammer Heilbronn-Franken :br Allee 76, 74072 Heilbronn :br Tel.: +49 711 61 94 80 :br <https://www.hwk-heilbronn.de/>
 
 ## Urheberrecht / Leistungsschutzrecht
 
@@ -22,13 +20,11 @@ Die auf dieser Webseite veröffentlichten Inhalte, Werke und bereitgestellten In
 
 #left
   :::div
-  Bernd Siegel :br
-  Steingestaltung
+  Bernd Siegel :br Steingestaltung
 
-  Bahnhofstraße 13 :br
-  74861 Neudenau
+  Bahnhofstraße 13 :br 74861 Neudenau
 
-  :icon{name="i-ph-phone-fill"} Tel.: 06264 92 64 44 :br :icon{name="i-ph-printer-fill"} Fax: 06264 92 64 45 :br :icon{name="i-ph-envelope-fill"} E-Mail: <info@siegel-steinmetz.de>
+  :icon{name="i-ph-phone-fill"} Tel.: 06264 92 64 44 :br :icon{name="i-ph-printer-fill"} Fax: 06264 92 64 45 :br :icon{name="i-ph-envelope-fill"} E-Mail: [info@siegel-steinmetz.de](mailto:info@siegel-steinmetz.de)
 
   Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV: Bernd Siegel (Anschrift wie oben)
 
