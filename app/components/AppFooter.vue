@@ -10,6 +10,9 @@ const { footerLinks } = useFooterLinks()
     <UFooter>
       <template #top>
         <UContainer>
+          <h2 class="sr-only">
+            Weitere Informationen und Kontakt
+          </h2>
           <HFooterColumns :columns="footerLinks">
             <template #right>
               <HSnippet path="/snippets/address" :components="{ h3: HFooterColumnHeading }" class="text-sm" />
