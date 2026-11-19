@@ -36,15 +36,10 @@ async function findContentFiles(directory: string): Promise<string[]> {
   return files.flat().sort()
 }
 
-async function loadStudioGenerator(): Promise<StudioDocumentGenerator> {
-  const require = createRequire(import.meta.url)
-  const studioEntry = require.resolve('nuxt-studio')
-  const generatorUrl = pathToFileURL(resolve(
-    dirname(studioEntry),
-    'runtime/utils/document/generate.js',
-  )).href
-
-  return await import(/* @vite-ignore */ generatorUrl) as StudioDocumentGenerator
+async function loadStudioDocumentModule(file: 'generate' | 'compare') {
+  const studioEntry = createRequire(import.meta.url).resolve('nuxt-studio')
+  const url = pathToFileURL(resolve(dirname(studioEntry), `runtime/utils/document/${file}.js`)).href
+  return await import(/* @vite-ignore */ url)
 }
 
 function parseMetadata(path: string, source: string): Record<string, unknown> {
@@ -78,7 +73,39 @@ function expectedMetadataOrder(metadata: Record<string, unknown>): string[] {
 }
 
 const contentFiles = await findContentFiles(contentRoot)
-const studioGenerator = await loadStudioGenerator()
+const studioGenerator: StudioDocumentGenerator = await loadStudioDocumentModule('generate')
+const { areDocumentsEqual } = await loadStudioDocumentModule('compare') as {
+  areDocumentsEqual: (original: StudioDocument, draft: StudioDocument) => boolean
+}
+
+describe('visual Markdown drafts', () => {
+  const image = ['img', { src: '/stein.jpg', alt: 'Grabstein' }]
+  const original = {
+    id: 'pages/grabmale.md',
+    extension: 'md',
+    title: 'Grabmale',
+    body: { type: 'minimark', value: [['div', { className: ['mx-auto'] }, ['p', {}, image]]] },
+  }
+  const draft = {
+    ...original,
+    body: { type: 'minimark', value: [['div', { class: 'mx-auto' }, image]] },
+  }
+
+  it('keeps equivalent visual-editor markup clean', () => {
+    expect(areDocumentsEqual(original, draft)).toBe(true)
+  })
+
+  it('detects a changed image, new text, and added frontmatter', () => {
+    for (const edit of [
+      { ...draft, body: { type: 'minimark', value: [['div', { class: 'mx-auto' }, ['img', { src: '/neu.jpg', alt: 'Grabstein' }]]] } },
+      { ...draft, body: { ...draft.body, value: [...draft.body.value, ['p', {}, 'Neuer Absatz']] } },
+      { ...draft, description: 'Neue Beschreibung' },
+    ]) {
+      expect(areDocumentsEqual(original, edit)).toBe(false)
+    }
+    expect(areDocumentsEqual(original, draft)).toBe(true)
+  })
+})
 
 describe('studio content formatting', () => {
   it.each(contentFiles)('keeps title first and remaining metadata alphabetical in %s', async (path) => {

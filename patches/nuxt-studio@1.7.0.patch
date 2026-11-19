@@ -66,3 +66,90 @@ diff --git a/dist/module/module.mjs b/dist/module/module.mjs
 @@ -432,1 +432,1 @@
 -          baseURL: `/_studio-app/${version}`,
 +          baseURL: `/_studio-app/${version}-album2`,
+diff --git a/dist/module/runtime/utils/document/generate.js b/dist/module/runtime/utils/document/generate.js
+--- a/dist/module/runtime/utils/document/generate.js
++++ b/dist/module/runtime/utils/document/generate.js
+@@ -1,7 +1,7 @@
+ import { consola } from "consola";
+ import { ContentFileExtension } from "../../types/content.js";
+ import { parseMarkdown } from "@nuxtjs/mdc/runtime/parser/index";
+-import { stringifyMarkdown } from "@nuxtjs/mdc/runtime";
++import { createStringifyProcessor } from "@nuxtjs/mdc/runtime";
+ import { visit } from "unist-util-visit";
+ import { compressTree, decompressTree } from "@nuxt/content/runtime";
+ import destr from "destr";
+@@ -135,24 +135,24 @@
+ export async function generateContentFromJSONDocument(document) {
+   return JSON.stringify(cleanDataKeys(document), null, 2);
+ }
++const markdownProcessor = createStringifyProcessor({
++  plugins: { remarkMDC: { options: { autoUnwrap: true } } }
++});
++// The draft-status API is synchronous. Compare and publish with the same MDC writer.
++export function renderMarkdownDocument(document) {
++  const body = document.body.type === "minimark" ? decompressTree(document.body) : document.body;
++  const value = JSON.stringify(body, function(key, props) {
++    if (key === "props" && this.type === "element" && this.tag === "a") {
++      const { rel, ...linkProps } = props;
++      return linkProps;
++    }
++    return props;
++  });
++  const markdown = String(markdownProcessor.processSync({ value }));
++  const data = cleanDataKeys(document);
++  const content = Object.keys(data).length ? stringifyFrontMatter(data, markdown, { lineWidth: 0 }) : markdown;
++  return content.replace(/&#x2A;/g, "*");
++}
+ export async function generateContentFromMarkdownDocument(document) {
+-  const body = document.body.type === "minimark" ? decompressTree(document.body) : document.body;
+-  visit(body, (node) => node.type === "element" && node.tag === "a", (node) => {
+-    Reflect.deleteProperty(node.props, "rel");
+-  });
+-  const markdown = await stringifyMarkdown(body, cleanDataKeys(document), {
+-    frontMatter: {
+-      options: {
+-        lineWidth: 0
+-      }
+-    },
+-    plugins: {
+-      remarkMDC: {
+-        options: {
+-          autoUnwrap: true
+-        }
+-      }
+-    }
+-  });
+-  return typeof markdown === "string" ? markdown.replace(/&#x2A;/g, "*") : markdown;
++  return renderMarkdownDocument(document);
+ }
+diff --git a/dist/module/runtime/utils/document/compare.js b/dist/module/runtime/utils/document/compare.js
+--- a/dist/module/runtime/utils/document/compare.js
++++ b/dist/module/runtime/utils/document/compare.js
+@@ -1,8 +1,7 @@
+ import { ContentFileExtension } from "../../types/content.js";
+ import { doObjectsMatch } from "../object.js";
+ import { stringify } from "minimark/stringify";
+-import { compressTree } from "@nuxt/content/runtime";
+-import { generateDocumentFromContent } from "./generate.js";
++import { generateDocumentFromContent, renderMarkdownDocument } from "./generate.js";
+ import { removeLastStylesFromTree } from "./tree.js";
+ export async function isDocumentMatchingContent(content, document) {
+   const generatedDocument = await generateDocumentFromContent(document.id, content, { compress: true, preserveLinkAttributes: true });
+@@ -24,15 +23,8 @@
+   const { body: body1, meta: meta1, ...documentData1 } = document1;
+   const { body: body2, meta: meta2, ...documentData2 } = document2;
+   if (document1.extension === ContentFileExtension.Markdown) {
+-    const minifiedBody1 = removeLastStylesFromTree(
+-      document1.body.type === "minimark" ? document1.body : compressTree(document1.body)
+-    );
+-    const minifiedBody2 = removeLastStylesFromTree(
+-      document2.body.type === "minimark" ? document2.body : compressTree(document2.body)
+-    );
+-    if (stringify(minifiedBody1) !== stringify(minifiedBody2)) {
+-      return false;
+-    }
++    if (document1.extension !== document2.extension || document1.id !== document2.id) return false;
++    return document1 === document2 || renderMarkdownDocument(document1) === renderMarkdownDocument(document2);
+   } else if (typeof body1 === "object" && typeof body2 === "object") {
+     if (!doObjectsMatch(body1, body2)) {
+       return false;
